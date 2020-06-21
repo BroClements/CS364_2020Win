@@ -1627,9 +1627,7 @@
 			</div>
 			<h2><span class="id">3.6</span> Design Constraints</h2>
 			<a name="Design"></a>
-			<p>The input constraints define constraints that fulfill the need for application security. By limiting character input lengths, the risk of a buffer-overflow attack is mitigated. The input constraints also enforce the sponsor’s guidelines to
-				keep input-fields and conversations “very limited”. [IR.7] By limiting character input lengths and input formats, the application follows the sponsor’s guidelines to prevent the application itself from being a place for people to talk,
-				socialize, and get to know each other. [IR.7] </p>
+			<p>The design constraints define the constraints for the “Uvents” application. The design constraints constrain specific actions that application users will be capable of completing. </p>
 			<div class="indent">
 				<h3><span class="id">DCS.1</span>Input Constraints</h3>
 				<p>The input constraints define constraints that fulfill the need for application security. By limiting character input lengths, the risk of a buffer-overflow attack is mitigated. The input constraints also enforce the sponsor’s guidelines
@@ -1637,12 +1635,12 @@
 					talk, socialize, and get to know each other. [IR.7] </p>
 				<div class="indent">
 					<h4><span class="id">DCS.1.1</span>The Commercial User system shall require that text input is limited to a set number of characters for description text fields. [PO.2.2.11]</h4>
-					<h4><span class="id">DCS.1.2</span>The Profile system shall require that text input is limited to a set number of characters for profile text fields. [PO.2.1.4]</h4>
-					<h4><span class="id">DCS.1.3</span>The Message system shall require that text input is limited to a set number of characters for conversation text fields [PO.2.1.12]</h4>
+					<h4><span class="id">DCS.1.2</span>The Edit Profile system shall require that text input is limited to a set number of characters for profile text fields. [PO.2.1.4]</h4>
+					<h4><span class="id">DCS.1.3</span>The Event Message system shall require that text input is limited to a set number of characters for conversation text fields [PO.2.1.12]</h4>
 					<h4><span class="id">DCS.1.4</span>The Login system shall require that text input is limited to a set number of characters for password text-fields. [PO.2.1.6, PO.2.2.9]</h4>
 					<h4><span class="id">DCS.1.5</span>The Login system shall require that text input is limited to a set number of characters for username text-fields. [PO.2.1.6, PO.2.2.9]</h4>
-					<h4><span class="id">DCS.1.6</span>The Message system shall allow utf-8 characters to be input in conversation text fields. [PO.2.1.12]</h4>
-					<h4><span class="id">DCS.1.7</span>The Message system shall allow Emoji characters to be input in conversation text fields. [PO.2.1.12]</h4>
+					<h4><span class="id">DCS.1.6</span>The Event Message system shall allow utf-8 characters to be input in conversation text fields. [PO.2.1.12]</h4>
+					<h4><span class="id">DCS.1.7</span>The Event Message system shall allow Emoji characters to be input in conversation text fields. [PO.2.1.12]</h4>
 				</div>
 
 				<h3><span class='id'>DCS.2</span>Payment Constraints</h3>
@@ -3182,12 +3180,12 @@
 							<li>Testing Technique: Demonstration</li>
 							<li>Workflow: Through the demo method we will test the character limit for description text fields by inputting one more than the maximum number of characters allowed. </li>
 						</ul>
-						<h4><span class="id">DCV.1.2</span>Verify that the Profile system requires that text input is limited to a set number of characters for profile text fields. [Req DCS.1.2] </h4>
+						<h4><span class="id">DCV.1.2</span>Verify that the Edit Profile system requires that text input is limited to a set number of characters for profile text fields. [Req DCS.1.2] </h4>
 						<ul>
 							<li>Testing Technique: Demonstration </li>
 							<li>Workflow: Through the demonstration method we will test the character limit for profile text fields by inputting one more than the maximum number of characters allowed.</li>
 						</ul>
-						<h4><span class="id">DCV.1.3</span>Verify that the Message system requires that text input is limited to a set number of characters for conversation text fields. [Req DCS.1.3]</h4>
+						<h4><span class="id">DCV.1.3</span>Verify that the Event Message system requires that text input is limited to a set number of characters for conversation text fields. [Req DCS.1.3]</h4>
 						<ul>
 							<li>Testing Technique: Demonstration </li>
 							<li>Workflow: Through the demonstration method we will test the character limit for conversation text fields by inputting one more than the maximum number of characters allowed</li>
@@ -3202,12 +3200,12 @@
 							<li>Testing Technique: Demonstration </li>
 							<li>Workflow: Through the demonstration method we will test the character limit for username text fields by inputting one more than the maximum number of characters allowed.</li>
 						</ul>
-						<h4><span class="id">DCV.1.6</span>Verify that the Message system allows utf-8 characters to be input in conversation text fields. [Req DCS.1.6]</h4>
+						<h4><span class="id">DCV.1.6</span>Verify that the Event Message system allows utf-8 characters to be input in conversation text fields. [Req DCS.1.6]</h4>
 						<ul>
 							<li>Testing Technique: Demonstration </li>
-							<li>Workflow: Through the demonstration method we will test that only utf-8 characters are able to be input into conversation text fields by attempting to input images or files in messaging text fields that should not be accepted.</li>
+							<li>Workflow: Through the demonstration method we will test that only utf-8 characters are able to be input into conversation text fields by attempting to input images or files in event messaging text fields that should not be accepted.</li>
 						</ul>
-						<h4><span class="id">DCV.1.7</span>Verify that the Message system allows Emoji characters to be input in conversation text fields. [Req DCS.1.7]</h4>
+						<h4><span class="id">DCV.1.7</span>Verify that the Event Message system allows Emoji characters to be input in conversation text fields. [Req DCS.1.7]</h4>
 						<ul>
 							<li>Testing Technique: Demonstration </li>
 							<li>Workflow: Through the demonstration method we will test that Emoji characters are able to be input into conversation text fields by inputting Emojis into conversation text fields to ensure they are accepted.
