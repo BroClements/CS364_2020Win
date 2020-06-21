@@ -127,7 +127,7 @@
       <div class="page table-of-contents">
          <h1>Table of Contents</h1><br><br>
          <div class="center">
-            <a href="#Introduction" class="s1"> 1. INTRODUCTION </a>
+            <a href="#Introduction" class="s1">1 INTRODUCTION </a>
             <div class="indent">
                <a href="#Purpose" class="s2">1.1 Purpose</a><br>
                <a href="#Scope" class="s2"> 1.2 Scope</a><br>
@@ -140,8 +140,8 @@
                </div>
                <a href="#Definitions" class="s2">1.4 Definitions </a><br><br>
             </div>
-            <a href="#References" class="s1">2. REFERENCES </a><br><br>
-            <a href="#SRequirements" class="s1">3. SPECIFIC REQUIREMENTS</a>
+            <a href="#References" class="s1">2 REFERENCES </a><br><br>
+            <a href="#SRequirements" class="s1">3 SPECIFIC REQUIREMENTS</a>
             <div class="indent">
                <a href="#Interface" class="s2">3.1 External Interface </a><br>
                <a href="#Functions" class="s2">3.2 Functions </a><br>
@@ -152,20 +152,24 @@
                <a href="#System" class="s2"> 3.7 Software System Attributes</a><br>
                <a href="#Info" class="s2"> 3.8 Supporting information</a><br><br>
             </div>
-            <a href="#Verification" class="s1">4. VERIFICATION </a><br>
+            <a href="#Verification" class="s1">4 VERIFICATION </a><br>
             <div class=indent>
-               <!--
-                    <a href="" class=s2>4.1</a><br>
-                    <a href="" class=s2>4.3</a><br>
-                    <a href="" class=s2>4.4</a><br>
-                    <a href="" class=s2>4.5</a><br>
-                    <a href="" class=s2>4.6</a><br>
-               -->
-               <a href="#FV" class=s2>4.2 Functions Verification</a><br>
+               <a href="#ExternalInterfacesVerification" class="s2">4.1 External Interfaces Verification</a><br>
+               <a href="#FunctionsVerification" class="s2">4.2 Functions Verification</a><br>
+               <a href="#UsabilityRequirementVerification" class="s2">4.3 Usability Requirement Verification</a><br>
+               <a href="#PerformanceRequirementsVerification" class="s2">4.4 Performance Requirements Verification</a><br>
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="center">
+            <div class="indent">
+               <a href="#LogicalDatabaseVerification" class="s2">4.5 Logical Database Verification</a><br>
+               <a href="#DesignConstraintsVerification" class="s2">4.6 Design Constraints Verification</a><br>
                <a href="#SAV" class=s2>4.7 Software System Verification</a><br>
                <a href="#SIV" class=s2>4.8 Supporting Information Verifications</a><br>
             </div>
-            <a href="#Appendices" class="s1">5. APPENDICES</a>
+            <a href="#Appendices" class="s1">5 APPENDICES</a>
             <div class="indent">
                <a href="#Assumptions" class="s2">5.1 Assumptions and Dependencies  </a><br>
                <a href="#Acronyms" class="s2">5.2 Acronyms and Abbreviations </a>
@@ -1754,8 +1758,8 @@
          <p>Software verification is “the process of evaluating the development phase to ensure the accuracy of the software.”. [ER.5] The goal of software verification is to verify that all requirements are met by the software. The verifications will
             be separated into different steps in order to validate the different parts. Each verification statement will map to one requirement specifically. Each verification statement will include the testing technique, a method to accomplish that
             technique, and the workflow step. </p>
-         <a name="FV"></a>
          <div class="indent">
+            <a name="ExternalInterfacesVerification"></a>
             <h2><span class="id">4.1</span>External Interfaces Verification</h2>
             <p>The External Interfaces verification defines the verification for External interfaces that pertain to the Uvents application.</p>
             <div class="indent">
@@ -1793,6 +1797,7 @@
                <p>EIV.6.1 Verify that the API allows commercial users to pay Uvents’ charges each month [EIS.6.1].</p>
             </div>
 
+            <a name="FunctionsVerification"></a>
             <h2><span class="id">4.2</span>Functions Verification</h2>
             <div class="indent">
                <u><h3>Consumer</h3></u>
@@ -2176,6 +2181,7 @@
       </div>
       <div class="page">
          <div class="indent">
+            <a name="UsabilityRequirementVerification"></a>
             <h2><span class="id">4.3</span> Usability Requirement Verification</h2>
             <div class="indent">
                <h3><span class="id">URV.1</span>Interface</h3>
@@ -2677,6 +2683,7 @@
       <div class="page">
          <div class="indent">
             <div class="indent">
+               <a name="PerformanceRequirementsVerification"></a>
                <h2><span class="id">4.4</span>Performance Requirements Verification</h2>
                <p>All performance requierments must be verified.</p>
                <div class="indent">
@@ -2760,6 +2767,7 @@
                      </li>
                   </ul>
                </div>
+               <a name="LogicalDatabaseVerification"></a>
                <h2><span class="id">4.5</span> Logical Database Verification</h2>
                <p>Each column of each table in the database must be verified after creation to ensure it meets specification outlined in 3.5 [LDR].</p>
                <div class="indent">
@@ -3403,7 +3411,8 @@
       <div class="page">
          <div class="indent">
             <div class="indent">
-               <h2><span class="id">4.6</span> Design constraints Verification</h2>
+               <a name="DesignConstraintsVerification"></a>
+               <h2><span class="id">4.6</span> Design Constraints Verification</h2>
                <p>The design constraints verification defines the verification for constraints that pertain to the “Uvents” application. </p>
                <div class="indent">
                   <h3><span class="id">DCV.1</span>Input Constraints Verification</h3>
