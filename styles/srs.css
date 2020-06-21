@@ -259,11 +259,10 @@ img {
 }
 
 .s1 {
-    font-size: large;
     font-weight: bold;
 }
 
-.s2 {
+.table-of-contents a {
     font-size: large;
 }
 
@@ -272,6 +271,20 @@ img {
     width: 61%;
     border: 1.5px solid black;
     padding: 30px;
+}
+
+.row {
+    display: flex;
+}
+
+.row span:nth-child(2) {
+    flex: 1;
+    border-bottom: 1px dashed black;
+    margin-bottom: 6px;
+}
+
+.row .pageNumber {
+    font-size: 16px;
 }
 
 /* stylesheet to be used specifically for SRS. */
