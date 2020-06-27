@@ -10,7 +10,7 @@
            let pages = document.getElementsByClassName('page');
            for (let page of pages) {
                if (++pageNumber !== 1)
-                   $(page).append(`<div class="page-number">${pageNumber}</dov>`)
+                   $(page).append('<div class="page-number">' + pageNumber + '</div>')
            }
 
            // Handle auto ID'd lists
@@ -20,13 +20,13 @@
                let idPrefix = idArray.slice(0, -1).join('.');
                let idIterator = parseInt(idArray.slice(-1));
                for (let element of autoIdList.children) {
-                   $(element).prepend(`<span class="id">${idPrefix + '.' + idIterator++}</span>`);
+                   $(element).prepend('<span class="id">' + idPrefix + '.' + (idIterator++) + '</span>');
                }
            }
 
            // Add Date labels
            for (let dateField of $('.date')) {
-               $(dateField).prepend(`<span>Date:</span>`);
+               $(dateField).prepend('<span>Date:</span>');
            }
        });
       </script>
