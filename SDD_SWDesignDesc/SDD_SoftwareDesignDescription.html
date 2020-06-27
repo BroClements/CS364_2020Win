@@ -292,13 +292,53 @@
             <h2><span class="id">4.28</span></h2>
             <h2><span class="id">4.29</span></h2>
             <h2><span class="id">4.30</span></h2>
-            <h2><span class="id">4.31</span></h2>
-            <h2><span class="id">4.32</span>Logout (Commercial User) [3.32]</h2>
+            <h2><span class="id">4.31</span>Logout (Commercial User) [3.32]</h2>
             <p class="indent">Commercial User sees the logout button. When pressed the Commercial User will be brought to the main login page.</p>
-            <h2><span class="id">4.33</span></h2>
-            <h2><span class="id">4.34</span></h2>
-            <h2><span class="id">4.35</span></h2>
-            <h2><span class="id">4.36</span></h2>
+            <h2><span class="id">4.32</span>Share Event (Commercial) [3.15]</h2>
+            <div class="indent">
+               <p>
+                  The user finds an event they want to share. They click on the Shareable link bar to pull up options for how they can share the event. 
+                  The user clicks on the copy link button and the link is copied to their clipboard which will allow them to paste the link wherever they'd like. 
+                  The user clicks on the facebook icon which brings them to their facebook page with a link to the activity ready to post. The user clicks on 
+                  the instagram icon which brings them to their instagram page with a link to the activity ready to post. The user clicks on the twitter icon which 
+                  brings them to their twitter page with a link to the activity ready to post
+               </p>
+            </div>
+            <h2><span class="id">4.33</span>Settings (Commercial) [3.]</h2>
+            <div class="indent">
+               <p>
+                  Commercial User will have the ability to change their settings. These settings are for the Notifications and to be able to logout.
+               </p>
+            </div>
+            <h2><span class="id">4.34</span>View Commercial Reports (Admin User) [3.]</h2>
+            <div class="indent">
+               <p>
+                  The Admin User will have the ability to view commercial reports. The reports display text from a Commercial User suggesting why the 
+                  community guidelines have been broken.
+               </p>
+            </div>
+            <h2><span class="id">4.35</span>View Consumer Reports (Admin User) [3.]</h2>
+            <div class="indent">
+               <p>
+                  The Admin User will have the ability to view consumer reports. The reports display text from a Consumer User suggesting why the 
+                  community guidelines have been broken. 
+               </p>
+            </div>
+            <h2><span class="id">4.36</span>Edit Profile (Admin User) [3.]</h2>
+            <div class="indent">
+               <p>
+                  The Admin User will have the ability to edit their own profile information. This profile information includes a username and password. If an 
+                  Admin User decides to change their profile picture, the Uvents application will direct them to their default photo application where they can 
+                  select their desired profile picture. If the Admin User decides to change their username, they will be given the opportunity to rename their username. 
+               </p>
+               <p>
+                  Once the Admin User is satisfied with their changes and if and if they have made any changes, then they will be given the opportunity to officially update their profile. 
+                  The update profile process will send requests from the Server to the Database to check if the chosen picture is acceptable and if the username does not 
+                  already exist among any other User. If the inputs are acceptable, then the Admin User will be displayed a success screen. Otherwise, the Server will 
+                  send a message to the GUI informing the Admin User that either the profile picture or the username is unacceptable. 
+
+               </p>
+            </div>
             <h2><span class="id">4.37</span>Login (Admin User) [3.37]</h2>
             <ul>
                 <p>The Admin User opens the app and sees the option to login via 3rd party, username/password, or to create an account.</p>
@@ -580,8 +620,7 @@
             <h2><span class="id">5.28</span></h2>
             <h2><span class="id">5.29</span></h2>
             <h2><span class="id">5.30</span></h2>
-            <h2><span class="id">5.31</span></h2>
-            <h2><span class="id">5.32</span>Logout (Commercial User) [3.32]</h2>
+            <h2><span class="id">5.31</span>Logout (Commercial User) [3.32]</h2>
             <div class="indent">
                 <p>Commercial User information is sent to server. If logout is accepted server will send confirmation to Commercial User, who’s information will be removed from device.</p>
                 <h3>Design Elements:</h3>
@@ -589,10 +628,80 @@
                     <li>Logout button: Sends Commercial User information to server for logout</li>
                 </ul>
             </div>
-            <h2><span class="id">5.33</span></h2>
-            <h2><span class="id">5.34</span></h2>
-            <h2><span class="id">5.35</span></h2>
-            <h2><span class="id">5.36</span></h2>
+            <h2><span class="id">5.32</span>Share Event (Commercial User)</h2>
+            <div class="indent">
+               <p>
+                  When the user clicks on the Shareable link bar, the program’s controller should be alerted that the user input an action and a change is happening. 
+                  Based on the action received, the controller can tell the view how the images on the application should change, and in this case the view should know 
+                  to make the shareable link bar appear with its accompanying icons and buttons. 
+               </p>
+               <p>
+                  When the user clicks any of the three icons, a few things should happen. First, the program should take the user’s credentials/authorizations and see 
+                  whether or not the user is already logged in to the social media platform. If not, The program should prompt the user to login with their credentials 
+                  which will go to the appropriate database to be verified. If not successful, it will ask the user to attempt to login again. If successful, the success 
+                  status should return to the application letting it know that the link can be shared through the appropriate social media platform. The application will 
+                  send the link to the appropriate social media platform and the platform will have the link ready in a post.
+               </p>
+               <p>
+                  When the user clicks on the copy link button, the controller becomes aware of the input and responds accordingly by copying the link to the user’s clipboard.
+               </p>
+            </div>
+            <h2><span class="id">5.33</span>Settings (Commercial User)</h2>
+            <div class="indent">
+               <p>
+                  Commercial User will be displayed with a Logout button and a Notifications on/off button from the GUI. If the Commercial User clicks the logout button, 
+                  then the Server will send a request to the Database to disqualify the current Session Key. Once the Session Key is reset, then the Database will send a 
+                  completion message to the Server that the Session Key is no longer valid. Once the Server receives the communication from the Database, then the Server 
+                  will request that GUI now presents the login screen. 
+               </p>
+            </div>
+            <h2><span class="id">5.34</span>View Commercial Reports (Admin User)</h2>
+            <div class="indent">
+               <p>
+                  GUI will display the Commercial Report text to the Admin User. Server will request up to date Commercial Report from the Database. Database will retrieve 
+                  Commercial Report and send back to Server. Server will display Commercial to Admin User.
+               </p>
+            </div>
+            <h2><span class="id">5.35</span>View Consumer Reports (Admin User)</h2>
+            <div class="indent">
+               <p>
+                  GUI will display the Consumer Report text to the Admin User. Server will request up to date Consumer Report from the Database. Database will retrieve 
+                  Consumer Report and send back to Server. Server will display Commercial to Admin User.
+               </p>
+            </div>
+            <h2><span class="id">5.36</span>Edit Profile (Admin User)</h2>
+            <div class="indent">
+               <p>
+                  GUI will present the current profile picture to the Admin User. GUI will present the current username to the Admin User. If Admin User presses on 
+                  current profile picture, GUI will send request to server to open the Admin User’s default Photo application (add to SRS as interface). If access is 
+                  granted, the Admin User’s default Photo application will be opened. If Admin User chooses a picture, Server will request the Uvents application be 
+                  presented back to the GUI with the new Profile picture now showing. 
+               </p>
+               <p>
+                  If Admin User clicks on current username, the GUI will present a keyboard and the current username will now be empty. If Admin User creates new username, 
+                  the new username may be saved in queue before requesting to update the Admin User information.
+               </p>
+               <p>
+                  If either a new Photo or a new username is presently in queue, GUI will present a button to save the updated username and password. If Admin User clicks 
+                  the update button, then the profile picture or username and if there is a new profile picture currently in the queue, the new Profile picture data will be 
+                  sent by the Server to the Database for storage. The Database will enter the profile picture data into the profile picture column and into the row associated 
+                  with the current Admin User. If the Server does not receive an error message from the Database after sending the new profile picture information, then 
+                  the GUI will indicate to the Admin User that the updates to the profile were saved. 
+               </p>
+               <p>
+                  If Admin User clicks the update button and if there is a new username currently in the queue, the new username will be sent by the Server to the Database 
+                  for storage. The Database will compare the new username with all other Admin, Consumer, and Commercial User usernames for duplication.
+               </p>
+               <p>
+                  If the new username matches any other current username, the Database will send an error message back to the Server. If the new username does not match any 
+                  other current username, the Database will save the new username in the Database in the username column and into the row associated with the current Admin User. 
+               </p>
+               <p>
+                  If the Server receives an error message from the Database after attempting to designate to a new username, then the GUI will present to the Admin User that 
+                  the username is already in use by another user. If the Server does not receive an error message from the Database after attempting to designate a new username, 
+                  then the GUI will indicate to the Admin User that the updates to the profile were saved.
+               </p>
+            </div>
             <h2><span class="id">5.37</span>Login (Admin User) [3.37]</h2>
             <ul>
                 <p>Admin User has option to login via username/password or via Facebook.</p>
