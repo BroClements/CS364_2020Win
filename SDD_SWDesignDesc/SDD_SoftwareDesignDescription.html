@@ -4,6 +4,31 @@
       <link href="../styles/sdd.css" rel="stylesheet" />
       <script src="../scripts/jquery-3.5.1.min.js"></script>
       <script>
+       $(document).ready(function() {
+           // Handle Page numbers
+           let pageNumber = 0;
+           let pages = document.getElementsByClassName('page');
+           for (let page of pages) {
+               if (++pageNumber !== 1)
+                   $(page).append(`<div class="page-number">${pageNumber}</dov>`)
+           }
+
+           // Handle auto ID'd lists
+           for (let autoIdList of $('.auto-ID')) {
+               let listId = autoIdList.id;
+               let idArray = listId.split('.')
+               let idPrefix = idArray.slice(0, -1).join('.');
+               let idIterator = parseInt(idArray.slice(-1));
+               for (let element of autoIdList.children) {
+                   $(element).prepend(`<span class="id">${idPrefix + '.' + idIterator++}</span>`);
+               }
+           }
+
+           // Add Date labels
+           for (let dateField of $('.date')) {
+               $(dateField).prepend(`<span>Date:</span>`);
+           }
+       });
       </script>
    </head>
    <body>
@@ -163,6 +188,115 @@
       <h1><span class="id">7</span>Design Language</h1>
       <div class="indent">
          
+      <div class="page title-page">
+         <h1>Software Design Description</h1>
+         <hr>
+         <h2>Uvents</h2>
+      </div>
+      <div class="page sign-off">
+         <h1>Sign Off</h1>
+         <div class="sign-row">
+            <div class="signiture"> <span class="signer">Project Manager: </span> <span class="blank">Sedona Tooley</span> </div>
+            <div class="date"> <span class="blank">June 20, 2020</span> </div>
+         </div>
+         <div class="sign-row">
+            <div class="signiture"> <span class="signer">Sponsor: </span> <span class="blank">Jordan Hamblin</span> </div>
+            <div class="date"> <span class="blank">June 20, 2020</span> </div>
+         </div>
+         <div class="sign-row">
+            <div class="signiture"> <span class="signer">QA: </span> <span class="blank">Alex Brasil</span> </div>
+            <div class="date"> <span class="blank">June 20, 2020</span> </div>
+         </div>
+         <h4 class="big">Team Leads:</h4>
+         <div class="sign-row">
+            <div class="signiture"> <span class="signer">Team 1: </span> <span class="blank">Wyatt Nelson</span> </div>
+            <div class="date"> <span class="blank">June 20, 2020</span> </div>
+         </div>
+         <div class="sign-row">
+            <div class="signiture"> <span class="signer">Team 2: </span> <span class="blank">Adrian Whetten</span> </div>
+            <div class="date"> <span class="blank">June 20, 2020</span> </div>
+         </div>
+         <div class="sign-row">
+            <div class="signiture"> <span class="signer">Team 3: </span> <span class="blank">Martin Vaughn</span> </div>
+            <div class="date"> <span class="blank">June 20, 2020</span> </div>
+         </div>
+         <div class="sign-row">
+            <div class="signiture"> <span class="signer">Team 4: </span> <span class="blank">Ethan Nelson</span> </div>
+            <div class="date"> <span class="blank">June 20, 2020</span> </div>
+         </div>
+         <div class="sign-row">
+            <div class="signiture"> <span class="signer">Team 5: </span> <span class="blank">Ilya Kovalyov</span> </div>
+            <div class="date"> <span class="blank">June 20, 2020</span> </div>
+         </div>
+         <div class="sign-row">
+            <div class="signiture"> <span class="signer">Team 6: </span> <span class="blank">Riley Nelson</span> </div>
+            <div class="date"> <span class="blank">June 20, 2020</span> </div>
+         </div>
+         <div class="sign-row">
+            <div class="signiture"> <span class="signer">Team 7: </span> <span class="blank">Zachary Klingler</span> </div>
+            <div class="date"> <span class="blank">June 20, 2020</span> </div>
+         </div>
+         <h1>List of Contributors: </h1>
+         <ul>
+            <li>Sedona Tooley</li>
+            <li>Wyatt Nelson</li>
+            <li>Samuel Bakes</li>
+            <li>Jonathan Cammack</li>
+            <li>Filipe Ferreira</li>
+            <li>Caleb Baird</li>
+            <li>Kwaku Appau-Nkansah</li>
+            <li>Joe Cheney</li>
+            <li>Abhishek Humagain</li>
+            <li>Timothy Stephenson</li>
+            <li>Adrian Whetten</li>
+            <li>Jonah White</li>
+            <li>Anita Achee</li>
+            <li>Kaylee Hartzog</li>
+            <li>Sengthay Kaing</li>
+            <li>Joshua Rolph</li>
+            <li>Martin Vaughn</li>
+            <li>Sam Despain</li>
+            <li>Andrew Schimelpfening</li>
+            <li>Suzy Naegle</li>
+            <li>Ethan Nelson</li>
+            <li>Matthew Tyra</li>
+            <li>Lance Bunch</li>
+            <li>Ilya Kovalyov</li>
+            <li>Hyeonbeom Lee</li>
+            <li>Bryson Prince</li>
+            <li>Adam White</li>
+            <li>Sam Wirthlin</li>
+            <li>Ivy Skousen</li>
+            <li>Jordan Burdett</li>
+            <li>Fangyi Li</li>
+            <li>Tori Fife</li>
+            <li>Riley Nelson</li>
+            <li>Alex Brasil</li>
+            <li>Zachary Klingler</li>
+            <li>Angelo Pablo</li>
+            <li>Jeremias Platero</li>
+            <li>Daniel Rogers</li>
+            <li>Stephen Sebastian</li>
+         </ul>
+      </div>
+      <div class="page table-of-contents">
+         <h1>Table of Contents</h1>
+         <h1>Table of Figures</h1>
+      </div>
+      <div class="page">
+         <h1>Revision History</h1>
+         <table style="width:100%">
+            <tr>
+               <th>Draft Number</th>
+               <th>Changes Made</th>
+               <th>Link</th>
+            </tr>
+            <tr>
+               <td>0 </td>
+               <td></td>
+               <td></td>
+            </tr>
+         </table>
       </div>
    </body>
 </html>
