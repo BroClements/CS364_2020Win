@@ -294,12 +294,18 @@
             <h2><span class="id">4.23</span>Create Commercial Event (Commercial) [3.23]</h2>
             <div class="indent">Commercial User clicks on the “Create New Event” button, in which the Commercial User will have access to customize the Event that will be created. After the Event information has been specified the Commercial User will Create the Event. Once
                 the Commercial User has created the Event the changes then will be sent to the database. </div>
-            <h2><span class="id">4.24</span></h2>
-            <h2><span class="id">4.25</span></h2>
-            <h2><span class="id">4.26</span></h2>
-            <h2><span class="id">4.27</span></h2>
-            <h2><span class="id">4.28</span></h2>
-            <h2><span class="id">4.29</span></h2>
+            <h2><span class="id">4.24</span>Add Description (Commercial) [3.24]</h2>
+            <div class="indent">Commercial User clicks on the description box, types in information, and saves. Then, changes are saved to the database, where the appropriate table's information will be changed. Then, the updated description is displayed to the Commercial User.</div>
+            <h2><span class="id">4.25</span>Manage Commercial Event (Commercial) [3.25]</h2>
+            <div class="indent">Commercial User clicks on the Manage Events button. All ongoing events are fetched from the database and sent back to the app. The information is displayed in a listview.</div>
+            <h2><span class="id">4.26</span>Edit Event (Commercial) [3.26]</h2>
+            <div class="indent">Commercial User clicks on the Edit Event button. The details of the event, including location, date/time, event type, description, etc. can be altered according to Commercial User's needs.</div>
+            <h2><span class="id">4.27</span>Past Events (Commercial) [3.27]</h2>
+            <div class="indent">Commercial User clicks a navigation option to view Past Events. The app navigates to that page, database information is fetched from the event table to collect events in the past created by this Commercial User, and those events are displayed in a list to the Commercial User.</div>
+            <h2><span class="id">4.28</span>Promote Event (Commercial) [3.28]</h2>
+            <div class="indent">Commercial User clicks on Promote Event button.The application then contacts the server and gets the required information regarding the time till the next bidding auction to be displayed. If the auction is currently taking place, the commercial user can click on Start Auction button and be redirected to the Start Auction feature. The commercial user can click on Share Event button and is redirected to the Share Event feature.</div>
+            <h2><span class="id">4.29</span>Start Auction (Commercial) / Place Bid [3.29]</h2>
+            <div class="indent">Commercial User clicks on the Start Auction / Place Bid button. The application then contacts the server and gets the required information regarding placing a bid. The commercial user then can click on an input field and enter in the amount they would like to bid. Then the data is sent to the database and a message is displayed whether or not the bid was places successfully.</div>
             <h2><span class="id">4.30</span>Share Event (Commercial User) [3.30]</h2>
             <div class="indent">
                <p>
@@ -703,12 +709,91 @@
 
                 </ul>
             </div>
-            <h2><span class="id">5.24</span></h2>
-            <h2><span class="id">5.25</span></h2>
-            <h2><span class="id">5.26</span></h2>
-            <h2><span class="id">5.27</span></h2>
-            <h2><span class="id">5.28</span></h2>
-            <h2><span class="id">5.29</span></h2>
+            <h2><span class="id">5.24</span>Add Description (Commercial) [3.24]</h2>
+            <div class="indent">
+               <h3>Design Viewpoints</h3>
+               <p>Commercial User enters information into text box entry. Commercial user will click on the save button. The changes are sent to the database. There the changes are made to the proper table and column. The changes are saved in the database. The updated changes are then sent back and displayed in the Commercial User's profile.</p>
+               <h3>Design Elements</h3>
+               <ul>
+                  <li>Entity Description</li>
+               </ul>
+            </div>
+            <h2><span class="id">5.25</span>Manage Commercial Event (Commercial) [3.25]</h2>
+            <div class="indent">
+               <h3>Design Viewpoints</h3>
+               <p>Commercial User clicks on the Manage Events button.
+                  Information is fetched from the database, and sent back to the app.
+                  Information is then displayed in the app in a listview.</p>
+               <h3>Design Elements</h3>
+               <ul>
+                  <li>Entity Current Events</li>
+               </ul>
+            </div>
+            <h2><span class="id">5.26</span>Edit Event (Commercial) [3.26]</h2>
+            <div class="indent">
+               <h3>Design Viewpoints</h3>
+               <p>Commercial User clicks on the Edit Event button. Data is retrieved from the database and becomes editable. The updates will take effect once the Commercial User clicks on the Update button.</p>
+               <h3>Design Elements</h3>
+               <ul>
+                  <li>Entity Event Type</li>
+                  <li>Entity Title</li>
+                  <li>Entity Description</li>
+                  <li>Entity Address</li>
+                  <li>Entity Start time</li>
+                  <li>Entity End time</li>
+                  <li>Entity Price</li>
+                  <li>Entity Icon</li>
+                  <li>Entity Max</li>
+                  <li>Foreign Key Constraints </li>
+               </ul>
+            </div>
+            <h2><span class="id">5.27</span>Past Events (Commercial) [3.27]</h2>
+            <div class="indent">
+               <h3>Design Viewpoints</h3>
+               <p>Commercial User requests to view Past Events. 
+                  Server queries information for all Events whose user ID column matches the Commercial User's user ID and whose end date is before the current date.
+                  Server returns the requested information.
+                  The application displays to the user the information for each of these past events.
+                  If no past events exist, the application displays a message indicating that the Commercial User has no past events.</p>
+               <h3>Design Elements</h3>
+               <ul>
+                  <li>Entity User ID</li>
+                  <li>Entity Current Date</li>
+                  <li>Entity Past Events</li>
+               </ul>
+            </div>
+            <h2><span class="id">5.28</span>Promote Event (Commercial) [3.28]</h2>
+            <div class="indent">
+               <h3>Design Viewpoints</h3>
+               <p>Comercial user enters in the Promote Event feature. The server requests the time till the next bidding auction. 
+                  The server returns the requested information. 
+                  The information is displayed to the commercial user. 
+                  The server verifies if the next bidding auction started. 
+                  If the answer if true, the application will allow the commercial user to click on Start Auction. </p>
+               <h3>Design Elements</h3>
+               <ul>
+                  <li>Entity time</li>
+                  <li>Entity Start Auction Button</li>
+                  <li>Entity Share Event Button</li>
+               </ul>
+            </div>
+            <h2><span class="id">5.29</span>Start Auction (Commercial) / Place Bid [3.29]</h2>
+            <div class="indent">
+               <h3>Design Viewpoints</h3>
+               <p>Session ID is Verified
+                  Server queries information for the current monthly bids
+                  Server sends the information regarding the bid to the client
+                  The user inputs the amount he/she would like to bid and the information is sent to the server
+                  The server inserts the bid into the bid table
+                  The server sends a response to the user that the bid was successfully added
+                  The application displays to the user that the bid was successfull/unsuccessfull</p>
+               <h3>Design Elements</h3>
+               <ul>
+                  <li>Entity Place Bid Button</li>
+                  <li>Entity Bid Amount</li>
+                  <li>Entity Save Bid</li>
+               </ul>
+            </div>
             <h2><span class="id">5.30</span>Share Event (Commercial User) [3.30]</h2>
             <div class="indent">
                <p>
