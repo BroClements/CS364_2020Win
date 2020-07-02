@@ -42,7 +42,7 @@
     <div class="page sign-off">
         <h1>Sign Off</h1>
         <div class="sign-row">
-            <div class="signiture"> <span class="signer">Project Manager: </span> <span class="blank">Sedona Tooley</span> </div>
+           <div class="signiture"> <span class="signer">Project Manager: </span> <span class="blank">Adrian Whetten</span> </div>
             <div class="date"> <span class="blank">June 20, 2020</span> </div>
         </div>
         <div class="sign-row">
@@ -50,7 +50,7 @@
             <div class="date"> <span class="blank">June 20, 2020</span> </div>
         </div>
         <div class="sign-row">
-            <div class="signiture"> <span class="signer">QA: </span> <span class="blank">Alex Brasil</span> </div>
+           <div class="signiture"> <span class="signer">QA: </span> <span class="blank">Joe Cheney</span> </div>
             <div class="date"> <span class="blank">June 20, 2020</span> </div>
         </div>
         <h4 class="big">Team Leads:</h4>
@@ -59,7 +59,7 @@
             <div class="date"> <span class="blank">June 20, 2020</span> </div>
         </div>
         <div class="sign-row">
-            <div class="signiture"> <span class="signer">Team 2: </span> <span class="blank">Adrian Whetten</span> </div>
+           <div class="signiture"> <span class="signer">Team 2: </span> <span class="blank">Jonah White</span></div>
             <div class="date"> <span class="blank">June 20, 2020</span> </div>
         </div>
         <div class="sign-row">
@@ -139,14 +139,36 @@
             </tr>
             <tr>
                 <td>0 </td>
-                <td></td>
-                <td></td>
+                <td>Added in the first drafts for Section 1, 4, and 5</td>
+                <td><a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/3.0-SDD-version-0/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html> https://github.com/BroClements/CS364_2020Win/blob/3.0-SDD-version-0/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html</a></td>
             </tr>
         </table>
     </div>
     <div class="super-page">
         <h1><span class="id">1</span>Introduction</h1>
+        <p>Uvents is a mobile application that brings the community together by allowing</p>
         <div class="indent">
+            <ul>
+               <li>Consumer Users to create or participate in events, which can be set as a Group Event or a Date event</li>
+               <li>Commercial Users to list their promotions as an event, which can be seen by the personal users and added to their events</li>
+               <li>Admin Users to manage general event policies, monitor user activity, and maintain the application</li>
+            </ul>
+            <a name="Purpose"></a>
+            <h2><span class="id">1.1</span>Purpose</h2>
+            <p>The purpose of Uvents is to aid in the provision of social experiences among young adults who otherwise may not know what to do with their socially available time. Consumer Users will be provided with simple access to Group Events and to create their own Group Events.</p>
+            <p>Additionally, Consumer Users can join and participate in events offered by local businesses. Uvents will receive revenue by having commercial users paying to have their events listed in the application.</p>
+            <p>Uvents provides a convenient way for people to easily arrange local events, supports the local economy, and provides recreation in the local area.</p>
+
+            <a name="Scope"></a>
+            <h2><span class="id">1.2</span>Scope</h2>
+            <p>Uvents is an application for people to post Group Events/Dates and for people to find and join those Group Events/Dates.
+            The application will allow Consumer Users to view posted events, join events, chat with those going to the same group event,
+            and learn of new events in the area.
+            </p>
+            <p>The application will allow Commercial Users to post events that they have available, for example, bowling at Fat Cats. Commercial Users will pay depending on how visible they want their Event to be to Consumer Users. Admin Users will regulate the
+               application and help to answer questions from Commercial & Consumer Users.
+            </p>
+
             <h2><span class="id">1.3</span>Design Goals</h2>
             <p>The Software Design Descriptions document (SDD) plays a vital role in the development and maintenance of software systems. An SDD document represents the software design that should be used for recording “design information, addressing various
                 design concerns, and communicating that information to the design’s stakeholders”.[1.5.2.1] An SDD document is used by “project managers, quality assurance, configuration managers, software designers, programmers, testers, and maintainers”.[1.5.2.1]
@@ -157,6 +179,17 @@
                 for documenting design viewpoints are also organized in the SDD. The SDD can also be used to organize design concerns, design elements, design constraints, and other aspects of the overall design. “An SDD is prepared to support the development
                 of a software item to solve a problem, where this problem has been expressed in terms of a set of requirements.” [1.5.2.1]
             </p>
+            <a name="Definitions"></a>
+            <h2><span class="id">1.4</span>Definitions</h2>
+            <div class="indent">
+                <h4><span class="id">1.4.1</span>Admin User - An individual that has the ability to moderate and enforce policies.</h4>
+                <h4><span class="id">1.4.2</span>Commercial User - Businesses that pay to advertise events on the application.</h4>
+                <h4><span class="id">1.4.3</span>Consumer User – Individual persons who use this application to join or plan events.</h4>
+                <h4><span class="id">1.4.4</span>Date – An event that is meant for pairs of people, typically a boy and a girl paired together, a Date is an event that’s planned by the personal user.</h4>
+                <h4><span class="id">1.4.5</span>Event – Listing that a Commercial User or Consumer User has posted.</h4>
+                <h4><span class="id">1.4.6</span>Foreign key - A foreign key is a column or group of columns in a relational database table that provides a link between data in two tables.</h4>
+                <h4><span class="id">1.4.7</span>Group Event – An event that includes three or more people. These people are not specifically paired together.</h4>
+            </div>
             <h2><span class="id">1.5</span>References</h2>
             <div class="indent">
                 <h3><span class="id">1.5.1</span>Internal References</h3>
@@ -725,7 +758,7 @@
             <h2><span class="id">5.27</span>Past Events (Commercial) [3.27]</h2>
             <div class="indent">
                <h3>Design Viewpoints</h3>
-               <p>Commercial User requests to view Past Events. 
+               <p>Commercial User requests to view Past Events.
                   Server queries information for all Events whose user ID column matches the Commercial User's user ID and whose end date is before the current date.
                   Server returns the requested information.
                   The application displays to the user the information for each of these past events.
@@ -740,10 +773,10 @@
             <h2><span class="id">5.28</span>Promote Event (Commercial) [3.28]</h2>
             <div class="indent">
                <h3>Design Viewpoints</h3>
-               <p>Comercial user enters in the Promote Event feature. The server requests the time till the next bidding auction. 
-                  The server returns the requested information. 
-                  The information is displayed to the commercial user. 
-                  The server verifies if the next bidding auction started. 
+               <p>Comercial user enters in the Promote Event feature. The server requests the time till the next bidding auction.
+                  The server returns the requested information.
+                  The information is displayed to the commercial user.
+                  The server verifies if the next bidding auction started.
                   If the answer if true, the application will allow the commercial user to click on Start Auction. </p>
                <h3>Design Elements</h3>
                <ul>
