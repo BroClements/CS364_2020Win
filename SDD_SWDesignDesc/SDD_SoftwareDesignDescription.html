@@ -1,89 +1,89 @@
 <html>
 
-<head>
-    <meta name=Title content="Software Design Description">
-    <link href="../styles/sdd.css" rel="stylesheet" />
-    <script src="../scripts/jquery-3.5.1.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            // Handle Page numbers
-            let pageNumber = 0;
-            let pages = document.getElementsByClassName('page');
-            for (let page of pages) {
-                if (++pageNumber !== 1)
-                    $(page).append('<div class="page-number">' + pageNumber + '</div>')
-            }
+   <head>
+      <meta name=Title content="Software Design Description">
+      <link href="../styles/sdd.css" rel="stylesheet" />
+      <script src="../scripts/jquery-3.5.1.min.js"></script>
+      <script>
+       $(document).ready(function() {
+           // Handle Page numbers
+           let pageNumber = 0;
+           let pages = document.getElementsByClassName('page');
+           for (let page of pages) {
+               if (++pageNumber !== 1)
+                   $(page).append('<div class="page-number">' + pageNumber + '</div>')
+           }
 
-            // Handle auto ID'd lists
-            for (let autoIdList of $('.auto-ID')) {
-                let listId = autoIdList.id;
-                let idArray = listId.split('.')
-                let idPrefix = idArray.slice(0, -1).join('.');
-                let idIterator = parseInt(idArray.slice(-1));
-                for (let element of autoIdList.children) {
-                    $(element).prepend('<span class="id">' + idPrefix + '.' + (idIterator++) + '</span>');
-                }
-            }
+           // Handle auto ID'd lists
+           for (let autoIdList of $('.auto-ID')) {
+               let listId = autoIdList.id;
+               let idArray = listId.split('.')
+               let idPrefix = idArray.slice(0, -1).join('.');
+               let idIterator = parseInt(idArray.slice(-1));
+               for (let element of autoIdList.children) {
+                   $(element).prepend('<span class="id">' + idPrefix + '.' + (idIterator++) + '</span>');
+               }
+           }
 
-            // Add Date labels
-            for (let dateField of $('.date')) {
-                $(dateField).prepend('<span>Date:</span>');
-            }
-        });
-    </script>
-</head>
+           // Add Date labels
+           for (let dateField of $('.date')) {
+               $(dateField).prepend('<span>Date:</span>');
+           }
+       });
+      </script>
+   </head>
 
-<body>
-    <div class="page title-page">
-        <h1>Software Design Description</h1>
-        <hr>
-        <h2>Uvents</h2>
-    </div>
-    <div class="page sign-off">
-        <h1>Sign Off</h1>
-        <div class="sign-row">
-           <div class="signiture"> <span class="signer">Project Manager: </span> <span class="blank">Adrian Whetten</span> </div>
+   <body>
+      <div class="page title-page">
+         <h1>Software Design Description</h1>
+         <hr>
+         <h2>Uvents</h2>
+      </div>
+      <div class="page sign-off">
+         <h1>Sign Off</h1>
+         <div class="sign-row">
+            <div class="signiture"> <span class="signer">Project Manager: </span> <span class="blank">Adrian Whetten</span> </div>
             <div class="date"> <span class="blank">June 20, 2020</span> </div>
-        </div>
-        <div class="sign-row">
+         </div>
+         <div class="sign-row">
             <div class="signiture"> <span class="signer">Sponsor: </span> <span class="blank">Jordan Hamblin</span> </div>
             <div class="date"> <span class="blank">June 20, 2020</span> </div>
-        </div>
-        <div class="sign-row">
-           <div class="signiture"> <span class="signer">QA: </span> <span class="blank">Joe Cheney</span> </div>
+         </div>
+         <div class="sign-row">
+            <div class="signiture"> <span class="signer">QA: </span> <span class="blank">Joe Cheney</span> </div>
             <div class="date"> <span class="blank">June 20, 2020</span> </div>
-        </div>
-        <h4 class="big">Team Leads:</h4>
-        <div class="sign-row">
+         </div>
+         <h4 class="big">Team Leads:</h4>
+         <div class="sign-row">
             <div class="signiture"> <span class="signer">Team 1: </span> <span class="blank">Wyatt Nelson</span> </div>
             <div class="date"> <span class="blank">June 20, 2020</span> </div>
-        </div>
-        <div class="sign-row">
-           <div class="signiture"> <span class="signer">Team 2: </span> <span class="blank">Jonah White</span></div>
+         </div>
+         <div class="sign-row">
+            <div class="signiture"> <span class="signer">Team 2: </span> <span class="blank">Jonah White</span></div>
             <div class="date"> <span class="blank">June 20, 2020</span> </div>
-        </div>
-        <div class="sign-row">
+         </div>
+         <div class="sign-row">
             <div class="signiture"> <span class="signer">Team 3: </span> <span class="blank">Martin Vaughn</span> </div>
             <div class="date"> <span class="blank">June 20, 2020</span> </div>
-        </div>
-        <div class="sign-row">
+         </div>
+         <div class="sign-row">
             <div class="signiture"> <span class="signer">Team 4: </span> <span class="blank">Ethan Nelson</span> </div>
             <div class="date"> <span class="blank">June 20, 2020</span> </div>
-        </div>
-        <div class="sign-row">
+         </div>
+         <div class="sign-row">
             <div class="signiture"> <span class="signer">Team 5: </span> <span class="blank">Ilya Kovalyov</span> </div>
             <div class="date"> <span class="blank">June 20, 2020</span> </div>
-        </div>
-        <div class="sign-row">
+         </div>
+         <div class="sign-row">
             <div class="signiture"> <span class="signer">Team 6: </span> <span class="blank">Riley Nelson</span> </div>
             <div class="date"> <span class="blank">June 20, 2020</span> </div>
-        </div>
-        <div class="sign-row">
+         </div>
+         <div class="sign-row">
             <div class="signiture"> <span class="signer">Team 7: </span> <span class="blank">Zachary Klingler</span> </div>
             <div class="date"> <span class="blank">June 20, 2020</span> </div>
-        </div>
-        <h1>List of Contributors:</h1>
-        <ul>
+         </div>
+         <h1>List of Contributors:</h1>
+         <ul>
             <li>Sedona Tooley</li>
             <li>Wyatt Nelson</li>
             <li>Samuel Bakes</li>
@@ -123,31 +123,31 @@
             <li>Jeremias Platero</li>
             <li>Daniel Rogers</li>
             <li>Stephen Sebastian</li>
-        </ul>
-    </div>
-    <div class="page table-of-contents">
-        <h1>Table of Contents</h1>
-        <h1>Table of Figures</h1>
-    </div>
-    <div class="page">
-        <h1>Revision History</h1>
-        <table style="width:100%">
+         </ul>
+      </div>
+      <div class="page table-of-contents">
+         <h1>Table of Contents</h1>
+         <h1>Table of Figures</h1>
+      </div>
+      <div class="page">
+         <h1>Revision History</h1>
+         <table style="width:100%">
             <tr>
-                <th>Draft Number</th>
-                <th>Changes Made</th>
-                <th>Link</th>
+               <th>Draft Number</th>
+               <th>Changes Made</th>
+               <th>Link</th>
             </tr>
             <tr>
-                <td>0 </td>
-                <td>Added in the first drafts for Section 1, 4, and 5</td>
-                <td><a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/3.0-SDD-version-0/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html> https://github.com/BroClements/CS364_2020Win/blob/3.0-SDD-version-0/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html</a></td>
+               <td>0 </td>
+               <td>Added in the first drafts for Section 1, 4, and 5</td>
+               <td><a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/3.0-SDD-version-0/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html> https://github.com/BroClements/CS364_2020Win/blob/3.0-SDD-version-0/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html</a></td>
             </tr>
-        </table>
-    </div>
-    <div class="super-page">
-        <h1><span class="id">1</span>Introduction</h1>
-        <p>Uvents is a mobile application that brings the community together by allowing</p>
-        <div class="indent">
+         </table>
+      </div>
+      <div class="super-page">
+         <h1><span class="id">1</span>Introduction</h1>
+         <p>Uvents is a mobile application that brings the community together by allowing</p>
+         <div class="indent">
             <ul>
                <li>Consumer Users to create or participate in events, which can be set as a Group Event or a Date event</li>
                <li>Commercial Users to list their promotions as an event, which can be seen by the personal users and added to their events</li>
@@ -162,8 +162,8 @@
             <a name="Scope"></a>
             <h2><span class="id">1.2</span>Scope</h2>
             <p>Uvents is an application for people to post Group Events/Dates and for people to find and join those Group Events/Dates.
-            The application will allow Consumer Users to view posted events, join events, chat with those going to the same group event,
-            and learn of new events in the area.
+               The application will allow Consumer Users to view posted events, join events, chat with those going to the same group event,
+               and learn of new events in the area.
             </p>
             <p>The application will allow Commercial Users to post events that they have available, for example, bowling at Fat Cats. Commercial Users will pay depending on how visible they want their Event to be to Consumer Users. Admin Users will regulate the
                application and help to answer questions from Commercial & Consumer Users.
@@ -171,48 +171,48 @@
 
             <h2><span class="id">1.3</span>Design Goals</h2>
             <p>The Software Design Descriptions document (SDD) plays a vital role in the development and maintenance of software systems. An SDD document represents the software design that should be used for recording “design information, addressing various
-                design concerns, and communicating that information to the design’s stakeholders”.[1.5.2.1] An SDD document is used by “project managers, quality assurance, configuration managers, software designers, programmers, testers, and maintainers”.[1.5.2.1]
-                Each design description contained in the SDD contains the design information needed by those previously mentioned stakeholders. The SDD is, in essence, a written description of the design for a software product for overall guidance in
-                the software project.
+               design concerns, and communicating that information to the design’s stakeholders”.[1.5.2.1] An SDD document is used by “project managers, quality assurance, configuration managers, software designers, programmers, testers, and maintainers”.[1.5.2.1]
+               Each design description contained in the SDD contains the design information needed by those previously mentioned stakeholders. The SDD is, in essence, a written description of the design for a software product for overall guidance in
+               the software project.
             </p>
             <p>One reason as to why one would want to use the SDD is because it allows the designers to communicate design information to the stakeholders. The SDD is also able to specify the requirements and design languages that are to be used. The requirements
-                for documenting design viewpoints are also organized in the SDD. The SDD can also be used to organize design concerns, design elements, design constraints, and other aspects of the overall design. “An SDD is prepared to support the development
-                of a software item to solve a problem, where this problem has been expressed in terms of a set of requirements.” [1.5.2.1]
+               for documenting design viewpoints are also organized in the SDD. The SDD can also be used to organize design concerns, design elements, design constraints, and other aspects of the overall design. “An SDD is prepared to support the development
+               of a software item to solve a problem, where this problem has been expressed in terms of a set of requirements.” [1.5.2.1]
             </p>
             <a name="Definitions"></a>
             <h2><span class="id">1.4</span>Definitions</h2>
             <div class="indent">
-                <h4><span class="id">1.4.1</span>Admin User - An individual that has the ability to moderate and enforce policies.</h4>
-                <h4><span class="id">1.4.2</span>Commercial User - Businesses that pay to advertise events on the application.</h4>
-                <h4><span class="id">1.4.3</span>Consumer User – Individual persons who use this application to join or plan events.</h4>
-                <h4><span class="id">1.4.4</span>Date – An event that is meant for pairs of people, typically a boy and a girl paired together, a Date is an event that’s planned by the personal user.</h4>
-                <h4><span class="id">1.4.5</span>Event – Listing that a Commercial User or Consumer User has posted.</h4>
-                <h4><span class="id">1.4.6</span>Foreign key - A foreign key is a column or group of columns in a relational database table that provides a link between data in two tables.</h4>
-                <h4><span class="id">1.4.7</span>Group Event – An event that includes three or more people. These people are not specifically paired together.</h4>
+               <h4><span class="id">1.4.1</span>Admin User - An individual that has the ability to moderate and enforce policies.</h4>
+               <h4><span class="id">1.4.2</span>Commercial User - Businesses that pay to advertise events on the application.</h4>
+               <h4><span class="id">1.4.3</span>Consumer User – Individual persons who use this application to join or plan events.</h4>
+               <h4><span class="id">1.4.4</span>Date – An event that is meant for pairs of people, typically a boy and a girl paired together, a Date is an event that’s planned by the personal user.</h4>
+               <h4><span class="id">1.4.5</span>Event – Listing that a Commercial User or Consumer User has posted.</h4>
+               <h4><span class="id">1.4.6</span>Foreign key - A foreign key is a column or group of columns in a relational database table that provides a link between data in two tables.</h4>
+               <h4><span class="id">1.4.7</span>Group Event – An event that includes three or more people. These people are not specifically paired together.</h4>
             </div>
             <h2><span class="id">1.5</span>References</h2>
             <div class="indent">
-                <h3><span class="id">1.5.1</span>Internal References</h3>
-                <div class="indent">
-                    <h4>1.5.1.1 System Requirements Specification:</h4>
-                    <p> <a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/2.4-SRS-version-Final/SRS_SWReqSpecs/SRS_SoftwareRequirementsSpecification.html#References>  
-                        https://github.com/BroClements/CS364_2020Win/blob/2.4-SRS-version-Final/SRS_SWReqSpecs/SRS_SoftwareRequirementsSpecification.html#References</a>
-                    </p>
-                </div>
-                <h3><span class="id">1.5.2</span>External References</h3>
-                <div class="indent">
-                    <h4>1.5.2.1</h4>
-                    <p>IEEE, "IEEE Standard for Information Technology — Systems Design — Software Design Descriptions" pp. 1-35, Jul. 2009. [Online] Available:
-                        <a href=http://ieeexplore.ieee.org/servlet/opac?punumber=5167253> http://ieeexplore.ieee.org/servlet/opac?punumber=5167253 </a> [Accessed June 20, 2020]. </p>
-                </div>
+               <h3><span class="id">1.5.1</span>Internal References</h3>
+               <div class="indent">
+                  <h4>1.5.1.1 System Requirements Specification:</h4>
+                  <p> <a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/2.4-SRS-version-Final/SRS_SWReqSpecs/SRS_SoftwareRequirementsSpecification.html#References>  
+                     https://github.com/BroClements/CS364_2020Win/blob/2.4-SRS-version-Final/SRS_SWReqSpecs/SRS_SoftwareRequirementsSpecification.html#References</a>
+                  </p>
+               </div>
+               <h3><span class="id">1.5.2</span>External References</h3>
+               <div class="indent">
+                  <h4>1.5.2.1</h4>
+                  <p>IEEE, "IEEE Standard for Information Technology — Systems Design — Software Design Descriptions" pp. 1-35, Jul. 2009. [Online] Available:
+                     <a href=http://ieeexplore.ieee.org/servlet/opac?punumber=5167253> http://ieeexplore.ieee.org/servlet/opac?punumber=5167253 </a> [Accessed June 20, 2020]. </p>
+               </div>
             </div>
-        </div>
-        <h1><span class="id">2</span>SDD Identification</h1>
-        <div class="indent">
+         </div>
+         <h1><span class="id">2</span>SDD Identification</h1>
+         <div class="indent">
 
-        </div>
-        <h1><span class="id">3</span>Design Stakeholders and Concerns</h1>
-        <div class="indent">
+         </div>
+         <h1><span class="id">3</span>Design Stakeholders and Concerns</h1>
+         <div class="indent">
             <h2><span class="id">3.1</span>Create Consumer Account</h2>
             <h2><span class="id">3.2</span>Join Commercial Event</h2>
             <h2><span class="id">3.3</span>Join Group Event</h2>
@@ -257,11 +257,11 @@
             <h2><span class="id">3.42</span>Notifications (Admin)</h2>
             <h2><span class="id">3.43</span>Settings (Admin)</h2>
             <h2><span class="id">3.44</span>Logout (Admin User)</h2>
-        </div>
-        <h1><span class="id">4</span>Design Views</h1>
-        <div class="indent">
-           <h2><span class="id">4.1</span>Create Consumer Account [3.1]</h2>
-           <p> Consumer enters an email address. Consumer enters a username and is notified if the username is already taken. Consumer enters a password and is notified when the password is valid (ie. when it reaches or exceeds 6 characters). Consumer presses the create account button. Alternatively, they can create an account by signing into a social media account and allowing the application to capture the required information to create an account.</p>
+         </div>
+         <h1><span class="id">4</span>Design Views</h1>
+         <div class="indent">
+            <h2><span class="id">4.1</span>Create Consumer Account [3.1]</h2>
+            <p> Consumer enters an email address. Consumer enters a username and is notified if the username is already taken. Consumer enters a password and is notified when the password is valid (ie. when it reaches or exceeds 6 characters). Consumer presses the create account button. Alternatively, they can create an account by signing into a social media account and allowing the application to capture the required information to create an account.</p>
             <h2><span class="id">4.2</span>Join Commercial Event [3.2]</h2>
             <p>Consumer will access a list of Commercial Events. Consumer select the Event of interest. Consumer will then have access to the Events description. Consumer can return to the list or join Event. </p>
             <h2><span class="id">4.3</span>Join Group Event [3.3]</h2>
@@ -273,12 +273,12 @@
             <p>Consumer selects the profile of the commercial or consumer user that they wish to view. The profile information is displayed. The consumer has the option to “Report User”. The consumer has the option to “Block User.” </p>
             <h2><span class="id">4.5</span>Login (Consumer User) [3.5]</h2>
             <ul>
-                <p>The Consumer User opens the app and sees the option to login via 3rd party, username/password, or to create an account.</p>
-                <li>Username and password: The Consumer User clicks on username/password and is brought to the login portal. The username and password boxes are displayed to the Consumer User. The Consumer User submits information. If the database rejects Consumer User information an error appears with an option to retry or recover password. If the database accepts the Consumer User information the Consumer User is brought to the home page.</li>
-                <lli>The Consumer User clicks on ‘3rd party login’ and is taken to a screen that displays the different 3rd party login options: Facebook, Twitter, Instagram.</li>
-                    <li>Facebook: The Consumer User clicks on login with Facebook. Facebooks login page is brought up and displays the Facebook Username and Password boxes. If the Facebook server rejects Consumer User information an error message appears. If the Facebook server accepts Consumer User information the Consumer User is brought to the Uvents’ home page.</li>
-                    <li>Twitter: The Consumer User clicks on login with Twitter. Twitter’s login page is brought up and displays the Twitter Username and Password boxes. If the Twitter server rejects Consumer User information an error message appears. If the Twitter server accepts Consumer User information the Consumer User is brought to the Uvents’ home page.</li>
-                    <li>Instagram: The Consumer User clicks on login with Instagram. Instagram’s login page is brought up and displays the Instagram Username and Password boxes. If the Instagram server rejects Consumer User information an error message appears. If the Instagram server accepts Consumer User information the Consumer User is brought to the Uvents’ home page.</li>
+               <p>The Consumer User opens the app and sees the option to login via 3rd party, username/password, or to create an account.</p>
+               <li>Username and password: The Consumer User clicks on username/password and is brought to the login portal. The username and password boxes are displayed to the Consumer User. The Consumer User submits information. If the database rejects Consumer User information an error appears with an option to retry or recover password. If the database accepts the Consumer User information the Consumer User is brought to the home page.</li>
+               <lli>The Consumer User clicks on ‘3rd party login’ and is taken to a screen that displays the different 3rd party login options: Facebook, Twitter, Instagram.</li>
+                  <li>Facebook: The Consumer User clicks on login with Facebook. Facebooks login page is brought up and displays the Facebook Username and Password boxes. If the Facebook server rejects Consumer User information an error message appears. If the Facebook server accepts Consumer User information the Consumer User is brought to the Uvents’ home page.</li>
+                  <li>Twitter: The Consumer User clicks on login with Twitter. Twitter’s login page is brought up and displays the Twitter Username and Password boxes. If the Twitter server rejects Consumer User information an error message appears. If the Twitter server accepts Consumer User information the Consumer User is brought to the Uvents’ home page.</li>
+                  <li>Instagram: The Consumer User clicks on login with Instagram. Instagram’s login page is brought up and displays the Instagram Username and Password boxes. If the Instagram server rejects Consumer User information an error message appears. If the Instagram server accepts Consumer User information the Consumer User is brought to the Uvents’ home page.</li>
             </ul>
             <h2><span class="id">4.6</span>Discover (Consumer) [3.6]</h2>
             <p>Filter/ Consumer will press the discover button. The consumer will then be presented with a discover view customized to the consumer preferences. This view will also include paid commercial listings. Sorting (Consumer) </p>
@@ -294,13 +294,13 @@
             <p class="indent">Consumer User sees the logout button. When pressed the Consumer User will be brought to the main login page.</p>
             <h2><span class="id">4.16</span>Create Commercial Account [3.16]</h2>
             <div class="indent">Commercial Users click on the “Create New Account” button. A window will open where the Commercial User will be required to enter information like a valid email, unique username and password with at least 6 characters. Commercial users will
-                also have an option to login through social media which shall integrate the consumers social media username. </div>
+               also have an option to login through social media which shall integrate the consumers social media username. </div>
             <h2><span class="id">4.17</span>Business Information (Commercial) [3.17]</h2>
             <div class="indent">Commercial User clicks business info button. A standard window opens to collect information about the business. Information like business name, business email address, business phone number, business description, business industry association,
-                and business logo or picture.</div>
+               and business logo or picture.</div>
             <h2><span class="id">4.18</span>Payment Information (Commercial) [3.18]</h2>
             <div class="indent">Commercial User clicks their preferred payment option. A standard window from that option’s service opens to collect payment information and confirm the purchase. When the purchase has been confirmed within the external option, a receipt will
-                be displayed within Uvents. </div>
+               be displayed within Uvents. </div>
             <h2><span class="id">4.19</span>Account Approval (Commercial) [3.19]</h2>
             <div class="indent">When a Commercial User submits their business information, the data is sent to the server and added to the database. A notification is sent to the admin to be approved</div>
             <h2><span class="id">4.20</span>Edit Profile (Commercial) [3.20]</h2>
@@ -309,16 +309,16 @@
             <div class="indent">Consumer User selects the profile of the Commercial User of which they would like to view. The profile information is displayed. The Consumer has the option to block/report Commercial User. </div>
             <h2><span class="id">4.22</span>Login (Commercial User) [3.22]</h2>
             <ul>
-                <p>The Commercial User opens the app and sees the option to login via 3rd party, username/password, or to create an account.</p>
-                <li>Username and password: The Commercial User clicks on username/password and is brought to the login portal. The username and password boxes are displayed to the Commercial User. The Commercial User submits information. If the database rejects Commercial User information an error appears with an option to retry or recover password. If the database accepts the Commercial User information the Commercial User is brought to the home page.</li>
-                <li>The Commercial User clicks on ‘3rd party login’ and is taken to a screen that displays the different 3rd party login options: Facebook, Twitter, Instagram.</li>
-                    <li>Facebook: The Commercial User clicks on login with Facebook. Facebooks login page is brought up and displays the Facebook Username and Password boxes. If the Facebook server rejects Commercial User information an error message appears. If the Facebook server accepts Commercial User information the Commercial User is brought to the Uvents’ home page.</li>
-                    <li>Twitter: The Commercial User clicks on login with Twitter. Twitter’s login page is brought up and displays the Twitter Username and Password boxes. If the Twitter server rejects Commercial User information an error message appears. If the Twitter server accepts Commercial User information the Commercial User is brought to the Uvents’ home page.</li>
-                    <li>Instagram: The Commercial User clicks on login with Instagram. Instagram’s login page is brought up and displays the Instagram Username and Password boxes. If the Instagram server rejects Commercial User information an error message appears. If the Instagram server accepts Commercial User information the Commercial User is brought to the Uvents’ home page.</li>
+               <p>The Commercial User opens the app and sees the option to login via 3rd party, username/password, or to create an account.</p>
+               <li>Username and password: The Commercial User clicks on username/password and is brought to the login portal. The username and password boxes are displayed to the Commercial User. The Commercial User submits information. If the database rejects Commercial User information an error appears with an option to retry or recover password. If the database accepts the Commercial User information the Commercial User is brought to the home page.</li>
+               <li>The Commercial User clicks on ‘3rd party login’ and is taken to a screen that displays the different 3rd party login options: Facebook, Twitter, Instagram.</li>
+               <li>Facebook: The Commercial User clicks on login with Facebook. Facebooks login page is brought up and displays the Facebook Username and Password boxes. If the Facebook server rejects Commercial User information an error message appears. If the Facebook server accepts Commercial User information the Commercial User is brought to the Uvents’ home page.</li>
+               <li>Twitter: The Commercial User clicks on login with Twitter. Twitter’s login page is brought up and displays the Twitter Username and Password boxes. If the Twitter server rejects Commercial User information an error message appears. If the Twitter server accepts Commercial User information the Commercial User is brought to the Uvents’ home page.</li>
+               <li>Instagram: The Commercial User clicks on login with Instagram. Instagram’s login page is brought up and displays the Instagram Username and Password boxes. If the Instagram server rejects Commercial User information an error message appears. If the Instagram server accepts Commercial User information the Commercial User is brought to the Uvents’ home page.</li>
             </ul>
             <h2><span class="id">4.23</span>Create Commercial Event (Commercial) [3.23]</h2>
             <div class="indent">Commercial User clicks on the “Create New Event” button, in which the Commercial User will have access to customize the Event that will be created. After the Event information has been specified the Commercial User will Create the Event. Once
-                the Commercial User has created the Event the changes then will be sent to the database. </div>
+               the Commercial User has created the Event the changes then will be sent to the database. </div>
             <h2><span class="id">4.24</span>Add Description (Commercial) [3.24]</h2>
             <div class="indent">Commercial User clicks on the description box, types in information, and saves. Then, changes are saved to the database, where the appropriate table's information will be changed. Then, the updated description is displayed to the Commercial User.</div>
             <h2><span class="id">4.25</span>Manage Commercial Event (Commercial) [3.25]</h2>
@@ -388,12 +388,12 @@
             </div>
             <h2><span class="id">4.37</span>Login (Admin User) [3.37]</h2>
             <ul>
-                <p>The Admin User opens the app and sees the option to login via 3rd party, username/password, or to create an account.</p>
-                <li>Username and password: The Admin User clicks on username/password and is brought to the login portal. The username and password boxes are displayed to the Admin User. The Admin User submits information. If the database rejects Admin User information an error appears with an option to retry or recover password. If the database accepts the Admin User information the Admin User is brought to the home page.</li>
-                <li>The Admin User clicks on ‘3rd party login’ and is taken to a screen that displays the different 3rd party login options: Facebook, Twitter, Instagram.</li>
-                    <li>Facebook: The Admin User clicks on login with Facebook. Facebooks login page is brought up and displays the Facebook Username and Password boxes. If the Facebook server rejects Admin User information an error message appears. If the Facebook server accepts Admin User information the Admin User is brought to the Uvents’ home page.</li>
-                    <li>Twitter: The Admin User clicks on login with Twitter. Twitter’s login page is brought up and displays the Twitter Username and Password boxes. If the Twitter server rejects Admin User information an error message appears. If the Twitter server accepts Admin User information the Admin User is brought to the Uvents’ home page.</li>
-                    <li>Instagram: The Admin User clicks on login with Instagram. Instagram’s login page is brought up and displays the Instagram Username and Password boxes. If the Instagram server rejects Admin User information an error message appears. If the Instagram server accepts Admin User information the Admin User is brought to the Uvents’ home page.</li>
+               <p>The Admin User opens the app and sees the option to login via 3rd party, username/password, or to create an account.</p>
+               <li>Username and password: The Admin User clicks on username/password and is brought to the login portal. The username and password boxes are displayed to the Admin User. The Admin User submits information. If the database rejects Admin User information an error appears with an option to retry or recover password. If the database accepts the Admin User information the Admin User is brought to the home page.</li>
+               <li>The Admin User clicks on ‘3rd party login’ and is taken to a screen that displays the different 3rd party login options: Facebook, Twitter, Instagram.</li>
+               <li>Facebook: The Admin User clicks on login with Facebook. Facebooks login page is brought up and displays the Facebook Username and Password boxes. If the Facebook server rejects Admin User information an error message appears. If the Facebook server accepts Admin User information the Admin User is brought to the Uvents’ home page.</li>
+               <li>Twitter: The Admin User clicks on login with Twitter. Twitter’s login page is brought up and displays the Twitter Username and Password boxes. If the Twitter server rejects Admin User information an error message appears. If the Twitter server accepts Admin User information the Admin User is brought to the Uvents’ home page.</li>
+               <li>Instagram: The Admin User clicks on login with Instagram. Instagram’s login page is brought up and displays the Instagram Username and Password boxes. If the Instagram server rejects Admin User information an error message appears. If the Instagram server accepts Admin User information the Admin User is brought to the Uvents’ home page.</li>
             </ul>
             <h2><span class="id">4.38</span>Create New Admin (Admin) [3.38]</h2>
             <div class="indent">
@@ -425,21 +425,21 @@
             <h2><span class="id">4.44</span>Logout (Admin User) [3.44]</h2>
             <p class="indent">Admin User sees the logout button. When pressed the Admin User will be brought to the main login page.</p>
 
-        </div>
-        <h1><span class="id">5</span>Design Viewpoints</h1>
-        <div class="indent">
-           <h2><span class="id">5.1</span>Create Consumer Account [3.1]</h2>
-           <p>Create a username and password is displayed to the consumer. An option to sign in with social media is also displayed. The server shall authenticate the username once it has been typed in ensuring that it is unique. Client-side validation will ensure that the password reaches or exceeds 6 characters, and that the email address is in the correct format.  When the consumer clicks 'Create Account' and the password, username, and email are authenticated, the password will be hashed and added to the database along with the email and username.</p>
-           <div class="indent">
-              <h3>Design Elements</h3>
-              <ul>
-                 <li>Email Address Text Field </li>
-                 <li>Username Text Field </li>
-                 <li>Password Text Field </li>
-                 <li>Create Account Button </li>
-                 <li>Social Media Login Button</li>
-              </ul>
-           </div>
+         </div>
+         <h1><span class="id">5</span>Design Viewpoints</h1>
+         <div class="indent">
+            <h2><span class="id">5.1</span>Create Consumer Account [3.1]</h2>
+            <p>Create a username and password is displayed to the consumer. An option to sign in with social media is also displayed. The server shall authenticate the username once it has been typed in ensuring that it is unique. Client-side validation will ensure that the password reaches or exceeds 6 characters, and that the email address is in the correct format.  When the consumer clicks 'Create Account' and the password, username, and email are authenticated, the password will be hashed and added to the database along with the email and username.</p>
+            <div class="indent">
+               <h3>Design Elements</h3>
+               <ul>
+                  <li>Email Address Text Field </li>
+                  <li>Username Text Field </li>
+                  <li>Password Text Field </li>
+                  <li>Create Account Button </li>
+                  <li>Social Media Login Button</li>
+               </ul>
+            </div>
             <h2><span class="id">5.2</span>Join Commercial Event [3.2]</h2>
             <ul>
                <li>List of Events is displayed to the consumer.  </li>
@@ -459,12 +459,12 @@
             </div>
             <h2><span class="id">5.3</span>Join Group Event [3.3]</h2>
             <ul>
-            <li>Notification icon is provided to the user view.  </li>
-            <li>Notification is provided on an invitation.  </li>
-            <li>List of Event invitation is provided on the notification and the list of group events.  </li>
-            <li>On Event click, Consumer can select to join or return.  </li>
-            <li>Interface between HMI and Server  </li>
-            <li>Interface between Server and Database </li>
+               <li>Notification icon is provided to the user view.  </li>
+               <li>Notification is provided on an invitation.  </li>
+               <li>List of Event invitation is provided on the notification and the list of group events.  </li>
+               <li>On Event click, Consumer can select to join or return.  </li>
+               <li>Interface between HMI and Server  </li>
+               <li>Interface between Server and Database </li>
             </ul>
             <div class="indent">
                <h3>Design Elements: </h3>
@@ -489,13 +489,13 @@
             </div>
             <h2><span class="id">5.5</span>Login (Consumer User) [3.5]</h2>
             <ul>
-                <p>Consumer User has option to login via username/password or via Facebook.</p>
-                <li>Username and password: Consumer User login information is submitted to server and put through hash to check for existing user as well as correct username and password. ‘Remember me’ option is taken into account. If information is incorrect the server returns an error message with option to recover password/account information and to re-submit login information. If the database accepts the submitted information the Consumer User will be sent to the home page of Uvents.</li>
-                <li>Facebook: Information is sent to Facebook server for verification. If server accepts request the Consumer User is brought to the home page of Uvents.</li>
-                <li>Twitter: Information is sent to Twitter server for verification. If server accepts request the Consumer User is brought to the home page of Uvents.</li>
-                <li>Instagram: Information is sent to Instagram server for verification. If server accepts request the Consumer User is brought to the home page of Uvents.</li>
-                <h3>Design Elements:</h3>
-                <table>
+               <p>Consumer User has option to login via username/password or via Facebook.</p>
+               <li>Username and password: Consumer User login information is submitted to server and put through hash to check for existing user as well as correct username and password. ‘Remember me’ option is taken into account. If information is incorrect the server returns an error message with option to recover password/account information and to re-submit login information. If the database accepts the submitted information the Consumer User will be sent to the home page of Uvents.</li>
+               <li>Facebook: Information is sent to Facebook server for verification. If server accepts request the Consumer User is brought to the home page of Uvents.</li>
+               <li>Twitter: Information is sent to Twitter server for verification. If server accepts request the Consumer User is brought to the home page of Uvents.</li>
+               <li>Instagram: Information is sent to Instagram server for verification. If server accepts request the Consumer User is brought to the home page of Uvents.</li>
+               <h3>Design Elements:</h3>
+               <table>
                   <tr><th>Name</th><th>Type</th><th>Purpose</th><th>Description</th></tr>
                   <tr>
                      <td>User Token</td>
@@ -610,9 +610,9 @@
             <h2><span class="id">5.14</span></h2>
             <h2><span class="id">5.15</span>Logout (Consumer User) [3.15]</h2>
             <div class="indent">
-                <p>Consumer User information is sent to server. If logout is accepted server will send confirmation to Consumer User, who’s information will be removed from device.</p>
-                <h3>Design Elements:</h3>
-                <table>
+               <p>Consumer User information is sent to server. If logout is accepted server will send confirmation to Consumer User, who’s information will be removed from device.</p>
+               <h3>Design Elements:</h3>
+               <table>
                   <tr><th>Name</th><th>Type</th><th>Purpose</th><th>Description</th></tr>
                   <tr>
                      <td>User Token</td>
@@ -630,135 +630,135 @@
             </div>
             <h2><span class="id">5.16</span>Create Commercial Account [3.16]</h2>
             <div class="indent">
-                <h3>Design Viewpoints:</h3>
-                <ul>
-                    <li>Session Id verified</li>
-                    <li>Email address verified</li>
-                    <li>Password verified</li>
-                    <li>Username verified</li>
-                    <li>Interface between social media and server</li>
-                    <li>Interface between Server and Database</li>
-                    <li>Database saves collected information</li>
+               <h3>Design Viewpoints:</h3>
+               <ul>
+                  <li>Session Id verified</li>
+                  <li>Email address verified</li>
+                  <li>Password verified</li>
+                  <li>Username verified</li>
+                  <li>Interface between social media and server</li>
+                  <li>Interface between Server and Database</li>
+                  <li>Database saves collected information</li>
 
-                </ul>
+               </ul>
 
-                <h3>Design Elements:</h3>
-                <ul>
-                    <li>Entity “Create Account” button</li>
-                    <li>Entity “Email Address” Textbox</li>
-                    <li>Entity “Username” Textbox</li>
-                    <li>Entity “Password” Textbox</li>
-                    <li>Entity “Login using social media” button</li>
-                </ul>
+               <h3>Design Elements:</h3>
+               <ul>
+                  <li>Entity “Create Account” button</li>
+                  <li>Entity “Email Address” Textbox</li>
+                  <li>Entity “Username” Textbox</li>
+                  <li>Entity “Password” Textbox</li>
+                  <li>Entity “Login using social media” button</li>
+               </ul>
 
             </div>
             <h2><span class="id">5.17</span>Business Information (Commercial) [3.17]</h2>
             <div class="indent">
-                <h3>Design Viewpoints:</h3>
-                <ul>
-                    <li>Session Id verified to open page</li>
-                    <li>Phone number verification feedback</li>
-                    <li>Email address verification feedback</li>
-                    <li>Location verification feedback</li>
-                    <li>Interface between Server and Database</li>
-                    <li>Database saves collected information</li>
-                </ul>
+               <h3>Design Viewpoints:</h3>
+               <ul>
+                  <li>Session Id verified to open page</li>
+                  <li>Phone number verification feedback</li>
+                  <li>Email address verification feedback</li>
+                  <li>Location verification feedback</li>
+                  <li>Interface between Server and Database</li>
+                  <li>Database saves collected information</li>
+               </ul>
 
-                <h3>Design Elements:</h3>
-                <ul>
-                    <li>Entity “Add Info” button </li>
-                    <li>Entity “Phone number” Textbox</li>
-                    <li>Entity “Email Address” Textbox</li>
-                    <li>Entity “Location” Textbox</li>
-                    <li>API data for business address</li>
+               <h3>Design Elements:</h3>
+               <ul>
+                  <li>Entity “Add Info” button </li>
+                  <li>Entity “Phone number” Textbox</li>
+                  <li>Entity “Email Address” Textbox</li>
+                  <li>Entity “Location” Textbox</li>
+                  <li>API data for business address</li>
 
-                </ul>
+               </ul>
 
             </div>
             <h2><span class="id">5.18</span>Payment Information (Commercial) [3.18]</h2>
             <div class="indent">
-                <h3>Design Viewpoints:</h3>
-                <ul>
-                    <li>Session Id verified</li>
-                    <li>Interface between HMI and Server</li>
-                    <li>Interface between Server and Database</li>
-                    <li>Server queries table in database</li>
-                    <li>Relationship between server and third party payment established</li>
-                    <li>Database saves edited information</li>
-                    <li>Changes to queried table</li>
-                </ul>
+               <h3>Design Viewpoints:</h3>
+               <ul>
+                  <li>Session Id verified</li>
+                  <li>Interface between HMI and Server</li>
+                  <li>Interface between Server and Database</li>
+                  <li>Server queries table in database</li>
+                  <li>Relationship between server and third party payment established</li>
+                  <li>Database saves edited information</li>
+                  <li>Changes to queried table</li>
+               </ul>
 
-                <h3>Design Elements:</h3>
-                <ul>
-                    <li>Price of service being purchased</li>
-                </ul>
+               <h3>Design Elements:</h3>
+               <ul>
+                  <li>Price of service being purchased</li>
+               </ul>
             </div>
             <h2><span class="id">5.19</span>Account Approval (Commercial) [3.19]</h2>
             <div class="indent">
-                <h3>Design Viewpoints:</h3>
-                <ul>
-                    <li>Session Id verified</li>
-                    <li>Interface between HMI and Server</li>
-                    <li>Interface between Server and Database</li>
-                    <li>Database saves added information</li>
-                    <li>Notification is sent to admin</li>
-                    <li>Changes to queried table</li>
-                </ul>
+               <h3>Design Viewpoints:</h3>
+               <ul>
+                  <li>Session Id verified</li>
+                  <li>Interface between HMI and Server</li>
+                  <li>Interface between Server and Database</li>
+                  <li>Database saves added information</li>
+                  <li>Notification is sent to admin</li>
+                  <li>Changes to queried table</li>
+               </ul>
 
-                <h3>Design Elements:</h3>
-                <ul>
-                    <li>Account approval status</li>
-                </ul>
+               <h3>Design Elements:</h3>
+               <ul>
+                  <li>Account approval status</li>
+               </ul>
             </div>
             <h2><span class="id">5.20</span>Edit Profile (Commercial) [3.20]</h2>
             <div class="indent">
-                <h3>Design Viewpoints:</h3>
-                <ul>
-                    <li>Session Id verified</li>
-                    <li>Interface between HMI and Server</li>
-                    <li>Interface between Server and Database</li>
-                    <li>Server queries table in database</li>
-                    <li>Database saves edited information</li>
-                    <li>Changes to queried table</li>
-                </ul>
+               <h3>Design Viewpoints:</h3>
+               <ul>
+                  <li>Session Id verified</li>
+                  <li>Interface between HMI and Server</li>
+                  <li>Interface between Server and Database</li>
+                  <li>Server queries table in database</li>
+                  <li>Database saves edited information</li>
+                  <li>Changes to queried table</li>
+               </ul>
 
-                <h3>Design Elements:</h3>
-                <ul>
-                    <li>Entity Profile Picture</li>
-                    <li>Entity First Name</li>
-                </ul>
+               <h3>Design Elements:</h3>
+               <ul>
+                  <li>Entity Profile Picture</li>
+                  <li>Entity First Name</li>
+               </ul>
             </div>
             <h2><span class="id">5.21</span>View Profile (Commercial) [3.21]</h2>
             <div class="indent">
-                <h3>Design Viewpoints:</h3>
-                <ul>
-                    <li>Session Id verified</li>
-                    <li>Interface between HMI and Server</li>
-                    <li>Interface between Server and Database</li>
-                    <li>Server queries table in database</li>
-                    <li>Retrieves information from database</li>
-                    <li>Changes to queried table</li>
-                </ul>
+               <h3>Design Viewpoints:</h3>
+               <ul>
+                  <li>Session Id verified</li>
+                  <li>Interface between HMI and Server</li>
+                  <li>Interface between Server and Database</li>
+                  <li>Server queries table in database</li>
+                  <li>Retrieves information from database</li>
+                  <li>Changes to queried table</li>
+               </ul>
 
-                <h3>Design Elements:</h3>
-                <ul>
-                    <li>Entity Profile Picture</li>
-                    <li>Entity First Name</li>
-                    <li>“Report” Commercial User</li>
-                    <li>“Block” Commercial User</li>
-                    <li>“View” Commercial profile</li>
+               <h3>Design Elements:</h3>
+               <ul>
+                  <li>Entity Profile Picture</li>
+                  <li>Entity First Name</li>
+                  <li>“Report” Commercial User</li>
+                  <li>“Block” Commercial User</li>
+                  <li>“View” Commercial profile</li>
 
-                </ul>
+               </ul>
             </div>
             <h2><span class="id">5.22</span>Login (Commercial User) [3.22]</h2>
             <ul>
-                <p>Commercial User has option to login via username/password or via Facebook.</p>
-                <li>Username and password: Commercial User login information is submitted to server and put through hash to check for existing user as well as correct username and password. ‘Remember me’ option is taken into account. If information is incorrect the server returns an error message with option to recover password/account information and to re-submit login information. If the database accepts the submitted information the Commercial User will be sent to the home page of Uvents.</li>
-                <li>Facebook: Information is sent to Facebook server for verification. If server accepts request the Commercial User is brought to the home page of Uvents.</li>
-                <li>Twitter: Information is sent to Twitter server for verification. If server accepts request the Commercial User is brought to the home page of Uvents.</li>
-                <li>Instagram: Information is sent to Instagram server for verification. If server accepts request the Commercial User is brought to the home page of Uvents.</li>
-                <h3>Design Elements:</h3>
-                <table>
+               <p>Commercial User has option to login via username/password or via Facebook.</p>
+               <li>Username and password: Commercial User login information is submitted to server and put through hash to check for existing user as well as correct username and password. ‘Remember me’ option is taken into account. If information is incorrect the server returns an error message with option to recover password/account information and to re-submit login information. If the database accepts the submitted information the Commercial User will be sent to the home page of Uvents.</li>
+               <li>Facebook: Information is sent to Facebook server for verification. If server accepts request the Commercial User is brought to the home page of Uvents.</li>
+               <li>Twitter: Information is sent to Twitter server for verification. If server accepts request the Commercial User is brought to the home page of Uvents.</li>
+               <li>Instagram: Information is sent to Instagram server for verification. If server accepts request the Commercial User is brought to the home page of Uvents.</li>
+               <h3>Design Elements:</h3>
+               <table>
                   <tr><th>Name</th><th>Type</th><th>Purpose</th><th>Description</th></tr>
                   <tr>
                      <td>User Token</td>
@@ -845,26 +845,26 @@
             </ul>
             <h2><span class="id">5.23</span>Create Commercial Event (Commercial) [3.23]</h2>
             <div class="indent">
-                <h3>Design Viewpoints:</h3>
-                <ul>
-                    <li>Session Id verified</li>
-                    <li>Interface between HMI and Server</li>
-                    <li>Interface between Server and Database</li>
-                    <li>Server queries table in database</li>
-                    <li>Database saves new Event</li>
-                    <li>Changes to queried table</li>
-                </ul>
+               <h3>Design Viewpoints:</h3>
+               <ul>
+                  <li>Session Id verified</li>
+                  <li>Interface between HMI and Server</li>
+                  <li>Interface between Server and Database</li>
+                  <li>Server queries table in database</li>
+                  <li>Database saves new Event</li>
+                  <li>Changes to queried table</li>
+               </ul>
 
-                <h3>Design Elements:</h3>
-                <ul>
-                    <li>Entity Price</li>
-                    <li>Entity Location</li>
-                    <li>Entity Date</li>
-                    <li>Entity Time </li>
-                    <li>“Create” Commercial Event</li>
+               <h3>Design Elements:</h3>
+               <ul>
+                  <li>Entity Price</li>
+                  <li>Entity Location</li>
+                  <li>Entity Date</li>
+                  <li>Entity Time </li>
+                  <li>“Create” Commercial Event</li>
 
 
-                </ul>
+               </ul>
             </div>
             <h2><span class="id">5.24</span>Add Description (Commercial) [3.24]</h2>
             <div class="indent">
@@ -980,9 +980,9 @@
             </div>
             <h2><span class="id">5.32</span>Logout (Commercial User) [3.32]</h2>
             <div class="indent">
-                <p>Commercial User information is sent to server. If logout is accepted server will send confirmation to Commercial User, who’s information will be removed from device.</p>
-                <h3>Design Elements:</h3>
-                <table>
+               <p>Commercial User information is sent to server. If logout is accepted server will send confirmation to Commercial User, who’s information will be removed from device.</p>
+               <h3>Design Elements:</h3>
+               <table>
                   <tr><th>Name</th><th>Type</th><th>Purpose</th><th>Description</th></tr>
                   <tr>
                      <td>User Token</td>
@@ -1054,13 +1054,13 @@
             </div>
             <h2><span class="id">5.37</span>Login (Admin User) [3.37]</h2>
             <ul>
-                <p>Admin User has option to login via username/password or via Facebook.</p>
-                <li>Username and password: Admin User login information is submitted to server and put through hash to check for existing user as well as correct username and password. ‘Remember me’ option is taken into account. If information is incorrect the server returns an error message with option to recover password/account information and to re-submit login information. If the database accepts the submitted information the Admin User will be sent to the home page of Uvents.</li>
-                <li>Facebook: Information is sent to Facebook server for verification. If server accepts request the Admin User is brought to the home page of Uvents.</li>
-                <li>Twitter: Information is sent to Twitter server for verification. If server accepts request the Admin User is brought to the home page of Uvents.</li>
-                <li>Instagram: Information is sent to Instagram server for verification. If server accepts request the Admin User is brought to the home page of Uvents.</li>
-                <h3>Design Elements:</h3>
-                <table>
+               <p>Admin User has option to login via username/password or via Facebook.</p>
+               <li>Username and password: Admin User login information is submitted to server and put through hash to check for existing user as well as correct username and password. ‘Remember me’ option is taken into account. If information is incorrect the server returns an error message with option to recover password/account information and to re-submit login information. If the database accepts the submitted information the Admin User will be sent to the home page of Uvents.</li>
+               <li>Facebook: Information is sent to Facebook server for verification. If server accepts request the Admin User is brought to the home page of Uvents.</li>
+               <li>Twitter: Information is sent to Twitter server for verification. If server accepts request the Admin User is brought to the home page of Uvents.</li>
+               <li>Instagram: Information is sent to Instagram server for verification. If server accepts request the Admin User is brought to the home page of Uvents.</li>
+               <h3>Design Elements:</h3>
+               <table>
                   <tr><th>Name</th><th>Type</th><th>Purpose</th><th>Description</th></tr>
                   <tr>
                      <td>User Token</td>
@@ -1150,15 +1150,15 @@
                <p>The Admin is asked to input their email. Create new username and password is displayed to the admin. The server shall authenticate the username by searching through the database for the same username. This ensures a unique username. If
                   a similar username is found, an alert will pop up to the user telling them that the username is already in use. Client side validation shall be used to ensure that the password is valid. A valid password will be a password that has
                   at least 6 characters. The Admin is then asked to provide their name. Once the create account button is pressed, the form will be validated.</p>
-                  <table>
-                     <td><tr>Name</tr><tr>Type</tr><tr>Purpose</tr><tr>Description</tr></td>
-                     <td><tr>Email Address Text Field </tr> <tr>Entity </tr> <tr>Allows the Admin User to type in their email address for verification </tr> <tr>The Admin User can use this field to set their email address that will be stored in a database </tr></td>
-                     <td><tr>Username Text Field </tr> <tr>Entity </tr> <tr>Allows the Admin User to create a username for their account, that will be used whenever they login </tr> <tr>The Admin User can use this field to set their username that will be stored in a database, and will be used whenever logging in </tr></td>
-                     <td><tr>Password Text Field </tr> <tr>Entity </tr> <tr>Allows the Admin User to create a password for their account, that will be used whenever the login </tr> <tr>The Admin User can use this field to set their password that will be stored in a database, and will be used whenever logging in </tr></td>
-                     <td><tr>Name Text Field </tr> <tr>Entity </tr> <tr>Allows the Admin User to insert their name </tr> <tr>The Admin User can use this field to set their name that will be stored in a database and will be displayed whenever needed </tr></td>
-                     <td><tr>Create Account Button </tr> <tr>Entity </tr> <tr>Allows the Admin User to send the form they filled out </tr> <tr>The Admin User can use this button to send the form they filled out with their information to the database and start using the app </tr></td>
-                     <td><tr>Social Media Login Button </tr> <tr>Entity </tr> <tr>Allows the Admin User to instead login through social media </tr> <tr>The Admin User can use this button to login using social media instead of creating a new account </tr></td>
-                  </table>
+               <table>
+                  <td><tr>Name</tr><tr>Type</tr><tr>Purpose</tr><tr>Description</tr></td>
+                  <td><tr>Email Address Text Field </tr> <tr>Entity </tr> <tr>Allows the Admin User to type in their email address for verification </tr> <tr>The Admin User can use this field to set their email address that will be stored in a database </tr></td>
+                  <td><tr>Username Text Field </tr> <tr>Entity </tr> <tr>Allows the Admin User to create a username for their account, that will be used whenever they login </tr> <tr>The Admin User can use this field to set their username that will be stored in a database, and will be used whenever logging in </tr></td>
+                  <td><tr>Password Text Field </tr> <tr>Entity </tr> <tr>Allows the Admin User to create a password for their account, that will be used whenever the login </tr> <tr>The Admin User can use this field to set their password that will be stored in a database, and will be used whenever logging in </tr></td>
+                  <td><tr>Name Text Field </tr> <tr>Entity </tr> <tr>Allows the Admin User to insert their name </tr> <tr>The Admin User can use this field to set their name that will be stored in a database and will be displayed whenever needed </tr></td>
+                  <td><tr>Create Account Button </tr> <tr>Entity </tr> <tr>Allows the Admin User to send the form they filled out </tr> <tr>The Admin User can use this button to send the form they filled out with their information to the database and start using the app </tr></td>
+                  <td><tr>Social Media Login Button </tr> <tr>Entity </tr> <tr>Allows the Admin User to instead login through social media </tr> <tr>The Admin User can use this button to login using social media instead of creating a new account </tr></td>
+               </table>
             </div>
             <h2><span class="id">5.39</span>Edit Users (Admin) [3.39]</h2>
             <div class="indent">
@@ -1166,37 +1166,37 @@
                   media links through a text box. After making changes, the Admin will be able to save the changes by pressing a button. If there are any issues saving the data, the UI will be updated to indicate. There will also be a button to delete
                   the user's account. Upon doing so, the Admin will need to verify that they want to delete the user account, and they will provide a reason for deleting it through a text box. If they verify it, the account will be deleted, and if there
                   are any issues with deleting the account, the UI will be updated to indicate so.</p>
-                  <table>
-                     <td><tr>Name</tr><tr>Type</tr><tr>Purpose</tr><tr>Description</tr></td>
-                     <td><tr>Username Textbox </tr> <tr>Entity </tr> <tr>Allows the Admin user to change the usernames of user and commercial accounts </tr> <tr>The Admin can enter text to change the username that is stored in the database </tr></td>
-                     <td><tr>Email Address Textbox </tr> <tr>Entity </tr> <tr>Allows the Admin user to change the email associated to the user or commercial account </tr> <tr>The Admin can enter text to change the email that is stored in the database </tr></td>
-                     <td><tr>Social Media Textbox </tr> <tr>Entity </tr> <tr>Allow the Admin user to change linked social media content for user and commercial accounts </tr> <tr></tr></td>
-                     <td><tr>Social Media Textbox </tr> <tr>Entity </tr> <tr>Allow the Admin user to change linked social media content for user and commercial accounts </tr> <tr>The Admin can enter text to change linked social media that is stored in the database </tr></td>
-                     <td><tr>Reason Textbox </tr> <tr>Entity </tr> <tr>To allow other Admins to see why the account was altered </tr> <tr>A string sent to the server that contains text explaining why the specified account was altered </tr></td>
-                     <td><tr>Search Bar </tr> <tr>Entity </tr> <tr>Allows the Admin user to search through for specific accounts by usernames </tr> <tr>The server will return usernames entered in the search bar allowing the Admin to locate specific accounts </tr></td>
-                     <td><tr>Select Account Button </tr> <tr>Entity </tr> <tr>Allows the Admin user to select which user or commercial account they want to look at </tr> <tr>Clicking the button will load the corresponding account information along with the user interface for changing account information </tr></td>
-                     <td><tr>Save Changes Button </tr> <tr>Entity </tr> <tr>Allows the Admin user to save changes made to an account </tr> <tr>Clicking the button will verify that the changes are valid, and it will save the changes on the database </tr></td>
-                     <td><tr>Delete Account Button </tr> <tr>Entity </tr> <tr>Allows the Admin user to delete an account </tr> <tr>Clicking the button will verify that the account can be deleted, and it will remove it from the database </tr></td>
-                     <td><tr>Error Message Box </tr> <tr>Entity </tr> <tr>Provides the reason why the account couldn’t be changed or why the account couldn’t be deleted to the Admin user </tr> <tr>If there are any errors from the server when trying to change or delete account information, they will be displayed here, so the Admin user can see them </tr></td>
-                  </table>
+               <table>
+                  <td><tr>Name</tr><tr>Type</tr><tr>Purpose</tr><tr>Description</tr></td>
+                  <td><tr>Username Textbox </tr> <tr>Entity </tr> <tr>Allows the Admin user to change the usernames of user and commercial accounts </tr> <tr>The Admin can enter text to change the username that is stored in the database </tr></td>
+                  <td><tr>Email Address Textbox </tr> <tr>Entity </tr> <tr>Allows the Admin user to change the email associated to the user or commercial account </tr> <tr>The Admin can enter text to change the email that is stored in the database </tr></td>
+                  <td><tr>Social Media Textbox </tr> <tr>Entity </tr> <tr>Allow the Admin user to change linked social media content for user and commercial accounts </tr> <tr></tr></td>
+                  <td><tr>Social Media Textbox </tr> <tr>Entity </tr> <tr>Allow the Admin user to change linked social media content for user and commercial accounts </tr> <tr>The Admin can enter text to change linked social media that is stored in the database </tr></td>
+                  <td><tr>Reason Textbox </tr> <tr>Entity </tr> <tr>To allow other Admins to see why the account was altered </tr> <tr>A string sent to the server that contains text explaining why the specified account was altered </tr></td>
+                  <td><tr>Search Bar </tr> <tr>Entity </tr> <tr>Allows the Admin user to search through for specific accounts by usernames </tr> <tr>The server will return usernames entered in the search bar allowing the Admin to locate specific accounts </tr></td>
+                  <td><tr>Select Account Button </tr> <tr>Entity </tr> <tr>Allows the Admin user to select which user or commercial account they want to look at </tr> <tr>Clicking the button will load the corresponding account information along with the user interface for changing account information </tr></td>
+                  <td><tr>Save Changes Button </tr> <tr>Entity </tr> <tr>Allows the Admin user to save changes made to an account </tr> <tr>Clicking the button will verify that the changes are valid, and it will save the changes on the database </tr></td>
+                  <td><tr>Delete Account Button </tr> <tr>Entity </tr> <tr>Allows the Admin user to delete an account </tr> <tr>Clicking the button will verify that the account can be deleted, and it will remove it from the database </tr></td>
+                  <td><tr>Error Message Box </tr> <tr>Entity </tr> <tr>Provides the reason why the account couldn’t be changed or why the account couldn’t be deleted to the Admin user </tr> <tr>If there are any errors from the server when trying to change or delete account information, they will be displayed here, so the Admin user can see them </tr></td>
+               </table>
             </div>
             <h2><span class="id">5.40</span>Edit Events (Admin) [3.40]</h2>
             <div class="indent">
-                <p>The user interface will allow the Admin User to search for events. The UI will allow the Admin to click on an event to bring up its details. The Admin will be able to edit the start time, end time, type, title, description, address, price,
-                    and participants through text boxes. The Admin will be able to save the changes by pressing a button. If there are any issues saving the data, the UI will be updated to indicate. There will also be a button to delte an account. Upon
-                    doing so, the Admin will need verify that they want to delete the event, and the Admin will provide a reason for deleting the account. If there are any issues trying to delete the account after the Admin verifies that they want it
-                    deleted, the UI will be updated to indicate so.</p>
-                    <table>
-                     <td><tr>Name</tr><tr>Type</tr><tr>Purpose</tr><tr>Description</tr></td>
-                     <td><tr></tr> <tr></tr> <tr></tr> <tr></tr></td>
-                     <td><tr></tr> <tr></tr> <tr></tr> <tr></tr></td>
-                     <td><tr></tr> <tr></tr> <tr></tr> <tr></tr></td>
-                  </table>
+               <p>The user interface will allow the Admin User to search for events. The UI will allow the Admin to click on an event to bring up its details. The Admin will be able to edit the start time, end time, type, title, description, address, price,
+                  and participants through text boxes. The Admin will be able to save the changes by pressing a button. If there are any issues saving the data, the UI will be updated to indicate. There will also be a button to delte an account. Upon
+                  doing so, the Admin will need verify that they want to delete the event, and the Admin will provide a reason for deleting the account. If there are any issues trying to delete the account after the Admin verifies that they want it
+                  deleted, the UI will be updated to indicate so.</p>
+               <table>
+                  <td><tr>Name</tr><tr>Type</tr><tr>Purpose</tr><tr>Description</tr></td>
+                  <td><tr></tr> <tr></tr> <tr></tr> <tr></tr></td>
+                  <td><tr></tr> <tr></tr> <tr></tr> <tr></tr></td>
+                  <td><tr></tr> <tr></tr> <tr></tr> <tr></tr></td>
+               </table>
             </div>
             <h2><span class="id">5.41</span>Message (Admin) [3.41]</h2>
             <div class="indent">
-                <p>The user interface will allow the Admin user to search for any other acount. The UI will allow the Admin to see any message for them that are unread.</p>
-                <table>
+               <p>The user interface will allow the Admin user to search for any other acount. The UI will allow the Admin to see any message for them that are unread.</p>
+               <table>
                   <td><tr>Name</tr><tr>Type</tr><tr>Purpose</tr><tr>Description</tr></td>
                   <td><tr>Message textbox </tr> <tr>Entry </tr> <tr>Allows user to insert the message </tr> <tr>A textbox that contains the message or file that was or is to be sent </tr></td>
                   <td><tr>Sender textbox </tr> <tr>Entry </tr> <tr>Allows user to see who is sending the message </tr> <tr>A string that shows who sent or is sending the message </tr></td>
@@ -1230,16 +1230,16 @@
                   <li>Logout button: Sends Admin User information to server for logout</li>
                </ul>
             </div>
-        </div>
-        <h1><span class="id">6</span>Design Rationale</h1>
-        <div class="indent">
+         </div>
+         <h1><span class="id">6</span>Design Rationale</h1>
+         <div class="indent">
 
-        </div>
-        <h1><span class="id">7</span>Design Language</h1>
-        <div class="indent">
+         </div>
+         <h1><span class="id">7</span>Design Language</h1>
+         <div class="indent">
 
-        </div>
-    </div>
-</body>
+         </div>
+      </div>
+   </body>
 
 </html>
