@@ -492,23 +492,90 @@
                 <li>Twitter: Information is sent to Twitter server for verification. If server accepts request the Consumer User is brought to the home page of Uvents.</li>
                 <li>Instagram: Information is sent to Instagram server for verification. If server accepts request the Consumer User is brought to the home page of Uvents.</li>
                 <h3>Design Elements:</h3>
-                <ul>
-                    <li>Login with Facebook button: Takes Consumer User to Facebook login API</li>
-                    <li>Facebook login page (this will probably be taken from Facebooks API)</li>
-                    <li>Login with Username/Password button: Takes Consumer User to login page</li>
-                    <li>Username text box: Displays input as text to send to server</li>
-                    <ul><li>Constraint: Limited input characters</li></ul>
-                    <li>Password text box: Input information to be sent to server</li>
-                    <ul>
-                        <li>Constraint: Characters are hidden from user</li>
-                        <li>Constraint: Limited acceptance of symbols</li>
-                    </ul>
-                    <li>Remember me checkbox: Tells server/device to remember login information for device</li>
-                    <li>Recover password: Takes Consumer User to recovery screen</li>
-                    <li>Submit button: Sends inputs (Username, Password) to server for verification</li>
-                    <ul><li>Constraint: Only sends if Username and Password text boxes are filled out</li></ul>
-                    <li>Back button: Takes Consumer User to main login page</li>
-                </ul>
+                <table>
+                  <tr><th>Name</th><th>Type</th><th>Purpose</th><th>Description</th></tr>
+                  <tr>
+                     <td>User Token</td>
+                     <td>Entity</td>
+                     <td>Security Measure to prevent malicious intent</td>
+                     <td>A piece of data that is sent between the device and server, allowing the accounts</td>
+                  </tr>
+                  <tr>
+                     <td>Login with 3rd Party</td>
+                     <td>Entity- Button</td>
+                     <td>Takes the Consumer User to login page with 3rd party options</td>
+                     <td>A button that takes the Consumer User to the 3rd party login options page</td>
+                  </tr>
+                  <tr>
+                     <td>Facebook Login Button</td>
+                     <td>Entity- Button</td>
+                     <td>Sends Consumer User to Facebook login API</td>
+                     <td>A button that sends the Consumer User to the Facebook API login page and gathers information from API for Uvents login</td>
+                  </tr>
+                  <tr>
+                     <td>Twitter Login button</td>
+                     <td>Entity- Button</td>
+                     <td>Sends Consumer User to Twitter Login API</td>
+                     <td>A button that sends the Consumer User to the Twitter API login page and gathers information from API for Uvents login</td>
+                  </tr>
+                  <tr>
+                     <td>Instagram login button</td>
+                     <td>Entity- Button</td>
+                     <td>Sends Consumer User to Instagram Login API</td>
+                     <td>A button that sends the Consumer User to the Instagram API login page and gathers information from API for Uvents login</td>
+                  </tr>
+                  <tr>
+                     <td>Username/password button</td>
+                     <td>Entity- Button</td>
+                     <td>Takes the Consumer User to Uvents login page</td>
+                     <td>A button that takes the Consumer User to the Uvents login page to login with their Uvents username and password</td>
+                  </tr>
+                  <tr>
+                     <td>Username textbox</td>
+                     <td>Entity- Textbox</td>
+                     <td>Input for username to be sent to the server</td>
+                     <td>A textbox that collects the Consumer User’s username to be sent to the server for login
+                        <ul><li>Constraint: Limited input characters</li></ul>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>Password textbox</td>
+                     <td>Entity- Textbox</td>
+                     <td>Input for password to be sent to the server</td>
+                     <td>A textbox that collects the Consumer User's password to be sent to the server for login
+                        <ul>
+                           <li>Constraint: Characters are hidden from user</li>
+                           <li>Constraint: Limited acceptance of symbols</li>
+                        </ul>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>Remember me checkbox</td>
+                     <td>Entity- Checkbox</td>
+                     <td>Input to tell the server/device to remember login information for device</td>
+                     <td>A checkbox that tells the device to locally store this login information in order to save the user time</td>
+                  </tr>
+                  <tr>
+                     <td>Recover password button</td>
+                     <td>Entity- Button</td>
+                     <td>Takes the Consumer User to the recovery screen</td>
+                     <td>A button that takes the Consumer User to the recovery screen</td>
+                  </tr>
+                  <tr>
+                     <td>Submit Button</td>
+                     <td>Entity- Button</td>
+                     <td>Sends inputs (username & password) to the server for login verification</td>
+                     <td>A button that sends the username & password to the server for login verification
+                        <ul><li>Constraint: Only sends if username and password textboxes are filled out</li></ul>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>Back Button</td>
+                     <td>Entity- Button</td>
+                     <td>Takes the the Consumer User to the main login page</td>
+                     <td>A button that takes the Consumer User to the main login page</td>
+                  </tr>
+               </table>
             </ul>
             <h2><span class="id">5.6</span>Discover (Consumer) [3.6]</h2>
             <p>Consumer presses discover button. Server sends request to database. Database returns list of events to server. events list is loaded on application. </p>
@@ -542,9 +609,21 @@
             <div class="indent">
                 <p>Consumer User information is sent to server. If logout is accepted server will send confirmation to Consumer User, who’s information will be removed from device.</p>
                 <h3>Design Elements:</h3>
-                <ul>
-                    <li>Logout button: Sends Consumer User information to server for logout</li>
-                </ul>
+                <table>
+                  <tr><th>Name</th><th>Type</th><th>Purpose</th><th>Description</th></tr>
+                  <tr>
+                     <td>User Token</td>
+                     <td>Entity</td>
+                     <td>Security Measure to prevent malicious intent</td>
+                     <td>A piece of data that is sent between the device and server, allowing the accounts</td>
+                  </tr>
+                  <tr>
+                     <td>Logout Button</td>
+                     <td>Entity- Button</td>
+                     <td>Takes the Consumer User to the main login page</td>
+                     <td>A button that informs the server of logout and clears information on device, then takes the Consumer User to the main login page</td>
+                  </tr>
+               </table>
             </div>
             <h2><span class="id">5.16</span>Create Commercial Account [3.16]</h2>
             <div class="indent">
@@ -676,23 +755,90 @@
                 <li>Twitter: Information is sent to Twitter server for verification. If server accepts request the Commercial User is brought to the home page of Uvents.</li>
                 <li>Instagram: Information is sent to Instagram server for verification. If server accepts request the Commercial User is brought to the home page of Uvents.</li>
                 <h3>Design Elements:</h3>
-                <ul>
-                    <li>Login with Facebook button: Takes Commercial User to Facebook login API</li>
-                    <li>Facebook login page (this will probably be taken from Facebooks API)</li>
-                    <li>Login with Username/Password button: Takes Commercial User to login page</li>
-                    <li>Username text box: Displays input as text to send to server</li>
-                    <ul><li>Constraint: Limited input characters</li></ul>
-                    <li>Password text box: Input information to be sent to server</li>
-                    <ul>
-                        <li>Constraint: Characters are hidden from user</li>
-                        <li>Constraint: Limited acceptance of symbols</li>
-                    </ul>
-                    <li>Remember me checkbox: Tells server/device to remember login information for device</li>
-                    <li>Recover password: Takes Commercial User to recovery screen</li>
-                    <li>Submit button: Sends inputs (Username, Password) to server for verification</li>
-                    <ul><li>Constraint: Only sends if Username and Password text boxes are filled out</li></ul>
-                    <li>Back button: Takes Commercial User to main login page</li>
-                </ul>
+                <table>
+                  <tr><th>Name</th><th>Type</th><th>Purpose</th><th>Description</th></tr>
+                  <tr>
+                     <td>User Token</td>
+                     <td>Entity</td>
+                     <td>Security Measure to prevent malicious intent</td>
+                     <td>A piece of data that is sent between the device and server, allowing the accounts</td>
+                  </tr>
+                  <tr>
+                     <td>Login with 3rd Party</td>
+                     <td>Entity- Button</td>
+                     <td>Takes the Commercial User to login page with 3rd party options</td>
+                     <td>A button that takes the Commercial User to the 3rd party login options page</td>
+                  </tr>
+                  <tr>
+                     <td>Facebook Login Button</td>
+                     <td>Entity- Button</td>
+                     <td>Sends Commercial User to Facebook login API</td>
+                     <td>A button that sends the Commercial User to the Facebook API login page and gathers information from API for Uvents login</td>
+                  </tr>
+                  <tr>
+                     <td>Twitter Login button</td>
+                     <td>Entity- Button</td>
+                     <td>Sends Commercial User to Twitter Login API</td>
+                     <td>A button that sends the Commercial User to the Twitter API login page and gathers information from API for Uvents login</td>
+                  </tr>
+                  <tr>
+                     <td>Instagram login button</td>
+                     <td>Entity- Button</td>
+                     <td>Sends Commercial User to Instagram Login API</td>
+                     <td>A button that sends the Commercial User to the Instagram API login page and gathers information from API for Uvents login</td>
+                  </tr>
+                  <tr>
+                     <td>Username/password button</td>
+                     <td>Entity- Button</td>
+                     <td>Takes the Commercial User to Uvents login page</td>
+                     <td>A button that takes the Commercial User to the Uvents login page to login with their Uvents username and password</td>
+                  </tr>
+                  <tr>
+                     <td>Username textbox</td>
+                     <td>Entity- Textbox</td>
+                     <td>Input for username to be sent to the server</td>
+                     <td>A textbox that collects the Commercial User’s username to be sent to the server for login
+                        <ul><li>Constraint: Limited input characters</li></ul>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>Password textbox</td>
+                     <td>Entity- Textbox</td>
+                     <td>Input for password to be sent to the server</td>
+                     <td>A textbox that collects the Commercial User's password to be sent to the server for login
+                        <ul>
+                           <li>Constraint: Characters are hidden from user</li>
+                           <li>Constraint: Limited acceptance of symbols</li>
+                        </ul>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>Remember me checkbox</td>
+                     <td>Entity- Checkbox</td>
+                     <td>Input to tell the server/device to remember login information for device</td>
+                     <td>A checkbox that tells the device to locally store this login information in order to save the user time</td>
+                  </tr>
+                  <tr>
+                     <td>Recover password button</td>
+                     <td>Entity- Button</td>
+                     <td>Takes the Commercial User to the recovery screen</td>
+                     <td>A button that takes the Commercial User to the recovery screen</td>
+                  </tr>
+                  <tr>
+                     <td>Submit Button</td>
+                     <td>Entity- Button</td>
+                     <td>Sends inputs (username & password) to the server for login verification</td>
+                     <td>A button that sends the username & password to the server for login verification
+                        <ul><li>Constraint: Only sends if username and password textboxes are filled out</li></ul>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>Back Button</td>
+                     <td>Entity- Button</td>
+                     <td>Takes the the Commercial User to the main login page</td>
+                     <td>A button that takes the Commercial User to the main login page</td>
+                  </tr>
+               </table>
             </ul>
             <h2><span class="id">5.23</span>Create Commercial Event (Commercial) [3.23]</h2>
             <div class="indent">
@@ -833,7 +979,21 @@
             <div class="indent">
                 <p>Commercial User information is sent to server. If logout is accepted server will send confirmation to Commercial User, who’s information will be removed from device.</p>
                 <h3>Design Elements:</h3>
-                <ul><li>Logout button: Sends Commercial User information to server for logout</li></ul>
+                <table>
+                  <tr><th>Name</th><th>Type</th><th>Purpose</th><th>Description</th></tr>
+                  <tr>
+                     <td>User Token</td>
+                     <td>Entity</td>
+                     <td>Security Measure to prevent malicious intent</td>
+                     <td>A piece of data that is sent between the device and server, allowing the accounts</td>
+                  </tr>
+                  <tr>
+                     <td>Logout Button</td>
+                     <td>Entity- Button</td>
+                     <td>Takes the Commercial User to the main login page</td>
+                     <td>A button that informs the server of logout and clears information on device, then takes the Commercial User to the main login page</td>
+                  </tr>
+               </table>
             </div>
             <h2><span class="id">5.33</span>View Commercial Reports (Admin User) [3.33]</h2>
             <div class="indent">
@@ -897,23 +1057,90 @@
                 <li>Twitter: Information is sent to Twitter server for verification. If server accepts request the Admin User is brought to the home page of Uvents.</li>
                 <li>Instagram: Information is sent to Instagram server for verification. If server accepts request the Admin User is brought to the home page of Uvents.</li>
                 <h3>Design Elements:</h3>
-                <ul>
-                    <li>Login with Facebook button: Takes Admin User to Facebook login API</li>
-                    <li>Facebook login page (this will probably be taken from Facebooks API)</li>
-                    <li>Login with Username/Password button: Takes Admin User to login page</li>
-                    <li>Username text box: Displays input as text to send to server</li>
-                    <ul><li>Constraint: Limited input characters</li></ul>
-                    <li>Password text box: Input information to be sent to server</li>
-                    <ul>
-                        <li>Constraint: Characters are hidden from user</li>
-                        <li>Constraint: Limited acceptance of symbols</li>
-                    </ul>
-                    <li>Remember me checkbox: Tells server/device to remember login information for device</li>
-                    <li>Recover password: Takes Admin User to recovery screen</li>
-                    <li>Submit button: Sends inputs (Username, Password) to server for verification</li>
-                    <ul><li>Constraint: Only sends if Username and Password text boxes are filled out</li></ul>
-                    <li>Back button: Takes Admin User to main login page</li>
-                </ul>
+                <table>
+                  <tr><th>Name</th><th>Type</th><th>Purpose</th><th>Description</th></tr>
+                  <tr>
+                     <td>User Token</td>
+                     <td>Entity</td>
+                     <td>Security Measure to prevent malicious intent</td>
+                     <td>A piece of data that is sent between the device and server, allowing the accounts</td>
+                  </tr>
+                  <tr>
+                     <td>Login with 3rd Party</td>
+                     <td>Entity- Button</td>
+                     <td>Takes the Admin User to login page with 3rd party options</td>
+                     <td>A button that takes the Admin User to the 3rd party login options page</td>
+                  </tr>
+                  <tr>
+                     <td>Facebook Login Button</td>
+                     <td>Entity- Button</td>
+                     <td>Sends Admin User to Facebook login API</td>
+                     <td>A button that sends the Admin User to the Facebook API login page and gathers information from API for Uvents login</td>
+                  </tr>
+                  <tr>
+                     <td>Twitter Login button</td>
+                     <td>Entity- Button</td>
+                     <td>Sends Admin User to Twitter Login API</td>
+                     <td>A button that sends the Admin User to the Twitter API login page and gathers information from API for Uvents login</td>
+                  </tr>
+                  <tr>
+                     <td>Instagram login button</td>
+                     <td>Entity- Button</td>
+                     <td>Sends Admin User to Instagram Login API</td>
+                     <td>A button that sends the Admin User to the Instagram API login page and gathers information from API for Uvents login</td>
+                  </tr>
+                  <tr>
+                     <td>Username/password button</td>
+                     <td>Entity- Button</td>
+                     <td>Takes the Admin User to Uvents login page</td>
+                     <td>A button that takes the Admin User to the Uvents login page to login with their Uvents username and password</td>
+                  </tr>
+                  <tr>
+                     <td>Username textbox</td>
+                     <td>Entity- Textbox</td>
+                     <td>Input for username to be sent to the server</td>
+                     <td>A textbox that collects the Admin User’s username to be sent to the server for login
+                        <ul><li>Constraint: Limited input characters</li></ul>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>Password textbox</td>
+                     <td>Entity- Textbox</td>
+                     <td>Input for password to be sent to the server</td>
+                     <td>A textbox that collects the Admin User's password to be sent to the server for login
+                        <ul>
+                           <li>Constraint: Characters are hidden from user</li>
+                           <li>Constraint: Limited acceptance of symbols</li>
+                        </ul>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>Remember me checkbox</td>
+                     <td>Entity- Checkbox</td>
+                     <td>Input to tell the server/device to remember login information for device</td>
+                     <td>A checkbox that tells the device to locally store this login information in order to save the user time</td>
+                  </tr>
+                  <tr>
+                     <td>Recover password button</td>
+                     <td>Entity- Button</td>
+                     <td>Takes the Admin User to the recovery screen</td>
+                     <td>A button that takes the Admin User to the recovery screen</td>
+                  </tr>
+                  <tr>
+                     <td>Submit Button</td>
+                     <td>Entity- Button</td>
+                     <td>Sends inputs (username & password) to the server for login verification</td>
+                     <td>A button that sends the username & password to the server for login verification
+                        <ul><li>Constraint: Only sends if username and password textboxes are filled out</li></ul>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>Back Button</td>
+                     <td>Entity- Button</td>
+                     <td>Takes the the Admin User to the main login page</td>
+                     <td>A button that takes the Admin User to the main login page</td>
+                  </tr>
+               </table>
             </ul>
             <h2><span class="id">5.38</span>Create New Admin (Admin) [3.38]</h2>
             <div class="indent">
@@ -951,7 +1178,21 @@
             <div class="indent">
                 <p>Admin User information is sent to server. If logout is accepted server will send confirmation to Admin User, who’s information will be removed from device.</p>
                 <h3>Design Elements:</h3>
-                <ul><li>Logout button: Sends Admin User information to server for logout</li></ul>
+                <table>
+                  <tr><th>Name</th><th>Type</th><th>Purpose</th><th>Description</th></tr>
+                  <tr>
+                     <td>User Token</td>
+                     <td>Entity</td>
+                     <td>Security Measure to prevent malicious intent</td>
+                     <td>A piece of data that is sent between the device and server, allowing the accounts</td>
+                  </tr>
+                  <tr>
+                     <td>Logout Button</td>
+                     <td>Entity- Button</td>
+                     <td>Takes the Admin User to the main login page</td>
+                     <td>A button that informs the server of logout and clears information on device, then takes the Admin User to the main login page</td>
+                  </tr>
+               </table>
             </div>
         </div>
         <h1><span class="id">6</span>Design Rationale</h1>
