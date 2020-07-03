@@ -173,6 +173,12 @@ ul.unlabeled {
     list-style: none;
 }
 
+ul.big>li,
+ul.big>li>span.id {
+    font-weight: bold;
+    font-size: 18px;
+}
+
 .indent {
     padding-left: 20px;
 }
