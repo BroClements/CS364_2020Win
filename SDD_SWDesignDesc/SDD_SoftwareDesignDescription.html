@@ -1369,13 +1369,13 @@
                   a similar username is found, an alert will pop up to the user telling them that the username is already in use. Client side validation shall be used to ensure that the password is valid. A valid password will be a password that has
                   at least 6 characters. The Admin is then asked to provide their name. Once the create account button is pressed, the form will be validated.</p>
                <table>
-                  <td><tr>Name</tr><tr>Type</tr><tr>Purpose</tr><tr>Description</tr></td>
-                  <td><tr>Email Address Text Field </tr> <tr>Entity </tr> <tr>Allows the Admin User to type in their email address for verification </tr> <tr>The Admin User can use this field to set their email address that will be stored in a database </tr></td>
-                  <td><tr>Username Text Field </tr> <tr>Entity </tr> <tr>Allows the Admin User to create a username for their account, that will be used whenever they login </tr> <tr>The Admin User can use this field to set their username that will be stored in a database, and will be used whenever logging in </tr></td>
-                  <td><tr>Password Text Field </tr> <tr>Entity </tr> <tr>Allows the Admin User to create a password for their account, that will be used whenever the login </tr> <tr>The Admin User can use this field to set their password that will be stored in a database, and will be used whenever logging in </tr></td>
-                  <td><tr>Name Text Field </tr> <tr>Entity </tr> <tr>Allows the Admin User to insert their name </tr> <tr>The Admin User can use this field to set their name that will be stored in a database and will be displayed whenever needed </tr></td>
-                  <td><tr>Create Account Button </tr> <tr>Entity </tr> <tr>Allows the Admin User to send the form they filled out </tr> <tr>The Admin User can use this button to send the form they filled out with their information to the database and start using the app </tr></td>
-                  <td><tr>Social Media Login Button </tr> <tr>Entity </tr> <tr>Allows the Admin User to instead login through social media </tr> <tr>The Admin User can use this button to login using social media instead of creating a new account </tr></td>
+                  <tr><th>Name</th><th>Type</th><th>Purpose</th><th>Description</th></tr>
+                  <tr><td>Email Address Text Field </td> <td>Entity </td> <td>Allows the Admin User to type in their email address for verification </td> <td>The Admin User can use this field to set their email address that will be stored in a database </td></tr>
+                  <tr><td>Username Text Field </td> <td>Entity </td> <td>Allows the Admin User to create a username for their account, that will be used whenever they login </td> <td>The Admin User can use this field to set their username that will be stored in a database, and will be used whenever logging in </td></tr>
+                  <tr><td>Password Text Field </td> <td>Entity </td> <td>Allows the Admin User to create a password for their account, that will be used whenever the login </td> <td>The Admin User can use this field to set their password that will be stored in a database, and will be used whenever logging in </td></tr>
+                  <tr><td>Name Text Field </td> <td>Entity </td> <td>Allows the Admin User to insert their name </td> <td>The Admin User can use this field to set their name that will be stored in a database and will be displayed whenever needed </td></tr>
+                  <tr><td>Create Account Button </td> <td>Entity </td> <td>Allows the Admin User to send the form they filled out </td> <td>The Admin User can use this button to send the form they filled out with their information to the database and start using the app </td></tr>
+                  <tr><td>Social Media Login Button </td> <td>Entity </td> <td>Allows the Admin User to instead login through social media </td> <td>The Admin User can use this button to login using social media instead of creating a new account </td></tr>
                </table>
             </div>
             <h2><span class="id">5.40</span>Edit Users (Admin) [3.40]</h2>
@@ -1385,17 +1385,16 @@
                   the user's account. Upon doing so, the Admin will need to verify that they want to delete the user account, and they will provide a reason for deleting it through a text box. If they verify it, the account will be deleted, and if there
                   are any issues with deleting the account, the UI will be updated to indicate so.</p>
                <table>
-                  <td><tr>Name</tr><tr>Type</tr><tr>Purpose</tr><tr>Description</tr></td>
-                  <td><tr>Username Textbox </tr> <tr>Entity </tr> <tr>Allows the Admin user to change the usernames of user and commercial accounts </tr> <tr>The Admin can enter text to change the username that is stored in the database </tr></td>
-                  <td><tr>Email Address Textbox </tr> <tr>Entity </tr> <tr>Allows the Admin user to change the email associated to the user or commercial account </tr> <tr>The Admin can enter text to change the email that is stored in the database </tr></td>
-                  <td><tr>Social Media Textbox </tr> <tr>Entity </tr> <tr>Allow the Admin user to change linked social media content for user and commercial accounts </tr> <tr></tr></td>
-                  <td><tr>Social Media Textbox </tr> <tr>Entity </tr> <tr>Allow the Admin user to change linked social media content for user and commercial accounts </tr> <tr>The Admin can enter text to change linked social media that is stored in the database </tr></td>
-                  <td><tr>Reason Textbox </tr> <tr>Entity </tr> <tr>To allow other Admins to see why the account was altered </tr> <tr>A string sent to the server that contains text explaining why the specified account was altered </tr></td>
-                  <td><tr>Search Bar </tr> <tr>Entity </tr> <tr>Allows the Admin user to search through for specific accounts by usernames </tr> <tr>The server will return usernames entered in the search bar allowing the Admin to locate specific accounts </tr></td>
-                  <td><tr>Select Account Button </tr> <tr>Entity </tr> <tr>Allows the Admin user to select which user or commercial account they want to look at </tr> <tr>Clicking the button will load the corresponding account information along with the user interface for changing account information </tr></td>
-                  <td><tr>Save Changes Button </tr> <tr>Entity </tr> <tr>Allows the Admin user to save changes made to an account </tr> <tr>Clicking the button will verify that the changes are valid, and it will save the changes on the database </tr></td>
-                  <td><tr>Delete Account Button </tr> <tr>Entity </tr> <tr>Allows the Admin user to delete an account </tr> <tr>Clicking the button will verify that the account can be deleted, and it will remove it from the database </tr></td>
-                  <td><tr>Error Message Box </tr> <tr>Entity </tr> <tr>Provides the reason why the account couldn’t be changed or why the account couldn’t be deleted to the Admin user </tr> <tr>If there are any errors from the server when trying to change or delete account information, they will be displayed here, so the Admin user can see them </tr></td>
+                  <tr><th>Name</th><th>Type</th><th>Purpose</th><th>Description</th></tr>
+                  <tr><td>Username Textbox </td> <td>Entity </td> <td>Allows the Admin user to change the usernames of user and commercial accounts </tr> <tr>The Admin can enter text to change the username that is stored in the database </td></tr>
+                  <tr><td>Email Address Textbox </td> <td>Entity </td> <td>Allows the Admin user to change the email associated to the user or commercial account </td> <td>The Admin can enter text to change the email that is stored in the database </td></tr>
+                  <tr><td>Social Media Textbox </td> <td>Entity </td> <td>Allow the Admin user to change linked social media content for user and commercial accounts </td> <td>The Admin can enter text to change linked social media that is stored in the database </td></tr>
+                  <tr><td>Reason Textbox </td> <td>Entity </td> <td>To allow other Admins to see why the account was altered </td> <td>A string sent to the server that contains text explaining why the specified account was altered </td></tr>
+                  <tr><td>Search Bar </td> <td>Entity </td> <td>Allows the Admin user to search through for specific accounts by usernames </td> <td>The server will return usernames entered in the search bar allowing the Admin to locate specific accounts </td></tr>
+                  <tr><td>Select Account Button </td> <td>Entity </td> <td>Allows the Admin user to select which user or commercial account they want to look at </td> <td>Clicking the button will load the corresponding account information along with the user interface for changing account information </td></tr>
+                  <tr><td>Save Changes Button </td> <td>Entity </td> <td>Allows the Admin user to save changes made to an account </td> <td>Clicking the button will verify that the changes are valid, and it will save the changes on the database </td></tr>
+                  <tr><td>Delete Account Button </td> <td>Entity </td> <td>Allows the Admin user to delete an account </td> <td>Clicking the button will verify that the account can be deleted, and it will remove it from the database </td></tr>
+                  <tr><td>Error Message Box </td> <td>Entity </td> <td>Provides the reason why the account couldn’t be changed or why the account couldn’t be deleted to the Admin user </td> <td>If there are any errors from the server when trying to change or delete account information, they will be displayed here, so the Admin user can see them </td></tr>
                </table>
             </div>
             <h2><span class="id">5.41</span>Edit Events (Admin) [3.41]</h2>
@@ -1405,39 +1404,45 @@
                   doing so, the Admin will need verify that they want to delete the event, and the Admin will provide a reason for deleting the account. If there are any issues trying to delete the account after the Admin verifies that they want it
                   deleted, the UI will be updated to indicate so.</p>
                <table>
-                  <td><tr>Name</tr><tr>Type</tr><tr>Purpose</tr><tr>Description</tr></td>
-                  <td><tr></tr> <tr></tr> <tr></tr> <tr></tr></td>
-                  <td><tr></tr> <tr></tr> <tr></tr> <tr></tr></td>
-                  <td><tr></tr> <tr></tr> <tr></tr> <tr></tr></td>
+                  <tr><th>Name</th><th>Type</th><th>Purpose</th><th>Description</th></tr>
+                  <tr><td>Username Textbox </td><td>Entity </td><td>Allows the Admin user to change the usernames of user and commercial accounts </td><td>The Admin can enter text to change the username that is stored in the database </td></tr>
+                  <tr><td>Email Address Textbox </td><td>Entity </td><td>Allows the Admin user to change the email associated to the user or commercial account </td><td>The Admin can enter text to change the email that is stored in the database </td></tr>
+                  <tr><td>Social Media Textbox </td><td>Entity </td><td>Allow the Admin user to change linked social media content for user and commercial accounts </td><td>The Admin can enter text to change linked social media that is stored in the database </td></tr>
+                  <tr><td>Reason Textbox </td><td>Entity </td><td>To allow other Admins to see why the account was altered </td><td>A string sent to the server that contains text explaining why the specified account was altered </td></tr>
+                  <tr><td>Search Bar </td><td>Entity </td><td>Allows the Admin user to search through for specific accounts by usernames </td><td>The server will return usernames entered in the search bar allowing the Admin to locate specific accounts </td></tr>
+                  <tr><td>Select Account Button </td><td>Entity </td><td>Allows the Admin user to select which user or commercial account they want to look at </td><td>Clicking the button will load the corresponding account information along with the user interface for changing account information </td></tr>
+                  <tr><td>Save Changes Button </td><td>Entity </td><td>Allows the Admin user to save changes made to an account </td><td>Clicking the button will verify that the changes are valid, and it will save the changes on the database </td></tr>
+                  <tr><td>Delete Account Button </td><td>Entity </td><td>Allows the Admin user to delete an account </td><td>Clicking the button will verify that the account can be deleted, and it will remove it from the database </td></tr>
+                  <tr><td>Error Message Box </td><td>Entity </td><td>Provides the reason why the account couldn’t be changed or why the account couldn’t be deleted to the Admin user </td><td>If there are any errors from the server when trying to change or delete account information, they will be displayed here, so the Admin user can see them </td></tr>
                </table>
             </div>
             <h2><span class="id">5.42</span>Message (Admin) [3.42]</h2>
             <div class="indent">
                <p>The user interface will allow the Admin user to search for any other acount. The UI will allow the Admin to see any message for them that are unread.</p>
                <table>
-                  <td><tr>Name</tr><tr>Type</tr><tr>Purpose</tr><tr>Description</tr></td>
-                  <td><tr>Message textbox </tr> <tr>Entry </tr> <tr>Allows user to insert the message </tr> <tr>A textbox that contains the message or file that was or is to be sent </tr></td>
-                  <td><tr>Sender textbox </tr> <tr>Entry </tr> <tr>Allows user to see who is sending the message </tr> <tr>A string that shows who sent or is sending the message </tr></td>
-                  <td><tr>Receiver textbox </tr> <tr>Entry </tr> <tr>Allow user to select who is receiving the message </tr> <tr>A string that shows who received or is receiving the message </tr></td>
+                  <tr><th>Name</th><th>Type</th><th>Purpose</th><th>Description</th></tr>
+                  <tr><td>Message textbox </td> <td>Entry </td> <td>Allows user to insert the message </td> <td>A textbox that contains the message or file that was or is to be sent </td></tr>
+                  <tr><td>Sender textbox </td> <td>Entry </td> <td>Allows user to see who is sending the message </td> <td>A string that shows who sent or is sending the message </td></tr>
+                  <tr><td>Receiver textbox </td> <td>Entry </td> <td>Allow user to select who is receiving the message </td> <td>A string that shows who received or is receiving the message </td></tr>
                </table>
             </div>
             <h2><span class="id">5.43</span>Notifications (Admin) [3.43]</h2>
             <div class="indent">
                <p>Notificatons will display useful information to the Admin User. These Notifications will include Events, Approval Status Advertising, new reports, messages, and acount activity.</p>
                <table>
-                  <td><tr>Name</tr><tr>Type</tr><tr>Purpose</tr><tr>Description</tr></td>
-                  <td><tr>Notification </tr> <tr>Entity </tr> <tr>Inform user of alerts or other actions. </tr> <tr>A notification will pop up that contains information regarding events or changes for the application </tr></td>
-                  <td><tr>Banners </tr> <tr>Entity </tr> <tr>Notifications that will appear on the lock screen or as a banner when the user is on the device. </tr> <tr>Depending on what the user is doing, notifications will show up differently. </tr></td>
+                  <tr><th>Name</th><th>Type</th><th>Purpose</th><th>Description</th></tr>
+                  <tr><td>Notification </td> <td>Entity </td> <td>Inform user of alerts or other actions. </td> <td>A notification will pop up that contains information regarding events or changes for the application </td></tr>
+                  <tr><td>Banners </td> <td>Entity </td> <td>Notifications that will appear on the lock screen or as a banner when the user is on the device. </td> <td>Depending on what the user is doing, notifications will show up differently. </td></tr>
                </table>
             </div>
             <h2><span class="id">5.44</span>Settings (Admin) [3.44]</h2>
             <div class="indent">
                <p>The settings UI will allow for the Admin User to logout and access </p>
                <table>
-                  <td><tr>Name</tr><tr>Type</tr><tr>Purpose</tr><tr>Description</tr></td>
-                  <td><tr>Settings button </tr> <tr>Entity </tr> <tr>Allows the user to open the settings menu </tr> <tr>This allows the user to access all the settings to make changes to the application, user accounts, and preferences. </tr></td>
-                  <td><tr>Logout button </tr> <tr>Entity </tr> <tr>Allows the user to log out of his account </tr> <tr>This button will allow the user to log out of their account. It is in the settings as well to be a predictable place </tr></td>
-                  <td><tr>Notification toggles </tr> <tr>Entity </tr> <tr>Allows the user to choose what type of notifications is to be viewed </tr> <tr>Different toggles will display and the user can toggle on or off different types of notifications. </tr></td>
+                  <tr><th>Name</th><th>Type</th><th>Purpose</th><th>Description</th></tr>
+                  <tr><td>Settings button </td> <td>Entity </td> <td>Allows the user to open the settings menu </td> <td>This allows the user to access all the settings to make changes to the application, user accounts, and preferences. </td></tr>
+                  <tr><td>Logout button </td> <td>Entity </td> <td>Allows the user to log out of his account </td> <td>This button will allow the user to log out of their account. It is in the settings as well to be a predictable place </td></tr>
+                  <tr><td>Notification toggles </td> <td>Entity </td> <td>Allows the user to choose what type of notifications is to be viewed </td> <td>Different toggles will display and the user can toggle on or off different types of notifications. </td></tr>
                </table>
             </div>
             <h2><span class="id">5.45</span>Logout (Admin User) [3.45]</h2>
