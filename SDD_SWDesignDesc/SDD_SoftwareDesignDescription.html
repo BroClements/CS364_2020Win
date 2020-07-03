@@ -215,11 +215,12 @@
          <ul class="auto-ID big" id="3.1">
             <li>Create Consumer Account</li>
             <li>Join Commercial Event</li>
-            <li>Join Group Event</li>
-            <li>View Profile (Consumer)</li>
+            <li>Join Group Event(Consumer User)</li>
+            <li>Edit Profile (Commercial User)</li>
+            <li>View Profile (Consumer User)</li>
             <li>Login (Consumer User)</li>
-            <li>Discover (Consumer)</li>
-            <li>Filter/Sorting (Consumer)</li>
+            <li>Discover (Consumer User)</li>
+            <li>Filter/Sorting (Consumer User)</li>
             <li></li>
             <li></li>
             <li></li>
@@ -264,14 +265,16 @@
             <p> Consumer enters an email address. Consumer enters a username and is notified if the username is already taken. Consumer enters a password and is notified when the password is valid (ie. when it reaches or exceeds 6 characters). Consumer presses the create account button. Alternatively, they can create an account by signing into a social media account and allowing the application to capture the required information to create an account.</p>
             <h2><span class="id">4.2</span>Join Commercial Event [3.2]</h2>
             <p>Consumer will access a list of Commercial Events. Consumer select the Event of interest. Consumer will then have access to the Events description. Consumer can return to the list or join Event. </p>
-            <h2><span class="id">4.3</span>Join Group Event [3.3]</h2>
+            <h2><span class="id">4.3</span>Join Group Event (Consumer User)[3.3]</h2>
             <ol>
                <li>On notification to join group Event, Consumer will view the description of the Event. Following the description the Consumer will have the option to reject or join Group event.  </li>
                <li>Consumer will access a list of Group Events invitation. Consumer select the Group Event of interest. Consumer will then have access to the Events description. Consumer can return to the list or join Group Event. </li>
             </ol>
-            <h2><span class="id">4.4</span>View Profile (Consumer) [3.4]</h2>
+            <h2><span class="id">4.4</span>Edit Profile (Consumer User) [3.4]</h2>
+            <p>Consumer will have access to settings. In the setting will be an option to edit profile. Current information fields will be presented. The user will be able to change these values and save them. </p>
+            <h2><span class="id">4.5</span>View Profile (Consumer User) [3.5]</h2>
             <p>Consumer selects the profile of the commercial or consumer user that they wish to view. The profile information is displayed. The consumer has the option to “Report User”. The consumer has the option to “Block User.” </p>
-            <h2><span class="id">4.5</span>Login (Consumer User) [3.5]</h2>
+            <h2><span class="id">4.6</span>Login (Consumer User) [3.6]</h2>
             <ul>
                <p>The Consumer User opens the app and sees the option to login via 3rd party, username/password, or to create an account.</p>
                <li>Username and password: The Consumer User clicks on username/password and is brought to the login portal. The username and password boxes are displayed to the Consumer User. The Consumer User submits information. If the database rejects Consumer User information an error appears with an option to retry or recover password. If the database accepts the Consumer User information the Consumer User is brought to the home page.</li>
@@ -280,16 +283,16 @@
                   <li>Twitter: The Consumer User clicks on login with Twitter. Twitter’s login page is brought up and displays the Twitter Username and Password boxes. If the Twitter server rejects Consumer User information an error message appears. If the Twitter server accepts Consumer User information the Consumer User is brought to the Uvents’ home page.</li>
                   <li>Instagram: The Consumer User clicks on login with Instagram. Instagram’s login page is brought up and displays the Instagram Username and Password boxes. If the Instagram server rejects Consumer User information an error message appears. If the Instagram server accepts Consumer User information the Consumer User is brought to the Uvents’ home page.</li>
             </ul>
-            <h2><span class="id">4.6</span>Discover (Consumer) [3.6]</h2>
-            <p>Filter/ Consumer will press the discover button. The consumer will then be presented with a discover view customized to the consumer preferences. This view will also include paid commercial listings. Sorting (Consumer) </p>
-            <h2><span class="id">4.7</span>Filter/Sorting (Consumer) [3.7]</h2>
-            <p>Consumer will press the filter button. The consumer will be presented with options to filter results in the discover view. On submission, the discover view will be presented with filtered results. (Consumer) </p>
-            <h2><span class="id">4.8</span></h2>
+            <h2><span class="id">4.7</span>Discover (Consumer User) [3.7]</h2>
+            <p>Filter/ Consumer will press the discover button. The consumer will then be presented with a discover view customized to the consumer preferences. This view will also include paid commercial listings. Sorting (Consumer User) </p>
+            <h2><span class="id">4.8</span>Filter/Sorting (Consumer User) [3.8]</h2>
+            <p>Consumer will press the filter button. The consumer will be presented with options to filter results in the discover view. On submission, the discover view will be presented with filtered results. (Consumer User) </p>
             <h2><span class="id">4.9</span></h2>
             <h2><span class="id">4.10</span></h2>
             <h2><span class="id">4.11</span></h2>
             <h2><span class="id">4.12</span></h2>
             <h2><span class="id">4.13</span></h2>
+            <h2><span class="id">4.14</span></h2>
             <h2><span class="id">4.15</span>Logout (Consumer User) [3.15]</h2>
             <p class="indent">Consumer User sees the logout button. When pressed the Consumer User will be brought to the main login page.</p>
             <h2><span class="id">4.16</span>Create Commercial Account [3.16]</h2>
@@ -432,13 +435,44 @@
             <p>Create a username and password is displayed to the consumer. An option to sign in with social media is also displayed. The server shall authenticate the username once it has been typed in ensuring that it is unique. Client-side validation will ensure that the password reaches or exceeds 6 characters, and that the email address is in the correct format.  When the consumer clicks 'Create Account' and the password, username, and email are authenticated, the password will be hashed and added to the database along with the email and username.</p>
             <div class="indent">
                <h3>Design Elements</h3>
-               <ul>
-                  <li>Email Address Text Field </li>
-                  <li>Username Text Field </li>
-                  <li>Password Text Field </li>
-                  <li>Create Account Button </li>
-                  <li>Social Media Login Button</li>
-               </ul>
+               <table>
+                  <tr>
+                     <th>Name</th>
+                     <th>Type</th>
+                     <th>Purpose</th>
+                     <th>Description</th>
+                  </tr>
+                  <tr>
+                     <td>"Email Address" Text Field</td>
+                     <td>Entity</td>
+                     <td>Allow the User to enter their email address.</td>
+                     <td>A User will type in their email address that will be linked to their account. Client side will check if email address is in the correct format.</td>
+                  </tr>
+                  <tr>
+                     <td>"Username" Text Field</td>
+                     <td>Entity</td>
+                     <td>Allow the User to enter a username.</td>
+                     <td>A User will type in a Username to be saved. The server shall authenticate the username once it has been typed in ensuring that it is unique.</td>
+                  </tr>
+                  <tr>
+                     <td>"Password" Text Field</td>
+                     <td>Entity</td>
+                     <td>Allow the User to enter a password.</td>
+                     <td>The User will type in a password for their account. Client-side validation will ensure that the password reaches or exceeds 6 characters.</td>
+                  </tr>
+                  <tr>
+                     <td>"Create Account" Button</td>
+                     <td>Entity</td>
+                     <td>Allow the User to create their account.</td>
+                     <td>When the consumer clicks the 'Create Account' button, the password, username, and email are authenticated. The password will be hashed and added to the database along with the email and username.</td>
+                  </tr>
+                  <tr>
+                     <td>"Social Media Login" Button</td>
+                     <td>Entity</td>
+                     <td>Allow the User to use their social media to log in.</td>
+                     <td>A button will be displayed that will give the user an option to sign into their social media account.</td>
+                  </tr>
+               </table>
             </div>
             <h2><span class="id">5.2</span>Join Commercial Event [3.2]</h2>
             <ul>
@@ -449,13 +483,44 @@
             </ul>
             <div class="indent">
                <h3>Design Elements: </h3>
-               <ul>
-                  <li>List of Events</li>
-                  <li>View Event</li>
-                  <li>Button View of Event Description.</li>
-                  <li>Join Event Button.</li>
-                  <li>Return to List Button.</li>
-               </ul>
+<table>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Purpose</th>
+      <th>Description</th>
+   </tr>
+   <tr>
+      <td>List of Events</td>
+      <td>Entity</td>
+      <td>To provide a view of all the Events to the consumer.</td>
+      <td>The list of events is a list that provides the user the option to see all the events available to them in a list format setting.</td>
+   </tr>
+   <tr>
+      <td>"View Event" Button</td>
+      <td>Entity</td>
+      <td>To provide access to Event’s details.</td>
+      <td>A button is available on each event so the user can click on it to see the details of the event.</td>
+   </tr>
+   <tr>
+      <td>View of Event Description.</td>
+      <td>Entity</td>
+      <td>A view which holds the information of the Event, in order for the consumer to read.</td>
+      <td>The description is where the user can see the details information of that event. It will have information such as location, time, event host, and description.</td>
+   </tr>
+   <tr>
+      <td>"Join Event" Button.</td>
+      <td>Entity</td>
+      <td>A button to allow a consumer to Join a desired Event.</td>
+      <td>Join event can be clicked in order to the user to join that event.</td>
+   </tr>
+   <tr>
+      <td>"Return to List" Button</td>
+      <td>Entity</td>
+      <td>A button to return to the List of Events, after reading the description of the Event.</td>
+      <td>The return button will be an option to take the user back to list of events, that way the user can continue to investigate other events.</td>
+   </tr>
+</table>
             </div>
             <h2><span class="id">5.3</span>Join Group Event [3.3]</h2>
             <ul>
@@ -468,26 +533,132 @@
             </ul>
             <div class="indent">
                <h3>Design Elements: </h3>
-               <ul>
-                  <li>List of Group Events  </li>
-                  <li>View Group Event  </li>
-                  <li>Button Veiw of Group Event Description.  </li>
-                  <li>Join Group Event Button.  </li>
-                  <li>Decline Group Event  </li>
-                  <li>Return to List Button. </li>
-               </ul>
+<table>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Purpose</th>
+      <th>Description</th>
+   </tr>
+   <tr>
+      <td>List of Group Events</td>
+      <td>Entity</td>
+      <td>To provide a view of all the Group Events to the consumer.</td>
+      <td>The list of events is a list that provides the user the option to see all the events available to them in a list format setting.</td>
+   </tr>
+   <tr>
+      <td>“View Group Event" Button</td>
+      <td>Entity</td>
+      <td>To provide access to Group Event’s details.</td>
+      <td>A button is available on each event so the user can click on it to see the details of the event.</td>
+   </tr>
+   <tr>
+      <td> View of Group Event Description.</td>
+      <td>Entity</td>
+      <td>A view which holds the information of the Group  Event, in order for the consumer to read.</td>
+      <td>The description is where the user can see the details information of that event. It will have information such as location, time, event host, and description.</td>
+   </tr>
+   <tr>
+      <td>"Join Group Event" Button.</td>
+      <td>Entity</td>
+      <td>A button to allow a consumer to Join a desired Group Event.</td>
+      <td>Join event can be clicked in order to the user to join that event.</td>
+   </tr>
+   <tr>
+      <td>"Decline Group Event"</td>
+      <td>Entity</td>
+      <td>A button to decline invitations to Group events from other users.</td>
+      <td>The decline option provides a way for the user to decline an invitation to join a group event. When clicked the event will not long available to the user invited.</td>
+   </tr>
+   <tr>
+      <td>"Return to List" Button.</td>
+      <td>Entity</td>
+      <td>A button to return to the List of Group Events, after reading the description of the Group Event.</td>
+      <td>The return button will be an option to take the user back to list of events, that way the user can continue to investigate other events.</td>
+   </tr>
+</table>
             </div>
-            <h2><span class="id">5.4</span>View Profile (Consumer) [3.4]</h2>
+            <h2><span class="id">5.4</span>Edit Profile (Consumer User) [3.4]</h2>
+            <p>Setting icon is presented to the customer. On "edit profile" click, a new activity is presented on the screen with the personal information fields already filled with current information. They could edit them. Input validation messages should be provided (ex: e-mail, username). Upon information change, the save and the cancel buttons are available with their perspective actions of canceling the operation or saving it. </p>
+            <div class="indent">
+               <h3>Design Elements </h3>
+<table>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Purpose</th>
+      <th>Description</th>
+   </tr>
+   <tr>
+      <td>"Edit profile" button/option</td>
+      <td>Entity</td>
+      <td>Provide access Profile editing.</td>
+      <td>A button that once selected will open the options to edit profile.</td>
+   </tr>
+   <tr>
+      <td>"Email Address" Text Field</td>
+      <td>Entity</td>
+      <td>Provide the option to edit their email.</td>
+      <td>A text Field where the user will enter their email</td>
+   </tr>
+   <tr>
+      <td>"Username" Text Field</td>
+      <td>Entity</td>
+      <td>Provide the option to edit username.</td>
+      <td>A text Field where the user will enter their Username</td>
+   </tr>
+   <tr>
+      <td>"Password" Text Field</td>
+      <td>Entity</td>
+      <td>Provide the option to edit password.</td>
+      <td>A text Field where the user will enter their Password.</td>
+   </tr>
+   <tr>
+      <td>"Save" Button</td>
+      <td>Entity</td>
+      <td>Allow user to save changes.</td>
+      <td>If any changes have been made to the Email, Username or Password text fields. This button will allow for those changes to be saved to the database.</td>
+   </tr>
+   <tr>
+      <td>"Cancel" Button</td>
+      <td>Entity</td>
+      <td>Allow user to cancel the process.</td>
+      <td>If any changes have been made to the Email, Username or Password text fields. This button will Cancel any would be changes and revert the fields to the original values.</td>
+   </tr>
+</table>
+            </div>
+            <h2><span class="id">5.5</span>View Profile (Consumer User) [3.5]</h2>
             <p>Option to view a consumer or commercial user's profile. The server then takes the consumer user to the commercial or consumer user's profile. Within that profile there is an option to report the user. Once this button is clicked, an admin user will be notified, and informed which user has been reported. If the block user button has been pushed, that user is added to a list of users that the consumer user does not want to receive messages or event invitations from. </p>
             <div class="indent">
                <h3>Design Elements </h3>
-               <ul>
-                  <li>View Profile Button </li>
-                  <li>Report User button </li>
-                  <li>Block User button </li>
-               </ul>
+<table>
+   <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Purpose</th>
+      <th>Description</th>
+   </tr>
+   <tr>
+      <td>View Profile Button</td>
+      <td>Entity</td>
+      <td>Allow Consumer user to pull up the Profile view.</td>
+      <td>A button which when clicked will signal the system to switch to the Profile view.</td>
+   </tr>
+   <tr>
+      <td>Report User Button</td>
+      <td>Entity</td>
+      <td>Allow Consumer user to report another user.</td>
+      <td>A button which when clicked send a notification to the admin users that the logged in user has reported the user for the profile that is currently displayed.</td>
+   </tr>
+   <tr>
+      <td>Block User Button</td>
+      <td>Entity</td>
+      <td></td>
+      <td>A button which when clicked sends two users to the server (the user logged in and the user for the profile that is currently displayed). The server will modify the database for the user that is logged in so it knows to ignore messages and event invitations from the other user.</td>
+   </tr>
+</table>
             </div>
-            <h2><span class="id">5.5</span>Login (Consumer User) [3.5]</h2>
+            <h2><span class="id">5.6</span>Login (Consumer User) [3.6]</h2>
             <ul>
                <p>Consumer User has option to login via username/password or via Facebook.</p>
                <li>Username and password: Consumer User login information is submitted to server and put through hash to check for existing user as well as correct username and password. ‘Remember me’ option is taken into account. If information is incorrect the server returns an error message with option to recover password/account information and to re-submit login information. If the database accepts the submitted information the Consumer User will be sent to the home page of Uvents.</li>
@@ -580,7 +751,7 @@
                   </tr>
                </table>
             </ul>
-            <h2><span class="id">5.6</span>Discover (Consumer) [3.6]</h2>
+            <h2><span class="id">5.7</span>Discover (Consumer User) [3.7]</h2>
             <p>Consumer presses discover button. Server sends request to database. Database returns list of events to server. events list is loaded on application. </p>
             <div class="indent">
                <h3>Design Elements: </h3>
@@ -590,7 +761,7 @@
                   <li>Filter/Sort Button </li>
                </ul>
             </div>
-            <h2><span class="id">5.7</span>Filter/Sorting (Consumer) [3.7]</h2>
+            <h2><span class="id">5.8</span>Filter/Sorting (Consumer User) [3.8]</h2>
             <p>App sends request to server. Server gathers details from database. Server sends view to App. </p>
             <div class="indent">
                <h3>Design Elements: </h3>
@@ -601,14 +772,14 @@
                   <li>Event type selector </li>
                </ul>
             </div>
-            <h2><span class="id">5.8</span></h2>
             <h2><span class="id">5.9</span></h2>
             <h2><span class="id">5.10</span></h2>
             <h2><span class="id">5.11</span></h2>
             <h2><span class="id">5.12</span></h2>
             <h2><span class="id">5.13</span></h2>
             <h2><span class="id">5.14</span></h2>
-            <h2><span class="id">5.15</span>Logout (Consumer User) [3.15]</h2>
+            <h2><span class="id">5.15</span></h2>
+            <h2><span class="id">5.16</span>Logout (Consumer User) [3.16]</h2>
             <div class="indent">
                <p>Consumer User information is sent to server. If logout is accepted server will send confirmation to Consumer User, who’s information will be removed from device.</p>
                <h3>Design Elements:</h3>
@@ -628,7 +799,7 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">5.16</span>Create Commercial Account [3.16]</h2>
+            <h2><span class="id">5.17</span>Create Commercial Account [3.17]</h2>
             <div class="indent">
                <h3>Design Viewpoints:</h3>
                <ul>
@@ -652,7 +823,7 @@
                </ul>
 
             </div>
-            <h2><span class="id">5.17</span>Business Information (Commercial) [3.17]</h2>
+            <h2><span class="id">5.18</span>Business Information (Commercial) [3.18]</h2>
             <div class="indent">
                <h3>Design Viewpoints:</h3>
                <ul>
@@ -675,7 +846,7 @@
                </ul>
 
             </div>
-            <h2><span class="id">5.18</span>Payment Information (Commercial) [3.18]</h2>
+            <h2><span class="id">5.19</span>Payment Information (Commercial) [3.19]</h2>
             <div class="indent">
                <h3>Design Viewpoints:</h3>
                <ul>
@@ -693,7 +864,7 @@
                   <li>Price of service being purchased</li>
                </ul>
             </div>
-            <h2><span class="id">5.19</span>Account Approval (Commercial) [3.19]</h2>
+            <h2><span class="id">5.20</span>Account Approval (Commercial) [3.20]</h2>
             <div class="indent">
                <h3>Design Viewpoints:</h3>
                <ul>
@@ -710,7 +881,7 @@
                   <li>Account approval status</li>
                </ul>
             </div>
-            <h2><span class="id">5.20</span>Edit Profile (Commercial) [3.20]</h2>
+            <h2><span class="id">5.21</span>Edit Profile (Commercial) [3.21]</h2>
             <div class="indent">
                <h3>Design Viewpoints:</h3>
                <ul>
@@ -728,7 +899,7 @@
                   <li>Entity First Name</li>
                </ul>
             </div>
-            <h2><span class="id">5.21</span>View Profile (Commercial) [3.21]</h2>
+            <h2><span class="id">5.22</span>View Profile (Commercial) [3.22]</h2>
             <div class="indent">
                <h3>Design Viewpoints:</h3>
                <ul>
@@ -750,7 +921,7 @@
 
                </ul>
             </div>
-            <h2><span class="id">5.22</span>Login (Commercial User) [3.22]</h2>
+            <h2><span class="id">5.23</span>Login (Commercial User) [3.23]</h2>
             <ul>
                <p>Commercial User has option to login via username/password or via Facebook.</p>
                <li>Username and password: Commercial User login information is submitted to server and put through hash to check for existing user as well as correct username and password. ‘Remember me’ option is taken into account. If information is incorrect the server returns an error message with option to recover password/account information and to re-submit login information. If the database accepts the submitted information the Commercial User will be sent to the home page of Uvents.</li>
@@ -843,7 +1014,7 @@
                   </tr>
                </table>
             </ul>
-            <h2><span class="id">5.23</span>Create Commercial Event (Commercial) [3.23]</h2>
+            <h2><span class="id">5.24</span>Create Commercial Event (Commercial) [3.24]</h2>
             <div class="indent">
                <h3>Design Viewpoints:</h3>
                <ul>
@@ -866,7 +1037,7 @@
 
                </ul>
             </div>
-            <h2><span class="id">5.24</span>Add Description (Commercial) [3.24]</h2>
+            <h2><span class="id">5.25</span>Add Description (Commercial) [3.25]</h2>
             <div class="indent">
                <h3>Design Viewpoints</h3>
                <p>Commercial User enters information into text box entry. Commercial user will click on the save button. The changes are sent to the database. There the changes are made to the proper table and column. The changes are saved in the database. The updated changes are then sent back and displayed in the Commercial User's profile.</p>
@@ -875,7 +1046,7 @@
                   <li>Entity Description</li>
                </ul>
             </div>
-            <h2><span class="id">5.25</span>Manage Commercial Event (Commercial) [3.25]</h2>
+            <h2><span class="id">5.26</span>Manage Commercial Event (Commercial) [3.26]</h2>
             <div class="indent">
                <h3>Design Viewpoints</h3>
                <p>Commercial User clicks on the Manage Events button.
@@ -886,7 +1057,7 @@
                   <li>Entity Current Events</li>
                </ul>
             </div>
-            <h2><span class="id">5.26</span>Edit Event (Commercial) [3.26]</h2>
+            <h2><span class="id">5.27</span>Edit Event (Commercial) [3.27]</h2>
             <div class="indent">
                <h3>Design Viewpoints</h3>
                <p>Commercial User clicks on the Edit Event button. Data is retrieved from the database and becomes editable. The updates will take effect once the Commercial User clicks on the Update button.</p>
