@@ -1089,9 +1089,27 @@
                <h3>Design Viewpoints</h3>
                <p>Commercial User enters information into text box entry. Commercial user will click on the save button. The changes are sent to the database. There the changes are made to the proper table and column. The changes are saved in the database. The updated changes are then sent back and displayed in the Commercial User's profile.</p>
                <h3>Design Elements</h3>
-               <ul>
-                  <li>Entity Description</li>
-               </ul>
+               The Add Description (Commercial) Table Allows the User to connect a description to events. [3.25] This description will allow users to better navigate the application and quickly find events that are suited for their needs. 
+               <table>
+                  <tr>
+                     <th>Name</th>
+                     <th>Type</th>
+                     <th>Purpose</th>
+                     <th>Description</th>
+                  </tr>
+                  <tr>
+                     <td>Session ID</td>
+                     <td>Entity </td>
+                     <td>Security Measure to prevent malicious intent</td>
+                     <td>Data that will be used as a security measure that will be passed between the front end and the server to verify the account</td>
+                  </tr>
+                  <tr>
+                     <td>Description Text Box </td>
+                     <td>Entity </td>
+                     <td>Allows owner of event to add a description. </td>
+                     <td>Sends the description data back to database and saves the data. </td>
+                  </tr>
+               </table>
             </div>
             <h2><span class="id">5.26</span>Manage Commercial Event (Commercial) [3.26]</h2>
             <div class="indent">
@@ -1100,27 +1118,108 @@
                   Information is fetched from the database, and sent back to the app.
                   Information is then displayed in the app in a listview.</p>
                <h3>Design Elements</h3>
-               <ul>
-                  <li>Entity Current Events</li>
-               </ul>
+               The Manage Commercial Event (Commercial) Table allows users to access ongoing events pertinent to their account. [3.26] This assists users in quickly finding their ongoing events without sorting through all past, present, and future events. 
+               <table>
+                  <tr>
+                     <th>Name</th>
+                     <th>Type</th>
+                     <th>Purpose</th>
+                     <th>Description</th>
+                  </tr>
+                  <tr>
+                     <td>Session ID</td>
+                     <td>Entity </td>
+                     <td>Security Measure to prevent malicious intent</td>
+                     <td>Data that will be used as a security measure that will be passed between the front end and the server to verify the account</td>
+                  </tr>
+                  <tr>
+                     <td>Current Events</td>
+                     <td>Entity </td>
+                     <td>This button allows Commercial Users to view their ongoing events. </td>
+                     <td>Current Events Data is queried from database and sent back to the user. </td>
+                  </tr>
+               </table>
             </div>
             <h2><span class="id">5.27</span>Edit Event (Commercial) [3.27]</h2>
             <div class="indent">
                <h3>Design Viewpoints</h3>
                <p>Commercial User clicks on the Edit Event button. Data is retrieved from the database and becomes editable. The updates will take effect once the Commercial User clicks on the Update button.</p>
                <h3>Design Elements</h3>
-               <ul>
-                  <li>Entity Event Type</li>
-                  <li>Entity Title</li>
-                  <li>Entity Description</li>
-                  <li>Entity Address</li>
-                  <li>Entity Start time</li>
-                  <li>Entity End time</li>
-                  <li>Entity Price</li>
-                  <li>Entity Icon</li>
-                  <li>Entity Max</li>
-                  <li>Foreign Key Constraints </li>
-               </ul>
+               The Edit Event table allows users to edit details of the events they created, including event type, title, description, address, start time, end time, price, icon, and maximum participants allowed. 
+               <table>
+                  <tr>
+                     <th>Name</th>
+                     <th>Type</th>
+                     <th>Purpose</th>
+                     <th>Description</th>
+                  </tr>
+                  <tr>
+                     <td>Session ID</td>
+                     <td>Entity </td>
+                     <td>Security Measure to prevent malicious intent</td>
+                     <td>Data that will be used as a security measure that will be passed between the front end and the server to verify the account</td>
+                  </tr>
+                  <tr>
+                     <td>Event Type</td>
+                     <td>Entity </td>
+                     <td>Allows Commercial Users to edit the event details. </td>
+                     <td>Data about the event is queried from database and sent back to the user. </td>
+                  </tr>
+                  <tr>
+                     <td>Title </td>
+                     <td>Entity </td>
+                     <td>Allows Commerical Users to edit the event title. </td>
+                     <td>Title column of the event table is queried from the database and being retrieved to the users. </td>
+                  </tr>
+                  <tr>
+                     <td>Description </td>
+                     <td>Entity </td>
+                     <td>Allows Commerical Users to edit the event description. </td>
+                     <td>Description column of the event table is queried from the database and being retrieved to the users. </td>
+                  </tr>
+                  <tr>
+                     <td>Address </td>
+                     <td>Entity </td>
+                     <td>Allows Commerical Users to edit the event location. </td>
+                     <td>Address column of the event table is queried from the database and being retrieved to the users. </td>
+                  </tr>
+                  <tr>
+                     <td>Start Time </td>
+                     <td>Entity </td>
+                     <td>Allows the Commercial Users to enter in a Start Time for their event  </td>
+                     <td>Start Time will be inserted into the Uvents Database to keep track of event Start Times. </td>
+                  </tr>
+                  <tr>
+                     <td>End Time </td>
+                     <td>Entity </td>
+                     <td>Allows the Commercial Users to enter in an End Time for their event </td>
+                     <td>End Time will be inserted into the Uvents Database to keep track of event Start Times </td>
+                  </tr>
+                  <tr>
+                     <td>Price </td>
+                     <td>Entity </td>
+                     <td>Allows the Commercial Users to enter in a Price for their event </td>
+                     <td>Price will be inserted into the Uvents Database to keep track of the price of an event. </td>
+                  </tr>
+                  <tr>
+                     <td>Icon  </td>
+                     <td>Entity </td>
+                     <td>Allows Commercial Users to edit Icon. </td>
+                     <td>A small graphical representation of the event that is sent back and forth from front end to server. </td>
+                  </tr>
+                  <tr>
+                     <td>Max  </td>
+                     <td>Entity </td>
+                     <td>Specifies the maximum number of participants allowed to join the event. </td>
+                     <td>An integer that is sent back and forth from front end to server, specifying a limit.  </td>
+                  </tr>
+                  <tr>
+                     <td>Foreign Key Constraints  </td>
+                     <td>Entity </td>
+                     <td>Security Measure to prevent malicious intent. </td>
+                     <td>A piece of data that is sent back and forth from front end to server, allowing the accounts. </td>
+                  </tr>
+               </table>
             </div>
             <h2><span class="id">5.28</span>Past Events (Commercial) [3.28]</h2>
             <div class="indent">
@@ -1131,11 +1230,39 @@
                   The application displays to the user the information for each of these past events.
                   If no past events exist, the application displays a message indicating that the Commercial User has no past events.</p>
                <h3>Design Elements</h3>
-               <ul>
-                  <li>Entity User ID</li>
-                  <li>Entity Current Date</li>
-                  <li>Entity Past Events</li>
-               </ul>
+               The Past Events (Commercial) Table identifies elements for the Past Events (Commercial) Concern. [3.27] These elements perform the duties of security, identifying relevant data, and displaying values held within said concern. 
+               <table>
+                  <tr>
+                     <th>Name</th>
+                     <th>Type</th>
+                     <th>Purpose</th>
+                     <th>Description</th>
+                  </tr>
+                  <tr>
+                     <td>User ID </td>
+                     <td>Entity </td>
+                     <td>Allows comparison to users at events to know which are the correct user </td>
+                     <td>A piece of data that is sent back and forth from front end to server to ensure the user only sends and receives information they should have access to. </td>
+                  </tr>
+                  <tr>
+                     <td>Current Date </td>
+                     <td>Entity </td>
+                     <td>Allow comparison to the dates of events to know which are past </td>
+                     <td>A piece of data used to refine a query to the server so that that Events returned by the server are only ones that ended prior to the current date. </td>
+                  </tr>
+                  <tr>
+                     <td>Current Events</td>
+                     <td>Entity </td>
+                     <td>This button allows Commercial Users to view their ongoing events. </td>
+                     <td>Current Events Data is queried from database and sent back to the user. </td>
+                  </tr>
+                  <tr>
+                     <td>Past Events </td>
+                     <td>Entity </td>
+                     <td>Allows a Commercial User to view their past events. </td>
+                     <td>A piece of data returned by the server, containing potentially several rows of Events for the Commercial User to be able to view. </td>
+                  </tr>
+               </table>
             </div>
             <h2><span class="id">5.29</span>Promote Event (Commercial) [3.29]</h2>
             <div class="indent">
@@ -1146,11 +1273,39 @@
                   The server verifies if the next bidding auction started.
                   If the answer if true, the application will allow the commercial user to click on Start Auction. </p>
                <h3>Design Elements</h3>
-               <ul>
-                  <li>Entity time</li>
-                  <li>Entity Start Auction Button</li>
-                  <li>Entity Share Event Button</li>
-               </ul>
+               The Promote Event Table allows Users to promote ongoing events that are part of their domain, and to share those events as well. This will also help Users to keep track of the timing until the next bidding auction.  
+               <table>
+                  <tr>
+                     <th>Name</th>
+                     <th>Type</th>
+                     <th>Purpose</th>
+                     <th>Description</th>
+                  </tr>
+                  <tr>
+                     <td>Session ID</td>
+                     <td>Entity </td>
+                     <td>Security Measure to prevent malicious intent</td>
+                     <td>Data that will be used as a security measure that will be passed between the front end and the server to verify the account</td>
+                  </tr>
+                  <tr>
+                     <td>Time </td>
+                     <td>Entity </td>
+                     <td>Allows a Commercial User to see time until next auction or options to participate in an active auction. </td>
+                     <td>A piece of data returned by the server containing the amount of time remaining until the next active auction. It is also used to determine if an auction is ongoing, in which case more options will be presented to the user. </td>
+                  </tr>
+                  <tr>
+                     <td>Start Auction Button </td>
+                     <td>Entity </td>
+                     <td>Allows the Commercial user to navigate to the Place Bid page for an ongoing auction. </td>
+                     <td>A button that triggers navigation within the Uvents app to the Place Bid page. </td>
+                  </tr>
+                  <tr>
+                     <td>Share Event Button </td>
+                     <td>Entity </td>
+                     <td>Allows the Commercial User to share events. </td>
+                     <td>Data that is shared across the server and allows the Commercial user to expose the event to multiple followers, this in turn attracts more users to the event. </td>
+                  </tr>
+               </table>
             </div>
             <h2><span class="id">5.30</span>Start Auction (Commercial) / Place Bid [3.30]</h2>
             <div class="indent">
@@ -1163,11 +1318,38 @@
                   The server sends a response to the user that the bid was successfully added
                   The application displays to the user that the bid was successfull/unsuccessfull</p>
                <h3>Design Elements</h3>
-               <ul>
-                  <li>Entity Place Bid Button</li>
-                  <li>Entity Bid Amount</li>
-                  <li>Entity Save Bid</li>
-               </ul>
+               <table>
+                  <tr>
+                     <th>Name</th>
+                     <th>Type</th>
+                     <th>Purpose</th>
+                     <th>Description</th>
+                  </tr>
+                  <tr>
+                     <td>Session ID</td>
+                     <td>Entity </td>
+                     <td>Security Measure to prevent malicious intent</td>
+                     <td>Data that will be used as a security measure that will be passed between the front end and the server to verify the account</td>
+                  </tr>
+                  <tr>
+                     <td>Place Bid Button </td>
+                     <td>Entity </td>
+                     <td>Allows the Commercial User to place a bid for space on the application. </td>
+                     <td>This button brings the Commercial user to the page where the commercial user will be able to place bids for certain spaces within the application. </td>
+                  </tr>
+                  <tr>
+                     <td>Bid Amount </td>
+                     <td>Entity </td>
+                     <td>Allows the Commercial User to determine the amount of money to bid. </td>
+                     <td>This entry box will allow the Commercial User to enter an amount of money into a text entry box and set that amount as the bid being placed. </td>
+                  </tr>
+                  <tr>
+                     <td>Save Bid Button </td>
+                     <td>Entity </td>
+                     <td>Allows the Commercial User to save the amount that has been bid. </td>
+                     <td>This button will save the bid amount and enter in that bid amount to the database.  </td>
+                  </tr>
+               </table>
             </div>
             <h2><span class="id">5.31</span>Share Event (Commercial User) [3.31]</h2>
             <div class="indent">
