@@ -220,13 +220,13 @@
             <li>Login (Consumer User)</li>
             <li>Discover (Consumer User)</li>
             <li>Filter/Sorting (Consumer User)</li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Search bar (Consumer)</li>
+            <li>Create Group Event (Consumer)</li>
+            <li>Edit Event (Consumer)</li>
+            <li>Event Messaging (Consumer)</li>
+            <li>My Events (Consumer)</li>
+            <li>Notifications (Consumer)</li>
+            <li>Settings (Consumer)</li>
             <li>Logout (Consumer User)</li>
             <li>Create Commercial Account</li>
             <li>Business Information (Commercial)</li>
@@ -286,13 +286,20 @@
             <p>Filter/ Consumer will press the discover button. The consumer will then be presented with a discover view customized to the consumer preferences. This view will also include paid commercial listings. Sorting (Consumer User) </p>
             <h2><span class="id">4.8</span>Filter/Sorting (Consumer User) [3.8]</h2>
             <p>Consumer will press the filter button. The consumer will be presented with options to filter results in the discover view. On submission, the discover view will be presented with filtered results. (Consumer User) </p>
-            <h2><span class="id">4.9</span></h2>
-            <h2><span class="id">4.10</span></h2>
-            <h2><span class="id">4.11</span></h2>
-            <h2><span class="id">4.12</span></h2>
-            <h2><span class="id">4.13</span></h2>
-            <h2><span class="id">4.14</span></h2>
-            <h2><span class="id">4.15</span></h2>
+            <h2><span class="id">4.9</span>Search bar (Consumer) [3.9]</h2>
+            <p>Consumer User navigates to the Events screen and clicks on a search bar. The Search Bar is focused, the Keyboard appears, while the User can still freely navigate on the page. As the User types in different keys, the list of Group and Commercial Events appears on the screen and filters according to the user’s input. These Events are filtered based on the input from the Search Bar and this filter works for location, Event name, and Event Organizer.</p>
+            <h2><span class="id">4.10</span>Create Group Event (Consumer) [3.10]</h2>
+            <p>A Consumer User navigates to the Group Event screen and clicks a “Create Group Event” button. The User sees text boxes for price, location, date/time, description, and buttons to upload media and create/edit this event. All fields are required except for uploading media. Once all the required fields are filled, the user can click a button “Create Event” which will create a Group Event in the database and this GroupEvent will be visible to all other Users. The user can also go back to My Events page and click on any of the Events created by that User and Edit them by clicking the “Edit” button.</p>
+            <h2><span class="id">4.11</span>Edit Event (Consumer) [3.11]</h2>
+            <p>Consumer user clicks on the ‘Edit Event’ button inside an Event. A new window will appear letting the Consumer change the Event. This will display the options to the Consumer and based on their input will change the Event in different ways.</p>
+            <h2><span class="id">4.12</span>Event Messaging (Consumer) [3.12]</h2>
+            <p>Consumer clicks on the “Event Messaging” button from inside an event. A new window will appear that lists the Event Chat and the messages that have been sent in it. This will display messages in sequential order starting with the most recent messages at the bottom.</p>
+            <h2><span class="id">4.13</span>My Events (Consumer) [3.13]</h2>
+            <p>Consumer users click on the “My Events” tab as found on the main menu. A new window will appear that lists all upcoming events that the Consumer user has subscribed to either by following the event or paying for a spot at the event. These events will be displayed in sequential order of date, with the closest event being listed first.</p>
+            <h2><span class="id">4.14</span>Notifications (Consumer) [3.14]</h2>
+            <p>Users click on the notifications tab as found on the main menu. A new window will appear that lists all notifications that the User has received. Each notification will list its title and the first portion of its body, as well as any flags assigned to the notification such as unread, or important. Notifications may be selected to expand to read the full details, or to modify flags or complete removal.</p>
+            <h2><span class="id">4.15</span>Settings (Consumer) [3.15]</h2>
+            <p>Consumer users will be able to access the setting menu on the top of the page. It looks like a hamburger button. Once it clicked it went from horizontal hamburger button to vertical. When the user clicks the “setting”, a new window will appear and ask users to type a password one more time to verify identification. Once the users type the password, all information(Name, password, address, contact information etc.) will be displayed. And when users are done changing any information, they can click the “Confirm” to change settings and “Cancel” to cancel whatever they did.</p>
             <h2><span class="id">4.16</span>Logout (Consumer User) [3.16]</h2>
             <p class="indent">Consumer User sees the logout button. When pressed the Consumer User will be brought to the main login page.</p>
             <h2><span class="id">4.17</span>Create Commercial Account [3.17]</h2>
@@ -821,13 +828,420 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">5.9</span></h2>
-            <h2><span class="id">5.10</span></h2>
-            <h2><span class="id">5.11</span></h2>
-            <h2><span class="id">5.12</span></h2>
-            <h2><span class="id">5.13</span></h2>
-            <h2><span class="id">5.14</span></h2>
-            <h2><span class="id">5.15</span></h2>
+            <h2><span class="id">5.9</span>Search bar (Consumer) [3.9]</h2>
+            <u1>
+               <li>Verify the Keyboard appears on the Screen</li>
+               <li>Verify the page is scrollable to enable navigation across the page</li>
+               <li>Verify the user input is visible in the Search Bar</li>
+               <li>User input is sent to the server and the correct list of events is returned back to the client and displayed appropriately on the screen</li>
+               <li>Every Event in the list should be clickable </li>
+               <li>Interface of Search Bar input field allows user to enter different characters with no limit</li>
+               <h3>Design Elements: </h3>
+               <table>
+                  <tr>
+                     <th>Name</th>
+                     <th>Type</th>
+                     <th>Purpose</th>
+                     <th>Description</th>
+                  </tr>
+                  <tr>
+                     <th>Keyboard</th>
+                     <th>Entity</th>
+                     <th>Allow user to type characters</th>
+                     <th>System tool that has different characters of different languages and allows users to provide input</th>
+                  </tr>
+                  <tr>
+                     <th>Search Bar Input</th>
+                     <th>Entity</th>
+                     <th>Field to accept input</th>
+                     <th>This input field will allow users to enter, modify, and remove characters entered from the keyboard and it will filter the results based on the input</th>
+                  </tr>
+                  <tr>
+                     <th>List View </th>
+                     <th>Entity</th>
+                     <th>Area to display the results</th>
+                     <th>This area will display the filtered results based on the input from the Search Bar</th>
+                  </tr>
+                  <tr>
+                     <th>List View Item</th>
+                     <th>Entity</th>
+                     <th>Item in the List View that is clickable</th>
+                     <th>The List View will consist of Items which will be clickable. Upon click on an Item that represents an Event, the user will navigate to an Event Details screen.</th>
+                  </tr>
+               </table>
+            </u1>
+            <h2><span class="id">5.10</span>Create Group Event (Consumer) [3.10]</h2>
+            <u1>
+               <li>erify that all text fields are displayed correctly</li>
+               <li>All Consumer Users should see a button “Create Group Event”  on the “Group Event” screen</li>
+               <li>Keyboard must appear on the screen once any text field is pressed</li>
+               <li>All input must be verified before it’s sent to the server for profanity and character limit</li>
+               <li>Page must be scrollable for an easier navigation for the user if they need to change other fields</li>
+               <li>When the input is submitted it must be saved to the database. If any errors occur, the user must be notified and provided a way to solve the problems</li>
+               <li>Proper navigation upon the Event creation</li>
+               <h3>Design Elements: </h3>
+               <table>
+                  <tr>
+                     <th>Name</th>
+                     <th>Type</th>
+                     <th>Purpose</th>
+                     <th>Description</th>
+                  </tr>
+                  <tr>
+                     <th>Group Event Screen</th>
+                     <th>Entity</th>
+                     <th>Display all Group Events</th>
+                     <th>This screen will allow consumer users to see all group events and will also let them create their Group events</th>
+                  </tr>
+                  <tr>
+                     <th>Create Group Event Button</th>
+                     <th>Entity</th>
+                     <th>Start the process of creating a Group Event</th>
+                     <th>This button will open another screen with input fields to let a Consumer User create a Group Event</th>
+                  </tr>
+                  <tr>
+                     <th>Price Input Field</th>
+                     <th>Entity</th>
+                     <th>Allows users to enter price</th>
+                     <th>Users will be able to enter the Event price in this field</th>
+                  </tr>
+                  <tr>
+                     <th>Location Input Field</th>
+                     <th>Entity</th>
+                     <th>Allows users to enter the event location</th>
+                     <th>Users will be able to enter the Event location in this field. They can use either their location or will be provided an interface to search for and enter location manually</th>
+                  </tr>
+                  <tr>
+                     <th>Date/Time Input Field</th>
+                     <th>Entity</th>
+                     <th>Allows users to enter the event date and time</th>
+                     <th>This field will provide a graphical interface to enter the date and time of the event. It can either be done by using a system built-in calendar system or by manually entering information into these fields</th>
+                  </tr>
+                  <tr>
+                     <th>Event Description Input Field</th>
+                     <th>Entity</th>
+                     <th>Allows users to enter the event description</th>
+                     <th>This text field will accept users input and will store the event description</th>
+                  </tr>
+                  <tr>
+                     <th>Upload Media Button</th>
+                     <th>Entity</th>
+                     <th>Allows users to upload media to that event</th>
+                     <th>This button will allow users to upload media that will be displayed on the event screen. Users should be able to remove / update that media in the future</th>
+                  </tr>
+                  <tr>
+                     <th>Create Button</th>
+                     <th>Entity</th>
+                     <th>Allows users to start a process of creating an event</th>
+                     <th>This button will verify all input fields for profanity and will make sure all required fields were filled. After the input is verified, the data is sent to the server and is stored in the Group Events table.</th>
+                  </tr>
+                  <tr>
+                     <th>Edit Button</th>
+                     <th>Entity</th>
+                     <th>Allows the Group Event creators to edit their events</th>
+                     <th>This button will be displayed only for the Consumer Users created the Group Event to edit their events. The Users can edit any information regarding the event. Once the button is clicked, the data is verified and sent to the server upon the successful verification.</th>
+                  </tr>
+                  <tr>
+                     <th>Events View</th>
+                     <th>Entity</th>
+                     <th>Displays the list of all Group Events</th>
+                     <th>This view allows all users to see the Group Events. It will also contain interface allowing the creators of events to start editing their events.</th>
+                  </tr>
+               </table>
+            </u1>
+            <h2><span class="id">5.11</span>Edit Event (Consumer) [3.11]</h2>
+            <u1>
+               <li>Verify that the correct options are displayed on the page</li>
+               <li>Verify that when any of the options are pressed, the Consumer is directed to the correct screen to allow them to make changes</li>
+               <li>Once changes are input allow the user to view them</li>
+               <li>Verify that the Consumer has to press ‘Confirm’ twice before changes are sent to the database and the page is refreshed to display the new changes</li>
+               <li>Verify that the ‘Cancel’ button directs the Consumer back to the Event page and discards the changes</li>
+               <h3>Design Elements: </h3>
+               <table>
+                  <tr>
+                     <th>Name</th>
+                     <th>Type</th>
+                     <th>Purpose</th>
+                     <th>Description</th>
+                  </tr>
+                  <tr>
+                     <th>Edit Event Button</th>
+                     <th>Entity</th>
+                     <th>To allow the User to make provisional changes to the Event data.</th>
+                     <th>This allows the user to access and change all of the data that pertains to the Event being accessed.</th>
+                  </tr>
+                  <tr>
+                     <th>Event</th>
+                     <th>Class</th>
+                     <th>An object to display and handle all of the information for each Event.</th>
+                     <th>This object will contain all of the logic for the Event page and Event-specific member variables that will be stored on the database.</th>
+                  </tr>
+                  <tr>
+                     <th>Edit Event Display</th>
+                     <th>Entity</th>
+                     <th>Displays the Event’s data that can be changed.</th>
+                     <th>This will Display the Event information that the User can change pertaining to the specific Event.</th>
+                  </tr>
+                  <tr>
+                     <th>Edit Event Name Variable</th>
+                     <th>Entity</th>
+                     <th>Displays and allows the User to change the ‘Name’ variable of the Event being edited.</th>
+                     <th>This allows the User to access and change what is stored in the ‘Name’ variable. </th>
+                  </tr>
+                  <tr>
+                     <th>Edit Event Date Variable</th>
+                     <th>Entity</th>
+                     <th>Displays and allows the User to change the ‘Date’ variable of the Event being edited.</th>
+                     <th>This allows the User to access and change what is stored in the ‘Date’ variable.</th>
+                  </tr>
+                  <tr>
+                     <th>Edit Event Location Variable</th>
+                     <th>Entity</th>
+                     <th>Displays and allows the User to change the ‘Location’ variable of the Event being edited.</th>
+                     <th>This allows the User to access and change what is stored in the ‘Location’ variable.</th>
+                  </tr>
+                  <tr>
+                     <th>Edit Event Description Variable</th>
+                     <th>Entity</th>
+                     <th>Displays and allows the User to change the ‘Description’ variable of the Event being edited.</th>
+                     <th>This allows the User to access and change what is stored in the ‘Description’ variable.</th>
+                  </tr>
+                  <tr>
+                     <th>Edit Event ‘Confirm’ Button</th>
+                     <th>Entity</th>
+                     <th>After the User is done making the changes that they would like to the Event, they can hit the ‘Confirm’ button twice and the new data will be sent to the database and the page will be refreshed to display the new information.</th>
+                     <th>This button is so that the User can apply their changes in a safe and non-haphazard way. This makes it safe for the User to play around with changes that they may want to apply.</th>
+                  </tr>
+                  <tr>
+                     <th>Edit Event ‘Cancel’ Button</th>
+                     <th>Entity</th>
+                     <th>If the User decides against the provisional changes that they made, they can hit the ‘Cancel’ button twice to discard the changes that they made.</th>
+                     <th>This button is so that the User can discard changes that they no longer want. This is also done in a safe way such that the User does not accidentally discard changes that they wanted.</th>
+                  </tr>
+               </table>
+            </u1>
+            <h2><span class="id">5.12</span>Event Messaging (Consumer) [3.12]</h2>
+            <u1>
+               <li>Verify that a connection to the database was made and the correct information was gotten</li>
+               <li>Populate message page with messages from the database</li>
+               <li>Interface of the messaging allows Consumer to send messages</li>
+               <li>Interface of the messaging allows Consumer to react to messages that have been sent</li>
+               <h3>Design Elements: </h3>
+               <table>
+                  <tr>
+                     <th>Name</th>
+                     <th>Type</th>
+                     <th>Purpose</th>
+                     <th>Description</th>
+                  </tr>
+                  <tr>            
+                     <th>‘Event Messaging’ Button</th>
+                     <th>Entity</th>
+                     <th>To allow a Consumer to access and use the Event Messages that they have permissions for. </th>
+                     <th>A button that switches the view, retrieves data from the database and populates the Event Messages page with the information.</th>
+                  </tr>
+                  <tr>
+                     <th>Messages</th>
+                     <th>Class</th>
+                     <th>An object to access, send and receive messages for specific events.</th>
+                     <th>This object will contain all of the logic needed for the messages portion to function and member variables that will be tracked and stored in the database.</th>
+                  </tr>
+                  <tr>
+                     <th>Event Messages Display</th>
+                     <th>Entity</th>
+                     <th>Displays the messages in sequential order based on date.</th>
+                     <th>This will display messages in an easy-to-read way for the Consumer to view.</th>
+                  </tr>
+                  <tr>
+                     <th>Event Messages Name View</th>
+                     <th>Entity</th>
+                     <th>Displays the name of the other Users that have sent each message on the page.</th>
+                     <th>This will display the names of users when they send messages to identify who said what in the chat.</th>
+                  </tr>
+                  <tr>
+                     <th>Event Messages Date View</th>
+                     <th>Entity</th>
+                     <th>Displays the date that goes with each message. This is dual purpose as it can also be used to display the messages in the correct order.</th>
+                     <th>This will display the date of when each message was sent, this can be used to keep a log of the conversation and can also be used in the display logic.</th>
+                  </tr>
+                  <tr>
+                     <th>Event Messages ‘Send’ Button</th>
+                     <th>Entity</th>
+                     <th>To allow a Consumer with sufficient permissions to send messages to the other Users of the same Event.</th>
+                     <th>A button that will send the message to the database to be stored and will re-populate the page with the new message (with accompanying data).</th>
+                  </tr>
+               </table>
+            </u1>
+            <h2><span class="id">5.13</span>My Events (Consumer) [3.13]</h2>
+            <u1>
+               <li>Session id verified</li>
+               <li>Interface between session ID and database of local events</li>
+               <li>Filter of local events to local events this specific Consumer user is subscribed to</li>
+               <li>Interface between social media and server</li>
+               <li>Separation of each event</li>
+               <h3>Design Elements: </h3>
+               <table>
+                  <tr>
+                     <th>Name</th>
+                     <th>Type</th>
+                     <th>Purpose</th>
+                     <th>Description</th>
+                  </tr>
+                  <tr>
+                     <th>‘My Events’ Button</th>
+                     <th>Entity</th>
+                     <th>Allow a Consumer user to view events that they are subscribed to.</th>
+                     <th>A button that retrieves the database of local events, and display those events in which the Consumer user is subscribed to.</th>
+                  </tr>
+                  <tr>
+                     <th>Events</th>
+                     <th>Class</th>
+                     <th>An object to more easily access and manipulate events.</th>
+                     <th>This object will contain members such as date, location, eventOwner (others to be determined), associated getters and setters, and other functions to better work with events.</th>
+                  </tr>
+                  <tr>
+                     <th>Event Display</th>
+                     <th>Entity</th>
+                     <th>Give a quick summary to the Consumer user of an event.</th>
+                     <th>This will be recurring boxes of various events. This box will showcase the event name, date, and location of the events that the consumer user is subscribed to.</th>
+                  </tr>
+                  <tr>
+                     <th>Event Name View</th>
+                     <th>Entity</th>
+                     <th>Gives an event a name.</th>
+                     <th>This is used to give Consumer users a name to remember certain events by.</th>
+                  </tr>
+                  <tr>
+                     <th>Event Date View</th>
+                     <th>Entity</th>
+                     <th>Gives an event a date.</th>
+                     <th>Used to give Consumer users a timeline of when events will be occurring.</th>
+                  </tr>
+                  <tr>
+                     <th>Event Location View</th>
+                     <th>Entity</th>
+                     <th>Gives an event a location.</th>
+                     <th>Used to give Consumer users an exact location of where an event will be taking place. </th>
+                  </tr>
+               </table>
+            </u1>
+            <h2><span class="id">5.14</span>Notifications (Consumer) [3.14]</h2>
+            <u1>
+               <li>Verify connection to database</li>
+               <li>update list of notifications with new notifications received and expired notifications removed.</li>
+               <li>Interface of the notifications allows users to delete or flag notifications.</li>
+               <h3>Design Elements: </h3>
+               <table>
+                  <tr>
+                     <th>Name</th>
+                     <th>Type</th>
+                     <th>Purpose</th>
+                     <th>Description</th>
+                  </tr>
+                  <tr>
+                     <th>Name</th>
+                     <th>Type</th>
+                     <th>Purpose</th>
+                     <th>Description</th>
+                  </tr>
+                  <tr>
+                     <th>Notifications Button</th>
+                     <th>Entity</th>
+                     <th>Allow a User to view Notifications they have received.</th>
+                     <th>A button that retrieves the database of notifications in the user’s inbox, and displays those notifications.</th>
+                  </tr>
+                  <tr>
+                     <th>Notifications</th>
+                     <th>class</th>
+                     <th>An object to more easily access and manipulate notifications.</th>
+                     <th>This object will contain members such as date,title, body(others to be determined), associated getters and setters, and other functions to better work with notifications.</th>
+                  </tr>
+                  <tr>
+                     <th>Notification title</th>
+                     <th>Entity</th>
+                     <th>Gives the main point of the notification.</th>
+                     <th>A text box displaying which function of the application caused the notification to be sent</th>
+                  </tr>
+                  <tr>
+                     <th>Notification Body</th>
+                     <th>Entity</th>
+                     <th>Gives the details that come with the notification.</th>
+                     <th>The text contained within the notification</th>
+                  </tr>
+                  <tr>
+                     <th>Notification options bar</th>
+                     <th>Entity</th>
+                     <th></th>
+                     <th>A popup menu that displays when selecting a notification, allowing for deletion, flagging, muting, and other messaging options.</th>
+                  </tr>
+               </table>
+            </u1>
+            <h2><span class="id">5.15</span>Settings (Consumer) [3.15]</h2>
+            <u1>
+               <li>Session-id verified</li>
+               <li>Check session-id and database and display correct information displayed (Name, password, address, contact information etc.)</li>
+               <li>Able to change information.</li>
+               <li>Ask one more time when they click the “Confirm” button.</li>
+               <li>Cancel the change when users click the “Cancel” button.</li>
+               <li>After the users change the information, change the information in the database, and display the changed information of users.</li>
+               <h3>Design Elements: </h3>
+               <table>
+                  <tr>
+                     <th>Name</th>
+                     <th>Type</th>
+                     <th>Purpose</th>
+                     <th>Description</th>
+                  </tr>
+                  <tr>
+                     <th>Setting button</th>
+                     <th>Entity</th>
+                     <th>Allow users to go “setting menu” and change the information of users.</th>
+                     <th>A button that retrieves the database of information of users, and displays all information of users</th>
+                  </tr>
+                  <tr>
+                     <th>Name</th>
+                     <th>Entity</th>
+                     <th>Show the name of users</th>
+                     <th>This used to show the name of the users</th>
+                  </tr>
+                  <tr>
+                     <th>Password</th>
+                     <th>Entity</th>
+                     <th>Able to change the password</th>
+                     <th>There are two blank boxes. One is for the old password and another is for the new password. The users should type the old password to change the password. </th>
+                  </tr>
+                  <tr>
+                     <th>Phone number</th>
+                     <th>Entity</th>
+                     <th>Show the phone number and able to change the number</th>
+                     <th>Users can check their phone numbers and are able to change their phone numbers if needed.</th>
+                  </tr>
+                  <tr>
+                     <th>Email address</th>
+                     <th>Entity</th>
+                     <th>Show the email address and able to change the email address</th>
+                     <th>Users can check their email addresses and are able to change their email addresses if needed.</th>
+                  </tr>
+                  <tr>
+                     <th>Home address</th>
+                     <th>Entity</th>
+                     <th>Show the home address and be able to change the home address.</th>
+                     <th>Users can check their home addresses and are able to change their home address if needed.</th>
+                  </tr>
+                  <tr>
+                     <th>Confirm button</th>
+                     <th>Class</th>
+                     <th>Able to change the all changed information by clicking the button. </th>
+                     <th>This button allows the users to change the information they need to. It includes all information of the database and changes that when it is completed. And it could be a “blue” color.</th>
+                  </tr>
+                  <tr>
+                     <th>Cancel button</th>
+                     <th>Entity</th>
+                     <th>Able to cancel the activities that users did.</th>
+                     <th>This button allows the users to cancel what they did. It is a button type and it could be a “red” color.</th>
+                  </tr>
+               </table>
+            </u1>
             <h2><span class="id">5.16</span>Logout (Consumer User) [3.16]</h2>
             <div class="indent">
                <p>Consumer User information is sent to server. If logout is accepted server will send confirmation to Consumer User, who’s information will be removed from device.</p>
