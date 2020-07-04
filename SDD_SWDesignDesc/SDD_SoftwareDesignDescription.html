@@ -1374,7 +1374,7 @@
             </p>
              <div class="indent">
                 <h3>Design Elements: </h3>
-                <p>The Share Event (Commercial) Table identifies elements for the Share Event (Commercial) Concern. [3.30] These elements perform the duties 
+                <p>The Share Event (Commercial) Table identifies elements for the Share Event (Commercial) Concern. [3.31] These elements perform the duties 
                     of displaying and copying values held within said concern. </p>
                 <table>
                     <tr>
@@ -1451,16 +1451,64 @@
                     </tr>
                 </table>
              </div>
-            <h2><span class="id">5.32</span>Settings (Commercial User) [3.32]</h2>
-            <div class="indent">
-               <p>
-                  Commercial User will be displayed with a Logout button and a Notifications on/off button from the GUI. If the Commercial User clicks the logout button,
-                  then the Server will send a request to the Database to disqualify the current Session Key. Once the Session Key is reset, then the Database will send a
-                  completion message to the Server that the Session Key is no longer valid. Once the Server receives the communication from the Database, then the Server
-                  will request that GUI now presents the login screen.
-               </p>
-            </div>
-            <h2><span class="id">5.33</span>Logout (Commercial User) [3.33]</h2>
+            <h2><span class="id">5.32</span>Settings Viewpoints (Commercial User) [3.32]</h2>
+            <p>  
+                The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares 
+                the received Session Key with its own valid Session Key. If the Key is validated, the Database sends a response to the Server that 
+                the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the Settings screen. 
+            </p>
+            <p>
+                Upon loading the Settings screen, the GUI will display a Logout button and a Notifications on/off slider. If the Commercial User 
+                clicks the logout button, the Server will send a request to the Database to disqualify the current Session Key. Once the Session Key 
+                is disqualified, the Database will notify the Server that the Session Key is no longer valid. Once the Server receives the 
+                communication from the Database, then the Server will update the GUI to present the Login screen. If the Commercial User clicks 
+                the Notifications on/off slider, the Server will send a request to open the Commercial User’s default settings application with a 
+                package to open the notifications settings section within the default settings application. 
+            </p>
+             <div class="indent">
+                <h3>Design Elements: </h3>
+                <p>The Settings (Commercial) Table identifies elements for the Settings (Commercial) concern. [3.32] These elements perform the duties 
+                    of displaying and updating values within said concern.</p>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Purpose</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>Logout</td>
+                        <td>Entity </td>
+                        <td>Allow Commercial Users to logout out of their account. </td>
+                        <td>A button that can be clicked to perform the function. </td>
+                    </tr>
+                    <tr>
+                        <td>Session Key</td>
+                        <td>Entity </td>
+                        <td>Verifies the user is currently logged. </td>
+                        <td>A unique key that validates login sessions by comparing the current key with the key stored in the database. </td>
+                    </tr>
+                    <tr>
+                        <td>Notifications on/off slider </td>
+                        <td>Entity </td>
+                        <td>Allow Commercial users to turn notifications on/off </td>
+                        <td>A switch button that can be clicked to perform the function.</td>
+                    </tr>
+                    <tr>
+                        <td>Server Request </td>
+                        <td>Relationship  </td>
+                        <td>To request that Session Keys be invalidated.</td>
+                        <td>A request </td>
+                    </tr>
+                    <tr>
+                        <td>Database Notification </td>
+                        <td>Relationship </td>
+                        <td>To notify server that Session Key has been invalidated </td>
+                        <td>A notification </td>
+                    </tr>
+                </table>
+             </div>
+            <h2><span class="id">5.33</span>Logout Viewpoints (Commercial User) [3.33]</h2>
             <div class="indent">
                <p>Commercial User information is sent to server. If logout is accepted server will send confirmation to Commercial User, who’s information will be removed from device.</p>
                <h3>Design Elements:</h3>
@@ -1480,60 +1528,176 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">5.34</span>View Commercial Reports (Admin User) [3.34]</h2>
-            <div class="indent">
-               <p>
-                  GUI will display the Commercial Report text to the Admin User. Server will request up to date Commercial Report from the Database. Database will retrieve
-                  Commercial Report and send back to Server. Server will display Commercial to Admin User.
-               </p>
-            </div>
-            <h2><span class="id">5.35</span>View Consumer Reports (Admin User) [3.35]</h2>
-            <div class="indent">
-               <p>
-                  GUI will display the Consumer Report text to the Admin User. Server will request up to date Consumer Report from the Database. Database will retrieve
-                  Consumer Report and send back to Server. Server will display Commercial to Admin User.
-               </p>
-            </div>
-            <h2><span class="id">5.36</span>Edit Profile (Admin User) [3.36]</h2>
-            <div class="indent">
-               <p>
-                  GUI will present the current profile picture to the Admin User. GUI will present the current username to the Admin User. If Admin User presses on
-                  current profile picture, GUI will send request to server to open the Admin User’s default Photo application (add to SRS as interface). If access is
-                  granted, the Admin User’s default Photo application will be opened. If Admin User chooses a picture, Server will request the Uvents application be
-                  presented back to the GUI with the new Profile picture now showing.
-               </p>
-               <p>
-                  If Admin User clicks on current username, the GUI will present a keyboard and the current username will now be empty. If Admin User creates new username,
-                  the new username may be saved in queue before requesting to update the Admin User information.
-               </p>
-               <p>
-                  If either a new Photo or a new username is presently in queue, GUI will present a button to save the updated username and password. If Admin User clicks
-                  the update button, then the profile picture or username and if there is a new profile picture currently in the queue, the new Profile picture data will be
-                  sent by the Server to the Database for storage. The Database will enter the profile picture data into the profile picture column and into the row associated
-                  with the current Admin User. If the Server does not receive an error message from the Database after sending the new profile picture information, then
-                  the GUI will indicate to the Admin User that the updates to the profile were saved.
-               </p>
-               <p>
-                  If Admin User clicks the update button and if there is a new username currently in the queue, the new username will be sent by the Server to the Database
-                  for storage. The Database will compare the new username with all other Admin, Consumer, and Commercial User usernames for duplication.
-               </p>
-               <p>
-                  If the new username matches any other current username, the Database will send an error message back to the Server. If the new username does not match any
-                  other current username, the Database will save the new username in the Database in the username column and into the row associated with the current Admin User.
-               </p>
-               <p>
-                  If the Server receives an error message from the Database after attempting to designate to a new username, then the GUI will present to the Admin User that
-                  the username is already in use by another user. If the Server does not receive an error message from the Database after attempting to designate a new username,
-                  then the GUI will indicate to the Admin User that the updates to the profile were saved.
-               </p>
-            </div>
-            <h2><span class="id">5.37</span>View Profile (Admin User) [3.37]</h2>
-            <div class="indent">
-               <p>
-                  On the screen Commercial Users will see a list ratings given to them from Consumer Users. They will also see the current activity that they have coming up. There will be a list of subscribers. The Commercial User will have the option to
-                  click a button that can either report or block other users. This will take them to a form to fill out who, when, and the reason(s).
-               </p>
-            </div>
+            <h2><span class="id">5.34</span>View Commercial Reports Viewpoints (Admin User) [3.34]</h2>
+            <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares the 
+                received Session Key with its own valid Session Key. If the Key is validated, the Database sends a response to the Server that the 
+                Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the View Commercial Reports screen.</p>
+            <p>Upon loading the Server will request an up to date Report text from the Database. Database will retrieve Report text and send back 
+                to the Server. The Server will update the GUI with the Report text. </p>
+             <div class="indent">
+                <h3>Design Elements: </h3>
+                <p>  
+                    The View Commercial Report Table identifies elements for the View Commercial Reports (Admin) Concern. [3.34] These elements 
+                    perform the duty of displaying values held with said concern.
+                </p>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Purpose</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>Report text </td>
+                        <td>Entity </td>
+                        <td>A report to inform the Admin user of community guidelines that may be being broken </td>
+                        <td>A block of text </td>
+                    </tr>
+                    <tr>
+                        <td>Session Key</td>
+                        <td>Entity </td>
+                        <td>Verifies the user is currently logged. </td>
+                        <td>A unique key that validates login sessions by comparing the current key with the key stored in the database. </td>
+                    </tr>
+                    <tr>
+                        <td>Commercial Reports shall display text from a Commercial User </td>
+                        <td>Relationship </td>
+                        <td>To inform the Admin User of community guidelines being broken as stated by a Commercial User.  </td>
+                        <td>A block of text </td>
+                    </tr>
+                </table>
+             </div>
+            <h2><span class="id">5.35</span>View Consumer Reports Viewpoints (Admin User) [3.35]</h2>
+            <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares 
+                the received Session Key with its own valid Session Key. If the Key is validated, the Database sends a response to the Server 
+                that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the View Consumer Reports screen.</p>
+            <p>Upon loading the Server will request an up to date Report text from the Database. Database will retrieve Report text and send back 
+                to the Server. The Server will update the GUI with the Report text. </p>
+             <div class="indent">
+                <h3>Design Elements: </h3>
+                <p>  
+                    The View Consumer Reports Table identifies elements for the View Consumer Reports (Admin) Concern. [3.35] These elements perform 
+                    the duty of displaying values held with said concern
+                </p>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Purpose</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>Report text </td>
+                        <td>Entity </td>
+                        <td>A report to inform the Admin user of community guidelines that may be being broken </td>
+                        <td>A block of text </td>
+                    </tr>
+                    <tr>
+                        <td>Session Key</td>
+                        <td>Entity </td>
+                        <td>Verifies the user is currently logged. </td>
+                        <td>A unique key that validates login sessions by comparing the current key with the key stored in the database. </td>
+                    </tr>
+                    <tr>
+                        <td>Consumer Reports shall display text from a Consumer User </td>
+                        <td>Relationship </td>
+                        <td>To inform the Admin User of community guidelines being broken as stated by a Consumer User. </td>
+                        <td>A block of text </td>
+                    </tr>
+                </table>
+             </div>
+            <h2><span class="id">5.36</span>Edit Profile Viewpoints (Admin User) [3.36]</h2>
+            <p>  
+
+            </p>
+             <div class="indent">
+                <h3>Design Elements: </h3>
+                <p></p>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Purpose</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Entity </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Entity </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Entity </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Entity </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Entity </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+             </div>
+            <h2><span class="id">5.37</span>View Profile Viewpoints (Admin User) [3.37]</h2>
+            <p>  
+
+            </p>
+             <div class="indent">
+                <h3>Design Elements: </h3>
+                <p></p>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Purpose</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Entity </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Entity </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Entity </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Entity </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Entity </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+             </div>
             <h2><span class="id">5.38</span>Login (Admin User) [3.38]</h2>
             <ul>
                <p>Admin User has option to login via username/password or via Facebook.</p>
