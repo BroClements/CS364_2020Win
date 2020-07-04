@@ -341,20 +341,20 @@
             <div class="indent">Commercial User clicks on Promote Event button.The application then contacts the server and gets the required information regarding the time till the next bidding auction to be displayed. If the auction is currently taking place, the commercial user can click on Start Auction button and be redirected to the Start Auction feature. The commercial user can click on Share Event button and is redirected to the Share Event feature.</div>
             <h2><span class="id">4.30</span>Start Auction (Commercial) / Place Bid [3.30]</h2>
             <div class="indent">Commercial User clicks on the Start Auction / Place Bid button. The application then contacts the server and gets the required information regarding placing a bid. The commercial user then can click on an input field and enter in the amount they would like to bid. Then the data is sent to the database and a message is displayed whether or not the bid was places successfully.</div>
-            <h2><span class="id">4.31</span>Share Event (Commercial User) [3.31]]</</h2>
+            <h2><span class="id">4.31</span>Share Event (Commercial User) [3.31]</h2>
             <div class="indent">
                <p>
-                  The user finds an event they want to share. They click on the Shareable link bar to pull up options for how they can share the event.
-                  The user clicks on the copy link button and the link is copied to their clipboard which will allow them to paste the link wherever they'd like.
-                  The user clicks on the facebook icon which brings them to their facebook page with a link to the activity ready to post. The user clicks on
-                  the instagram icon which brings them to their instagram page with a link to the activity ready to post. The user clicks on the twitter icon which
-                  brings them to their twitter page with a link to the activity ready to post
+                The Commercial User may share their Event. The Shareable link bar allows the Commercial User to copy a shareable link. The Commercial User may 
+                click the copy link button to copy the Event Link to their clipboard. The Commercial User may click on the Facebook icon which brings loads 
+                their Facebook application with a link to the Event ready to post. The Admin User may click on the Instagram icon which brings them to their 
+                Instagram application with a link to the Event ready to post. The Admin User may click on the Twitter icon which brings them to their twitter 
+                page with a link to the Event ready to post.
                </p>
             </div>
             <h2><span class="id">4.32</span>Settings (Commercial User) [3.32]</h2>
             <div class="indent">
                <p>
-                  Commercial Users will have the ability to set their settings. This will include logging out of their account and modifying their notification.
+                Commercial Users will have the ability to adjust their settings. This will include logging out of their account and modifying their notification settings. 
                </p>
             </div>
             <h2><span class="id">4.33</span>Logout (Commercial User) [3.33]</h2>
@@ -362,37 +362,39 @@
             <h2><span class="id">4.34</span>View Commercial Reports (Admin User) [3.34]</h2>
             <div class="indent">
                <p>
-                  The Admin User will have the ability to view commercial reports. The reports display text from a Commercial User suggesting why the
-                  community guidelines have been broken.
+                The Admin User will have the ability to view commercial reports. The reports display text from a Commercial User suggesting why the 
+                community guidelines have been broken.
                </p>
             </div>
             <h2><span class="id">4.35</span>View Consumer Reports (Admin User) [3.35]</h2>
             <div class="indent">
                <p>
-                  The Admin User will have the ability to view consumer reports. The reports display text from a Consumer User suggesting why the
-                  community guidelines have been broken.
+                The Admin User will have the ability to view Consumer User reports. The reports display text from a Consumer User suggesting why the 
+                community guidelines have been broken.
                </p>
             </div>
             <h2><span class="id">4.36</span>Edit Profile (Admin User) [3.36]</h2>
             <div class="indent">
                <p>
-                  The Admin User will have the ability to edit their own profile information. This profile information includes a username and password. If an
-                  Admin User decides to change their profile picture, the Uvents application will direct them to their default photo application where they can
-                  select their desired profile picture. If the Admin User decides to change their username, they will be given the opportunity to rename their username.
+                The Admin User will have the ability to edit their own profile information. This profile information includes a username 
+                and profile picture. If an Admin User decides to change their profile picture, the Uvents application will direct them to their 
+                default photo application where they can select their desired profile picture. If the Admin User decides to change their 
+                username, they will be given the opportunity to rename their username.  
                </p>
                <p>
-                  Once the Admin User is satisfied with their changes and if and if they have made any changes, then they will be given the opportunity to officially update their profile.
-                  The update profile process will send requests from the Server to the Database to check if the chosen picture is acceptable and if the username does not
-                  already exist among any other User. If the inputs are acceptable, then the Admin User will be displayed a success screen. Otherwise, the Server will
-                  send a message to the GUI informing the Admin User that either the profile picture or the username is unacceptable.
-
+                Once the Admin User is satisfied with their changes, they may officially update their profile with the Update Profile button. 
+                The update profile button will send requests from the Server to the Database to check if the chosen picture is acceptable and if 
+                the username does not already exist among any other Uvents Account. If the inputs are acceptable, then the Admin User will be 
+                displayed a success screen. Otherwise, the Server will send a message to the GUI informing the Admin User that either the 
+                profile picture or the username is unacceptable.
                </p>
             </div>
             <h2><span class="id">4.37</span>View Profile (Admin User) [3.37]</h2>
             <div class="indent">
                <p>
-                  Commercial Users will have the ability to view their profiles. This will include viewing their ratings, activities, subscribers, and being able to block/report
-                  Consumer Users.
+                Admin Users will have the ability to view any commercial or consumer profile that they wish. Once they select a profile, that 
+                profile is displayed. The Admin User has the option to “Report User” or “Block User” on the profile of any Commercial or 
+                Consumer User.
                </p>
 
             </div>
@@ -1765,24 +1767,104 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">5.31</span>Share Event (Commercial User) [3.31]</h2>
-            <div class="indent">
-               <p>
-                  When the user clicks on the Shareable link bar, the program’s controller should be alerted that the user input an action and a change is happening.
-                  Based on the action received, the controller can tell the view how the images on the application should change, and in this case the view should know
-                  to make the shareable link bar appear with its accompanying icons and buttons.
-               </p>
-               <p>
-                  When the user clicks any of the three icons, a few things should happen. First, the program should take the user’s credentials/authorizations and see
-                  whether or not the user is already logged in to the social media platform. If not, The program should prompt the user to login with their credentials
-                  which will go to the appropriate database to be verified. If not successful, it will ask the user to attempt to login again. If successful, the success
-                  status should return to the application letting it know that the link can be shared through the appropriate social media platform. The application will
-                  send the link to the appropriate social media platform and the platform will have the link ready in a post.
-               </p>
-               <p>
-                  When the user clicks on the copy link button, the controller becomes aware of the input and responds accordingly by copying the link to the user’s clipboard.
-               </p>
-            </div>
+            <h2><span class="id">5.31</span>Share Event Viewpoints (Commercial User) [3.31]</h2>
+            <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. 
+                The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the 
+                Database sends a response to the Server that the Session Key is valid. If the Session Key is valid, then the 
+                Server updates the GUI with the Share Event screen.  
+            </p>
+            <p>Upon loading the Share Event screen, the Server sends a request to the Database to receive a link to the current 
+                Commercial User’s Event. The Database searches for the Commercial Users Event link, then sends the link back to the Server. 
+                Upon receiving an Event Link, the Server updates the GUI’s shareable link bar with the Event Link text. The GUI loads 
+                the Facebook, Instagram, and Twitter icons. 
+            </p>
+            <p>If the Commercial User clicks on the Copy Link button, then the GUI copies the Event Link text to the Commercial User’s clipboard. </p>
+            <p>If the Commercial User clicks on the Facebook icon, the Server will send a request through the Facebook API to load a post. The 
+                Server will send the Event Link as a package to through the Facebook API to be used in the post. If the Commercial User clicks on 
+                the Instagram icon, the Server will send a request through the Instagram API to load a post. The Server will send the Event Link 
+                as a package to through the Instagram API to be used in the post. If the Commercial User clicks on the Twitter icon, the Server will 
+                send a request through the Twitter API to load a post. The Server will send the Event Link as a package to through the Twitter 
+                API to be used in the post.  
+            </p>
+             <div class="indent">
+                <h3>Design Elements: </h3>
+                <p>The Share Event (Commercial) Table identifies elements for the Share Event (Commercial) Concern. [3.30] These elements perform the duties 
+                    of displaying and copying values held within said concern. </p>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Purpose</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>Facebook icon hyperlink </td>
+                        <td>Entity </td>
+                        <td>Commercial Users can share events. </td>
+                        <td>Hyperlinks using Facebook API to load new post. </td>
+                    </tr>
+                    <tr>
+                        <td>Twitter icon hyperlink </td>
+                        <td>Entity </td>
+                        <td>Commercial Users can share events. </td>
+                        <td>Hyperlinks using Twitter API to load new post. </td>
+                    </tr>
+                    <tr>
+                        <td>Instagram icon hyperlink </td>
+                        <td>Entity </td>
+                        <td>Commercial Users can share events. </td>
+                        <td>Hyperlinks using Instagram API to load new post. </td>
+                    </tr>
+                    <tr>
+                        <td>Hyperlinks using Instagram API to load new post. </td>
+                        <td>Entity </td>
+                        <td>Pulls up option for the Commercial Users to share events. </td>
+                        <td>Presents options for the Commercial Users to share events. </td>
+                    </tr>
+                    <tr>
+                        <td>Event link </td>
+                        <td>Entity </td>
+                        <td>Allows Commercial User to share Events through a link. </td>
+                        <td>Text that is received from the Database that directs to a specific Event. </td>
+                    </tr>
+                    <tr>
+                        <td>Copy link button </td>
+                        <td>Entity </td>
+                        <td>Allows Commercial Users to easily share Events through a link. </td>
+                        <td>Copies shareable link to Commercial Users clipboard. </td>
+                    </tr>
+                    <tr>
+                        <td>Facebook login </td>
+                        <td>Relationship </td>
+                        <td>Login a Commercial to their Facebook account so they can share on Facebook. </td>
+                        <td>Use Facebook API to ask for and verify credentials </td>
+                    </tr>
+                    <tr>
+                        <td>Twitter login </td>
+                        <td>Relationship </td>
+                        <td>Login a Commercial to their Facebook account so they can share on Twitter. </td>
+                        <td>Use Twitter API to ask for and verify credentials. </td>
+                    </tr>
+                    <tr>
+                        <td>Instagram login </td>
+                        <td>Relationship </td>
+                        <td>Login a Commercial to their Facebook account so they can share on Instagram. </td>
+                        <td>Use Instagram API to ask for and verify credentials </td>
+                    </tr>
+                    <tr>
+                        <td>Invalid Credentials </td>
+                        <td>Constraint </td>
+                        <td>Provide proper authentication for logging in to Social Media Platforms </td>
+                        <td>Doesn’t allow Commercial Users to access Social Media platforms if credentials are invalid. </td>
+                    </tr>
+                    <tr>
+                        <td>Session Key </td>
+                        <td>Entity </td>
+                        <td>Verifies the user is currently logged. </td>
+                        <td>A unique key that validates login sessions by comparing the current key with the key stored in the database. </td>
+                    </tr>
+                </table>
+             </div>
             <h2><span class="id">5.32</span>Settings (Commercial User) [3.32]</h2>
             <div class="indent">
                <p>
