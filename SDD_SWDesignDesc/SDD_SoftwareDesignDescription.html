@@ -440,7 +440,7 @@
          </div>
          <h1><span class="id">5</span>Design Viewpoints</h1>
          <div class="indent">
-            <h2><span class="id">5.1</span>Create Consumer Account [3.1]</h2>
+            <h2><span class="id">5.1</span>Create Consumer Account Viewpoints [3.1]</h2>
             <p>Create a username and password is displayed to the consumer. An option to sign in with social media is also displayed. The server shall authenticate the username once it has been typed in ensuring that it is unique. Client-side validation will ensure that the password reaches or exceeds 6 characters, and that the email address is in the correct format.  When the consumer clicks 'Create Account' and the password, username, and email are authenticated, the password will be hashed and added to the database along with the email and username.</p>
             <div class="indent">
                <h3>Design Elements</h3>
@@ -483,7 +483,7 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">5.2</span>Join Commercial Event [3.2]</h2>
+            <h2><span class="id">5.2</span>Join Commercial Event Viewpoints [3.2]</h2>
             <ul>
                <li>List of Events is displayed to the consumer.  </li>
                <li>On Event selection, a description of the selected event is displayed to the user with an option button to return or join event.  </li>
@@ -531,7 +531,7 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">5.3</span>Join Group Event [3.3]</h2>
+            <h2><span class="id">5.3</span>Join Group Event Viewpoints [3.3]</h2>
             <ul>
                <li>Notification icon is provided to the user view.  </li>
                <li>Notification is provided on an invitation.  </li>
@@ -587,7 +587,7 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">5.4</span>Edit Profile (Consumer User) [3.4]</h2>
+            <h2><span class="id">5.4</span>Edit Profile Viewpoints (Consumer User) [3.4]</h2>
             <p>Setting icon is presented to the customer. On "edit profile" click, a new activity is presented on the screen with the personal information fields already filled with current information. They could edit them. Input validation messages should be provided (ex: e-mail, username). Upon information change, the save and the cancel buttons are available with their perspective actions of canceling the operation or saving it. </p>
             <div class="indent">
                <h3>Design Elements </h3>
@@ -636,7 +636,7 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">5.5</span>View Profile (Consumer User) [3.5]</h2>
+            <h2><span class="id">5.5</span>View Profile Viewpoints (Consumer User) [3.5]</h2>
             <p>Option to view a consumer or commercial user's profile. The server then takes the consumer user to the commercial or consumer user's profile. Within that profile there is an option to report the user. Once this button is clicked, an admin user will be notified, and informed which user has been reported. If the block user button has been pushed, that user is added to a list of users that the consumer user does not want to receive messages or event invitations from. </p>
             <div class="indent">
                <h3>Design Elements </h3>
@@ -667,7 +667,7 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">5.6</span>Login (Consumer User) [3.6]</h2>
+            <h2><span class="id">5.6</span>Login Viewpoints (Consumer User) [3.6]</h2>
             <ul>
                <p>Consumer User has option to login via username/password or via Facebook.</p>
                <li>Username and password: Consumer User login information is submitted to server and put through hash to check for existing user as well as correct username and password. ‘Remember me’ option is taken into account. If information is incorrect the server returns an error message with option to recover password/account information and to re-submit login information. If the database accepts the submitted information the Consumer User will be sent to the home page of Uvents.</li>
@@ -760,7 +760,7 @@
                   </tr>
                </table>
             </ul>
-            <h2><span class="id">5.7</span>Discover (Consumer User) [3.7]</h2>
+            <h2><span class="id">5.7</span>Discover Viewpoints (Consumer User) [3.7]</h2>
             <p>Consumer presses discover button. Server sends request to database. Database returns list of events to server. events list is loaded on application. </p>
             <div class="indent">
                <h3>Design Elements: </h3>
@@ -791,7 +791,7 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">5.8</span>Filter/Sorting (Consumer User) [3.8]</h2>
+            <h2><span class="id">5.8</span>Filter/Sorting Viewpoints (Consumer User) [3.8]</h2>
             <p>App sends request to server. Server gathers details from database. Server sends view to App. </p>
             <div class="indent">
                <h3>Design Elements: </h3>
@@ -828,7 +828,7 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">5.9</span>Search bar (Consumer) [3.9]</h2>
+            <h2><span class="id">5.9</span>Search bar Viewpoints (Consumer User) [3.9]</h2>
             <u1>
                <li>Verify the Keyboard appears on the Screen</li>
                <li>Verify the page is scrollable to enable navigation across the page</li>
@@ -870,7 +870,7 @@
                   </tr>
                </table>
             </u1>
-            <h2><span class="id">5.10</span>Create Group Event (Consumer) [3.10]</h2>
+            <h2><span class="id">5.10</span>Create Group Event Viewpoints (Consumer User) [3.10]</h2>
             <u1>
                <li>erify that all text fields are displayed correctly</li>
                <li>All Consumer Users should see a button “Create Group Event”  on the “Group Event” screen</li>
@@ -2022,11 +2022,50 @@
              </div>
             <h2><span class="id">5.36</span>Edit Profile Viewpoints (Admin User) [3.36]</h2>
             <p>  
-
+                The current Session Key is sent from the Server to the Database to check that the current session is valid. 
+                The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the 
+                Database sends a response to the Server that the Session Key is valid. If the Session Key is valid, then the 
+                Server updates the GUI with the View Consumer Reports screen.
+            </p>
+            <p>  
+                Upon loading the Server will update the GUI with the current profile picture to the Admin User. The Server will 
+                update the GUI with the current username. If Admin User clicks on current profile picture, GUI will send request to 
+                the Server to open the Admin User’s default Photo application. If access is granted, the Admin User’s default photo 
+                application will be opened. If Admin User chooses a picture, Server will request the Uvents application be presented 
+                back to the GUI with the new Profile picture now showing.  
+            </p>
+            <p>  
+                If Admin User clicks on current username, the GUI will present a keyboard and the current username will now be empty. 
+                If Admin User creates new username, the new username will be saved before requesting to officially update the Admin User 
+                information. 
+            </p>
+            <p>  
+                If either the profile picture or the username has been changed, the GUI will present a button to save the updated 
+                information. If Admin User clicks the update button and if the profile picture was changed, then the new Profile 
+                picture data will be sent by the Server to the Database for storage. The Database will save the profile picture data. 
+                If the Server does not receive an error message from the Database after sending the new profile picture information, 
+                then the GUI will indicate to the Admin User that the updates to the profile were saved.  
+            </p>
+            <p>  
+                If Admin User clicks the update button and if there is the username was changed, then the new username will be sent by 
+                the Server to the Database for storage. The Database will compare the new username with all other Admin, Consumer, and 
+                Commercial User usernames for duplication. 
+            </p>
+            <p>  
+                If the new username matches any other current username, the Database will send an error message back to the Server. 
+                If the new username does not match any other current username, the Database will save the new username in the Database 
+                in the username column and into the row associated with the current Admin User.  
+            </p>
+            <p>  
+                If the Server receives an error message from the Database after attempting to designate to a new username, then the GUI 
+                will present to the Admin User that the username is already in use by another user. If the Server does not receive an 
+                error message from the Database after attempting to designate a new username, then the GUI will indicate to the Admin 
+                User that the updates to the profile were saved. 
             </p>
              <div class="indent">
                 <h3>Design Elements: </h3>
-                <p></p>
+                <p>The Edit Profile (Admin) Table identifies elements for the Edit Profile (Admin) Concern. [3.36] These elements perform 
+                    the duties of displaying and changing values held within said concern. </p>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -2035,44 +2074,78 @@
                         <th>Description</th>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>Profile picture</td>
                         <td>Entity </td>
-                        <td></td>
-                        <td></td>
+                        <td>Allow Admin User to display a picture to other interactants. </td>
+                        <td>Picture chosen by the Admin User and used to represent themselves to others.</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>Username </td>
                         <td>Entity </td>
-                        <td></td>
-                        <td></td>
+                        <td>Allow Admin User to have a uniquely identifiable account</td>
+                        <td>Name chosen by an Admin User to represent themselves to others.</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td>Entity </td>
-                        <td></td>
-                        <td></td>
+                        <td>Retrieve current profile picture </td>
+                        <td>Relationship </td>
+                        <td>Displays the Admin User’s current profile picture </td>
+                        <td>Relationship between the Server and Database </td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td>Entity </td>
-                        <td></td>
-                        <td></td>
+                        <td>Retrieve current username </td>
+                        <td>Relationship </td>
+                        <td>Displays the Admin User’s current username. </td>
+                        <td>Relationship between the Server and Database </td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td>Entity </td>
-                        <td></td>
-                        <td></td>
+                        <td>Relationship between the Server and Database </td>
+                        <td>Relationship </td>
+                        <td>Changes the Admin User’s username </td>
+                        <td>Relationship between the Server and Database </td>
+                    </tr>
+                    <tr>
+                        <td>Username comparison </td>
+                        <td>Constraint </td>
+                        <td>Prevents duplicate usernames.</td>
+                        <td>Compares newly selected username with all other usernames.</td>
+                    </tr>
+                    <tr>
+                        <td>Profile picture size </td>
+                        <td>Constraint </td>
+                        <td>Prevents overly large image sizes  </td>
+                        <td>Checks new profile picture size with pre-configured maximum size. </td>
+                    </tr>
+                    <tr>
+                        <td>Username size </td>
+                        <td>Constraint </td>
+                        <td>Prevents username from being overly complicated and long. </td>
+                        <td>Checks new username character count with pre-configured maximum size. </td>
+                    </tr>
+                    <tr>
+                        <td>Profile picture format </td>
+                        <td>Constraint </td>
+                        <td>Prevents videos or other non-image file formats from being used. </td>
+                        <td>Checks new profile picture format with pre-configured acceptable formats list. </td>
                     </tr>
                 </table>
              </div>
             <h2><span class="id">5.37</span>View Profile Viewpoints (Admin User) [3.37]</h2>
-            <p>  
-
+            <p>
+                The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database 
+                compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends a response 
+                to the Server that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the View 
+                Profile screen. 
+            </p>
+            <p>
+                Upon loading the Server will update the GUI with a Report User button and Block User button. If the Report User button is 
+                clicked, then the Server will send a request to the Database to update the given Commercial or Consumer User as having 
+                been reported. If the Report User button is clicked, then the Server will send a request to the Database to update the 
+                given Commercial or Consumer User as having been blocked. 
             </p>
              <div class="indent">
                 <h3>Design Elements: </h3>
-                <p></p>
+                <p>The View Profile (Admin) Table identifies elements for the View Profile (Admin) Concern. [3.37] These elements perform 
+                    the duties of displaying and choosing values held within said concern. </p>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -2081,38 +2154,26 @@
                         <th>Description</th>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>Report User button </td>
                         <td>Entity </td>
-                        <td></td>
-                        <td></td>
+                        <td>Allows the Admin User to Report any Commercial or Consumer User. </td>
+                        <td>A button that can be clicked to perform the function. </td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>Block User button</td>
                         <td>Entity </td>
-                        <td></td>
-                        <td></td>
+                        <td>Allows the Admin User to Block any Commercial or Consumer User. </td>
+                        <td>A button that can be clicked to perform the function. </td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>Session Key</td>
                         <td>Entity </td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Entity </td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Entity </td>
-                        <td></td>
-                        <td></td>
+                        <td>Verifies the user is currently logged. </td>
+                        <td>A unique key that validates login sessions by comparing the current key with the key stored in the database. </td>
                     </tr>
                 </table>
              </div>
-            <h2><span class="id">5.38</span>Login (Admin User) [3.38]</h2>
+            <h2><span class="id">5.38</span>Login Viewpoints (Admin User) [3.38]</h2>
             <ul>
                <p>Admin User has option to login via username/password or via Facebook.</p>
                <li>Username and password: Admin User login information is submitted to server and put through hash to check for existing user as well as correct username and password. ‘Remember me’ option is taken into account. If information is incorrect the server returns an error message with option to recover password/account information and to re-submit login information. If the database accepts the submitted information the Admin User will be sent to the home page of Uvents.</li>
@@ -2205,7 +2266,7 @@
                   </tr>
                </table>
             </ul>
-            <h2><span class="id">5.39</span>Create New Admin (Admin) [3.39]</h2>
+            <h2><span class="id">5.39</span>Create New Admin Viewpoints (Admin) [3.39]</h2>
             <div class="indent">
                <p>The Admin is asked to input their email. Create new username and password is displayed to the admin. The server shall authenticate the username by searching through the database for the same username. This ensures a unique username. If
                   a similar username is found, an alert will pop up to the user telling them that the username is already in use. Client side validation shall be used to ensure that the password is valid. A valid password will be a password that has
@@ -2220,7 +2281,7 @@
                   <tr><td>Social Media Login Button </td> <td>Entity </td> <td>Allows the Admin User to instead login through social media </td> <td>The Admin User can use this button to login using social media instead of creating a new account </td></tr>
                </table>
             </div>
-            <h2><span class="id">5.40</span>Edit Users (Admin) [3.40]</h2>
+            <h2><span class="id">5.40</span>Edit Users Viewpoints (Admin) [3.40]</h2>
             <div class="indent">
                <p>The user interface will allow the Admin User to search for usernames. The UI will allow the Admin to click on a username to bring it up along with its associated social media links. The Admin will be able to edit the username and the social
                   media links through a text box. After making changes, the Admin will be able to save the changes by pressing a button. If there are any issues saving the data, the UI will be updated to indicate. There will also be a button to delete
@@ -2239,7 +2300,7 @@
                   <tr><td>Error Message Box </td> <td>Entity </td> <td>Provides the reason why the account couldn’t be changed or why the account couldn’t be deleted to the Admin user </td> <td>If there are any errors from the server when trying to change or delete account information, they will be displayed here, so the Admin user can see them </td></tr>
                </table>
             </div>
-            <h2><span class="id">5.41</span>Edit Events (Admin) [3.41]</h2>
+            <h2><span class="id">5.41</span>Edit Events Viewpoints (Admin) [3.41]</h2>
             <div class="indent">
                <p>The user interface will allow the Admin User to search for events. The UI will allow the Admin to click on an event to bring up its details. The Admin will be able to edit the start time, end time, type, title, description, address, price,
                   and participants through text boxes. The Admin will be able to save the changes by pressing a button. If there are any issues saving the data, the UI will be updated to indicate. There will also be a button to delte an account. Upon
@@ -2258,7 +2319,7 @@
                   <tr><td>Error Message Box </td><td>Entity </td><td>Provides the reason why the account couldn’t be changed or why the account couldn’t be deleted to the Admin user </td><td>If there are any errors from the server when trying to change or delete account information, they will be displayed here, so the Admin user can see them </td></tr>
                </table>
             </div>
-            <h2><span class="id">5.42</span>Message (Admin) [3.42]</h2>
+            <h2><span class="id">5.42</span>Message Viewpoints (Admin) [3.42]</h2>
             <div class="indent">
                <p>The user interface will allow the Admin user to search for any other acount. The UI will allow the Admin to see any message for them that are unread.</p>
                <table>
@@ -2268,7 +2329,7 @@
                   <tr><td>Receiver textbox </td> <td>Entry </td> <td>Allow user to select who is receiving the message </td> <td>A string that shows who received or is receiving the message </td></tr>
                </table>
             </div>
-            <h2><span class="id">5.43</span>Notifications (Admin) [3.43]</h2>
+            <h2><span class="id">5.43</span>Notifications Viewpoints (Admin) [3.43]</h2>
             <div class="indent">
                <p>Notificatons will display useful information to the Admin User. These Notifications will include Events, Approval Status Advertising, new reports, messages, and acount activity.</p>
                <table>
@@ -2277,7 +2338,7 @@
                   <tr><td>Banners </td> <td>Entity </td> <td>Notifications that will appear on the lock screen or as a banner when the user is on the device. </td> <td>Depending on what the user is doing, notifications will show up differently. </td></tr>
                </table>
             </div>
-            <h2><span class="id">5.44</span>Settings (Admin) [3.44]</h2>
+            <h2><span class="id">5.44</span>Settings Viewpoints (Admin) [3.44]</h2>
             <div class="indent">
                <p>The settings UI will allow for the Admin User to logout and access </p>
                <table>
@@ -2287,7 +2348,7 @@
                   <tr><td>Notification toggles </td> <td>Entity </td> <td>Allows the user to choose what type of notifications is to be viewed </td> <td>Different toggles will display and the user can toggle on or off different types of notifications. </td></tr>
                </table>
             </div>
-            <h2><span class="id">5.45</span>Logout (Admin User) [3.45]</h2>
+            <h2><span class="id">5.45</span>Logout Viewpoints (Admin User) [3.45]</h2>
             <div class="indent">
                <p>Admin User information is sent to server. If logout is accepted server will send confirmation to Admin User, who’s information will be removed from device.</p>
                <h3>Design Elements:</h3>
