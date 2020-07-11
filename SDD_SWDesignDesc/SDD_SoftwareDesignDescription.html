@@ -215,7 +215,64 @@
          <div class="indent">
 
          </div>
-         <h1><span class="id">3</span>Design Stakeholders and Concerns</h1>
+         <h1><span class="id">3</span>Overview/Architecture</h1>
+         <div class="indent">
+            <h2>Overview</h2>
+            <p>The overview is to show how all of the different pieces come together. At the top we have the login function to give access to one of the three different types of accounts. Upon login the database will be able to see which type of account that you have access to. If you are a consumer User then you will login and have access to your consumer “My Profile”, “My Events”, “Discover” and “settings”. If you are a commercial User then you will have access to “My Profile”, “Commercial Events”, “Settings”, and “Promote Event”. Upon login, the Admin will gain access to their account and will have access to “My Profile”, “Manage Users/Events”, “Settings”, and “Reports”. </p><br>
+            <img src="/SDD_SWDesignDesc/images/image10.png" alt="" class="pic"><br>
+            <h2>Login</h2>
+            <p>Upon login the database will verify the login credentials. Once the credentials have been verified you will gain access to the account type that is associated with your credentials. If you do not have an account you will have the ability to create a new account. </p><br>
+            <img src="/SDD_SWDesignDesc/images/image20.png" alt="" class="pic"><br>
+            <h2>Consumer Overview</h2>
+            <p>Upon consumer login, the Consumer will gain access to their account and will have access to “My Profile”, “My Events”, “Discover” and “settings”. “My Profile” will show the Consumer Users profile information and allow them to change their profile information. The Consumer will also have “My Events”, within “My Events” the Consumer will see all the Events that they have created or Joined. The Consumer will have the ability to edit the Events that they have created.</p><br>
+            <img src="/SDD_SWDesignDesc/images/image32.png" alt="" class="pic"><br>
+            <h2>Discover</h2>
+            <p>Upon consumer login, they will see the Discover Page. On the Discover page, they will be shown a list of relevant events from the database. They will have the option to use a search bar to search for profiles or events as well as Filtering and sorting.</p> 
+               <p>When a Consumer or Commercial profile has been found, the Consumer User will have the option to access it. When viewing the profile, the Consumer User will have the ability to block or report a user. Any block or report will be sent to the database for future use or review.
+               </p><br>
+            <img src="/SDD_SWDesignDesc/images/image12.png" alt="" class="pic"><br>
+            <h2>My Events</h2>
+            <p>Upon selecting the “My Events” tab, the user will be shown a list of events they have created and a list of events they have joined. From there, they will be able to select an event to edit it, leave it, or message other participants.</p><br>
+            <img src="/SDD_SWDesignDesc/images/image14.png" alt="" class="pic"><br>
+            <h2>View My Profile</h2>
+            <p>Once the Consumer User has logged in, they will be able to View their Profile in which they can see their own information and then edit it as well. After which the information is sent to the database to update the information. </p><br>
+            <img src="/SDD_SWDesignDesc/images/image38.png" alt="" class="pic"><br>
+            <h2>Settings</h2>
+            <p>In order to view the settings and make changes, the Consumer User must first be logged in. A new session will be created. User login info will be verified by comparing it to the data in the Database. Successful verification will grant application access to the user.  In settings, the Consumer User may go to Notifications or logout of their session. If they logout their session will be closed and then redirected to the login page. In the Notification settings the Consumer User may choose notification preferences (turn on or off individual notifications).</p><br>
+            <img src="/SDD_SWDesignDesc/images/image13.png" alt="" class="pic"><br>
+            <h2>Commercial Overview</h2>
+            <p>Upon login, the Commercial User will gain access to their account and will have access to “My Profile”, “Commercial Events”, “Settings”, and “Promote Event”. “My Profile” will show the Commercial Users profile information and allow them to change their profile information. The Commercial Users will have third party payment information in addition to the business information. The Commercial User will also have “Commercial Events”, this will show the Events created by the Commercial User and will allow them to edit and see participants. The Commercial User will also have “Settings” and  “Promote Event”.</p><br>
+            <img src="/SDD_SWDesignDesc/images/image41.png" alt="" class="pic"><br>
+            <h2>Promote Event</h2>
+            <p>The Commercial user after logging in will be able to “Promote Event”. They will then be able to start auctioning to Promote a chosen Event.</p><br>
+            <img src="/SDD_SWDesignDesc/images/image18.png" alt="" class="pic"><br>
+            <h2>View My Profile </h2>
+            <p>In order to view their profile, the Commercial user must first be logged in. When a profile is viewed, information is retrieved from the database to be displayed in a standard format. The Commercial User will also be able to edit their own profile information including their picture/logo or their username. Edited profile information will replace the old information in the database. Payment information will be handled through a third-party API.
+            </p><br>
+            <img src="/SDD_SWDesignDesc/images/image19.png" alt="" class="pic"><br>
+            <h2>Commercial Event</h2>
+            <p>In order to view and make changes to the Commercial Events the user must be logged in. The Users can choose between Creating an Event, Editing/Deleting an Event or viewing the Past Events. After choosing each of these functions the app will retrieve information from the database and the user can make changes to it. After the user is done editing the information will be updated to the database again.</p><br>
+            <img src="/SDD_SWDesignDesc/images/image42.png" alt="" class="pic"><br>
+            <h2>Settings</h2>
+            <p>In order to view the settings and make changes, the Commercial user must first be logged in. A new session will be created. User login info will be verified by comparing it to the data in the Database. Successful verification will grant application access to the user.  In settings, the Commercial user may go to Notifications or logout of their session. If they logout their session will be closed and then redirected to the login page. In the Notification settings the Commercial user may choose notification preferences (turn on or off individual notifications).</p><br>
+            <img src="/SDD_SWDesignDesc/images/image4.png" alt="" class="pic"><br>
+            <h2>Admin Overview</h2>
+            <p>Upon login, the Admin will gain access to their account and will have access to “My Profile”, “Manage Users/Events”, “Settings”, and “Reports”. “My Profile” will show the Admin profile information and allow them to change their profile information. The Admin User will also have “Manage User/Events”, this will give the Admin access to edit Accounts as well as Events Created by Consumers and Commercial Users. The Admin User will also have “Settings” and  “Reports”.</p><br>
+            <img src="/SDD_SWDesignDesc/images/image36.png" alt="" class="pic"><br>
+            <h2>Manage Users/Events</h2>
+            <p>After logging in, an admin user will be able to select the “Manage Users/Events” tab to be able to edit or delete events created by another user as well as approving commercial users to obtain a commercial account.</p><br>
+            <img src="/SDD_SWDesignDesc/images/image31.png" alt="" class="pic"><br>
+            <h2>View My Profile</h2>
+            <p>In order to view their profile, the Admin user must first be logged in. When a profile is viewed, information is retrieved from the database to be displayed in a standard format. The Admin User will also be able to edit their own profile information including their picture/logo or their username. Edited profile information will replace the old information in the database.</p><br>
+            <img src="/SDD_SWDesignDesc/images/image19.png" alt="" class="pic"><br>
+            <h2>Reports</h2>
+            <p>The Admin User must be logged in to view the reports. Admin Users will be able to view Consumer as well as Commercial Reports. After the Admin Users chooses which report they want to view the app will request the information from the database and the User can view it.</p><br>
+            <img src="/SDD_SWDesignDesc/images/image34.png" alt="" class="pic"><br>
+            <h2>Settings</h2>
+            <p>In order to view the settings and make changes, the Admin user must first be logged in. A new session will be created. User login info will be verified by comparing it to the data in the Database. Successful verification will grant application access to the user.  In settings, the Admin user may go to Notifications or logout of their session. If they logout their session will be closed and then redirected to the login page. In the Notification settings the Admin user may choose notification preferences (turn on or off individual notifications).</p><br>
+            <img src="/SDD_SWDesignDesc/images/image4.png" alt="" class="pic"><br>
+         </div>
+         <h1><span class="id">4</span>Design Stakeholders and Concerns</h1>
          <ul class="auto-ID big" id="3.1">
             <li>Create Consumer Account</li>
             <li>Join Commercial Event</li>
@@ -429,27 +486,27 @@
                <li>Instagram: The Admin User clicks on login with Instagram. Instagram’s login page is brought up and displays the Instagram Username and Password boxes. If the Instagram server rejects Admin User information an error message appears. If
                   the Instagram server accepts Admin User information the Admin User is brought to the Uvents’ home page.</li>
             </ul>
-            <h2><span class="id">4.39</span>Create New Admin (Admin) [3.39]</h2>
+            <h2><span class="id">5.39</span>Create New Admin (Admin) [4.39]</h2>
             <div class="indent">
                <p>Admin user enters an email address. Admin user then creates a username and is notified when the username has been taken. Admin then creates a password and is notified when it is valid. The Admin is then asked for their name. The admin user then clicks the create account button.</p>
             </div>
-            <h2><span class="id">4.40</span>Edit Users (Admin User) [3.40]</h2>
+            <h2><span class="id">5.40</span>Edit Users (Admin User) [4.40]</h2>
             <div class="indent">
                <p>The Admin User will have the ability to edit user information. The Admin will be able to change usernames. The Admin will also be to add or remove any social media connections to the user's account. The Admin user will also have the option to delete the user's account, and they will need to provide a reason for deleting a user's account. Once the changes are verified, the Admin will be able to save these changes to the database.</p>
             </div>
-            <h2><span class="id">4.41</span>Edit Events (Admin) [3.41]</h2>
+            <h2><span class="id">5.41</span>Edit Events (Admin) [5.41]</h2>
             <div class="indent">
                <p>The Admin User will have the ability to edit event information. The Admin will be able to change the event location, time, participants, title, description, type, and price. The Admin will also have the option to delete the event. The Admin will need to provide a reason for deleting the event. The changes will be verified, and then the Admin can save them to the database.</p>
             </div>
-            <h2><span class="id">4.42</span>Message (Admin) [3.42]</h2>
+            <h2><span class="id">5.42</span>Message (Admin) [4.42]</h2>
             <div class="indent">
                <p>The Admin will have the ability to message other all other accounts.</p>
             </div>
-            <h2><span class="id">4.43</span>Notifications (Admin) [3.43]</h2>
+            <h2><span class="id">5.43</span>Notifications (Admin) [4.43]</h2>
             <div class="indent">
                <p>The Admin will have the ability to see different types of notifications for different events</p>
             </div>
-            <h2><span class="id">4.44</span>Settings (Admin) [3.44]</h2>
+            <h2><span class="id">5.44</span>Settings (Admin) [4.44]</h2>
             <div class="indent">
                <p>The Admin User will have the ability to edit their settings and notifications</p>
             </div>
@@ -2480,7 +2537,7 @@
                   </tr>
                </table>
             </ul>
-            <h2><span class="id">5.39</span>Create New Admin (Admin) [3.39]</h2>
+            <h2><span class="id">6.39</span>Create New Admin (Admin) [4.39]</h2>
             <div class="indent">
                <p>The Admin is asked to input their email. Create new username and password is displayed to the admin. The server shall authenticate the username by searching through the database for the same username. This ensures a unique username. If a similar username is found, an alert will pop up to the user telling them that the username is already in use. Client side validation shall be used to ensure that the password is valid. A valid password will be a password that has at least 6 characters. The Admin is then asked to provide their name. Once the create account button is pressed, the form will be validated.</p>
                <table>
@@ -2528,9 +2585,9 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">5.40</span>Edit Users (Admin) [3.40]</h2>
+            <h2><span class="id">6.40</span>Edit Users (Admin) [4.40]</h2>
             <div class="indent">
-               <p>The user interface will allow the Admin User to search for usernames. The UI will allow the Admin to click on a username to bring it up along with its associated social media links. The Admin will be able to edit the username and the social media links through a text box. After making changes, the Admin will be able to save the changes by pressing a button. If there are any issues saving the data, the UI will be updated to indicate. There will also be a button to delete the user's account. Upon doing so, the Admin will need to verify that they want to delete the user account, and they will provide a reason for deleting it through a text box. If they verify it, the account will be deleted, and if there are any issues with deleting the account, the UI will be updated to indicate so.</p>
+               <p>he user interface will allow the Admin User to search for usernames. The UI will allow the Admin to click on a username to bring it up along with its associated social media links. The Admin will be able to edit the username and the social media links through a text box. After making changes, the Admin will be able to save the changes by pressing a button. If there are any issues saving the data, the UI will be updated to indicate. There will also be a button to delete the user's account. Upon doing so, the Admin will need to verify that they want to delete the user account, and they will provide a reason for deleting it through a text box. If they verify it, the account will be deleted, and if there are any issues with deleting the account, the UI will be updated to indicate so.</p>
                <table>
                   <tr>
                      <th>Name</th>
@@ -2663,7 +2720,7 @@
             </div>
             <h2><span class="id">5.42</span>Message (Admin) [3.42]</h2>
             <div class="indent">
-               <p>The user interface will allow the Admin user to search for any other acount. The UI will allow the Admin to see any message for them that are unread.</p>
+               <p>The user interface will allow the Admin user to search for any other account. The UI will allow the Admin to see any message for them that are unread.</p>
                <table>
                   <tr>
                      <th>Name</th>
@@ -2693,7 +2750,7 @@
             </div>
             <h2><span class="id">5.43</span>Notifications (Admin) [3.43]</h2>
             <div class="indent">
-               <p>Notificatons will display useful information to the Admin User. These Notifications will include Events, Approval Status Advertising, new reports, messages, and acount activity.</p>
+               <p>Notifications will display useful information to the Admin User. These Notifications will include Events, Approval Status Advertising, new reports, messages, and account activity.</p>
                <table>
                   <tr>
                      <th>Name</th>
@@ -2717,7 +2774,7 @@
             </div>
             <h2><span class="id">5.44</span>Settings Viewpoints (Admin) [3.44]</h2>
             <div class="indent">
-               <p>The settings UI will allow for the Admin User to logout and access </p>
+               <p>The settings UI will allow for the Admin User to logout and access</p>
                <table>
                   <tr>
                      <th>Name</th>
@@ -2754,11 +2811,11 @@
                </ul>
             </div>
          </div>
-         <h1><span class="id">6</span>View</h1>
+         <h1><span class="id">7</span>View</h1>
          <div class="indent">
 
          </div>
-         <h1><span class="id">7</span>Model</h1>
+         <h1><span class="id">8</span>Model</h1>
          <div class="indent">
             <img src="./images/CommunicationUML.png" alt="Communication UML" class="pic">
             <p>The System will use encrypted communication channels for communication between the mobile application and the server. The system will use encrypted communication channels for communication between the server and the database. Facebook login credentials will be able to be used as an option for logging into the mobile application and as a means of authentication.  This system of communication will ensure the privacy of the user and ensures that the data transferred can be predictable. </p>
@@ -2870,7 +2927,7 @@
             <img src="" alt="" class="pic">
             <img src="" alt="" class="pic">
          </div>
-         <h1><span class="id">8</span>Controller</h1>
+         <h1><span class="id">9</span>Controller</h1>
          <div class="indent">
             <img src="" alt="" class="pic">
             <img src="" alt="" class="pic">
@@ -2878,9 +2935,9 @@
             <img src="" alt="" class="pic">
             <img src="" alt="" class="pic">
             <img src="" alt="" class="pic">
-            <img src="" alt="" class="pic">
-            <img src="" alt="" class="pic">
-            <img src="" alt="" class="pic">
+            <img src="/SDD_SWDesignDesc/images/Flow diagram trash.png" alt="" class="pic">
+            <img src="/SDD_SWDesignDesc/images/Control Flow.png" alt="" class="pic">
+            <img src="/SDD_SWDesignDesc/images/UML.png" alt="" class="pic">
          </div>
       </div>
    </body>
