@@ -215,7 +215,64 @@
          <div class="indent">
 
          </div>
-         <h1><span class="id">3</span>Design Stakeholders and Concerns</h1>
+         <h1><span class="id">3</span>Overview/Architecture</h1>
+         <div class="indent">
+            <h2>Overview</h2>
+            <p>The overview is to show how all of the different pieces come together. At the top we have the login function to give access to one of the three different types of accounts. Upon login the database will be able to see which type of account that you have access to. If you are a consumer User then you will login and have access to your consumer “My Profile”, “My Events”, “Discover” and “settings”. If you are a commercial User then you will have access to “My Profile”, “Commercial Events”, “Settings”, and “Promote Event”. Upon login, the Admin will gain access to their account and will have access to “My Profile”, “Manage Users/Events”, “Settings”, and “Reports”. </p><br>
+            <img src="/SDD_SWDesignDesc/images/image10.png" alt="" class="pic"><br>
+            <h2>Login</h2>
+            <p>Upon login the database will verify the login credentials. Once the credentials have been verified you will gain access to the account type that is associated with your credentials. If you do not have an account you will have the ability to create a new account. </p><br>
+            <img src="/SDD_SWDesignDesc/images/image20.png" alt="" class="pic"><br>
+            <h2>Consumer Overview</h2>
+            <p>Upon consumer login, the Consumer will gain access to their account and will have access to “My Profile”, “My Events”, “Discover” and “settings”. “My Profile” will show the Consumer Users profile information and allow them to change their profile information. The Consumer will also have “My Events”, within “My Events” the Consumer will see all the Events that they have created or Joined. The Consumer will have the ability to edit the Events that they have created.</p><br>
+            <img src="/SDD_SWDesignDesc/images/image32.png" alt="" class="pic"><br>
+            <h2>Discover</h2>
+            <p>Upon consumer login, they will see the Discover Page. On the Discover page, they will be shown a list of relevant events from the database. They will have the option to use a search bar to search for profiles or events as well as Filtering and sorting.</p> 
+               <p>When a Consumer or Commercial profile has been found, the Consumer User will have the option to access it. When viewing the profile, the Consumer User will have the ability to block or report a user. Any block or report will be sent to the database for future use or review.
+               </p><br>
+            <img src="/SDD_SWDesignDesc/images/image12.png" alt="" class="pic"><br>
+            <h2>My Events</h2>
+            <p>Upon selecting the “My Events” tab, the user will be shown a list of events they have created and a list of events they have joined. From there, they will be able to select an event to edit it, leave it, or message other participants.</p><br>
+            <img src="/SDD_SWDesignDesc/images/image14.png" alt="" class="pic"><br>
+            <h2>View My Profile</h2>
+            <p>Once the Consumer User has logged in, they will be able to View their Profile in which they can see their own information and then edit it as well. After which the information is sent to the database to update the information. </p><br>
+            <img src="/SDD_SWDesignDesc/images/image38.png" alt="" class="pic"><br>
+            <h2>Settings</h2>
+            <p>In order to view the settings and make changes, the Consumer User must first be logged in. A new session will be created. User login info will be verified by comparing it to the data in the Database. Successful verification will grant application access to the user.  In settings, the Consumer User may go to Notifications or logout of their session. If they logout their session will be closed and then redirected to the login page. In the Notification settings the Consumer User may choose notification preferences (turn on or off individual notifications).</p><br>
+            <img src="/SDD_SWDesignDesc/images/image13.png" alt="" class="pic"><br>
+            <h2>Commercial Overview</h2>
+            <p>Upon login, the Commercial User will gain access to their account and will have access to “My Profile”, “Commercial Events”, “Settings”, and “Promote Event”. “My Profile” will show the Commercial Users profile information and allow them to change their profile information. The Commercial Users will have third party payment information in addition to the business information. The Commercial User will also have “Commercial Events”, this will show the Events created by the Commercial User and will allow them to edit and see participants. The Commercial User will also have “Settings” and  “Promote Event”.</p><br>
+            <img src="/SDD_SWDesignDesc/images/image41.png" alt="" class="pic"><br>
+            <h2>Promote Event</h2>
+            <p>The Commercial user after logging in will be able to “Promote Event”. They will then be able to start auctioning to Promote a chosen Event.</p><br>
+            <img src="/SDD_SWDesignDesc/images/image18.png" alt="" class="pic"><br>
+            <h2>View My Profile </h2>
+            <p>In order to view their profile, the Commercial user must first be logged in. When a profile is viewed, information is retrieved from the database to be displayed in a standard format. The Commercial User will also be able to edit their own profile information including their picture/logo or their username. Edited profile information will replace the old information in the database. Payment information will be handled through a third-party API.
+            </p><br>
+            <img src="/SDD_SWDesignDesc/images/image19.png" alt="" class="pic"><br>
+            <h2>Commercial Event</h2>
+            <p>In order to view and make changes to the Commercial Events the user must be logged in. The Users can choose between Creating an Event, Editing/Deleting an Event or viewing the Past Events. After choosing each of these functions the app will retrieve information from the database and the user can make changes to it. After the user is done editing the information will be updated to the database again.</p><br>
+            <img src="/SDD_SWDesignDesc/images/image42.png" alt="" class="pic"><br>
+            <h2>Settings</h2>
+            <p>In order to view the settings and make changes, the Commercial user must first be logged in. A new session will be created. User login info will be verified by comparing it to the data in the Database. Successful verification will grant application access to the user.  In settings, the Commercial user may go to Notifications or logout of their session. If they logout their session will be closed and then redirected to the login page. In the Notification settings the Commercial user may choose notification preferences (turn on or off individual notifications).</p><br>
+            <img src="/SDD_SWDesignDesc/images/image4.png" alt="" class="pic"><br>
+            <h2>Admin Overview</h2>
+            <p>Upon login, the Admin will gain access to their account and will have access to “My Profile”, “Manage Users/Events”, “Settings”, and “Reports”. “My Profile” will show the Admin profile information and allow them to change their profile information. The Admin User will also have “Manage User/Events”, this will give the Admin access to edit Accounts as well as Events Created by Consumers and Commercial Users. The Admin User will also have “Settings” and  “Reports”.</p><br>
+            <img src="/SDD_SWDesignDesc/images/image36.png" alt="" class="pic"><br>
+            <h2>Manage Users/Events</h2>
+            <p>After logging in, an admin user will be able to select the “Manage Users/Events” tab to be able to edit or delete events created by another user as well as approving commercial users to obtain a commercial account.</p><br>
+            <img src="/SDD_SWDesignDesc/images/image31.png" alt="" class="pic"><br>
+            <h2>View My Profile</h2>
+            <p>In order to view their profile, the Admin user must first be logged in. When a profile is viewed, information is retrieved from the database to be displayed in a standard format. The Admin User will also be able to edit their own profile information including their picture/logo or their username. Edited profile information will replace the old information in the database.</p><br>
+            <img src="/SDD_SWDesignDesc/images/image19.png" alt="" class="pic"><br>
+            <h2>Reports</h2>
+            <p>The Admin User must be logged in to view the reports. Admin Users will be able to view Consumer as well as Commercial Reports. After the Admin Users chooses which report they want to view the app will request the information from the database and the User can view it.</p><br>
+            <img src="/SDD_SWDesignDesc/images/image34.png" alt="" class="pic"><br>
+            <h2>Settings</h2>
+            <p>In order to view the settings and make changes, the Admin user must first be logged in. A new session will be created. User login info will be verified by comparing it to the data in the Database. Successful verification will grant application access to the user.  In settings, the Admin user may go to Notifications or logout of their session. If they logout their session will be closed and then redirected to the login page. In the Notification settings the Admin user may choose notification preferences (turn on or off individual notifications).</p><br>
+            <img src="/SDD_SWDesignDesc/images/image4.png" alt="" class="pic"><br>
+         </div>
+         <h1><span class="id">4</span>Design Stakeholders and Concerns</h1>
          <ul class="auto-ID big" id="3.1">
             <li>Create Consumer Account</li>
             <li>Join Commercial Event</li>
