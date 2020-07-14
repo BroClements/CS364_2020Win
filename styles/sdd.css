@@ -72,7 +72,7 @@ h2, h2 span { font-size: 18px; }
 h3, h3 span { font-size: 16px; }
 h4, h5, h6 { 
    font-weight: unset;
-   margin: 10px 0 0 0;
+   margin: 0;
 }
 h4, h4 span { font-size: 14px; }
 h5, h5 span { font-size: 12px; }
