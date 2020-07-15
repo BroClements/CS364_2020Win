@@ -59,6 +59,8 @@ div.page-number {
 header { padding: 10px 0; }
 header>div { font-size: 11px; }
 
+.big { font-weight: bold; }
+
 h1,
 h2,
 h3,
@@ -173,15 +175,6 @@ img {
    width: 33%;
 }
 
-.table-of-contents h1 {
-   margin-top: 40px;
-   margin-bottom: 10px;
-}
-
-.table-of-contents a {
-   font-size: large;
-}
-
 .center {
    margin: auto;
    width: 61%;
@@ -189,18 +182,26 @@ img {
    padding: 30px;
 }
 
-.row {
+.table-of-contents h1 {
+   margin-top: 20px 0 0 0;
+}
+
+.table-of-contents a {
+   font-size: large;
+   display: table-row; 
+}
+
+.table-of-contents div:not(.indent) {
    display: flex;
 }
 
-.row span:nth-child(2) {
+.table-of-contents div span:nth-child(2) {
    flex: 1;
    border-bottom: 1px dashed black;
    margin-bottom: 6px;
 }
 
-.row .pageNumber {
+.pageNumber {
    font-size: 16px;
 }
-
 /* stylesheet to be used specifically for SDD. */

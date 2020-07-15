@@ -126,7 +126,32 @@
       </div>
       <div class="page table-of-contents">
          <h1>Table of Contents</h1>
+         <div><a href="#Introduction" class="big">1 INTRODUCTION</a> <span></span> <span class="pageNumber">4</span></div>
+         <div class="indent">
+            <div><a href="#Purpose">1.1 Purpose</a> <span></span> <span class="pageNumber">7</span></div>
+            <div><a href="#Scope">1.2 Scope</a> <span></span> <span class="pageNumber">7</span></div>
+            <div><a href="#DesignGoals">1.3 Design Goals</a> <span></span> <span class="pageNumber">7</span></div>
+            <div><a href="#Definitions">1.4 Definitions</a> <span></span> <span class="pageNumber">7</span></div>
+            <div><a href="#References">1.5 References</a> <span></span> <span class="pageNumber">7</span></div>
+         </div>
+         <div><a href="#SDDID" class="big">2 SDD IDENTIFICATION</a> <span></span> <span class="pageNumber">4</span></div>
+         <div><a href="#Concerns" class="big">3 DESIGN STAKEHOLDERS AND CONCERS</a> <span></span> <span class="pageNumber">4</span></div>
+         <div><a href="#Overview" class="big">4 OVERVIEW/ARCHITECTURE</a> <span></span> <span class="pageNumber">4</span></div>
+         <div class="indent">
+            <div><a href="#Overview">4.1 Overview</a> <span></span> <span class="pageNumber">7</span></div>
+            <div><a href="#Login">4.2 Login</a> <span></span> <span class="pageNumber">7</span></div>
+            <div><a href="#ConsOver">4.3 Consumer User Overview</a> <span></span> <span class="pageNumber">7</span></div>
+            <div><a href="#CommOver">4.4 Commercial User Overview</a> <span></span> <span class="pageNumber">7</span></div>
+            <div><a href="#AdminOver">4.5 Admin User Overview</a> <span></span> <span class="pageNumber">7</span></div>
+         </div>
+         <div><a href="#Concerns" class="big">5 DESIGN STAKEHOLDERS AND CONCERS</a> <span></span> <span class="pageNumber">4</span></div>
+         
          <h1>Table of Figures</h1>
+         <div><a href="#">Consumer User Login Workflow</a> <span></span> <span class="pageNumber">p</span></div>
+         <div><a href="#">Consumer User Login Workflow</a> <span></span> <span class="pageNumber">p</span></div>
+         <div><a href="#">Consumer User Login Workflow</a> <span></span> <span class="pageNumber">p</span></div>
+         <div><a href="#">Consumer User Login Workflow</a> <span></span> <span class="pageNumber">p</span></div>
+         <div><a href="#">Consumer User Login Workflow</a> <span></span> <span class="pageNumber">p</span></div>
       </div>
       <div class="page">
          <h1>Revision History</h1>
@@ -281,7 +306,8 @@
                <p>Sponsor wants the admin user to be able to adjust settings</p>
             </li>
             <li>Logout (Admin User) [1.5.1.1]
-               <p>Sponsor wants Admins to logout, due to security reason</p></li>
+               <ul><li>Sponsor wants Admin Users to logout, due to security reason</li></ul>
+            </li>
          </ul>
          <h1><span class="id">4</span>Overview/Architecture</h1>
          <div class="indent">
@@ -342,6 +368,7 @@
             <p>In order to view the settings and make changes, the Admin user must first be logged in. A new session will be created. User login info will be verified by comparing it to the data in the Database. Successful verification will grant application access to the user. In settings, the Admin user may go to Notifications or logout of their session. If they logout their session will be closed and then redirected to the login page. In the Notification settings the Admin user may choose notification preferences (turn on or off individual notifications).</p>
             <img src="images/image4.png" alt="Overview Admin Settings" class="pic"><br>
          </div>
+         
          <h1><span class="id">5</span>Design Views</h1>
          <div class="indent">
             <h2><span class="id">5.1</span>Create Consumer Account [4.1]</h2>
@@ -358,8 +385,8 @@
             <p>Consumer will have access to settings. In the setting will be an option to edit profile. Current information fields will be presented. The user will be able to change these values and save them. </p>
             <h2><span class="id">5.5</span>View Profile (Consumer User) [4.5]</h2>
             <p>Consumer selects the profile of the commercial or consumer user that they wish to view. The profile information is displayed. The consumer has the option to “Report User”. The consumer has the option to “Block User.” </p>
-            <h2><span class="id">5.6</span>Login (Consumer User) [4.6]</h2>
-            <p>The Consumer User opens the app and sees the option to login via 3rd party, username/password, or to create an account.</p>
+            <h2><span class="id">5.6</span>Login (Consumer User) [3.6]</h2>
+            <p>The Consumer User opens Uvents and sees the option to login via 3rd party, username/password, or to create an account.</p>
             <ul>
                <li>Username and password: The Consumer User clicks on username/password and is brought to the login portal. The username and password boxes are displayed to the Consumer User. The Consumer User submits information. If the database rejects Consumer User information an error appears with an option to retry or recover password. If the database accepts the Consumer User information the Consumer User is brought to the home page.</li>
                <li>The Consumer User clicks on ‘3rd party login’ and is taken to a screen that displays the different 3rd party login options: Facebook, Twitter, Instagram.</li>
@@ -395,7 +422,7 @@
             <p>Consumer users will be able to access the setting menu on the top of the page. It looks like a hamburger button. Once it clicked it went from horizontal hamburger button to vertical. When the user clicks the “setting”, a new window will appear
                and ask users to type a password one more time to verify identification. Once the users type the password, all information(Name, password, address, contact information etc.) will be displayed. And when users are done changing any information,
                they can click the “Confirm” to change settings and “Cancel” to cancel whatever they did.</p>
-            <h2><span class="id">5.16</span>Logout (Consumer User) [4.16]</h2>
+            <h2><span class="id">5.16</span>Logout (Consumer User) [3.16]</h2>
             <p>Consumer User sees the logout button. When pressed the Consumer User will be brought to the main login page. They are then “signed out” of their account.</p>
             <h2><span class="id">5.17</span>Create Commercial Account [4.17]</h2>
             <div class="indent">Commercial Users click on the “Create New Account” button. A window will open where the Commercial User will be required to enter information like a valid email, unique username and password with at least 6 characters. Commercial users will
@@ -412,8 +439,8 @@
             <div class="indent">Commercial user clicks on picture, description, etc. to edit information. Once user saves edits, the changes will be sent to the database, where the appropriate table's information shall be changed. Edits will be displayed after being saved.</div>
             <h2><span class="id">5.22</span>View Profile (Commercial) [4.22]</h2>
             <div class="indent">Consumer User selects the profile of the Commercial User of which they would like to view. The profile information is displayed. The Consumer has the option to block/report Commercial User.</div>
-            <h2><span class="id">5.23</span>Login (Commercial User) [4.23]</h2>
-            <p>The Commercial User opens the app and sees the option to login via 3rd party, username/password, or to create an account.</p>
+            <h2><span class="id">5.23</span>Login (Commercial User) [3.23]</h2>
+            <p>The Commercial User opens Uvents and sees the option to login via 3rd party, username/password, or to create an account.</p>
             <ul>
                <li>Username and password: The Commercial User clicks on username/password and is brought to the login portal. The username and password boxes are displayed to the Commercial User. The Commercial User submits information. If the database rejects Commercial User information an error appears with an option to retry or recover password. If the database accepts the Commercial User information the Commercial User is brought to the home page.</li>
                <li>The Commercial User clicks on ‘3rd party login’ and is taken to a screen that displays the different 3rd party login options: Facebook, Twitter, Instagram.</li>
@@ -457,7 +484,7 @@
                   Commercial Users will have the ability to adjust their settings. This will include logging out of their account and modifying their notification settings.
                </p>
             </div>
-            <h2><span class="id">5.33</span>Logout (Commercial User) [4.33]</h2>
+            <h2><span class="id">5.33</span>Logout (Commercial User) [3.33]</h2>
             <p>Commercial User sees the logout button. When pressed the Commercial User will be brought to the main login page. They are then “signed out” of their account.</p>
             <h2><span class="id">5.34</span>View Commercial Reports (Admin User) [4.34]</h2>
             <div class="indent">
@@ -491,7 +518,7 @@
                </p>
 
             </div>
-            <h2><span class="id">5.38</span>Login (Admin User) [4.38]</h2>
+            <h2><span class="id">5.38</span>Login (Admin User) [3.38]</h2>
             <p>The Admin User opens the app and sees the option to login via 3rd party, username/password, or to create an account.</p>
             <ul>
                <li>Username and password: The Admin User clicks on username/password and is brought to the login portal. The username and password boxes are displayed to the Admin User. The Admin User submits information. If the database rejects Admin User information an error appears with an option to retry or recover password. If the database accepts the Admin User information the Admin User is brought to the home page.</li>
@@ -527,7 +554,7 @@
             <div class="indent">
                <p>The Admin User will have the ability to edit their settings and notifications</p>
             </div>
-            <h2><span class="id">5.45</span>Logout (Admin User) [4.45]</h2>
+            <h2><span class="id">5.45</span>Logout (Admin User) [3.45]</h2>
             <p>Admin User sees the logout button. When pressed the Admin User will be brought to the main login page. They are then “signed out” of their account.</p>
          </div>
          <h1><span class="id">6</span>Design Viewpoints</h1>
