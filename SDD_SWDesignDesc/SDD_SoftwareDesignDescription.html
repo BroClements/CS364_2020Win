@@ -28,10 +28,10 @@
             for (let dateField of $('.date')) {
                $(dateField).prepend('<span>Date:</span>');
             }
-         });
 
-         // Add anchors before each heading id
-         $('span.id').each((i, el)=> {$(el).before(`<a name="${el.innerHTML}"></a>`)});
+            // Add anchors before each heading id
+            $('span.id').each((i, el)=> {$(el).before(`<a name="${el.innerHTML}"></a>`)});
+         });
       </script>
    </head>
 
