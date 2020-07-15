@@ -2843,7 +2843,34 @@
          </div>
          <h1><span class="id">7</span>View</h1>
          <div class="indent">
-
+            <h2>7.2 Workflow</h2>
+            <p>The workflow technique is designed to give the person who uses it a layed out example of a User performing a task on the system. This takes things like logging in and breaks it down into its steps and decision logic. Decision logic is used to highlight spots in the code where something along the lines of an if statement will be needed. This represents a crossroads where a condition is met or is not. This graphic overview of these different processes makes all of the aspects of something more complicated like logging in, the logic behind it, and lays it out in an easy-to-understand manner. There are different diagrams based on the User and process in question, for a Consumer User making a new account is more simple than an Admin User making a new account. All of these diagrams together form the workflow that can be used by both engineers and developers alike.</p>
+            <div class="indent">
+               <h3>7.2.1 Admin workflow Diagram</h3>
+               <img src="./images/AdminWorkflowDiagrams.png" alt="Admin Workflow Diagram" class=:pic">
+               <h3>7.2.3 Commercial Workflow Diagram</h3>
+               <img src="./images/CommercialWorkflowDiagram.png" alt="Commercial Workflor Diagram" class=:pic">
+               <h3>7.2.3 Consumer Workflow Diagram</h3>
+               <img src="./images/ConsumerWorkflowDiagram.png" alt="Consumer Workflow Diagram" class=:pic">
+            </div>
+            <h2>7.3 Data and Data and Information View Design</h2>
+            <div class="indent">
+               <h3>7.3.1 Data and Information View Design Diagram</h3>
+               <p>This view focuses on the flow of information and data as the program operates. There is no particular sequence of events. Of course everything begins when a user either creates an account or logs into their account. This can be done by entering credentials manually, or creating/signing in via another social media profile such as Facebook. Accounts can be one of three levels of privilege: Consumer, Commercial, or Admin. Each type of user can view the accounts of other users, but not change any information. Each user has a way to create or edit events, and as such need access to the events database. As well each user has the ability to edit their profile, and need access to the database to make and save changes to their profile. Upon creation of a Consumer User account, a help feature may guide the new user around to show them how to operate the application. Similarly, upon the creation of a Commercial User account a “Tooltips” feature appears to showcase more ways to operate a commercial user account.</p>
+               <img src="./images/Data_and_Information_View_Design.png" alt="Data and Information View Design Diagram" class=:pic">
+            </div>
+            <h2>7.4 Entity Relationships</h2>
+            <div class="indent">
+            	<h3> Entity Relationships Diagram</h3>
+               <p>An entity relationship diagram (ERD) shows the relationships of entity sets stored in a database. An entity in this context is an object, a component of data. An entity set is a collection of similar entities. These entities can have attributes that define its properties[1]. For the Uvents project, this diagram is built based on the 3.5 Logical Database Requirements section of the SRS. It consists of 14 tables that will hold both user and application data[2]. This database will be stored remotely and the users will have to have an Internet connection to be able to access this database. All the information downloaded from there will be streamed to let the user get the most updated information. The information, channels, and all connections must be secure to protect both users and stakeholders.</p>
+               <img src="./images/Entity-Relationships.png" alt="Entity Relationships Diagram" class=:pic">
+            </div>
+            <h3>7.5 Project Viewpoint</h3>
+            <div class="indent">
+               <h2>7.5.1 Project viewpoint Diagram</h2>
+               <p>Project viewpoint is one of the design techniques. It is a way to divide the whole project into pieces using teams or small projects. In our scenario, I would like to divide the project into each type of user. Then each type of user has its own special project.</p>
+               <img src="./images/Uvents_project_viewpoint.png" alt="Uvents Project Viewpoint Diagram" class=:pic">
+            </div>
          </div>
          <h1><span class="id">8</span>Model</h1>
          <div class="indent">
