@@ -586,11 +586,12 @@
          <h1><span class="id">4</span>Overview/Architecture</h1>
          <div class="indent">
             <h2><span class="id">4.1</span>Overview</h2>
-            <p>The overview is to show how all of the different pieces come together. At the top we have the login function to give access to one of the three different types of accounts. Upon login the database will be able to see which type of account that you have access to. If you are a Consumer User then you will login and have access to your Consumer User “My Profile”, “My Events”, “Discover” and “Settings”. If you are a Commercial User then you will have access to “My Profile”, “Commercial Events”, “Settings”, and “Promote Event”. Upon login, the Admin User will gain access to their account and will have access to “My Profile”, “Manage Users/Events”, “Settings”, and “Reports”.</p>
+            <p>The overview is to show how all of the different pieces come together. At the top we have the login function to give access to one of the three different types of accounts. Upon login the database will be able to see which type of account that you have access to. If you are a consumer User then you will login and have access to your consumer “My Profile”, “My Events”, “Discover” and “settings”. If you are a commercial User then you will have access to “My Profile”, “Commercial Events”, “Settings”, and “Promote Event”. Upon login, the Admin will gain access to their account and will have access to “My Profile”, “Manage Users/Events”, “Settings”, and “Reports”. The following form consumer will be expanded upon: “My Profile”, “My Events”, “Discover” and “settings”.The following from commercial will be expanded upon:“My Profile”, “Commercial Events”, “Settings”, and “Promote Event”..The following from Admin  will be expanded upon: “My Profile”, “Manage Users/Events”, “Settings”, and “Reports”.</p>
             <img src="images/Overview.png" alt="Overview" class="pic"><br>
             
             <h2><span class="id">4.2</span>Login</h2>
-            <p>Upon login the database will verify the login credentials. Once the credentials have been verified you will gain access to the account type that is associated with your credentials. If you do not have an account you will have the ability to create a new account.</p>
+            <p>Upon login the database will verify the login credentials. Once the credentials have been verified you will gain access to the account type that is associated with your credentials. If you do not have an account you will have the ability to create a new account. If the credentials already are set then the credentials will be verified and the User will have access to the account.
+            </p>
             <img src="images/Overview-Login.png" alt="Overview Login" class="pic"><br>
             
             <h2><span class="id">4.3</span>Consumer User Overview</h2>
@@ -601,7 +602,7 @@
             <p>When a Consumer or Commercial profile has been found, the Consumer User will have the option to access it. When viewing the profile, the Consumer User will have the ability to block or report a user. Any block or report will be sent to the database for future use or review.</p>
             <img src="images/OverviewConsumer-Discover.png" alt="Overview Consumer Discover" class="pic"><br>
             <h3><span class="id">4.3.2</span>My Events</h3>
-            <p>Upon selecting the “My Events” tab, the user will be shown a list of events they have created and a list of events they have joined. From there, they will be able to select an event to edit it, leave it, or message other participants.</p>
+            <p>Upon selecting the “My Events” tab, the user will be shown a list of events they have created and a list of events they have joined. From there, they will be able to select an event to edit it, leave it, or message other participants. The Consumer will also be able to view consumer and commercial profiles that are a part of the Event.</p>
             <img src="images/OverviewConsumer-Events.png" alt="Overview Consumer Events" class="pic"><br>
             <h3><span class="id">4.3.3</span>View My Profile</h3>
             <p>Once the Consumer User has logged in, they will be able to View their Profile in which they can see their own information and then edit it as well. After which the information is sent to the database to update the information.</p>
@@ -795,12 +796,11 @@
             </ul>
             <h2><span class="id">5.37</span>Create Account (Admin User) [4.37]</h2>
             <div class="indent">
-               <p>Admin user enters an email address. Admin user then creates a username and is notified when the username has been taken. Admin then creates a password and is notified when it is valid. The Admin is then asked for their name. The admin
-                  user then clicks the create account button.</p>
+               <p>Admin User enters an email address. Admin User then enters a username and is notified when the username has been taken. Admin then creates a password and is notified when it is valid. The Admin is then asked for their name. The admin user then clicks the create account button.</p>
             </div>
             <h2><span class="id">5.38</span>Edit Users (Admin User) [4.38]</h2>
             <div class="indent">
-               <p>The Admin User will have the ability to edit user information. The Admin User will be able to change usernames. The Admin User will also be to add or remove any social media connections to the User's account. The Admin User will also have the option to delete the User's account, and they will need to provide a reason for deleting a User's account. Once the changes are verified, the Admin User will be able to save these changes to the database.</p>
+               <p>The Admin User will have the ability to edit user information. The Admin User will navigate to the Edit Users screen, where the Admin User will be able to change usernames. The Admin User will also be to add or remove any social media connections to the User's account. The Admin User will also have the option to delete the User's account, and they will need to provide a reason for deleting a User's account. Once the changes are verified, the Admin User will be able to save these changes to the database.</p>
             </div>
             <h2><span class="id">5.39</span>Edit Events (Admin User) [3.39]</h2>
             <div class="indent">
@@ -808,11 +808,11 @@
             </div>
             <h2><span class="id">5.40</span>Message (Admin User) [3.40]</h2>
             <div class="indent">
-               <p>The Admin User will have the ability to message other all other accounts.</p>
+               <p>The Admin User will have the ability to message other all other Users. There will be a separate chat page with area to input text and area to view the participants of the conversation, as well as their messages. Messages can be deleted by holding on them.</p>
             </div>
             <h2><span class="id">5.41</span>Notifications (Admin User) [3.41]</h2>
             <div class="indent">
-               <p>The Admin User will have the ability to see different types of notifications for different events</p>
+               <p>The Admin User will have the ability to see different types of notifications for different events on the Events page. Once the Admin User clicks on the Event, there is a button to “View Notifications”.</p>
             </div>
             <h2><span class="id">5.42</span>Settings (Admin User) [3.42]</h2>
             <div class="indent">
@@ -2958,7 +2958,7 @@
             </div>
             <h2><span class="id">6.42</span>Settings (Admin) [3.42]</h2>
             <div class="indent">
-               <p>The settings UI will allow for the Admin User to logout and access</p>
+               <p>The settings UI will allow for the Admin User to logout and access their profile information, as well as notification information.</p>
                <table>
                   <tr>
                      <th>Name</th>
@@ -3348,6 +3348,9 @@
                <li>Android Studio (Programming Environment)</li>
             </ul><br>
             <p>To be able to provide usability to all mobile platforms the application will have two sets of criteria for it’s Design Languages. To have the application work on All Android device Uvents will be built on Android Studio using Kotlin for both the Frontware and Middleware. And MySQL will be used for the back end or the database. To have the application work on All IOS device Uvents will be built on Xcode9 using Swift for both the Frontware and Middleware. And MySQL will be used for the back end or the database. </p>
+            <h2><span class='id'>10.1</span>System Engineer View (Layering)</h2>
+            <p>The System Engineer View, designed through the layering technique, presents conceptually how the entire system will work together. This may be done through one of two previously mentioned routes, depending on the Uvents User’s operating system.</p>
+            <img src="" alt="">
          </div>
       </div>
    </body>
