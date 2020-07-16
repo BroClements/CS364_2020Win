@@ -29,8 +29,8 @@
                $(dateField).prepend('<span>Date:</span>');
             }
 
-            // Add anchors before each heading id
-            $('span.id').each((i, el)=> {$(el).before(`<a name="${el.innerHTML}"></a>`)});
+            // Add anchors before each heading that has the id class
+            $('span.id').each((i, el)=> {$(el).parent().before('<a name="'+ el.innerHTML+'"></a>')});
          });
       </script>
    </head>
@@ -153,7 +153,7 @@
             <div><a href="#5.2">5.2 Join Commercial Event (Consumer User)</a> <span></span> <span class="pageNumber">7</span></div>
             <div><a href="#5.3">5.3 Join Group Event (Consumer User)</a> <span></span> <span class="pageNumber">7</span></div>
             <div><a href="#5.4">5.4 Edit Profile (Consumer User)</a> <span></span> <span class="pageNumber">7</span></div>
-            <div><a href="#5.5">5.5 View My Profile (All User)</a> <span></span> <span class="pageNumber">7</span></div>
+            <div><a href="#5.5">5.5 View My Profile (All Users)</a> <span></span> <span class="pageNumber">7</span></div>
             <div><a href="#5.6">5.6 Login (Consumer User)</a> <span></span> <span class="pageNumber">7</span></div>
             <div><a href="#5.7">5.7 Discover (Consumer User)</a> <span></span> <span class="pageNumber">7</span></div>
             <div><a href="#5.8">5.8 Filter/Sorting (Consumer User)</a> <span></span> <span class="pageNumber">7</span></div>
@@ -209,7 +209,7 @@
             <div><a href="#6.2">6.2 Join Commercial Event (Consumer User)</a> <span></span> <span class="pageNumber">7</span></div>
             <div><a href="#6.3">6.3 Join Group Event (Consumer User)</a> <span></span> <span class="pageNumber">7</span></div>
             <div><a href="#6.4">6.4 Edit Profile (Consumer User)</a> <span></span> <span class="pageNumber">7</span></div>
-            <div><a href="#6.5">6.5 View My Profile (All User)</a> <span></span> <span class="pageNumber">7</span></div>
+            <div><a href="#6.5">6.5 View My Profile (All Users)</a> <span></span> <span class="pageNumber">7</span></div>
             <div><a href="#6.6">6.6 Login (Consumer User)</a> <span></span> <span class="pageNumber">7</span></div>
             <div><a href="#6.7">6.7 Discover (Consumer User)</a> <span></span> <span class="pageNumber">7</span></div>
             <div><a href="#6.8">6.8 Filter/Sorting (Consumer User)</a> <span></span> <span class="pageNumber">7</span></div>
@@ -795,7 +795,7 @@
                </p>
 
             </div>
-            <h2><span class="id">5.38</span>Login (Admin User) [3.38]</h2>
+            <h2><span class="id">5.36</span>Login (Admin User) [3.36]</h2>
             <p>The Admin User opens the app and sees the option to login via 3rd party, username/password, or to create an account.</p>
             <ul>
                <li>Username and password: The Admin User clicks on username/password and is brought to the login portal. The username and password boxes are displayed to the Admin User. The Admin User submits information. If the database rejects Admin User information an error appears with an option to retry or recover password. If the database accepts the Admin User information the Admin User is brought to the home page.</li>
@@ -1960,7 +1960,7 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">6.23</span>Login Viewpoints (Commercial User) [4.23]</h2>
+            <h2><span class="id">6.22</span>Login Viewpoints (Commercial User) [4.22]</h2>
             <p>Commercial User has option to login via username/password or via 3rd party.</p>
             <ul>
                <li>Username and password: Commercial User login information is submitted to server and put through hash to check for existing user as well as correct username and password. ‘Remember me’ option is taken into account. If information is incorrect the server returns an error message with option to recover password/account information and to re-submit login information. If the database accepts the submitted information the Commercial User will be sent to the home page of Uvents.</li>
@@ -2520,7 +2520,7 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">6.33</span>Logout Viewpoints (Commercial User) [4.33]</h2>
+            <h2><span class="id">6.32</span>Logout Viewpoints (Commercial User) [4.32]</h2>
             <p>Commercial User information is sent to server. If logout is accepted server will send confirmation to Commercial User, who’s information will be removed from device.</p>
             <div class="indent">
                <h3>Design Elements:</h3>
@@ -2752,7 +2752,7 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">6.38</span>Login Viewpoints (Admin User) [4.38]</h2>
+            <h2><span class="id">6.36</span>Login Viewpoints (Admin User) [4.36]</h2>
             <p>Admin User has option to login via username/password or via 3rd party.</p>
             <ul>
                <li>Username and password: Admin User login information is submitted to server and put through hash to check for existing user as well as correct username and password. ‘Remember me’ option is taken into account. If information is incorrect the server returns an error message with option to recover password/account information and to re-submit login information. If the database accepts the submitted information the Admin User will be sent to the home page of Uvents.</li>
@@ -3129,7 +3129,7 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">6.45</span>Logout Viewpoints (Admin User) [4.45]</h2>
+            <h2><span class="id">6.43</span>Logout (Admin User) [4.43]</h2>
             <p>Admin User information is sent to server. If logout is accepted server will send confirmation to Admin User, who’s information will be removed from device.</p>
             <div class="indent">
                <h3>Design Elements:</h3>
@@ -3157,33 +3157,49 @@
          </div>
          <h1><span class="id">7</span>View</h1>
          <div class="indent">
-            <h2>7.2 Workflow</h2>
-            <p>The workflow technique is designed to give the person who uses it a layed out example of a User performing a task on the system. This takes things like logging in and breaks it down into its steps and decision logic. Decision logic is used to highlight spots in the code where something along the lines of an if statement will be needed. This represents a crossroads where a condition is met or is not. This graphic overview of these different processes makes all of the aspects of something more complicated like logging in, the logic behind it, and lays it out in an easy-to-understand manner. There are different diagrams based on the User and process in question, for a Consumer User making a new account is more simple than an Admin User making a new account. All of these diagrams together form the workflow that can be used by both engineers and developers alike.</p>
+            <h2><span class="id">7.1</span>Front-End Component UML</h2>
+            <img src="images/ComponentUML.png" alt="View Component UML" class="pic">
+            <h2><span class="id">7.2</span>Behavioral Design Pattern for Messaging</h2>
+            <img src="images/View-BehavioralDesignPattern.png" alt="Behavioral Design Pattern" class="pic">
+            <h2><span class="id">7.3</span>Front-End Structure Chart for Share Event</h2>
             <div class="indent">
-               <h3>7.2.1 Admin workflow Diagram</h3>
-               <img src="./images/AdminWorkflowDiagrams.png" alt="Admin Workflow Diagram" class=:pic">
-               <h3>7.2.3 Commercial Workflow Diagram</h3>
-               <img src="./images/CommercialWorkflowDiagram.png" alt="Commercial Workflor Diagram" class=:pic">
-               <h3>7.2.3 Consumer Workflow Diagram</h3>
-               <img src="./images/ConsumerWorkflowDiagram.png" alt="Consumer Workflow Diagram" class=:pic">
+               <h3><span class="id">7.3.1</span>Share Event (Commercial User) Structure Chart</h3>
+               <img src="images/View-StructureChart-ShareEvent.png" alt="Share Event (Commercial User) Structure Chart" class="pic">
+               <h3><span class="id">7.3.2</span>Edit Profile Structure Chart</h3>
+               <img src="images/View-StructureChart-EditProfile.png" alt="Edit Profile Structure Chart" class="pic">
+               <h3><span class="id">7.3.3</span>Create Group Event (Consumer User) Structure Chart</h3>
+               <img src="images/View-StructureChart-CreateGroupEvent.png" alt="Create Group Event (Consumer User) Structure Chart" class="pic">
+               <h3><span class="id">7.3.4</span>Edit Users (Admin User) Structure Chart</h3>
+               <img src="images/View-StructureChart-EditUsers.png" alt="Edit Users (Admin User) Structure Chart" class="pic">
             </div>
-            <h2>7.3 Data and Data and Information View Design</h2>
+            <h2><span class="id">7.4</span>Front-End Workflow</h2>
+            <p>
+               The workflow technique is designed to give the person who uses it a layed out example of a User performing a task on the system. This takes things like logging in and breaks it down into its steps and decision logic. Decision logic is used to highlight spots in the code where something along the lines of an if statement will be needed. This represents a crossroads where a condition is met or is not. This graphic overview of these different processes makes all of the aspects of something more complicated like logging in, the logic behind it, and lays it out in an easy-to-understand manner. There are different diagrams based on the User and process in question, for a Consumer User making a new account is more simple than an Admin User making a new account. All of these diagrams together form the workflow that can be used by both engineers and developers alike.
+            </p>
             <div class="indent">
-               <h3>7.3.1 Data and Information View Design Diagram</h3>
-               <p>This view focuses on the flow of information and data as the program operates. There is no particular sequence of events. Of course everything begins when a user either creates an account or logs into their account. This can be done by entering credentials manually, or creating/signing in via another social media profile such as Facebook. Accounts can be one of three levels of privilege: Consumer, Commercial, or Admin. Each type of user can view the accounts of other users, but not change any information. Each user has a way to create or edit events, and as such need access to the events database. As well each user has the ability to edit their profile, and need access to the database to make and save changes to their profile. Upon creation of a Consumer User account, a help feature may guide the new user around to show them how to operate the application. Similarly, upon the creation of a Commercial User account a “Tooltips” feature appears to showcase more ways to operate a commercial user account.</p>
-               <img src="./images/Data_and_Information_View_Design.png" alt="Data and Information View Design Diagram" class=:pic">
+               <h3><span class="id">7.4.1</span>Admin workflow Diagram</h3>
+               <img src="images/AdminWorkflowDiagrams.png" alt="Admin Workflow Diagram" class="pic">
+               <h3><span class="id">7.4.2</span>Commercial Workflow Diagram</h3>
+               <img src="images/CommercialWorkflowDiagram.png" alt="Commercial Workflor Diagram" class="pic">
+               <h3><span class="id">7.4.3</span>Consumer Workflow Diagram</h3>
+               <img src="images/ConsumerWorkflowDiagram.png" alt="Consumer Workflow Diagram" class="pic">
             </div>
-            <h2>7.4 Entity Relationships</h2>
+            <h2><span class="id">7.5</span>Front-End Data and Information View Design</h2>
             <div class="indent">
-            	<h3> Entity Relationships Diagram</h3>
-               <p>An entity relationship diagram (ERD) shows the relationships of entity sets stored in a database. An entity in this context is an object, a component of data. An entity set is a collection of similar entities. These entities can have attributes that define its properties[1]. For the Uvents project, this diagram is built based on the 3.5 Logical Database Requirements section of the SRS. It consists of 14 tables that will hold both user and application data[2]. This database will be stored remotely and the users will have to have an Internet connection to be able to access this database. All the information downloaded from there will be streamed to let the user get the most updated information. The information, channels, and all connections must be secure to protect both users and stakeholders.</p>
-               <img src="./images/Entity-Relationships.png" alt="Entity Relationships Diagram" class=:pic">
+               <h3>7.5.1 Data and Information View Design Diagram</h3>
+               <p>
+                  This view focuses on the flow of information and data as the program operates. There is no particular sequence of events. Of course everything begins when a user either creates an account or logs into their account. This can be done by entering credentials manually, or creating/signing in via another social media profile such as Facebook. Accounts can be one of three levels of privilege: Consumer, Commercial, or Admin User. Each type of user can view the accounts of other users, but not change any information. Each user has a way to create or edit events, and as such need access to the events database. As well each user has the ability to edit their profile, and need access to the database to make and save changes to their profile. Upon creation of a Consumer User account, a help feature may guide the new user around to show them how to operate the application. Similarly, upon the creation of a Commercial User account a “Tooltips” feature appears to showcase more ways to operate a commercial user account.
+               </p>
+               <img src="images/Data_and_Information_View_Design.png" alt="Data and Information View Design Diagram" class="pic">
             </div>
-            <h3>7.5 Project Viewpoint</h3>
+            <h2><span class="id">7.6</span>Entity Relationships</h2>
+            <p>An entity relationship diagram (ERD) shows the relationships of entity sets stored in a database. An entity in this context is an object, a component of data. An entity set is a collection of similar entities. These entities can have attributes that define its properties[1]. For the Uvents project, this diagram is built based on the 3.5 Logical Database Requirements section of the SRS. It consists of 14 tables that will hold both user and application data[2]. This database will be stored remotely and the users will have to have an Internet connection to be able to access this database. All the information downloaded from there will be streamed to let the user get the most updated information. The information, channels, and all connections must be secure to protect both users and stakeholders.</p>
+            <img src="./images/Entity-Relationships.png" alt="Entity Relationships Diagram" class="pic">
+            <h3><span class="id">7.7</span>Project Viewpoint</h3>
             <div class="indent">
                <h2>7.5.1 Project viewpoint Diagram</h2>
                <p>Project viewpoint is one of the design techniques. It is a way to divide the whole project into pieces using teams or small projects. In our scenario, I would like to divide the project into each type of user. Then each type of user has its own special project.</p>
-               <img src="./images/Uvents_project_viewpoint.png" alt="Uvents Project Viewpoint Diagram" class=:pic">
+               <img src="./images/Uvents_project_viewpoint.png" alt="Uvents Project Viewpoint Diagram" class="pic">
             </div>
          </div>
          <h1><span class="id">8</span>Model</h1>
