@@ -1898,58 +1898,6 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">6.22</span>View Profile Viewpoints (Commercial User) [4.22]</h2>
-            <div class="indent">
-               <h3>Design Viewpoints:</h3>
-               <ul>
-                  <li>Session Id verified</li>
-                  <li>Interface between HMI and Server</li>
-                  <li>Interface between Server and Database</li>
-                  <li>Server queries table in database</li>
-                  <li>Retrieves information from database</li>
-                  <li>Changes to queried table</li>
-               </ul>
-
-               <h3>Design Elements:</h3>
-               <table>
-                  <tr>
-                     <th>Name</th>
-                     <th>Type</th>
-                     <th>Purpose</th>
-                     <th>Description</th>
-                  </tr>
-                  <tr>
-                     <td>Session Id</td>
-                     <td>Entity</td>
-                     <td>Security Measure to prevent malicious intent</td>
-                     <td>Data that will be used as a security measure that will be passed between the Front end and the server to verify Account.</td>
-                  </tr>
-                  <tr>
-                     <td>Profile Picture</td>
-                     <td>Entity</td>
-                     <td>Allows the Consumer to view Commercial User’s Profile Picture. </td>
-                     <td>After the Session Id is verified the Profile Picture will be retrieved for the database in order to be displayed.</td>
-                  </tr>
-                  <tr>
-                     <td>Name</td>
-                     <td>Entity</td>
-                     <td>Allows a Consumer to view Commercial User’s Name.</td>
-                     <td>After the Session Id is verified the First Name will be retrieved for the database in order to be displayed.</td>
-                  </tr>
-                  <tr>
-                     <td>“Report" Commercial User</td>
-                     <td>Entity</td>
-                     <td>Allows a consumer to report a Commercial User.</td>
-                     <td>A button that will send data to the database and notify the Admin. The Admin will then Verify that the Report is legitimate.</td>
-                  </tr>
-                  <tr>
-                     <td>“Block” Commercial User</td>
-                     <td>Entity</td>
-                     <td>Allows a consumer to block a Commercial User.</td>
-                     <td>A button that will send data to the database that will disable any contact between the accounts.</td>
-                  </tr>
-               </table>
-            </div>
             <h2><span class="id">6.22</span>Login Viewpoints (Commercial User) [4.22]</h2>
             <p>Commercial User has option to login via username/password or via 3rd party.</p>
             <ul>
@@ -2054,7 +2002,7 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">6.24</span>Create Commercial Event Viewpoints (Commercial User) [4.24]</h2>
+            <h2><span class="id">6.23</span>Create Commercial Event Viewpoints (Commercial User) [4.23]</h2>
             <div class="indent">
                <h3>Design Viewpoints:</h3>
                <ul>
@@ -2112,7 +2060,7 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">6.25</span>Add Description Viewpoints (Commercial User) [4.25]</h2>
+            <h2><span class="id">6.24</span>Add Description Viewpoints (Commercial User) [4.24]</h2>
             <div class="indent">
                <h3>Design Viewpoints</h3>
                <p>Commercial User enters information into text box entry. Commercial user will click on the save button. The changes are sent to the database. There the changes are made to the proper table and column. The changes are saved in the database.
@@ -2140,7 +2088,7 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">6.26</span>Manage Commercial Event Viewpoints (Commercial User) [5.26]</h2>
+            <h2><span class="id">6.25</span>Manage Commercial Event Viewpoints (Commercial User) [5.25]</h2>
             <div class="indent">
                <h3>Design Viewpoints</h3>
                <p>Commercial User clicks on the Manage Events button. Information is fetched from the database, and sent back to the app. Information is then displayed in the app in a listview.</p>
@@ -2167,7 +2115,7 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">6.27</span>Edit Event Viewpoints (Commercial User) [4.27]</h2>
+            <h2><span class="id">6.26</span>Edit Event Viewpoints (Commercial User) [4.26]</h2>
             <div class="indent">
                <h3>Design Viewpoints</h3>
                <p>Commercial User clicks on the Edit Event button. Data is retrieved from the database and becomes editable. The updates will take effect once the Commercial User clicks on the Update button.</p>
@@ -2248,7 +2196,7 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">6.28</span>Past Events Viewpoints (Commercial User) [4.28]</h2>
+            <h2><span class="id">6.27</span>Past Events Viewpoints (Commercial User) [4.27]</h2>
             <div class="indent">
                <h3>Design Viewpoints</h3>
                <p>Commercial User requests to view Past Events. Server queries information for all Events whose user ID column matches the Commercial User's user ID and whose end date is before the current date. Server returns the requested information.
@@ -2288,7 +2236,7 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">6.29</span>Promote Event Viewpoints (Commercial User) [4.29]</h2>
+            <h2><span class="id">6.28</span>Promote Event Viewpoints (Commercial User) [4.28]</h2>
             <div class="indent">
                <h3>Design Viewpoints</h3>
                <p>Comercial user enters in the Promote Event feature. The server requests the time till the next bidding auction. The server returns the requested information. The information is displayed to the commercial user. The server verifies if the
@@ -2328,7 +2276,7 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">6.30</span>Start Auction (Commercial User) / Place Bid Viewpoints [4.30]</h2>
+            <h2><span class="id">6.29</span>Start Auction (Commercial User) / Place Bid Viewpoints [4.29]</h2>
             <div class="indent">
                <h3>Design Viewpoints</h3>
                <p>Session ID is Verified Server queries information for the current monthly bids Server sends the information regarding the bid to the client The user inputs the amount he/she would like to bid and the information is sent to the server The
@@ -2368,21 +2316,21 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">6.31</span>Share Event Viewpoints (Commercial User) [4.31]</h2>
-            <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends a response
-               to the Server that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the Share Event screen.
-            </p>
-            <p>Upon loading the Share Event screen, the Server sends a request to the Database to receive a link to the current Commercial User’s Event. The Database searches for the Commercial Users Event link, then sends the link back to the Server. Upon
-               receiving an Event Link, the Server updates the GUI’s shareable link bar with the Event Link text. The GUI loads the Facebook, Instagram, and Twitter icons.
-            </p>
-            <p>If the Commercial User clicks on the Copy Link button, then the GUI copies the Event Link text to the Commercial User’s clipboard. </p>
-            <p>If the Commercial User clicks on the Facebook icon, the Server will send a request through the Facebook API to load a post. The Server will send the Event Link as a package to through the Facebook API to be used in the post. If the Commercial
-               User clicks on the Instagram icon, the Server will send a request through the Instagram API to load a post. The Server will send the Event Link as a package to through the Instagram API to be used in the post. If the Commercial User clicks
-               on the Twitter icon, the Server will send a request through the Twitter API to load a post. The Server will send the Event Link as a package to through the Twitter API to be used in the post.
-            </p>
+            <h2><span class="id">6.30</span>Share Event Viewpoints (Commercial User) [4.30]</h2>
+            <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends a 
+               response to the Server that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the Share Event screen.</p>
+            <p>Upon loading the Share Event screen, the Server sends a request to the Database to receive a link to the current Commercial User’s Event. The Database searches for the Commercial Users Event link, then sends the 
+               link back to the Server. Upon receiving an Event Link, the Server updates the GUI’s shareable link bar with the Event Link text. The GUI loads the Facebook, 
+               Instagram, and Twitter icons. [9.1.10]</p>
+            <p>If the Commercial User clicks on the Copy Link button, then the GUI copies the Event Link text to the Commercial User’s clipboard.</p>
+            <p>If the Commercial User clicks on the Facebook icon, the Server will send a request through the Facebook API to load a post. [8.1.1] The Server will send the Event Link 
+               as a package through the Facebook API to be used in the post. If the Commercial User clicks on the Instagram icon, the Server will send a request through the Instagram 
+               API to load a post. The Server will send the Event Link as a package through the Instagram API to be used in the post. If the Commercial User clicks on the Twitter icon, 
+               the Server will send a request through the Twitter API to load a post. The Server will send the Event Link as a package to through the Twitter API to be used in the post. 
+               [7.3.1, 7.4.3]</p>
             <div class="indent">
                <h3>Design Elements: </h3>
-               <p>The Share Event (Commercial) Table identifies elements for the Share Event (Commercial) Concern. [4.31] These elements perform the duties of displaying and copying values held within said concern. </p>
+               <p>The Share Event (Commercial) Table identifies elements for the Share Event (Commercial) Concern. [4.30] These elements perform the duties of displaying and copying values held within said concern. </p>
                <table>
                   <tr>
                      <th>Name</th>
@@ -2458,19 +2406,18 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">6.32</span>Settings Viewpoints (Commercial User) [4.32]</h2>
-            <p>
-               The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends a response to the Server
-               that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the Settings screen.
-            </p>
-            <p>
-               Upon loading the Settings screen, the GUI will display a Logout button and a Notifications on/off slider. If the Commercial User clicks the logout button, the Server will send a request to the Database to disqualify the current Session Key. Once the Session
-               Key is disqualified, the Database will notify the Server that the Session Key is no longer valid. Once the Server receives the communication from the Database, then the Server will update the GUI to present the Login screen. If the Commercial
-               User clicks the Notifications on/off slider, the Server will send a request to open the Commercial User’s default settings application with a package to open the notifications settings section within the default settings application.
-            </p>
+            <h2><span class="id">6.31</span>Settings Viewpoints (Commercial User) [4.31]</h2>
+            <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares the received Session Key with 
+               its own valid Session Key. If the Key is validated, the Database sends a response to the Server that the Session Key is valid. If the Session Key is valid, then 
+               the Server updates the GUI with the Settings screen. </p>
+            <p>Upon loading the Settings screen, the GUI [7.4.3, 9.1.5, 9.1.11] will display a Logout button and a Notifications on/off 
+               slider. If the Commercial User clicks the logout button, the Server will send a request to the Database to disqualify the current Session Key. Once the Session 
+               Key is disqualified, the Database will notify the Server that the Session Key is no longer valid. Once the Server receives the communication from the Database, 
+               then the Server will update the GUI to present the Login screen. If the Commercial User clicks the Notifications on/off slider, the Server will send a request to 
+               open the Commercial User’s default settings application with a package to open the notifications settings section within the default settings application.</p>
             <div class="indent">
                <h3>Design Elements: </h3>
-               <p>The Settings (Commercial) Table identifies elements for the Settings (Commercial) concern. [4.32] These elements perform the duties of displaying and updating values within said concern.</p>
+               <p>The Settings (Commercial) Table identifies elements for the Settings (Commercial) concern. [4.31] These elements perform the duties of displaying and updating values within said concern.</p>
                <table>
                   <tr>
                      <th>Name</th>
@@ -2535,14 +2482,16 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">6.34</span>View Commercial Reports Viewpoints (Admin User) [4.34]</h2>
-            <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends a response
-               to the Server that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the View Commercial Reports screen.</p>
-            <p>Upon loading the Server will request an up to date Report text from the Database. Database will retrieve Report text and send back to the Server. The Server will update the GUI with the Report text. </p>
+            <h2><span class="id">6.33</span>View Commercial Reports Viewpoints (Admin User) [4.33]</h2>
+            <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. [7.4.1] The Database compares the received Session Key with 
+               its own valid Session Key. If the Key is validated, the Database sends a response to the Server that the Session Key is valid. If the Session Key is valid, then the 
+               Server updates the GUI with the View Commercial Reports screen. [7.3.4] </p>
+            <p>Upon loading the Server will request an up to date Report text from the Database. Database will retrieve Report text and send back to the Server. The Server will 
+               update the GUI with the Report text. [7.4.1] </p>
             <div class="indent">
                <h3>Design Elements: </h3>
                <p>
-                  The View Commercial Report Table identifies elements for the View Commercial Reports (Admin) Concern. [4.34] These elements perform the duty of displaying values held with said concern.
+                  The View Commercial Report Table identifies elements for the View Commercial Reports (Admin) Concern. [4.33] These elements perform the duty of displaying values held with said concern.
                </p>
                <table>
                   <tr>
@@ -2571,14 +2520,16 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">6.35</span>View Consumer Reports Viewpoints (Admin User) [4.35]</h2>
-            <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends a response
-               to the Server that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the View Consumer Reports screen.</p>
-            <p>Upon loading the Server will request an up to date Report text from the Database. Database will retrieve Report text and send back to the Server. The Server will update the GUI with the Report text. </p>
+            <h2><span class="id">6.34</span>View Consumer Reports Viewpoints (Admin User) [4.34]</h2>
+            <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. [7.4.1] The Database compares 
+               the received Session Key with its own valid Session Key. If the Key is validated, the Database sends a response to the Server that the Session Key is valid. 
+               If the Session Key is valid, then the Server updates the GUI with the View Consumer Reports screen. [7.3.4]</p>
+            <p>Upon loading the Server will request an up to date Report text from the Database. Database will retrieve Report text and send back to the Server. The Server 
+               will update the GUI with the Report text. [7.4.1]</p>
             <div class="indent">
                <h3>Design Elements: </h3>
                <p>
-                  The View Consumer Reports Table identifies elements for the View Consumer Reports (Admin) Concern. [4.35] These elements perform the duty of displaying values held with said concern
+                  The View Consumer Reports Table identifies elements for the View Consumer Reports (Admin) Concern. [4.34] These elements perform the duty of displaying values held with said concern
                </p>
                <table>
                   <tr>
@@ -2607,39 +2558,23 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">6.36</span>Edit Profile Viewpoints (Admin User) [4.36]</h2>
-            <p>
-               The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends a response to the Server
-               that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the View Consumer Reports screen.
-            </p>
-            <p>
-               Upon loading the Server will update the GUI with the current profile picture to the Admin User. The Server will update the GUI with the current username. If Admin User clicks on current profile picture, GUI will send request to the Server to open the
-               Admin User’s default Photo application. If access is granted, the Admin User’s default photo application will be opened. If Admin User chooses a picture, Server will request the Uvents application be presented back to the GUI with the
-               new Profile picture now showing.
-            </p>
-            <p>
-               If Admin User clicks on current username, the GUI will present a keyboard and the current username will now be empty. If Admin User creates new username, the new username will be saved before requesting to officially update the Admin User information.
-            </p>
-            <p>
-               If either the profile picture or the username has been changed, the GUI will present a button to save the updated information. If Admin User clicks the update button and if the profile picture was changed, then the new Profile picture data will be sent
-               by the Server to the Database for storage. The Database will save the profile picture data. If the Server does not receive an error message from the Database after sending the new profile picture information, then the GUI will indicate
-               to the Admin User that the updates to the profile were saved.
-            </p>
-            <p>
-               If Admin User clicks the update button and if there is the username was changed, then the new username will be sent by the Server to the Database for storage. The Database will compare the new username with all other Admin, Consumer, and Commercial User
-               usernames for duplication.
-            </p>
-            <p>
-               If the new username matches any other current username, the Database will send an error message back to the Server. If the new username does not match any other current username, the Database will save the new username in the Database in the username
-               column and into the row associated with the current Admin User.
-            </p>
-            <p>
-               If the Server receives an error message from the Database after attempting to designate to a new username, then the GUI will present to the Admin User that the username is already in use by another user. If the Server does not receive an error message
-               from the Database after attempting to designate a new username, then the GUI will indicate to the Admin User that the updates to the profile were saved.
-            </p>
+            <h2><span class="id">6.35</span>Edit Profile Viewpoints (Admin User) [4.35]</h2>
+            <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends a response to the 
+               Server that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the Edit Profile screen. [9.1.2] </p>
+
+            <p>Upon loading the Server will update the GUI with the current profile picture to the Admin User. [7.3.2] The Server will update the GUI with the current username. If Admin User clicks on current profile picture, they may change 
+               the profile picture.</p>
+
+            <p>If Admin User clicks on current username, they may change their username. The Server will request the username to be checked with the database to make sure that username is not already 
+               in use. [8.6.2, 9.1.2]</p>
+
+            <p>If the button to save the updated information is clicked [7.3.2], then the Server will request that information is checked and saved to the database. [8.6.2] If 
+               the information is updated successfully, then the Server will update the GUI with a success message. If the Server receives an error message after attempting to save, 
+               then the Server will update the GUI presenting that the save was unsuccessful. [9.6]</p>
+            
             <div class="indent">
                <h3>Design Elements: </h3>
-               <p>The Edit Profile (Admin) Table identifies elements for the Edit Profile (Admin) Concern. [4.36] These elements perform the duties of displaying and changing values held within said concern. </p>
+               <p>The Edit Profile (Admin) Table identifies elements for the Edit Profile (Admin) Concern. [4.35] These elements perform the duties of displaying and changing values held within said concern. </p>
                <table>
                   <tr>
                      <th>Name</th>
@@ -2700,45 +2635,6 @@
                      <td>Constraint </td>
                      <td>Prevents videos or other non-image file formats from being used. </td>
                      <td>Checks new profile picture format with pre-configured acceptable formats list. </td>
-                  </tr>
-               </table>
-            </div>
-            <h2><span class="id">6.37</span>View Profile Viewpoints (Admin User) [4.37]</h2>
-            <p>
-               The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends a response to the Server
-               that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the View Profile screen.
-            </p>
-            <p>
-               Upon loading the Server will update the GUI with a Report User button and Block User button. If the Report User button is clicked, then the Server will send a request to the Database to update the given Commercial or Consumer User as having been reported.
-               If the Report User button is clicked, then the Server will send a request to the Database to update the given Commercial or Consumer User as having been blocked.
-            </p>
-            <div class="indent">
-               <h3>Design Elements: </h3>
-               <p>The View Profile (Admin) Table identifies elements for the View Profile (Admin) Concern. [4.37] These elements perform the duties of displaying and choosing values held within said concern. </p>
-               <table>
-                  <tr>
-                     <th>Name</th>
-                     <th>Type</th>
-                     <th>Purpose</th>
-                     <th>Description</th>
-                  </tr>
-                  <tr>
-                     <td>Report User button </td>
-                     <td>Entity </td>
-                     <td>Allows the Admin User to Report any Commercial or Consumer User. </td>
-                     <td>A button that can be clicked to perform the function. </td>
-                  </tr>
-                  <tr>
-                     <td>Block User button</td>
-                     <td>Entity </td>
-                     <td>Allows the Admin User to Block any Commercial or Consumer User. </td>
-                     <td>A button that can be clicked to perform the function. </td>
-                  </tr>
-                  <tr>
-                     <td>Session Key</td>
-                     <td>Entity </td>
-                     <td>Verifies the user is currently logged. </td>
-                     <td>A unique key that validates login sessions by comparing the current key with the key stored in the database. </td>
                   </tr>
                </table>
             </div>
@@ -3089,7 +2985,7 @@
                   </tr>
                </table>
             </div>
-            <h2><span class="id">6.44</span>Settings (Admin) [3.44]</h2>
+            <h2><span class="id">6.42</span>Settings (Admin) [3.42]</h2>
             <div class="indent">
                <p>The settings UI will allow for the Admin User to logout and access</p>
                <table>
