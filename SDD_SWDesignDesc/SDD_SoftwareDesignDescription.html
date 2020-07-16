@@ -3040,6 +3040,42 @@
                   </tr>
                </table>
             </div>
+            <h2><span class="id">6.45</span>View Commercial Profile [4.45]</h2>
+            <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares the received Session Key 
+               with its own valid Session Key. If the Key is validated, the Database sends a response to the Server that the Session Key is valid. If the Session Key is 
+               valid, then the Server updates the GUI with the View My Profile screen. [9.1.1] </p>
+            <p>Upon loading the Server will update the GUI with a Report User button and Block User button. If the Report User button is clicked, then the Server will send 
+               a request to the Database to update the given Commercial or Consumer User as having been reported. [7.6] If the Report User button 
+               is clicked, then the Server will send a request to the Database to update the given Commercial or Consumer User as having been blocked. [9.1.4] </p>
+            <div class="indent">
+               <h3>Design Elements:</h3>
+               <table>
+                  <tr>
+                     <th>Name</th>
+                     <th>Type</th>
+                     <th>Purpose</th>
+                     <th>Description</th>
+                  </tr>
+                  <tr>
+                     <td>Report User button</td>
+                     <td>Entity</td>
+                     <td>Allows the Admin User to Report any Commercial or Consumer User.</td>
+                     <td>A button that can be clicked to perform the function. </td>
+                  </tr>
+                  <tr>
+                     <td>Block User button</td>
+                     <td>Entity</td>
+                     <td>Allows the Admin User to Block any Commercial or Consumer User.</td>
+                     <td>A button that can be clicked to perform the function.</td>
+                  </tr>
+                  <tr>
+                     <td>Session Key</td>
+                     <td>Entity</td>
+                     <td>Verifies the user is currently logged.</td>
+                     <td>A unique key that validates login sessions by comparing the current key with the key stored in the database.</td>
+                  </tr>
+               </table>
+            </div>
          </div>
          <h1><span class="id">7</span>Front-End</h1>
          <div class="indent">
