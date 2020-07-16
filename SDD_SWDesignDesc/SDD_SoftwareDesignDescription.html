@@ -2562,10 +2562,10 @@
             <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends a response to the 
                Server that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the Edit Profile screen. [9.1.2] </p>
 
-            <p>Upon loading the Server will update the GUI with the current profile picture to the Admin User. [7.3.2] The Server will update the GUI with the current username. If Admin User clicks on current profile picture, they may change 
+            <p>Upon loading the Server will update the GUI with the current profile picture to the Admin User. [7.3.2] The Server will update the GUI with the current username. If Admin User clicks on a current profile picture, they may change 
                the profile picture.</p>
 
-            <p>If Admin User clicks on current username, they may change their username. The Server will request the username to be checked with the database to make sure that username is not already 
+            <p>If Admin User clicks on a current username, they may change their username. The Server will request the username to be checked with the database to make sure that username is not already 
                in use. [8.6.2, 9.1.2]</p>
 
             <p>If the button to save the updated information is clicked [7.3.2], then the Server will request that information is checked and saved to the database. [8.6.2] If 
@@ -2595,18 +2595,6 @@
                      <td>Name chosen by an Admin User to represent themselves to others.</td>
                   </tr>
                   <tr>
-                     <td>Retrieve current profile picture </td>
-                     <td>Relationship </td>
-                     <td>Displays the Admin User’s current profile picture </td>
-                     <td>Relationship between the Server and Database </td>
-                  </tr>
-                  <tr>
-                     <td>Retrieve current username </td>
-                     <td>Relationship </td>
-                     <td>Displays the Admin User’s current username. </td>
-                     <td>Relationship between the Server and Database </td>
-                  </tr>
-                  <tr>
                      <td>Relationship between the Server and Database </td>
                      <td>Relationship </td>
                      <td>Changes the Admin User’s username </td>
@@ -2619,22 +2607,10 @@
                      <td>Compares newly selected username with all other usernames.</td>
                   </tr>
                   <tr>
-                     <td>Profile picture size </td>
-                     <td>Constraint </td>
-                     <td>Prevents overly large image sizes </td>
-                     <td>Checks new profile picture size with pre-configured maximum size. </td>
-                  </tr>
-                  <tr>
                      <td>Username size </td>
                      <td>Constraint </td>
                      <td>Prevents username from being overly complicated and long. </td>
                      <td>Checks new username character count with pre-configured maximum size. </td>
-                  </tr>
-                  <tr>
-                     <td>Profile picture format </td>
-                     <td>Constraint </td>
-                     <td>Prevents videos or other non-image file formats from being used. </td>
-                     <td>Checks new profile picture format with pre-configured acceptable formats list. </td>
                   </tr>
                </table>
             </div>
