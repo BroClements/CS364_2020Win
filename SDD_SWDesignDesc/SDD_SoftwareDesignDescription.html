@@ -255,13 +255,15 @@
             <div><a href="#6.44">6.44 View Consumer Profile (Admin User)</a> <span></span> <span class="pageNumber">7</span></div>
             <div><a href="#6.45">6.45 View Commercial Profile (Admin User)</a> <span></span> <span class="pageNumber">7</span></div>
          </div>
-         <div><a href="#7" class="big">7 VIEW</a> <span></span> <span class="pageNumber">4</span></div>
+         <div><a href="#7" class="big">7 FRONT-END</a> <span></span> <span class="pageNumber">4</span></div>
          <div class="indent">
             <div><a href="#7.1">7.1 Component UML</a> <span></span> <span class="pageNumber">7</span></div>
-            <div><a href="#7.2">7.2 Workflow</a> <span></span> <span class="pageNumber">7</span></div>
-            <div><a href="#7.3">7.3 Data and Information View Design</a> <span></span> <span class="pageNumber">7</span></div>
-            <div><a href="#7.4">7.4 Entity Relationships</a> <span></span> <span class="pageNumber">7</span></div>
-            <div><a href="#7.5">7.5 Project Viewpoint</a> <span></span> <span class="pageNumber">7</span></div>
+            <div><a href="#7.2">7.2 Behavioral Design Pattern</a> <span></span> <span class="pageNumber">7</span></div>
+            <div><a href="#7.3">7.3 Structure Chart</a> <span></span> <span class="pageNumber">7</span></div>
+            <div><a href="#7.4">7.4 Workflow</a> <span></span> <span class="pageNumber">7</span></div>
+            <div><a href="#7.5">7.5 Data and Information View Design</a> <span></span> <span class="pageNumber">7</span></div>
+            <div><a href="#7.6">7.6 Entity Relationships</a> <span></span> <span class="pageNumber">7</span></div>
+            <div><a href="#7.7">7.7 Project Viewpoint</a> <span></span> <span class="pageNumber">7</span></div>
          </div>
          <div><a href="#8" class="big">8 MODEL</a> <span></span> <span class="pageNumber">4</span></div>
          <div class="indent">
@@ -3155,21 +3157,21 @@
                </table>
             </div>
          </div>
-         <h1><span class="id">7</span>View</h1>
+         <h1><span class="id">7</span>Front-End</h1>
          <div class="indent">
-            <h2><span class="id">7.1</span>Front-End Component UML</h2>
+            <h2><span class="id">7.1</span>Component UML</h2>
             <img src="images/ComponentUML.png" alt="View Component UML" class="pic">
-            <h2><span class="id">7.2</span>Behavioral Design Pattern for Messaging</h2>
+            <h2><span class="id">7.2</span>Behavioral Design Pattern</h2>
             <img src="images/View-BehavioralDesignPattern.png" alt="Behavioral Design Pattern" class="pic">
-            <h2><span class="id">7.3</span>Front-End Structure Chart for Share Event</h2>
+            <h2><span class="id">7.3</span>Front-End Structure Chart</h2>
             <div class="indent">
-               <h3><span class="id">7.3.1</span>Share Event (Commercial User) Structure Chart</h3>
+               <h3><span class="id">7.3.1</span>Front-End Share Event (Commercial User) Structure Chart</h3>
                <img src="images/View-StructureChart-ShareEvent.png" alt="Share Event (Commercial User) Structure Chart" class="pic">
-               <h3><span class="id">7.3.2</span>Edit Profile Structure Chart</h3>
+               <h3><span class="id">7.3.2</span>Front-End Edit Profile Structure Chart</h3>
                <img src="images/View-StructureChart-EditProfile.png" alt="Edit Profile Structure Chart" class="pic">
-               <h3><span class="id">7.3.3</span>Create Group Event (Consumer User) Structure Chart</h3>
+               <h3><span class="id">7.3.3</span>Front-End Create Group Event (Consumer User) Structure Chart</h3>
                <img src="images/View-StructureChart-CreateGroupEvent.png" alt="Create Group Event (Consumer User) Structure Chart" class="pic">
-               <h3><span class="id">7.3.4</span>Edit Users (Admin User) Structure Chart</h3>
+               <h3><span class="id">7.3.4</span>Front-End Edit Users (Admin User) Structure Chart</h3>
                <img src="images/View-StructureChart-EditUsers.png" alt="Edit Users (Admin User) Structure Chart" class="pic">
             </div>
             <h2><span class="id">7.4</span>Front-End Workflow</h2>
@@ -3185,22 +3187,16 @@
                <img src="images/ConsumerWorkflowDiagram.png" alt="Consumer Workflow Diagram" class="pic">
             </div>
             <h2><span class="id">7.5</span>Front-End Data and Information View Design</h2>
-            <div class="indent">
-               <h3>7.5.1 Data and Information View Design Diagram</h3>
-               <p>
-                  This view focuses on the flow of information and data as the program operates. There is no particular sequence of events. Of course everything begins when a user either creates an account or logs into their account. This can be done by entering credentials manually, or creating/signing in via another social media profile such as Facebook. Accounts can be one of three levels of privilege: Consumer, Commercial, or Admin User. Each type of user can view the accounts of other users, but not change any information. Each user has a way to create or edit events, and as such need access to the events database. As well each user has the ability to edit their profile, and need access to the database to make and save changes to their profile. Upon creation of a Consumer User account, a help feature may guide the new user around to show them how to operate the application. Similarly, upon the creation of a Commercial User account a “Tooltips” feature appears to showcase more ways to operate a commercial user account.
-               </p>
-               <img src="images/Data_and_Information_View_Design.png" alt="Data and Information View Design Diagram" class="pic">
-            </div>
+            <p>
+               This view focuses on the flow of information and data as the program operates. There is no particular sequence of events. Of course everything begins when a user either creates an account or logs into their account. This can be done by entering credentials manually, or creating/signing in via another social media profile such as Facebook. Accounts can be one of three levels of privilege: Consumer, Commercial, or Admin User. Each type of user can view the accounts of other users, but not change any information. Each user has a way to create or edit events, and as such need access to the events database. As well each user has the ability to edit their profile, and need access to the database to make and save changes to their profile. Upon creation of a Consumer User account, a help feature may guide the new user around to show them how to operate the application. Similarly, upon the creation of a Commercial User account a “Tooltips” feature appears to showcase more ways to operate a commercial user account.
+            </p>
+            <img src="images/Data_and_Information_View_Design.png" alt="Data and Information View Design Diagram" class="pic">
             <h2><span class="id">7.6</span>Entity Relationships</h2>
             <p>An entity relationship diagram (ERD) shows the relationships of entity sets stored in a database. An entity in this context is an object, a component of data. An entity set is a collection of similar entities. These entities can have attributes that define its properties[1]. For the Uvents project, this diagram is built based on the 3.5 Logical Database Requirements section of the SRS. It consists of 14 tables that will hold both user and application data[2]. This database will be stored remotely and the users will have to have an Internet connection to be able to access this database. All the information downloaded from there will be streamed to let the user get the most updated information. The information, channels, and all connections must be secure to protect both users and stakeholders.</p>
             <img src="./images/Entity-Relationships.png" alt="Entity Relationships Diagram" class="pic">
             <h3><span class="id">7.7</span>Project Viewpoint</h3>
-            <div class="indent">
-               <h2>7.5.1 Project viewpoint Diagram</h2>
-               <p>Project viewpoint is one of the design techniques. It is a way to divide the whole project into pieces using teams or small projects. In our scenario, I would like to divide the project into each type of user. Then each type of user has its own special project.</p>
-               <img src="./images/Uvents_project_viewpoint.png" alt="Uvents Project Viewpoint Diagram" class="pic">
-            </div>
+            <p>Project viewpoint is one of the design techniques. It is a way to divide the whole project into pieces using teams or small projects. In our scenario, I would like to divide the project into each type of user. Then each type of user has its own special project.</p>
+            <img src="./images/Uvents_project_viewpoint.png" alt="Uvents Project Viewpoint Diagram" class="pic">
          </div>
          <h1><span class="id">8</span>Model</h1>
          <div class="indent">
