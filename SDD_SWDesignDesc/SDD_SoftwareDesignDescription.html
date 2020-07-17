@@ -3292,7 +3292,7 @@
                 <img src="./images/CommunicationUML-Create&ManageEvent.png" alt="CommuncationUML - Create & Manage Event.png" class="pic">
                 <figcaption>Communication UML Figure 4</figcaption>
             </div>
-            <h2>Database Design</h2>
+            <h2><span class="id">8.2</span>Database Design</h2>
             <ol>
                 <li>(selection) For designing our database, we will use the following design plan modified from the steps found in [1]:
                     <div class="indent">
@@ -3339,7 +3339,7 @@
                 </li>
             </ol>
 
-            <h2>Data Types</h2>
+            <h2><span class="id">8.3</span>Data Types</h2>
             <ol>
                 <li></li>
                 <li></li>
@@ -3361,7 +3361,7 @@
             <h2>Commercial User Table</h2>
             <p>The Commercial User chart demonstrates what is being stored, and what data-type is being used to display it.</p>
             <img src="./images/DataTypes-Commercial_Users.png" alt="Commercial User Table" class="pic">
-            <h2>Structural Design Technique</h2>
+            <h2><span class="id">8.4</span>Structural Design Technique</h2>
             <ol>
                 <li>(selection) For the Structural Design Pattern we will be using the façade design pattern. This will allow us to create classes in the program that are easier to use many times in in many circumstances without the complexity of knowing
                     all the underlying functions and how they work.. </li>
@@ -3401,18 +3401,56 @@
                 </li>
             </ol>
             <img src="./images/EntityRelationship.png" alt="Entity Relationship" class="pic">
-            <h2>Data Flow</h2>
-            <img src="./images/DataFlow-CreateAccount.png" alt="" class="pic">
-            <img src="./images/DataFlow-EditProfile.png" alt="" class="pic">
-            <img src="./images/DataFlow-ViewProfile.png" alt="" class="pic">
-            <img src="./images/DataFlow-CreateGroupEvent.png" alt="" class="pic">
-            <img src="./images/DataFlow-EditEvent.png" alt="" class="pic">
-            <img src="./images/DataFlow-CreateCommercialEvent.png" alt="" class="pic">
-            <img src="./images/DataFlow-AddDescription.png" alt="" class="pic">
-            <img src="./images/DataFlow-ManageCommercialEvent.png" alt="" class="pic">
-            <img src="./images/DataFlow-EditUsers.png" alt="" class="pic">
-            <img src="" alt="" class="pic">
-            <img src="" alt="" class="pic">
+            <h2><span class="id">8.6</span>Data Flow</h2>
+            <div class="indent">
+                <h3><span class="id">8.6.1</span>Model Data Flow Create Account View</h3>
+                <p>The User is brought to the create account view and subsequently is asked to enter a username and password. Both the password and username are validated to ensure they follow guidelines and are available. If an error arises the User is notified on the create account view. If validation is successful, the password is hashed and the create account process will store the password and username in the database. A confirmation is then sent to the User. Users may also create an account via a third party social media account which will use the social media platforms own login feature.</p>
+                <img src="./images/DataFlow-CreateAccount.png" alt="" class="pic">
+                <figcaption>Data Flow Figure 1</figcaption>
+                <h3><span class="id">8.6.2</span>Model Data Flow Edit Profile</h3>
+                <p>The User enters a new username, password, and/or email. All three pieces of data are validated and if an error occurs a message is sent back to the edit profile view to alert the User. IF validation is successful, then the new password is hashed (if one is present), and the data is then stored in the database. Confirmation is then sent to the User.</p>
+                <img src="./images/DataFlow-EditProfile.png" alt="" class="pic">
+                <figcaption>Data Flow Figure 2</figcaption>
+                <h3><span class="id">8.6.3</span>Model Data Flow View Profile View</h3>
+                <p>The User enters the view profile view. A process to request account information is then run. The database will send the requested information back to the view.</p>
+                <img src="./images/DataFlow-ViewProfile.png" alt="" class="pic">
+                <figcaption>Data Flow Figure 3</figcaption>
+                <h3><span class="id">8.6.4</span>Model Data Flow Create Group Event View (Consumer User)</h3>
+                <p>The Consumer User enters the create group event view. The Consumer User then enters data pertaining to the group event and clicks the create event button. The data is then inspected and validated. If appropriate and successful, data is saved to the database and confirmation is sent to the Consumer User.</p>
+                <img src="./images/DataFlow-CreateGroupEvent.png" alt="" class="pic">
+                <figcaption>Data Flow Figure 4</figcaption>
+                <h3><span class="id">8.6.5</span>Model Data Flow Edit Event View</h3>
+                <p>The User Enter the Edit Event View. Data about the event can then be edited and resubmitted. The data is inspected for appropriateness and validity. If successful, data is saved to the database. Confirmation is sent to the User.</p>
+                <img src="./images/DataFlow-EditEvent.png" alt="" class="pic">
+                <figcaption>Data Flow Figure 5</figcaption>
+                <h3><span class="id">8.6.6</span>Model Data Flow Create Group Event View (Commercial User)</h3>
+                <p>The Commercial User enters the create group event view. The Commercial User then enters data pertaining to the group event and clicks the create event button. The data is then inspected and validated. If appropriate and successful, data is saved to the database and confirmation is sent to the Commercial User.</p>
+                <img src="./images/DataFlow-CreateCommercialEvent.png" alt="" class="pic">
+                <figcaption>Data Flow Figure 6</figcaption>
+                <h3><span class="id">8.6.7</span>Model Data Flow Description View
+</h3>
+                <p>The User enters the add description view. The User then edits or adds a new description to the event. The description is then sent to the database for storage. Confirmation is sent to the User.</p>
+                <img src="./images/DataFlow-AddDescription.png" alt="" class="pic">
+                <figcaption>Data Flow Figure 7</figcaption>
+                <h3><span class="id">8.6.8</span>Model Data Flow List View</h3>
+                <p>The User Enters the list view. Upon entering the view, the list of available events is sent from the database, with their corresponding details, and returned to the view. The view then displays this list of events.</p>
+                <img src="./images/DataFlow-ManageCommercialEvent.png" alt="" class="pic">
+                <figcaption>Data Flow Figure 8</figcaption>
+                <h3><span class="id">8.6.9</span>Model Data Flow Edit Users View</h3>
+                <p>The Admin User enters the edit users view. The Admin User then can select a Commercial or Consumer User. That users profile and information is then retrieved from the database and returned to the edit users view. From that point, the Admin User can either edit user data, or delete user data. Changes are then saved to the database.</p>
+                <img src="./images/DataFlow-EditUsers.png" alt="" class="pic">
+                <figcaption>Data Flow Figure 9</figcaption>
+            </div>
+
+            <h2><span class="id">8.7</span>Data & Information View</h2>
+            <p>The Data and Information view describes the various relationships between the data schema and entities of the project. The figure below (DIV Figure 1) describes the data flow among three types of users (Admin, Commercial, Consumer) and their dependencies.</p>
+            <img src="./images/Data&InfoView.png" alt="Data & Information View" class="pic">
+            <figcaption>Data and Information View Figure 1</figcaption>
+
+            <h2><span class="id">8.8</span>Petri-Nets</h2>
+            <p>One way to model an application is by the interaction between the various views of the application. A Petri-Net is an excellent way to design such a model. In the following Petri-Net each circle represents a view, and rectangles represent functions that change a user from one view to another. The arcs connecting circles and rectangles show places where you can access specific view changing functions, and which views the functions lead to.</p>
+            <img src="./images/petri-net.png" alt="Petri-Nets" class="pic">
+            <figcaption>Petri-Nets Figure 1</figcaption>
             <img src="" alt="" class="pic">
         </div>
         <h1><span class="id">9</span>Controller</h1>
@@ -3545,12 +3583,11 @@
                 <li>MySQL (Database)</li>
                 <li>Android Studio (Programming Environment)</li>
             </ul><br>
-            <p>To be able to provide usability to all mobile platforms the application will have two sets of criteria for it’s Design Languages. To have the application work on All Android device Uvents will be built on Android Studio using Kotlin for both
-                the Frontware and Middleware. And MySQL will be used for the back end or the database. To have the application work on All IOS device Uvents will be built on Xcode9 using Swift for both the Frontware and Middleware. And MySQL will be used
-                for the back end or the database. </p>
+            <p>To be able to provide usability to all mobile platforms the application will have two sets of criteria for it’s Design Languages. To have the application work on All Android device Uvents will be built on Android Studio using Kotlin for both the Frontware and Middleware. And MySQL will be used for the back end or the database. To have the application work on All IOS device Uvents will be built on Xcode9 using Swift for both the Frontware and Middleware. And MySQL will be used for the back end or the database.</p>
             <h2><span class='id'>10.1</span>System Engineer View (Layering)</h2>
             <p>The System Engineer View, designed through the layering technique, presents conceptually how the entire system will work together. This may be done through one of two previously mentioned routes, depending on the Uvents User’s operating system.</p>
-            <img src="" alt="">
+            <img src="./images/layering.png" alt="">
+            <figcaption>Layering Figure 1</figcaption>
         </div>
     </div>
 </body>
