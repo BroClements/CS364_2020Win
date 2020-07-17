@@ -2202,6 +2202,7 @@
             </div>
             <h2><span class="id">6.25</span>Manage Commercial Event Viewpoints (Commercial User) [3.25]</h2>
             <div class="indent">
+                <p>The Manage Commercial Event Concern allows Commercial Users to view their ongoing and future events. This assists Commercial Users by allowing them to easily access those events. </p>
                 <h3>Design Viewpoints</h3>
                 <p>Commercial User clicks on the Manage Events button. Information is fetched from the database, and sent back to the app. Information is then displayed in the app in a listview.</p>
                 <h3>Design Elements</h3>
@@ -2229,6 +2230,7 @@
             </div>
             <h2><span class="id">6.26</span>Edit Event Viewpoints (Commercial User) [3.26]</h2>
             <div class="indent">
+                The Edit Event concern is meant to provide users the capacity to edit the events they created. This edit event functionality allows users to modify the details of the non-past events they created. 
                 <h3>Design Viewpoints</h3>
                 <p>Commercial User clicks on the Edit Event button. Data is retrieved from the database and becomes editable. The updates will take effect once the Commercial User clicks on the Update button.</p>
                 <h3>Design Elements</h3>
@@ -2310,6 +2312,7 @@
             </div>
             <h2><span class="id">6.27</span>Past Events Viewpoints (Commercial User) [3.27]</h2>
             <div class="indent">
+                <p>The past events concern is meant to allow Commercial Users to view the events they have hosted that have already ended. This will provide a record to the Commercial User and may help the Commercial User in planning future events or repeating the ones they have previously hosted. </p>
                 <h3>Design Viewpoints</h3>
                 <p>Commercial User requests to view Past Events. Server queries information for all Events whose user ID column matches the Commercial User's user ID and whose end date is before the current date. Server returns the requested information.
                     The application displays to the user the information for each of these past events. If no past events exist, the application displays a message indicating that the Commercial User has no past events.</p>
@@ -2350,9 +2353,10 @@
             </div>
             <h2><span class="id">6.28</span>Promote Event Viewpoints (Commercial User) [3.28]</h2>
             <div class="indent">
+                <p>The promote event concern is meant to provide users the capacity to promote the events they created. The promote event functionality allows users to keep track and to manage their auctions. </p>
                 <h3>Design Viewpoints</h3>
-                <p>Comercial user enters in the Promote Event feature. The server requests the time till the next bidding auction. The server returns the requested information. The information is displayed to the commercial user. The server verifies if the
-                    next bidding auction started. If the answer if true, the application will allow the commercial user to click on Start Auction. </p>
+                <p>Commercial User enters in the Promote Event feature. The server requests the time till the next bidding auction. The server returns the requested information. The information is displayed to the commercial user. The server verifies if the
+                    next bidding auction started. If the answer is true, the application will allow the commercial user to click on Start Auction. </p>
                 <h3>Design Elements</h3>
                 The Promote Event Table allows Users to promote ongoing events that are part of their domain, and to share those events as well. This will also help Users to keep track of the timing until the next bidding auction.
                 <table>
@@ -2390,6 +2394,7 @@
             </div>
             <h2><span class="id">6.29</span>Start Auction (Commercial User) / Place Bid Viewpoints [3.29]</h2>
             <div class="indent">
+                <p>The Start Auction / Place Bid functionality is to allow a commercial user to bid for more awareness of their event. </p>
                 <h3>Design Viewpoints</h3>
                 <p>Session ID is Verified Server queries information for the current monthly bids Server sends the information regarding the bid to the client The user inputs the amount he/she would like to bid and the information is sent to the server The
                     server inserts the bid into the bid table The server sends a response to the user that the bid was successfully added The application displays to the user that the bid was successfull/unsuccessfull</p>
@@ -3213,7 +3218,7 @@
             <img src="./images/CommunicationUML-Create&ManageEvent.png" alt="CommuncationUML - Create & Manage Event.png" class="pic">
             <h2>Database Design</h2>
             <ol>
-                <li>(selection) For designing our database, we will use the following design plan modified from the steps found in [1]:
+                <li>For designing our database, we will use the following design plan modified from the steps found in [1]:
                     <div class="indent">
                         <ul>
                             <li>Find and organize required information </li>
@@ -3225,14 +3230,14 @@
                         </ul>
                     </div>
                 </li>
-                <li>(implementation) Steps a-e of the design plan were completed in the SRS. The database is already divided into tables, each of which has a primary key, and all foreign relationships have been identified. This leaves us with only applying
+                <li>The first five steps above of the design plan were completed in the SRS. The database is already divided into tables, each of which has a primary key, and all foreign relationships have been identified. This leaves us with only applying
                     the Normalization Rules. The normalization rules we will apply are as follows, found at [1, 2]:
                     <ul>
                         <li>First Normal Form
                             <div class="indent">
                                 <ul>
                                     <li>Every data item (intersection of a column and row) contains only a single value, and not a list of values. </li>
-                                    <li>Values stored in a column should be of the same domain (e.g. an address column should not sometimes contain a lat-long and at other times contain a written address). </li>
+                                    <li>Values stored in a column should be of the same domain (e.g. an address column should not sometimes contain a latitude-longitude and at other times contain a written address). </li>
                                     <li>All columns in a given table should have unique names (e.g. start time and end time for an Event should not both be called simply “time”) </li>
                                     <li>The order in which data is stored doesn’t matter</li>
                                 </ul>
@@ -3257,69 +3262,115 @@
                     </ul>
                 </li>
             </ol>
+            <img src="./images/Database.png" alt="Database" class="pic">
+            <p>Database Design Figure 8.2.1 </p>
 
-            <h2>Data Types</h2>
-            <ol>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ol>
-            <img src="./images/DataTypes.png" alt="Data Types" class="pic">
-            <h2>Event Table</h2>
+            <h2>Data Types [6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7, 6.8, 6.10, 6.11, 6.12, 6.13, 6.17, 6.18, 6.19,6,2 6.23, 6.24, 6.26,6.27, 6.33, 6.34, 6.35, 6.37, 6.38, 6.44, 6.45]</h2>
+            <p>For the data types we will use Integers, Strings, Booleans, varchars, timestamps, tinyint, tinytext, blob, and decimal. </p>
+            <p>We will inspect each table and find out which data type we will use. Some of the tables may require only 4, but some may require many more. This allows the correct storage of the data and will ensure that the wrong data type is not put into the table. </p>
+            <p>the tables have been designed for the Uvents application have been made along with the data types that will be used in each column in the tables. </p>
+            
+            <h2><span class="id">8.3.1</span>Event_Participant Table </h2>
+            <p>The Even_Participant Table chart demonstrates what is being stored, and what data-type is being used to display it.</p>
+            <img src="./images/DataTypes-Event-Participant.png" alt="Event Participant Table" class="pic">
+            <p>Data Types Figure 1</p>
+
+            <h2><span class="id">8.3.2</span>User Report Table</h2>
+            <p>The User_Report Table chart demonstrates what is being stored, and what data-type is being used to display it.  </p>
+            <img src="./images/Data Types- User-Report.png" alt="User Report Table" class="pic">
+            <p>Data Types Figure 2</p>
+
+            <h2><span class="id">8.3.3</span>Message Table</h2>
+            <p>The Message Table chart demonstrates what is being stored, and what data-type is being used to display it.</p>
+            <img src="./images/DataTypes-Message.png" alt="Message Table" class="pic">
+            <p>Data Types Figure 3</p>
+
+            <h2><span class="id">8.3.4</span>Bid Table</h2>
+            <p>The Bid Table chart demonstrates what is being stored, and what data-type is being used to display it. </p>
+            <img src="./images/DataTypes-Bid.png" alt="Bid Table" class="pic">
+            <p>Data Types Figure 4</p>
+
+            <h2><span class="id">8.3.5</span>Notification Table</h2>
+            <p>The Notification Table chart demonstrates what is being stored, and what data-type is being used to display it. </p>
+            <img src="./images/DataTypes-Notifications.png" alt="Notification Table" class="pic">
+            <p>Data Types Figure 5</p>
+
+            <h2><span class="id">8.3.6</span>Address Table</h2>
+            <p>The Address Table chart demonstrates what is being stored, and what data-type is being used to display it. </p>
+            <img src="./images/DataTypes-Addres.png" alt="Address Table" class="pic">
+            <p>Data Types Figure 6</p>
+
+            <h2><span class="id">8.3.7</span>Conversation Table</h2>
+            <p>The Conversation Table chart demonstrates what is being stored, and what data-type is being used to display it. </p>
+            <img src="./images/DataTypes-Conversation.png" alt="Conversation Table" class="pic">
+            <p>Data Types Figure 7</p>
+
+            <h2><span class="id">8.3.8</span>Conversation Participant Table</h2>
+            <p>The Conversation Participant Table chart demonstrates what is being stored, and what data-type is being used to display it. </p>
+            <img src="./images/DataTypes-Conversation-Participant.png" alt="Conversation Participant Table" class="pic">
+            <p>Data Types Figure 8</p>
+
+            <h2><span class="id">8.3.9</span>Event Table</h2>
             <p>The Event Table chart demonstrates what is being stored, and what data-type is being used to display it. </p>
             <img src="./images/DataTypes-Event_Table.png" alt="Event Table" class="pic">
-            <h2>Event Media Table</h2>
+            <p>Data Types Figure 9</p>
+
+            <h2><span class="id">8.3.10</span>Event Media Table</h2>
             <p>The Event Media chart demonstrates what is being stored, and what data-type is being used to display it.</p>
             <img src="./images/DataTypes-Event_Media.png" alt="Event Media" class="pic">
-            <h2>Consumer User Table</h2>
+            <p>Data Types Figure 10</p>
+
+            <h2><span class="id">8.3.11</span>Consumer User Table</h2>
             <p>The Consumer User chart demonstrates what is being stored, and what data-type is being used to display it. </p>
             <img src="./images/DataTypes-Consumer_Users.png" alt="Consumer Table" class="pic">
-            <h2>Group Event Table</h2>
+            <p>Data Types Figure 11</p>
+
+            <h2><span class="id">8.3.12</span>Group Event Table</h2>
             <p>The Group Event chart demonstrates what is being stored, and what data-type is being used to display it. </p>
             <img src="./images/DataTypes-Group_Events.png" alt="Group Events Table" class="pic">
-            <h2>Commercial User Table</h2>
+            <p>Data Types Figure 12</p>
+
+            <h2><span class="id">8.3.13</span>Commercial User Table</h2>
             <p>The Commercial User chart demonstrates what is being stored, and what data-type is being used to display it.</p>
             <img src="./images/DataTypes-Commercial_Users.png" alt="Commercial User Table" class="pic">
-            <h2>Structural Design Technique</h2>
+            <p>Data Types Figure 13</p>
+
+            <h2>Model Structural Design Technique [6.6, 6.10, 6.22, 6.23, 6.36]</h2>
             <ol>
-                <li>(selection) For the Structural Design Pattern we will be using the façade design pattern. This will allow us to create classes in the program that are easier to use many times in in many circumstances without the complexity of knowing
+                <li>For the Structural Design Pattern we will be using the façade design pattern. This will allow us to create classes in the program that are easier to use many times in in many circumstances without the complexity of knowing
                     all the underlying functions and how they work.. </li>
-                <li>(implementation)We will use the façade design technique specifically to implement classes that involve the User class. The application has three unique users: admin, consumer, and commercial, but these users all share some similarities.
-                    These similarities included ID’s names, and etc. They also share similar functions, such as logging in and creating events. The façade design pattern will allow us to simplify these shared functions so that a single function call can
-                    be made where several might otherwise be necessary so that the client does not need to keep track of a lot of unnecessary or repetitive functions. </li>
-                <li>(charts) The first chart shows how the client may use simply a login function providing the username and password as parameters. Then, the server can verify that the given username exists and that the password is correct and return an
-                    ID. The application will then direct the user to the home page as a validated user.</li>
+                <li>We will use the façade design technique specifically to implement classes that involve the User class. The application has three unique users: admin, consumer, and commercial, but these users all share some similarities.
+                    These similarities included ID’s names, etc. They also share similar functions, such as logging in and creating events. The façade design pattern will allow us to simplify these shared functions so that a single function call can
+                    be made where several might otherwise be necessary so that the client does not need to keep track of unnecessary or repetitive functions. </li>
             </ol>
+            <h2><span class="id">8.4.1</span>Structural Design Technique Login Façade Design</h2>
+            <p>The first chart shows how the client may  simply use a login function providing the username and password as parameters. Then, the server can verify that the given username exists and that the password is correct and return an ID. The application will then direct the user to the home page as a validated user. </p>
             <img src="./images/StructuralDesign-Login.png" alt="Design Login" class="pic">
+            <p>Structural Design Technique Login Façade Design Figure 1 </p>
+
             <p>The second chart shows how the Client may simply use a createEvent function (providing the data to be used in creation, e.g. start time, end time, description, etc.). The server will then validate that the data is appropriate (the correct
-                data types and allowed for that sort of user), insert the data into the database, and return the new event ID to the client. The application will then direct the user to the event page for their new Event. </p>
+                data types and allowed for that sort of user), insert the data into the database, and return the new event ID to the client. The Uvents will then direct the user to the event page for their new Event. </p>
             <img src="./images/StructuralDesign-CreateEvent.png" alt="Design Create Event" class="pic">
-            <h2>Entity Relationship</h2>
-            <ol>
-                <li>(selection) For the Entity Relationship design, we will be using the Entity Relationship Diagram. This will allow us to specify, visualize, construct and document artifacts of data. </li>
-                <li>(implementation)We will use the Entity Relationship Diagram technique to specifically visualize and construct data, including relations of columns to each table and among each table. We will apply the following steps to complete the design:
-                    <div class="indent">
-                        <ul>
-                            <li>Identify all the entities in the system. An entity should appear only once in a particular diagram. Create rectangles for all entities and name them properly.</li>
-                            <li>Identify relationships between entities. Connect them using a line and add a diamond in the middle describing the relationship. </li>
-                            <li>Add attributes for entities. Give meaningful attribute names so they can be understood easily. </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>A few things to notice:
-                    <div class="indent">
-                        <ul>
-                            <li>Provide a precise and appropriate name for each entity, attribute, and relationship in the diagram. Terms that are simple and familiar always beats vague, technical-sounding words. In naming entities, remember to use singular
-                                nouns. However, adjectives may be used to distinguish entities belonging to the same class (part-time employee and full-time employee, for example). Meanwhile attribute names must be meaningful, unique, system-independent,
-                                and easily understandable. </li>
-                            <li>Remove vague, redundant or unnecessary relationships between entities.</li>
-                            <li>Never connect a relationship to another relationship. </li>
-                            <li>Make effective use of colors. You can use colors to classify similar entities or to highlight key areas in your diagrams. </li>
-                        </ul>
-                    </div>
-                </li>
-            </ol>
+            <p>Structural Design Technique Create Event Façade Design Figure 2 </p>
+
+            <h2>Model Entity Relationship [6.25, 6.26, 6.27, 6.28, 6.29]</h2>
+            <p>For the Entity Relationship design, we will be using the Entity Relationship Diagram. This will allow us to specify, visualize, construct and document artifacts of data.</p>
+            <p>We will use the Entity Relationship Diagram technique to specifically visualize and construct data, including relations of columns to each table. We will apply the following steps to complete the design: </p>
+            <ul>
+                <li>Identify all the entities in the system. An entity should appear only once in a particular diagram. Create rectangles for all entities and name them properly. </li>
+                <li>Identify relationships between entities. Connect them using a line and add a diamond in the middle describing the relationship. </li>
+                <li>Add attributes for entities. Give meaningful attribute names so they can be understood easily. </li>
+            </ul>
+            <p>A few things to notice: </p>
+            <ul>
+                <li>Provide a precise and appropriate name for each entity, attribute, and relationship in the diagram. Terms that are simple and familiar always beats vague, technical-sounding words. In naming entities, remember to use singular nouns. However, adjectives may be used to distinguish entities belonging to the same class (part-time employee and full-time employee, for example). Meanwhile attribute names must be meaningful, unique, system-independent, and easily understandable. </li>
+                <li>Remove vague, redundant or unnecessary relationships between entities. </li>
+                <li>Never connect a relationship to another relationship. </li>
+                <li>Make effective use of colors. You can use colors to classify similar entities or to highlight key areas in your diagrams. </li>
+            </ul>
+
             <img src="./images/EntityRelationship.png" alt="Entity Relationship" class="pic">
+            <p>Entity Relationship Diagram Figure 1</p>
             <h2>Data Flow</h2>
             <img src="./images/DataFlow-CreateAccount.png" alt="" class="pic">
             <img src="./images/DataFlow-EditProfile.png" alt="" class="pic">
