@@ -833,22 +833,17 @@
             <h2><span class="id">5.23</span>Create Commercial Event (Commercial User) [3.23]</h2>
             <p>Commercial User clicks on the “Create New Event” button, in which the Commercial User will have access to customize the Event that will be created. After the Event information has been specified the Commercial User will Create the Event. Once the Commercial User has created the Event the changes then will be sent to the database. </p>
             <h2><span class="id">5.24</span>Add Description (Commercial User) [3.24]</h2>
-            <p>Commercial User clicks on the description box, types in information, and saves. Then, changes are saved to the database, where the appropriate table's information will be changed. Then, the updated description is displayed to the Commercial
-                User.
-            </p>
-            <h2><span class="id">5.25</span>Manage Commercial Event (Commercial) [3.25]</h2>
-            <p>Commercial User clicks on the Manage Events button. All ongoing events are fetched from the database and sent back to the app. The information is displayed in a listview.</p>
-            <h2><span class="id">5.26</span>Edit Event (Commercial) [3.26]</h2>
-            <p>Commercial User clicks on the Edit Event button. The details of the event, including location, date/time, event type, description, etc. can be altered according to Commercial User's needs.</p>
-            <h2><span class="id">5.27</span>Past Events (Commercial) [3.27]</h2>
-            <p>Commercial User clicks a navigation option to view Past Events. The app navigates to that page, database information is fetched from the event table to collect events in the past created by this Commercial User, and those events are displayed
-                in a list to the Commercial User.</p>
-            <h2><span class="id">5.28</span>Promote Event (Commercial) [3.28]</h2>
-            <p>Commercial User clicks on Promote Event button.The application then contacts the server and gets the required information regarding the time till the next bidding auction to be displayed. If the auction is currently taking place, the commercial
-                user can click on Start Auction button and be redirected to the Start Auction feature. The commercial user can click on Share Event button and is redirected to the Share Event feature.</p>
-            <h2><span class="id">5.29</span>Start Auction (Commercial) / Place Bid [3.29]</h2>
-            <p>Commercial User clicks on the Start Auction / Place Bid button. The application then contacts the server and gets the required information regarding placing a bid. The commercial user then can click on an input field and enter in the amount
-                they would like to bid. Then the data is sent to the database and a message is displayed whether or not the bid was places successfully.</p>
+            <p>Commercial User clicks on the description box, types in information, and saves. The changes are saved to the database, where the appropriate table's information will be changed. The updated description is displayed to the Commercial User.</p>
+            <h2><span class="id">5.25</span>Manage Event (Commercial User) [3.25]</h2>
+            <p>Commercial User clicks on the Manage Events button. All ongoing/future events hosted by the Commercial User are fetched from the database and sent back to the Commercial User. The information is displayed in a list view.</p>
+            <h2><span class="id">5.26</span>Edit Event (Commercial User) [3.26]</h2>
+            <p>Commercial User clicks on the Edit Event button. The details of the Event, including location, date/time, description, etc. can be altered according to Commercial User's needs.</p>
+            <h2><span class="id">5.27</span>Past Events (Commercial User) [3.27]</h2>
+            <p>Commercial User clicks a navigation option to view Past Events. Uvents navigates to that page, past events created by the Commercial User are fetched from the database. Those events are displayed in a list to the Commercial User.</p>
+            <h2><span class="id">5.28</span>Promote Event (Commercial User) [3.28]</h2>
+            <p>The Commercial User shall have the option to promote their events. This option shall allow the Commercial User to add deals and/or discounts to the event.</p>
+            <h2><span class="id">5.29</span>Start Auction / Place Bid (Commercial User) [3.29]</h2>
+            <p>Commercial User clicks on the Start Auction / Place Bid button. Uvents then contacts the server and gets the required information regarding placing a bid. The Commercial User can then click on an input field and enter in the amount they would like to bid. The data is sent to the database and a message is displayed indicating whether the bid was placed successfully.</p>
             <h2><span class="id">5.30</span>Share Event (Commercial User) [3.30]</h2>
             <p>
                 The Commercial User may share their Event. The Shareable link bar allows the Commercial User to copy a shareable link. The Commercial User may click the copy link button to copy the Event Link to their clipboard. The Commercial User may click on the Facebook
@@ -921,100 +916,109 @@
         </div>
         <h1><span class="id">6</span>Design Viewpoints</h1>
         <div class="indent">
-            <h2><span class="id">6.1</span>Create Consumer Account Viewpoints [3.1]</h2>
-            <p>Create a username and password is displayed to the consumer. An option to sign in with social media is also displayed. The server shall authenticate the username once it has been typed in ensuring that it is unique. Client-side validation
-                will ensure that the password reaches or exceeds 6 characters, and that the email address is in the correct format. When the consumer clicks 'Create Account' and the password, username, and email are authenticated, the password will be
-                hashed and added to the database along with the email and username.</p>
-            <div class="indent">
-                <h3>Design Elements</h3>
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Purpose</th>
-                        <th>Description</th>
-                    </tr>
-                    <tr>
-                        <td>"Email Address" Text Field</td>
-                        <td>Entity</td>
-                        <td>Allow the User to enter their email address.</td>
-                        <td>A User will type in their email address that will be linked to their account. Client side will check if email address is in the correct format.</td>
-                    </tr>
-                    <tr>
-                        <td>"Username" Text Field</td>
-                        <td>Entity</td>
-                        <td>Allow the User to enter a username.</td>
-                        <td>A User will type in a Username to be saved. The server shall authenticate the username once it has been typed in ensuring that it is unique.</td>
-                    </tr>
-                    <tr>
-                        <td>"Password" Text Field</td>
-                        <td>Entity</td>
-                        <td>Allow the User to enter a password.</td>
-                        <td>The User will type in a password for their account. Client-side validation will ensure that the password reaches or exceeds 6 characters.</td>
-                    </tr>
-                    <tr>
-                        <td>"Create Account" Button</td>
-                        <td>Entity</td>
-                        <td>Allow the User to create their account.</td>
-                        <td>When the consumer clicks the 'Create Account' button, the password, username, and email are authenticated. The password will be hashed and added to the database along with the email and username.</td>
-                    </tr>
-                    <tr>
-                        <td>"Social Media Login" Button</td>
-                        <td>Entity</td>
-                        <td>Allow the User to use their social media to log in.</td>
-                        <td>A button will be displayed that will give the user an option to sign into their social media account.</td>
-                    </tr>
-                </table>
-            </div>
-            <h2><span class="id">6.2</span>Join Commercial Event Viewpoints [3.2]</h2>
+            <h2><span class="id">6.1</span>Create Consumer Account [3.1]</h2>
+            <h3>Design Viewpoints</h3>
+            <p>The option to create a username and password is displayed to the consumer. An option to sign in with social media is also displayed. The server shall authenticate the username once it has been typed in ensuring that it is unique. Client-side validation will ensure that the password reaches or exceeds 6 characters, and that the email address is in the correct format.  When the consumer clicks 'Create Account' and the password, username, and email are authenticated, the password will be hashed and added to the database along with the email and username. [DF.1]</p>
+            <h3>Design Elements</h3>
+            <p>A text field for the user to type in their email address, a text field for the user to type in their username, and a text field for the user to type in their password is displayed on the screen. A button that displays the words “Create Account” is displayed. A button that displays the words “Social Media Login” is displayed. [DF.1]</p>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Purpose</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>"Email Address" Text Field</td>
+                    <td>Entity</td>
+                    <td>Allow the User to enter their email address.</td>
+                    <td>A User will type in their email address that will be linked to their account. Client side will check if email address is in the correct format.</td>
+                </tr>
+                <tr>
+                    <td>"Username" Text Field</td>
+                    <td>Entity</td>
+                    <td>Allow the User to enter a username.</td>
+                    <td>A User will type in a Username to be saved. The server shall authenticate the username once it has been typed in ensuring that it is unique.</td>
+                </tr>
+                <tr>
+                    <td>"Password" Text Field</td>
+                    <td>Entity</td>
+                    <td>Allow the User to enter a password.</td>
+                    <td>The User will type in a password for their account. Client-side validation will ensure that the password reaches or exceeds 6 characters.</td>
+                </tr>
+                <tr>
+                    <td>"Create Account" Button</td>
+                    <td>Entity</td>
+                    <td>Allow the User to create their account.</td>
+                    <td>When the consumer clicks the 'Create Account' button, the password, username, and email are authenticated. The password will be hashed and added to the database along with the email and username.</td>
+                </tr>
+                <tr>
+                    <td>"Social Media Login" Button</td>
+                    <td>Entity</td>
+                    <td>Allow the User to use their social media to log in.</td>
+                    <td>A button will be displayed that will give the user an option to sign into their social media account.</td>
+                </tr>
+            </table>
+            <h2><span class="id">6.2</span>Join Commercial Event (Consumer User) [3.2]</h2>
+            <h3>Design Viewpoints:</h3>
+            <p>The Design Viewpoints should behave as described in the following points:</p>
             <ul>
                 <li>List of Events is displayed to the consumer. </li>
                 <li>On Event selection, a description of the selected event is displayed to the user with an option button to return or join event. </li>
-                <li>Interface between HMI and Server </li>
-                <li>Interface between Server and Database </li>
+                <li>Interface between HMI and Server</li>
+                <li>Interface between Server and Database</li>
             </ul>
-            <div class="indent">
-                <h3>Design Elements: </h3>
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Purpose</th>
-                        <th>Description</th>
-                    </tr>
-                    <tr>
-                        <td>List of Events</td>
-                        <td>Entity</td>
-                        <td>To provide a view of all the Events to the consumer.</td>
-                        <td>The list of events is a list that provides the user the option to see all the events available to them in a list format setting.</td>
-                    </tr>
-                    <tr>
-                        <td>"View Event" Button</td>
-                        <td>Entity</td>
-                        <td>To provide access to Event’s details.</td>
-                        <td>A button is available on each event so the user can click on it to see the details of the event.</td>
-                    </tr>
-                    <tr>
-                        <td>View of Event Description.</td>
-                        <td>Entity</td>
-                        <td>A view which holds the information of the Event, in order for the consumer to read.</td>
-                        <td>The description is where the user can see the details information of that event. It will have information such as location, time, event host, and description.</td>
-                    </tr>
-                    <tr>
-                        <td>"Join Event" Button.</td>
-                        <td>Entity</td>
-                        <td>A button to allow a consumer to Join a desired Event.</td>
-                        <td>Join event can be clicked in order to the user to join that event.</td>
-                    </tr>
-                    <tr>
-                        <td>"Return to List" Button</td>
-                        <td>Entity</td>
-                        <td>A button to return to the List of Events, after reading the description of the Event.</td>
-                        <td>The return button will be an option to take the user back to list of events, that way the user can continue to investigate other events.</td>
-                    </tr>
-                </table>
-            </div>
-            <h2><span class="id">6.3</span>Join Group Event Viewpoints [3.3]</h2>
+            <h3>Design Elements: </h3>
+            <p>Below is a list of Design Elements that compose the Join Commercial event:</p>
+            <ul>
+                <li>List of Events</li>
+                <li>"View Event" Button</li>
+                <li>View of Event Description.</li>
+                <li>"Join Event" Button.</li>
+                <li>"Return to List" Button.</li>
+            </ul>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Purpose</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>List of Events</td>
+                    <td>Entity</td>
+                    <td>To provide a view of all the Events to the consumer.</td>
+                    <td>The list of events is a list that provides the user the option to see all the events available to them in a list format setting.</td>
+                </tr>
+                <tr>
+                    <td>"View Event" Button</td>
+                    <td>Entity</td>
+                    <td>To provide access to Event’s details.</td>
+                    <td>A button is available on each event so the user can click on it to see the details of the event.</td>
+                </tr>
+                <tr>
+                    <td>View of Event Description.</td>
+                    <td>Entity</td>
+                    <td>A view which holds the information of the Event, in order for the consumer to read.</td>
+                    <td>The description is where the user can see the details information of that event. It will have information such as location, time, event host, and description.</td>
+                </tr>
+                <tr>
+                    <td>"Join Event" Button.</td>
+                    <td>Entity</td>
+                    <td>A button to allow a consumer to Join a desired Event.</td>
+                    <td>Join event can be clicked in order to the user to join that event.</td>
+                </tr>
+                <tr>
+                    <td>"Return to List" Button</td>
+                    <td>Entity</td>
+                    <td>A button to return to the List of Events, after reading the description of the Event.</td>
+                    <td>The return button will be an option to take the user back to list of events, that way the user can continue to investigate other events.</td>
+                </tr>
+            </table>
+
+            <h2><span class="id">6.3</span>Join Group Event (Consumer User)[3.3]</h2>
+            <h3>Design Viewpoints:</h3>
+            <p>The Design Viewpoints should behave as described in the following points:</p>
             <ul>
                 <li>Notification icon is provided to the user view. </li>
                 <li>Notification is provided on an invitation. </li>
@@ -1023,137 +1027,153 @@
                 <li>Interface between HMI and Server </li>
                 <li>Interface between Server and Database </li>
             </ul>
-            <div class="indent">
-                <h3>Design Elements: </h3>
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Purpose</th>
-                        <th>Description</th>
-                    </tr>
-                    <tr>
-                        <td>List of Group Events</td>
-                        <td>Entity</td>
-                        <td>To provide a view of all the Group Events to the consumer.</td>
-                        <td>The list of events is a list that provides the user the option to see all the events available to them in a list format setting.</td>
-                    </tr>
-                    <tr>
-                        <td>“View Group Event" Button</td>
-                        <td>Entity</td>
-                        <td>To provide access to Group Event’s details.</td>
-                        <td>A button is available on each event so the user can click on it to see the details of the event.</td>
-                    </tr>
-                    <tr>
-                        <td> View of Group Event Description.</td>
-                        <td>Entity</td>
-                        <td>A view which holds the information of the Group Event, in order for the consumer to read.</td>
-                        <td>The description is where the user can see the details information of that event. It will have information such as location, time, event host, and description.</td>
-                    </tr>
-                    <tr>
-                        <td>"Join Group Event" Button.</td>
-                        <td>Entity</td>
-                        <td>A button to allow a consumer to Join a desired Group Event.</td>
-                        <td>Join event can be clicked in order to the user to join that event.</td>
-                    </tr>
-                    <tr>
-                        <td>"Decline Group Event"</td>
-                        <td>Entity</td>
-                        <td>A button to decline invitations to Group events from other users.</td>
-                        <td>The decline option provides a way for the user to decline an invitation to join a group event. When clicked the event will not long available to the user invited.</td>
-                    </tr>
-                    <tr>
-                        <td>"Return to List" Button.</td>
-                        <td>Entity</td>
-                        <td>A button to return to the List of Group Events, after reading the description of the Group Event.</td>
-                        <td>The return button will be an option to take the user back to list of events, that way the user can continue to investigate other events.</td>
-                    </tr>
-                </table>
-            </div>
-            <h2><span class="id">6.4</span>Edit Profile Viewpoints (Consumer User) [3.4]</h2>
-            <p>Setting icon is presented to the customer. On "edit profile" click, a new activity is presented on the screen with the personal information fields already filled with current information. They could edit them. Input validation messages should
-                be provided (ex: e-mail, username). Upon information change, the save and the cancel buttons are available with their perspective actions of canceling the operation or saving it. </p>
-            <div class="indent">
-                <h3>Design Elements </h3>
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Purpose</th>
-                        <th>Description</th>
-                    </tr>
-                    <tr>
-                        <td>"Edit profile" button/option</td>
-                        <td>Entity</td>
-                        <td>Provide access Profile editing.</td>
-                        <td>A button that once selected will open the options to edit profile.</td>
-                    </tr>
-                    <tr>
-                        <td>"Email Address" Text Field</td>
-                        <td>Entity</td>
-                        <td>Provide the option to edit their email.</td>
-                        <td>A text Field where the user will enter their email</td>
-                    </tr>
-                    <tr>
-                        <td>"Username" Text Field</td>
-                        <td>Entity</td>
-                        <td>Provide the option to edit username.</td>
-                        <td>A text Field where the user will enter their Username</td>
-                    </tr>
-                    <tr>
-                        <td>"Password" Text Field</td>
-                        <td>Entity</td>
-                        <td>Provide the option to edit password.</td>
-                        <td>A text Field where the user will enter their Password.</td>
-                    </tr>
-                    <tr>
-                        <td>"Save" Button</td>
-                        <td>Entity</td>
-                        <td>Allow user to save changes.</td>
-                        <td>If any changes have been made to the Email, Username or Password text fields. This button will allow for those changes to be saved to the database.</td>
-                    </tr>
-                    <tr>
-                        <td>"Cancel" Button</td>
-                        <td>Entity</td>
-                        <td>Allow user to cancel the process.</td>
-                        <td>If any changes have been made to the Email, Username or Password text fields. This button will Cancel any would be changes and revert the fields to the original values.</td>
-                    </tr>
-                </table>
-            </div>
-            <h2><span class="id">6.5</span>View Profile Viewpoints (Consumer User) [3.5]</h2>
-            <p>Option to view a consumer or commercial user's profile. The server then takes the consumer user to the commercial or consumer user's profile. Within that profile there is an option to report the user. Once this button is clicked, an admin
-                user will be notified, and informed which user has been reported. If the block user button has been pushed, that user is added to a list of users that the consumer user does not want to receive messages or event invitations from. </p>
-            <div class="indent">
-                <h3>Design Elements </h3>
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Purpose</th>
-                        <th>Description</th>
-                    </tr>
-                    <tr>
-                        <td>View Profile Button</td>
-                        <td>Entity</td>
-                        <td>Allow Consumer user to pull up the Profile view.</td>
-                        <td>A button which when clicked will signal the system to switch to the Profile view.</td>
-                    </tr>
-                    <tr>
-                        <td>Report User Button</td>
-                        <td>Entity</td>
-                        <td>Allow Consumer user to report another user.</td>
-                        <td>A button which when clicked send a notification to the admin users that the logged in user has reported the user for the profile that is currently displayed.</td>
-                    </tr>
-                    <tr>
-                        <td>Block User Button</td>
-                        <td>Entity</td>
-                        <td></td>
-                        <td>A button which when clicked sends two users to the server (the user logged in and the user for the profile that is currently displayed). The server will modify the database for the user that is logged in so it knows to ignore messages
-                            and event invitations from the other user.</td>
-                    </tr>
-                </table>
-            </div>
-            <h2><span class="id">6.6</span>Login Viewpoints (Consumer User) [3.6]</h2>
+            <h3>Design Elements: </h3>
+            <p>Below is the list of Design Elements that compose the Join Commercial event. These Elements will give the consumer options to join, view, or decline Group events.</p>
+            <ul>
+                <li>List of Group Events</li>
+                <li>"View Group Event" Button</li>
+                <li>View of Group Event Description.</li>
+                <li>"Join Group Event" Button.</li>
+                <li>"Decline Group Event"</li>
+                <li>"Return to List" Button.</li>
+            </ul>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Purpose</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>List of Group Events</td>
+                    <td>Entity</td>
+                    <td>To provide a view of all the Group Events to the consumer.</td>
+                    <td>The list of events is a list that provides the user the option to see all the events available to them in a list format setting.</td>
+                </tr>
+                <tr>
+                    <td>“View Group Event" Button</td>
+                    <td>Entity</td>
+                    <td>To provide access to Group Event’s details.</td>
+                    <td>A button is available on each event so the user can click on it to see the details of the event.</td>
+                </tr>
+                <tr>
+                    <td> View of Group Event Description.</td>
+                    <td>Entity</td>
+                    <td>A view which holds the information of the Group Event, in order for the consumer to read.</td>
+                    <td>The description is where the user can see the details information of that event. It will have information such as location, time, event host, and description.</td>
+                </tr>
+                <tr>
+                    <td>"Join Group Event" Button.</td>
+                    <td>Entity</td>
+                    <td>A button to allow a consumer to Join a desired Group Event.</td>
+                    <td>Join event can be clicked in order to the user to join that event.</td>
+                </tr>
+                <tr>
+                    <td>"Decline Group Event"</td>
+                    <td>Entity</td>
+                    <td>A button to decline invitations to Group events from other users.</td>
+                    <td>The decline option provides a way for the user to decline an invitation to join a group event. When clicked the event will not long available to the user invited.</td>
+                </tr>
+                <tr>
+                    <td>"Return to List" Button.</td>
+                    <td>Entity</td>
+                    <td>A button to return to the List of Group Events, after reading the description of the Group Event.</td>
+                    <td>The return button will be an option to take the user back to list of events, that way the user can continue to investigate other events.</td>
+                </tr>
+            </table>
+
+            <h2><span class="id">6.4</span>Edit Profile (Consumer User) [3.4]</h2>
+            <h3>Design Viewpoints:</h3>
+            <p>Setting icon is presented to the customer. On "edit profile" click, a new activity is presented on the screen with the personal information fields already filled with current information. The user will be able to edit them. Input validation messages should be provided (ex: e-mail, username). Upon information change, the save and the cancel buttons are available with their perspective actions of canceling the operation or saving it.</p>
+            <h3>Design Elements </h3>
+            <p>Below is a list of Design Elements that compose the Edit Profile. These elements will give the Consumer the ability to edit their Email, Username, Password. They will be able to save these changes or discard them.</p>
+            <ul>
+                <li>"Edit profile" button/option</li>
+                <li>"Email Address" Text Field</li>
+                <li>"Username" Text Field</li>
+                <li>"Password" Text Field</li>
+                <li>"Save" Button</li>
+                <li>"Cancel" Button</li>
+            </ul>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Purpose</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>"Edit profile" button/option</td>
+                    <td>Entity</td>
+                    <td>Provide access Profile editing.</td>
+                    <td>A button that once selected will open the options to edit profile.</td>
+                </tr>
+                <tr>
+                    <td>"Email Address" Text Field</td>
+                    <td>Entity</td>
+                    <td>Provide the option to edit their email.</td>
+                    <td>A text Field where the user will enter their email</td>
+                </tr>
+                <tr>
+                    <td>"Username" Text Field</td>
+                    <td>Entity</td>
+                    <td>Provide the option to edit username.</td>
+                    <td>A text Field where the user will enter their Username</td>
+                </tr>
+                <tr>
+                    <td>"Password" Text Field</td>
+                    <td>Entity</td>
+                    <td>Provide the option to edit password.</td>
+                    <td>A text Field where the user will enter their Password.</td>
+                </tr>
+                <tr>
+                    <td>"Save" Button</td>
+                    <td>Entity</td>
+                    <td>Allow user to save changes.</td>
+                    <td>If any changes have been made to the Email, Username or Password text fields. This button will allow for those changes to be saved to the database.</td>
+                </tr>
+                <tr>
+                    <td>"Cancel" Button</td>
+                    <td>Entity</td>
+                    <td>Allow user to cancel the process.</td>
+                    <td>If any changes have been made to the Email, Username or Password text fields. This button will cancel any would-be changes and revert the fields to the original values.</td>
+                </tr>
+            </table>
+
+            <h2><span class="id">6.5</span>View Profile (All User) [3.5]</h2>
+            <h3>Design Viewpoints:</h3>
+            <p>A user’s profile is displayed. Within that profile is an option to report the user. On click, an admin user will be notified, and informed which user has been reported. If the block user button has been pushed, that user is added to a list of users that the current user does not want to receive messages or event invitations from. [DF.3]</p>
+            <h3>Design Elements </h3>
+            <p>A button is displayed that reads “View Profile.” Once that button is clicked, two more buttons are displayed, “Report User” and “Block User.” [DF.3]</p>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Purpose</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>View Profile Button</td>
+                    <td>Entity</td>
+                    <td>Allow Consumer user to pull up the Profile view.</td>
+                    <td>A button which when clicked will signal the system to switch to the Profile view.</td>
+                </tr>
+                <tr>
+                    <td>Report User Button</td>
+                    <td>Entity</td>
+                    <td>Allow Consumer user to report another user.</td>
+                    <td>A button which when clicked send a notification to the admin users that the logged in user has reported the user for the profile that is currently displayed.</td>
+                </tr>
+                <tr>
+                    <td>Block User Button</td>
+                    <td>Entity</td>
+                    <td></td>
+                    <td>A button which when clicked sends two users to the server (the user logged in and the user for the profile that is currently displayed). The server will modify the database for the user that is logged in so it knows to ignore messages
+                        and event invitations from the other user.</td>
+                </tr>
+            </table>
+
+            <h2><span class="id">6.6</span>Login (Consumer User) [3.6]</h2>
             <p>Consumer User has option to login via username/password or via 3rd party.</p>
             <ul>
                 <li>Username and password: Consumer User login information is submitted to server and put through hash to check for existing user as well as correct username and password. ‘Remember me’ option is taken into account. If information is incorrect
@@ -1258,75 +1278,89 @@
                     </tr>
                 </table>
             </div>
-            <h2><span class="id">6.7</span>Discover Viewpoints (Consumer User) [3.7]</h2>
-            <p>Consumer presses discover button. Server sends request to database. Database returns list of events to server. events list is loaded on application. </p>
-            <div class="indent">
-                <h3>Design Elements: </h3>
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Purpose</th>
-                        <th>Description</th>
-                    </tr>
-                    <tr>
-                        <td>Events Icons</td>
-                        <td>Entity</td>
-                        <td>Allows user to view description of event</td>
-                        <td>Icons that represent the events. They will be links that bring up another view with a greater description of the event.</td>
-                    </tr>
-                    <tr>
-                        <td>Entity row & col from database</td>
-                        <td>Entity</td>
-                        <td>Allows for the dynamic viewing of Icons</td>
-                        <td>This entity will allow for the presentation of the icons dynamically.</td>
-                    </tr>
-                    <tr>
-                        <td>Filter/Sort Button</td>
-                        <td>Entity</td>
-                        <td>Allows for the filtering of results</td>
-                        <td>A button that will bring access to filtering and sorting properties.</td>
-                    </tr>
-                </table>
-            </div>
-            <h2><span class="id">6.8</span>Filter/Sorting Viewpoints (Consumer User) [3.8]</h2>
+            <h2><span class="id">6.7</span>Discover (Consumer User) [3.7]</h2>
+            <h3>Design Viewpoints:</h3>
+            <p>Consumer presses the discover button. Server sends request to database. Database returns list of events to server. events list is loaded on application.</p>
+            <h3>Design Elements: </h3>
+            <p>The following elements will be visible to the Consumer User upon entering the discover view.</p>
+            <ul>
+                <li>Events Icons [DIV Figure 1]</li>
+                <li>Entity row & col from database [DIV Figure 1] </li>
+                <li>Filter/Sort Button [DIV Figure 1] </li>
+            </ul>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Purpose</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Events Icons</td>
+                    <td>Entity</td>
+                    <td>Allows user to view description of event</td>
+                    <td>Icons that represent the events. They will be links that bring up another view with a greater description of the event.</td>
+                </tr>
+                <tr>
+                    <td>Entity row & col from database</td>
+                    <td>Entity</td>
+                    <td>Allows for the dynamic viewing of Icons</td>
+                    <td>This entity will allow for the presentation of the icons dynamically.</td>
+                </tr>
+                <tr>
+                    <td>Filter/Sort Button</td>
+                    <td>Entity</td>
+                    <td>Allows for the filtering of results</td>
+                    <td>A button that will bring access to filtering and sorting properties.</td>
+                </tr>
+            </table>
+
+            <h2><span class="id">6.8</span>Filter/Sorting (Consumer User) [3.8]</h2>
+            <h3>Design Viewpoints:</h3>
             <p>App sends request to server. Server gathers details from database. Server sends view to App. </p>
-            <div class="indent">
-                <h3>Design Elements: </h3>
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Purpose</th>
-                        <th>Description</th>
-                    </tr>
-                    <tr>
-                        <td>Time frame scale</td>
-                        <td>Entity</td>
-                        <td>To allow users to view specific events.</td>
-                        <td>This will alter the presentation of the events to exclude any events not in the time frame. It will be a scale.</td>
-                    </tr>
-                    <tr>
-                        <td>Location input</td>
-                        <td>Entity</td>
-                        <td>To allow users to specify events at a specific location</td>
-                        <td>This will be a location input that will remove events from the event list to exclude any events not at the location</td>
-                    </tr>
-                    <tr>
-                        <td>Cost</td>
-                        <td>Entity</td>
-                        <td>To allow users to sort events by cost</td>
-                        <td>The cost will allow users to specify budgetary constraints</td>
-                    </tr>
-                    <tr>
-                        <td>Event type selector</td>
-                        <td>Entity</td>
-                        <td>Allows the user to filter by event type.</td>
-                        <td>An input that will filter out any event that does not include the specified type tag.</td>
-                    </tr>
-                </table>
-            </div>
-            <h2><span class="id">6.9</span>Search bar Viewpoints (Consumer User) [3.9]</h2>
+            <h3>Design Elements: </h3>
+            <p>The following elements will control the elements sent to the database, restricting the results returned to the application.</p>
+            <ul>
+                <li>Time frame scale [DIV Figure 1]</li>
+                <li>Location input [DIV Figure 1]  </li>
+                <li>Cost [DIV Figure 1]  </li>
+                <li>Event type selector [DIV Figure 1] </li>
+            </ul>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Purpose</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Time frame scale</td>
+                    <td>Entity</td>
+                    <td>To allow users to view specific events.</td>
+                    <td>This will alter the presentation of the events to exclude any events not in the time frame. It will be a scale.</td>
+                </tr>
+                <tr>
+                    <td>Location input</td>
+                    <td>Entity</td>
+                    <td>To allow users to specify events at a specific location</td>
+                    <td>This will be a location input that will remove events from the event list to exclude any events not at the location</td>
+                </tr>
+                <tr>
+                    <td>Cost</td>
+                    <td>Entity</td>
+                    <td>To allow users to sort events by cost</td>
+                    <td>The cost will allow users to specify budgetary constraints</td>
+                </tr>
+                <tr>
+                    <td>Event type selector</td>
+                    <td>Entity</td>
+                    <td>Allows the user to filter by event type.</td>
+                    <td>An input that will filter out any event that does not include the specified type tag.</td>
+                </tr>
+            </table>
+
+            <h2><span class="id">6.9</span>Search Bar (Consumer User) [3.9]</h2>
+            <h3>Design Viewpoints:</h3>
             <ul>
                 <li>Verify the Keyboard appears on the Screen</li>
                 <li>Verify the page is scrollable to enable navigation across the page</li>
@@ -1368,87 +1402,88 @@
                     </tr>
                 </table>
             </ul>
-            <h2><span class="id">6.10</span>Create Group Event Viewpoints (Consumer User) [3.10]</h2>
+            <h2><span class="id">6.10</span>Create Group Event (Consumer User) [3.10]</h2>
+            <h3>Design Viewpoints:</h3>
             <ul>
-                <li>erify that all text fields are displayed correctly</li>
+                <li>Verify that all text fields are displayed correctly</li>
                 <li>All Consumer Users should see a button “Create Group Event” on the “Group Event” screen</li>
                 <li>Keyboard must appear on the screen once any text field is pressed</li>
                 <li>All input must be verified before it’s sent to the server for profanity and character limit</li>
                 <li>Page must be scrollable for an easier navigation for the user if they need to change other fields</li>
                 <li>When the input is submitted it must be saved to the database. If any errors occur, the user must be notified and provided a way to solve the problems</li>
                 <li>Proper navigation upon the Event creation</li>
-                <h3>Design Elements: </h3>
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Purpose</th>
-                        <th>Description</th>
-                    </tr>
-                    <tr>
-                        <td>Group Event Screen</td>
-                        <td>Entity</td>
-                        <td>Display all Group Events</td>
-                        <td>This screen will allow consumer users to see all group events and will also let them create their Group events</td>
-                    </tr>
-                    <tr>
-                        <td>Create Group Event Button</td>
-                        <td>Entity</td>
-                        <td>Start the process of creating a Group Event</td>
-                        <td>This button will open another screen with input fields to let a Consumer User create a Group Event</td>
-                    </tr>
-                    <tr>
-                        <td>Price Input Field</td>
-                        <td>Entity</td>
-                        <td>Allows users to enter price</td>
-                        <td>Users will be able to enter the Event price in this field</td>
-                    </tr>
-                    <tr>
-                        <td>Location Input Field</td>
-                        <td>Entity</td>
-                        <td>Allows users to enter the event location</td>
-                        <td>Users will be able to enter the Event location in this field. They can use either their location or will be provided an interface to search for and enter location manually</td>
-                    </tr>
-                    <tr>
-                        <td>Date/Time Input Field</td>
-                        <td>Entity</td>
-                        <td>Allows users to enter the event date and time</td>
-                        <td>This field will provide a graphical interface to enter the date and time of the event. It can either be done by using a system built-in calendar system or by manually entering information into these fields</td>
-                    </tr>
-                    <tr>
-                        <td>Event Description Input Field</td>
-                        <td>Entity</td>
-                        <td>Allows users to enter the event description</td>
-                        <td>This text field will accept users input and will store the event description</td>
-                    </tr>
-                    <tr>
-                        <td>Upload Media Button</td>
-                        <td>Entity</td>
-                        <td>Allows users to upload media to that event</td>
-                        <td>This button will allow users to upload media that will be displayed on the event screen. Users should be able to remove / update that media in the future</td>
-                    </tr>
-                    <tr>
-                        <td>Create Button</td>
-                        <td>Entity</td>
-                        <td>Allows users to start a process of creating an event</td>
-                        <td>This button will verify all input fields for profanity and will make sure all required fields were filled. After the input is verified, the data is sent to the server and is stored in the Group Events table.</td>
-                    </tr>
-                    <tr>
-                        <td>Edit Button</td>
-                        <td>Entity</td>
-                        <td>Allows the Group Event creators to edit their events</td>
-                        <td>This button will be displayed only for the Consumer Users created the Group Event to edit their events. The Users can edit any information regarding the event. Once the button is clicked, the data is verified and sent to the server
-                            upon the successful verification.</td>
-                    </tr>
-                    <tr>
-                        <td>Events View</td>
-                        <td>Entity</td>
-                        <td>Displays the list of all Group Events</td>
-                        <td>This view allows all users to see the Group Events. It will also contain interface allowing the creators of events to start editing their events.</td>
-                    </tr>
-                </table>
             </ul>
-            <h2><span class="id">6.11</span>Edit Event Viewpoints (Consumer User) [3.11]</h2>
+            <h3>Design Elements: </h3>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Purpose</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Group Event Screen</td>
+                    <td>Entity</td>
+                    <td>Display all Group Events</td>
+                    <td>This screen will allow consumer users to see all group events and will also let them create their Group events</td>
+                </tr>
+                <tr>
+                    <td>Create Group Event Button</td>
+                    <td>Entity</td>
+                    <td>Start the process of creating a Group Event</td>
+                    <td>This button will open another screen with input fields to let a Consumer User create a Group Event</td>
+                </tr>
+                <tr>
+                    <td>Price Input Field</td>
+                    <td>Entity</td>
+                    <td>Allows users to enter price</td>
+                    <td>Users will be able to enter the Event price in this field</td>
+                </tr>
+                <tr>
+                    <td>Location Input Field</td>
+                    <td>Entity</td>
+                    <td>Allows users to enter the event location</td>
+                    <td>Users will be able to enter the Event location in this field. They can use either their location or will be provided an interface to search for and enter location manually</td>
+                </tr>
+                <tr>
+                    <td>Date/Time Input Field</td>
+                    <td>Entity</td>
+                    <td>Allows users to enter the event date and time</td>
+                    <td>This field will provide a graphical interface to enter the date and time of the event. It can either be done by using a system built-in calendar system or by manually entering information into these fields</td>
+                </tr>
+                <tr>
+                    <td>Event Description Input Field</td>
+                    <td>Entity</td>
+                    <td>Allows users to enter the event description</td>
+                    <td>This text field will accept users input and will store the event description</td>
+                </tr>
+                <tr>
+                    <td>Upload Media Button</td>
+                    <td>Entity</td>
+                    <td>Allows users to upload media to that event</td>
+                    <td>This button will allow users to upload media that will be displayed on the event screen. Users should be able to remove / update that media in the future</td>
+                </tr>
+                <tr>
+                    <td>Create Button</td>
+                    <td>Entity</td>
+                    <td>Allows users to start a process of creating an event</td>
+                    <td>This button will verify all input fields for profanity and will make sure all required fields were filled. After the input is verified, the data is sent to the server and is stored in the Group Events table.</td>
+                </tr>
+                <tr>
+                    <td>Edit Button</td>
+                    <td>Entity</td>
+                    <td>Allows the Group Event creators to edit their events</td>
+                    <td>This button will be displayed only for the Consumer Users created the Group Event to edit their events. The Users can edit any information regarding the event. Once the button is clicked, the data is verified and sent to the server
+                        upon the successful verification.</td>
+                </tr>
+                <tr>
+                    <td>Events View</td>
+                    <td>Entity</td>
+                    <td>Displays the list of all Group Events</td>
+                    <td>This view allows all users to see the Group Events. It will also contain interface allowing the creators of events to start editing their events.</td>
+                </tr>
+            </table>
+            <h2><span class="id">6.11</span>Edit Event (Consumer User) [3.11]</h2>
             <ul>
                 <li>Verify that the correct options are displayed on the page</li>
                 <li>Verify that when any of the options are pressed, the Consumer is directed to the correct screen to allow them to make changes</li>
@@ -1519,59 +1554,60 @@
                     </tr>
                 </table>
             </ul>
-            <h2><span class="id">6.12</span>Event Messaging Viewpoints (Consumer User) [3.12]</h2>
+            <h2><span class="id">6.12</span>Event Messaging (Consumer User) [3.12]</h2>
+            <h3>Design Viewpoints:</h3>
             <ul>
                <li>Session-id verified</li>
                <li>Populate message page with messages from the database</li>
                <li>Interface of the messaging allows Consumer to send messages</li>
                <li>Interface of the messaging allows Consumer to react to messages that have been sent</li>
-               <h3>Design Elements: </h3>
-               <table>
-                  <tr>
-                     <th>Name</th>
-                     <th>Type</th>
-                     <th>Purpose</th>
-                     <th>Description</th>
-                  </tr>
-                  <tr>
-                     <td>‘Event Messaging’ Button</td>
-                     <td>Entity</td>
-                     <td>To allow a Consumer to access and use the Event Messages that they have permissions for. </td>
-                     <td>A button that switches the view, retrieves data from the database and populates the Event Messages page with the information.</td>
-                  </tr>
-                  <tr>
-                     <td>Messages</td>
-                     <td>Class</td>
-                     <td>An object to access, send and receive messages for specific events.</td>
-                     <td>This object will contain all of the logic needed for the messages portion to function and member variables that will be tracked and stored in the database.</td>
-                  </tr>
-                  <tr>
-                     <td>Event Messages Display</td>
-                     <td>Entity</td>
-                     <td>Displays the messages in sequential order based on date.</td>
-                     <td>This will display messages in an easy-to-read way for the Consumer to view.</td>
-                  </tr>
-                  <tr>
-                     <td>Event Messages Name View</td>
-                     <td>Entity</td>
-                     <td>Displays the name of the other Users that have sent each message on the page.</td>
-                     <td>This will display the names of users when they send messages to identify who said what in the chat.</td>
-                  </tr>
-                  <tr>
-                     <td>Event Messages Date View</td>
-                     <td>Entity</td>
-                     <td>Displays the date that goes with each message. This is dual purpose as it can also be used to display the messages in the correct order.</td>
-                     <td>This will display the date of when each message was sent, this can be used to keep a log of the conversation and can also be used in the display logic.</td>
-                  </tr>
-                  <tr>
-                     <td>Event Messages ‘Send’ Button</td>
-                     <td>Entity</td>
-                     <td>To allow a Consumer with sufficient permissions to send messages to the other Users of the same Event.</td>
-                     <td>A button that will send the message to the database to be stored and will re-populate the page with the new message (with accompanying data).</td>
-                  </tr>
-               </table>
             </ul>
-            <h2><span class="id">6.13</span>My Events Viewpoints (Consumer User) [3.13]</h2>
+            <h3>Design Elements: </h3>
+            <table>
+              <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Purpose</th>
+                  <th>Description</th>
+              </tr>
+              <tr>
+                  <td>‘Event Messaging’ Button</td>
+                  <td>Entity</td>
+                  <td>To allow a Consumer to access and use the Event Messages that they have permissions for. </td>
+                  <td>A button that switches the view, retrieves data from the database and populates the Event Messages page with the information.</td>
+              </tr>
+              <tr>
+                  <td>Messages</td>
+                  <td>Class</td>
+                  <td>An object to access, send and receive messages for specific events.</td>
+                  <td>This object will contain all of the logic needed for the messages portion to function and member variables that will be tracked and stored in the database.</td>
+              </tr>
+              <tr>
+                  <td>Event Messages Display</td>
+                  <td>Entity</td>
+                  <td>Displays the messages in sequential order based on date.</td>
+                  <td>This will display messages in an easy-to-read way for the Consumer to view.</td>
+              </tr>
+              <tr>
+                  <td>Event Messages Name View</td>
+                  <td>Entity</td>
+                  <td>Displays the name of the other Users that have sent each message on the page.</td>
+                  <td>This will display the names of users when they send messages to identify who said what in the chat.</td>
+              </tr>
+              <tr>
+                  <td>Event Messages Date View</td>
+                  <td>Entity</td>
+                  <td>Displays the date that goes with each message. This is dual purpose as it can also be used to display the messages in the correct order.</td>
+                  <td>This will display the date of when each message was sent, this can be used to keep a log of the conversation and can also be used in the display logic.</td>
+              </tr>
+              <tr>
+                  <td>Event Messages ‘Send’ Button</td>
+                  <td>Entity</td>
+                  <td>To allow a Consumer with sufficient permissions to send messages to the other Users of the same Event.</td>
+                  <td>A button that will send the message to the database to be stored and will re-populate the page with the new message (with accompanying data).</td>
+              </tr>
+            </table>
+            <h2><span class="id">6.13</span>My Events (Consumer User) [3.13]</h2>
             <ul>
                 <li>Session id verified</li>
                 <li>Interface between session ID and database of local events</li>
@@ -1624,52 +1660,53 @@
                     </tr>
                 </table>
             </ul>
-            <h2><span class="id">6.14</span>Notifications Viewpoints (Consumer User) [3.14]</h2>
+            <h2><span class="id">6.14</span>Notifications (Consumer User) [3.14]</h2>
+            <h3>Design Viewpoints:</h3>
             <ul>
                <li>Verify connection to database</li>
                <li>update list of notifications with new notifications received and expired notifications removed.</li>
                <li>Interface of the notifications allows users to delete or flag notifications.</li>
-               <h3>Design Elements: </h3>
-               <table>
-                  <tr>
-                     <th>Name</th>
-                     <th>Type</th>
-                     <th>Purpose</th>
-                     <th>Description</th>
-                  </tr>
-                  <tr>
-                     <td>Notifications Button</td>
-                     <td>Entity</td>
-                     <td>Allow a User to view Notifications they have received.</td>
-                     <td>A button that retrieves the database of notifications in the user’s inbox, and displays those notifications.</td>
-                  </tr>
-                  <tr>
-                     <td>Notifications</td>
-                     <td>Class</td>
-                     <td>An object to more easily access and manipulate notifications.</td>
-                     <td>This object will contain members such as date,title, body(others to be determined), associated getters and setters, and other functions to better work with notifications.</td>
-                  </tr>
-                  <tr>
-                     <td>Notification title</td>
-                     <td>Entity</td>
-                     <td>Gives the main point of the notification.</td>
-                     <td>A text box displaying which function of the application caused the notification to be sent</td>
-                  </tr>
-                  <tr>
-                     <td>Notification Body</td>
-                     <td>Entity</td>
-                     <td>Gives the details that come with the notification.</td>
-                     <td>The text contained within the notification</td>
-                  </tr>
-                  <tr>
-                     <td>Notification options bar</td>
-                     <td>Entity</td>
-                     <td></td>
-                     <td>A popup menu that displays when selecting a notification, allowing for deletion, flagging, muting, and other messaging options.</td>
-                  </tr>
-               </table>
             </ul>
-            <h2><span class="id">6.15</span>Settings Viewpoints (Consumer User) [3.15]</h2>
+            <h3>Design Elements: </h3>
+            <table>
+              <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Purpose</th>
+                  <th>Description</th>
+              </tr>
+              <tr>
+                  <td>Notifications Button</td>
+                  <td>Entity</td>
+                  <td>Allow a User to view Notifications they have received.</td>
+                  <td>A button that retrieves the database of notifications in the user’s inbox, and displays those notifications.</td>
+              </tr>
+              <tr>
+                  <td>Notifications</td>
+                  <td>Class</td>
+                  <td>An object to more easily access and manipulate notifications.</td>
+                  <td>This object will contain members such as date,title, body(others to be determined), associated getters and setters, and other functions to better work with notifications.</td>
+              </tr>
+              <tr>
+                  <td>Notification title</td>
+                  <td>Entity</td>
+                  <td>Gives the main point of the notification.</td>
+                  <td>A text box displaying which function of the application caused the notification to be sent</td>
+              </tr>
+              <tr>
+                  <td>Notification Body</td>
+                  <td>Entity</td>
+                  <td>Gives the details that come with the notification.</td>
+                  <td>The text contained within the notification</td>
+              </tr>
+              <tr>
+                  <td>Notification options bar</td>
+                  <td>Entity</td>
+                  <td></td>
+                  <td>A popup menu that displays when selecting a notification, allowing for deletion, flagging, muting, and other messaging options.</td>
+              </tr>
+            </table>
+            <h2><span class="id">6.15</span>Settings (Consumer User) [3.15]</h2>
             <ul>
                 <li>Session-id verified</li>
                 <li>Check session-id and database and display correct information displayed (Name, password, address, contact information etc.)</li>
@@ -1735,7 +1772,7 @@
                     </tr>
                 </table>
             </ul>
-            <h2><span class="id">6.16</span>Logout Viewpoints (Consumer User) [3.16]</h2>
+            <h2><span class="id">6.16</span>Logout (Consumer User) [3.16]</h2>
             <p>Consumer User information is sent to the server. If logout is accepted, the server will send confirmation to the Consumer User, who’s information will be removed from the device.</p>
             <div class="indent">
                 <h3>Design Elements:</h3>
@@ -2006,7 +2043,7 @@
                     </tr>
                 </table>
             </div>
-            <h2><span class="id">6.22</span>Login Viewpoints (Commercial User) [3.22]</h2>
+            <h2><span class="id">6.22</span>Login (Commercial User) [3.22]</h2>
             <p>Commercial User has the option to login via username/password or via 3rd party.</p>
             <ul>
                 <li>Username and password: Commercial User login information is submitted to the server and put through a hash to check for existing users as well as correct username and password. ‘Remember me’ option is taken into account. If information
@@ -2172,7 +2209,7 @@
                     </tr>
                 </table>
             </div>
-            <h2><span class="id">6.24</span>Add Description Viewpoints (Commercial User) [3.24]</h2>
+            <h2><span class="id">6.24</span>Add Description (Commercial User) [3.24]</h2>
             <div class="indent">
                 <h3>Design Viewpoints</h3>
                 <p>Commercial User enters information into text box entry. Commercial user will click on the save button. The changes are sent to the database. There the changes are made to the proper table and column. The changes are saved in the database.
@@ -2200,7 +2237,7 @@
                     </tr>
                 </table>
             </div>
-            <h2><span class="id">6.25</span>Manage Commercial Event Viewpoints (Commercial User) [3.25]</h2>
+            <h2><span class="id">6.25</span>Manage Commercial Event (Commercial User) [3.25]</h2>
             <div class="indent">
                 <p>The Manage Commercial Event Concern allows Commercial Users to view their ongoing and future events. This assists Commercial Users by allowing them to easily access those events. </p>
                 <h3>Design Viewpoints</h3>
@@ -2228,7 +2265,7 @@
                     </tr>
                 </table>
             </div>
-            <h2><span class="id">6.26</span>Edit Event Viewpoints (Commercial User) [3.26]</h2>
+            <h2><span class="id">6.26</span>Edit Event (Commercial User) [3.26]</h2>
             <div class="indent">
                 The Edit Event concern is meant to provide users the capacity to edit the events they created. This edit event functionality allows users to modify the details of the non-past events they created. 
                 <h3>Design Viewpoints</h3>
@@ -2310,7 +2347,7 @@
                     </tr>
                 </table>
             </div>
-            <h2><span class="id">6.27</span>Past Events Viewpoints (Commercial User) [3.27]</h2>
+            <h2><span class="id">6.27</span>Past Events (Commercial User) [3.27]</h2>
             <div class="indent">
                 <p>The past events concern is meant to allow Commercial Users to view the events they have hosted that have already ended. This will provide a record to the Commercial User and may help the Commercial User in planning future events or repeating the ones they have previously hosted. </p>
                 <h3>Design Viewpoints</h3>
@@ -2351,7 +2388,7 @@
                     </tr>
                 </table>
             </div>
-            <h2><span class="id">6.28</span>Promote Event Viewpoints (Commercial User) [3.28]</h2>
+            <h2><span class="id">6.28</span>Promote Event (Commercial User) [3.28]</h2>
             <div class="indent">
                 <p>The promote event concern is meant to provide users the capacity to promote the events they created. The promote event functionality allows users to keep track and to manage their auctions. </p>
                 <h3>Design Viewpoints</h3>
@@ -2392,7 +2429,7 @@
                     </tr>
                 </table>
             </div>
-            <h2><span class="id">6.29</span>Start Auction (Commercial User) / Place Bid Viewpoints [3.29]</h2>
+            <h2><span class="id">6.29</span>Start Auction (Commercial User) / Place Bid [3.29]</h2>
             <div class="indent">
                 <p>The Start Auction / Place Bid functionality is to allow a commercial user to bid for more awareness of their event. </p>
                 <h3>Design Viewpoints</h3>
@@ -2433,7 +2470,7 @@
                     </tr>
                 </table>
             </div>
-            <h2><span class="id">6.30</span>Share Event Viewpoints (Commercial User) [3.30]</h2>
+            <h2><span class="id">6.30</span>Share Event (Commercial User) [3.30]</h2>
             <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends a response
                 to the Server that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the Share Event screen.</p>
             <p>Upon loading the Share Event screen, the Server sends a request to the Database to receive a link to the current Commercial User’s Event. The Database searches for the Commercial Users Event link, then sends the link back to the Server. Upon
@@ -2520,7 +2557,7 @@
                     </tr>
                 </table>
             </div>
-            <h2><span class="id">6.31</span>Settings Viewpoints (Commercial User) [3.31]</h2>
+            <h2><span class="id">6.31</span>Settings (Commercial User) [3.31]</h2>
             <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends a response
                 to the Server that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the Settings screen. </p>
             <p>Upon loading the Settings screen, the GUI [7.4.3, 9.1.5, 9.1.11] will display a Logout button and a Notifications on/off slider. If the Commercial User clicks the logout button, the Server will send a request to the Database to disqualify
@@ -2569,7 +2606,7 @@
                     </tr>
                 </table>
             </div>
-            <h2><span class="id">6.32</span>Logout Viewpoints (Commercial User) [3.32]</h2>
+            <h2><span class="id">6.32</span>Logout (Commercial User) [3.32]</h2>
             <p>Commercial User information is sent to the server. If logout is accepted, the server will send confirmation to Commercial User, who’s information will be removed from device.</p>
             <div class="indent">
                 <h3>Design Elements:</h3>
@@ -2594,7 +2631,7 @@
                     </tr>
                 </table>
             </div>
-            <h2><span class="id">6.33</span>View Commercial Reports Viewpoints (Admin User) [3.33]</h2>
+            <h2><span class="id">6.33</span>View Commercial Reports (Admin User) [3.33]</h2>
             <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. [7.4.1] The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends
                 a response to the Server that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the View Commercial Reports screen. [7.3.4] </p>
             <p>Upon loading the Server will request an up to date Report text from the Database. Database will retrieve Report text and send back to the Server. The Server will update the GUI with the Report text. [7.4.1] </p>
@@ -2630,7 +2667,7 @@
                     </tr>
                 </table>
             </div>
-            <h2><span class="id">6.34</span>View Consumer Reports Viewpoints (Admin User) [3.34]</h2>
+            <h2><span class="id">6.34</span>View Consumer Reports (Admin User) [3.34]</h2>
             <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. [7.4.1] The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends
                 a response to the Server that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the View Consumer Reports screen. [7.3.4]</p>
             <p>Upon loading the Server will request an up to date Report text from the Database. Database will retrieve Report text and send back to the Server. The Server will update the GUI with the Report text. [7.4.1]</p>
@@ -2666,7 +2703,7 @@
                     </tr>
                 </table>
             </div>
-            <h2><span class="id">6.35</span>Edit Profile Viewpoints (Admin User) [3.35]</h2>
+            <h2><span class="id">6.35</span>Edit Profile (Admin User) [3.35]</h2>
             <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends a response
                 to the Server that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the Edit Profile screen. [9.1.2] </p>
 
@@ -2717,7 +2754,7 @@
                     </tr>
                 </table>
             </div>
-            <h2><span class="id">6.36</span>Login Viewpoints (Admin User) [3.36]</h2>
+            <h2><span class="id">6.36</span>Login (Admin User) [3.36]</h2>
             <p>Admin User has the option to login via username/password or via 3rd party.</p>
             <ul>
                 <li>Username and password: Admin User login information is submitted to the server and put through a hash to check for existing users as well as correct username and password. ‘Remember me’ option is taken into account. If information is incorrect
@@ -3120,6 +3157,36 @@
                     </tr>
                 </table>
             </div>
+            <h2><span class="id">6.44</span>View Consumer Profile [3.44]</h2>
+            <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends a response to the Server that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the View My Profile screen.</p>
+            <p>Upon loading the Server will update the GUI with a Report User button and Block User button. If the Report User button is clicked, then the Server will send a request to the Database to update the given Commercial or Consumer User as having been reported. If the Report User button is clicked, then the Server will send a request to the Database to update the given Commercial or Consumer User as having been blocked.</p>
+            <h3>Design Elements:</h3>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Purpose</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Report User button</td>
+                    <td>Entity</td>
+                    <td>Allows the Admin User to Report any Commercial or Consumer User.</td>
+                    <td>A button that can be clicked to perform the function.</td>
+                </tr>
+                <tr>
+                    <td>Block User button</td>
+                    <td>Entity</td>
+                    <td>Allows the Admin User to Block any Commercial or Consumer User.</td>
+                    <td>A button that can be clicked to perform the function.</td>
+                </tr>
+                <tr>
+                    <td>Session Key</td>
+                    <td>Entity</td>
+                    <td>Verifies the user is currently logged.</td>
+                    <td>A unique key that validates login sessions by comparing the current key with the key stored in the database.</td>
+                </tr>
+            </table>
             <h2><span class="id">6.45</span>View Commercial Profile [3.45]</h2>
             <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends a response
                 to the Server that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the View My Profile screen. [9.1.1] </p>
@@ -3208,14 +3275,28 @@
             <img src="./images/Uvents_project_viewpoint.png" alt="Uvents Project Viewpoint Diagram" class="pic">
         </div>
         <h1><span class="id">8</span>Model</h1>
+        <p>The Model of the Uvents application acts as….</p>
         <div class="indent">
-            <img src="./images/CommunicationUML.png" alt="Communication UML" class="pic">
-            <p>The System will use encrypted communication channels for communication between the mobile application and the server. The system will use encrypted communication channels for communication between the server and the database. Facebook login
-                credentials will be able to be used as an option for logging into the mobile application and as a means of authentication. This system of communication will ensure the privacy of the user and ensures that the data transferred can be predictable.
-            </p>
-            <img src="./images/CommunicationUML-Edit&ViewProfile.png" alt="CommunicationUML - Edit & View Profile" class="pic">
-            <img src="./images/CommunicationUML-CreatNewAccount.png" alt="CommunicationUML - Create New Account " class="pic">
-            <img src="./images/CommunicationUML-Create&ManageEvent.png" alt="CommuncationUML - Create & Manage Event.png" class="pic">
+            <h2><span class="id">8.1</span>Model Communication UML</h2>
+            <p>The System will use encrypted communication channels for communication between the mobile application and the server. The system will use encrypted communication channels for communication between the server and the database. Facebook login credentials will be able to be used as an option for logging into the mobile application and as a means of authentication.  This system of communication will ensure the privacy of the user and ensures that the data transferred can be predictable.</p>
+            <div class="indent">
+                <h3><span class="id">8.1.1</span>Communication UML Login View</h3>
+                <p>The System will use encrypted communication channels for communication between the mobile application and the server. The system will use encrypted communication channels for communication between the server and the database. Facebook login credentials will be able to be used as an option for logging into the mobile application and as a means of authentication. This system of communication will ensure the privacy of the user and ensures that the data transferred can be predictable.</p>
+                <img src="./images/CommunicationUML.png" alt="Communication UML" class="pic">
+                <figcaption>Communication UML Figure 1</figcaption>
+                <h3><span class="id">8.1.2</span>Communication UML Edit/View Profile View</h3>
+                <p>This diagram shows the flow of communication when editing and viewing a profile. The user will click the button to view or edit. That will then be sent to the server and the server will retrieve data from the database. The information will now be adjustable. The user can adjust their profile, and upon completion may save it to the database. The server will perform some validation and upon completion an update success view will be sent to the app and it will then be saved to the database.</p>
+                <img src="./images/CommunicationUML-Edit&ViewProfile.png" alt="CommunicationUML - Edit & View Profile" class="pic">
+                <figcaption>Communication UML Figure 2</figcaption>
+                <h3><span class="id">8.1.3</span>Communication UML Create New Consumer/Commercial/Admin Profile Event</h3>
+                <p>This diagram describes the flow of communication data during the creation of a profile. User input is passed from the app to the server to the database where it is validated. The validation processes performed against the database ensures that there are no duplicate users.  Upon completion, a page confirming the success of profile creation is presented.</p>
+                <img src="./images/CommunicationUML-CreatNewAccount.png" alt="CommunicationUML - Create New Account " class="pic">
+                <figcaption>Communication UML Figure 3</figcaption>
+                <h3><span class="id">8.1.4</span>Communication UML Create Manage Event</h3>
+                <p>This diagram shows the flow of communication when creating and managing an Event. The User will click the button to create an Event. That action will then be sent to the server. The server will validate the Event and add it to the database. A page will appear to show if the event was created or if there was a failure. The User can then edit the details of the event and then save it to the database.</p>
+                <img src="./images/CommunicationUML-Create&ManageEvent.png" alt="CommuncationUML - Create & Manage Event.png" class="pic">
+                <figcaption>Communication UML Figure 4</figcaption>
+            </div>
             <h2>Database Design</h2>
             <ol>
                 <li>For designing our database, we will use the following design plan modified from the steps found in [1]:
