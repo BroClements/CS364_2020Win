@@ -375,9 +375,9 @@
         <div><a href="#7.4.3">Front-End - Consumer Workflow Diagram</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#7.5">Front-End Data and Information View Design</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#7.6">Entity Relationships</a> <span></span> <span class="pageNumber">p</span></div>
+        <div><a href="#7.7">Project Viewpoint</a> <span></span> <span class="pageNumber">p</span></div>
     </div>
     <div class="page table-of-contents">
-        <div><a href="#7.7">Project Viewpoint</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#8">Communication UML</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#8.1">Communication Edit/View Profile</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#8.1.1">Communication UML Login View</a> <span></span> <span class="pageNumber">p</span></div>
@@ -409,6 +409,8 @@
         <div><a href="#8.5.4">Data Flow - Create Group Event</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#8.5.5">Data Flow - Edit Event</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#8.5.6">Data Flow - Commercial Event</a> <span></span> <span class="pageNumber">p</span></div>
+    </div>
+    <div class="page table-of-contents">
         <div><a href="#8.5.7">Data Flow - Add Description</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#8.5.8">Data Flow - Manage Commercial Event</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#8.5.9">Data Flow - Edit User</a> <span></span> <span class="pageNumber">p</span></div>
@@ -420,8 +422,6 @@
         <div><a href="#9.1.6">Reports Process Flow</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#9.1.7">Edit Users/Events Process Flow</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#9.1.8">Messaging Process Flow</a> <span></span> <span class="pageNumber">p</span></div>
-    </div>
-    <div class="page table-of-contents">
         <div><a href="#9.1.9">Posting Events Process Flow</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#9.1.10">Edit Information Process Flow</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#9.1.11">Logout Process Flow</a> <span></span> <span class="pageNumber">p</span></div>
@@ -440,44 +440,43 @@
         <div><a href="#9.9">Server Functional Flow Chart</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#10.1">System Engineer View (Layering)</a> <span></span> <span class="pageNumber">p</span></div>
     </div>
-    <div class="super-page">
+    <div class="page">
         <h1><span class="id">1</span>Introduction</h1>
         <p>Uvents is a mobile application that brings the community together by allowing</p>
+        <ul>
+            <li>Consumer Users to create or participate in events, which can be set as a Group Event or a Date event</li>
+            <li>Commercial Users to list their promotions as an event, which can be seen by the personal users and added to their events</li>
+            <li>Admin Users to manage general event policies, monitor user activity, and maintain the application</li>
+        </ul>
         <div class="indent">
-            <ul>
-                <li>Consumer Users to create or participate in events, which can be set as a Group Event or a Date event</li>
-                <li>Commercial Users to list their promotions as an event, which can be seen by the personal users and added to their events</li>
-                <li>Admin Users to manage general event policies, monitor user activity, and maintain the application</li>
-            </ul>
             <h2><span class="id">1.1</span>Purpose</h2>
-            <p>The purpose of Uvents is to aid in the provision of social experiences among young adults who otherwise may not know what to do with their socially available time. Consumer Users will be provided with simple access to Group Events and to create
-                their own Group Events.</p>
-            <p>Additionally, Consumer Users can join and participate in events offered by local businesses. Uvents will receive revenue by having commercial users paying to have their events listed in the application.</p>
-            <p>Uvents provides a convenient way for people to easily arrange local events, supports the local economy, and provides recreation in the local area.</p>
-
+            <p>
+                The purpose of Uvents is to aid in the provision of social experiences among young adults who otherwise may not know what to do with their socially available time. Consumer Users will be provided with simple access to Group Events and to create their own Group Events.</p>
+            <p>
+                Additionally, Consumer Users can join and participate in events offered by local businesses. Uvents will receive revenue by having commercial users paying to have their events listed in the application.</p>
+            <p>
+                Uvents provides a convenient way for people to easily arrange local events, supports the local economy, and provides recreation in the local area.</p>
             <h2><span class="id">1.2</span>Scope</h2>
             <p>
                 Uvents is an application for people to post Group Events/Dates and for people to find and join those Group Events/Dates. The application will allow Consumer Users to view posted events, join events, chat with those going to the same group event, and learn
-                of new events in the area.
-            </p>
+                of new events in the area.</p>
             <p>
                 The application will allow Commercial Users to post events that they have available, for example, bowling at Fat Cats. Commercial Users will pay depending on how visible they want their Event to be to Consumer Users. Admin Users will regulate the application
-                and help to answer questions from Commercial & Consumer Users.
-            </p>
-
+                and help to answer questions from Commercial & Consumer Users.</p>
             <h2><span class="id">1.3</span>Design Goals</h2>
             <p>
                 The Software Design Descriptions document (SDD) plays a vital role in the development and maintenance of software systems. An SDD document represents the software design that should be used for recording “design information, addressing various design
-                concerns, and communicating that information to the design’s stakeholders”.[1.5.2.1] An SDD document is used by “project managers, quality assurance, configuration managers, software designers, programmers, testers, and maintainers”.[1.5.2.1]
+                concerns, and communicating that information to the design’s stakeholders”[1.5.2.1]. An SDD document is used by “project managers, quality assurance, configuration managers, software designers, programmers, testers, and maintainers”[1.5.2.1].
                 Each design description contained in the SDD contains the design information needed by those previously mentioned stakeholders. The SDD is, in essence, a written description of the design for a software product for overall guidance in
-                the software project.
-            </p>
+                the software project.</p>
             <p>
                 One reason as to why one would want to use the SDD is because it allows the designers to communicate design information to the stakeholders. The SDD is also able to specify the requirements and design languages that are to be used. The requirements for
                 documenting design viewpoints are also organized in the SDD. The SDD can also be used to organize design concerns, design elements, design constraints, and other aspects of the overall design. “An SDD is prepared to support the development
-                of a software item to solve a problem, where this problem has been expressed in terms of a set of requirements.” [1.5.2.1]
-            </p>
-
+                of a software item to solve a problem, where this problem has been expressed in terms of a set of requirements”[1.5.2.1].</p>
+       </div>
+    </div>
+    <div class="page">
+       <div class="indent">
             <h2><span class="id">1.4</span>Definitions</h2>
             <div class="indent">
                 <h4><span class="big">1.4.1 Admin User</span> - An individual that has the ability to moderate and enforce policies.</h4>
@@ -503,12 +502,13 @@
                 <div class="indent">
                     <h4>1.5.2.1 Software Design Descriptions</h4>
                     <p>
-                        IEEE, "IEEE Standard for Information Technology — Systems Design — Software Design Descriptions" pp. 1-35, Jul. 2009. [Online] Available: <a href=http://ieeexplore.ieee.org/servlet/opac?punumber=5167253> http://ieeexplore.ieee.org/servlet/opac?punumber=5167253 </a>                        [Accessed June 20, 2020].
+                        IEEE, "IEEE Standard for Information Technology — Systems Design — Software Design Descriptions" pp. 1-35, Jul. 2009. [Online] Available: <a href=http://ieeexplore.ieee.org/servlet/opac?punumber=5167253> http://ieeexplore.ieee.org/servlet/opac?punumber=5167253 </a> [Accessed June 20, 2020].
                     </p>
                 </div>
             </div>
         </div>
-
+    </div>
+    <div class="page">
         <h1><span class="id">2</span>SDD Identification</h1>
         <div class="indent">
             <h2>Revision History</h2>
@@ -543,9 +543,14 @@
                     <td><a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/3.4-SDD-version-Final/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html> https://github.com/BroClements/CS364_2020Win/blob/3.4-SDD-version-Final/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html</a></td>
                     <td>07/18/2020</td>
                 </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Updated all sections</td>
+                    <td><a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/3.5-SDD-Final/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html> https://github.com/BroClements/CS364_2020Win/blob/3.5-SDD-Final/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html</a></td>
+                    <td>07/22/2020</td>
+                </tr>
             </table>
         </div>
-
         <h1><span class="id">3</span>Design Stakeholders and Concerns</h1>
         <p>The Stakeholders are those with an interest in the overall success of the Uvents application, especially Jordan Hamblin, the project sponsor. The following are concerns of the sponsor that must be resolved by the Uvents application.</p>
         <ul class="auto-ID big" id="3.1">
@@ -573,6 +578,10 @@
             <li>Filter/Sorting (Consumer User) [1.5.1.1]
                 <p>Sponsor wants Consumer Users to filter based on Consumer or Commercial hosted events.</p>
             </li>
+        </ul>
+    </div>
+    <div class="page">
+        <ul class="auto-ID big" id="3.9">
             <li>Search bar (Consumer User) [1.5.1.1]
                 <p>Sponsor wants Consumer Users to search for specific events or hosts.</p>
             </li>
@@ -627,6 +636,10 @@
             <li>Edit Event (Commercial User) [1.5.1.1]
                 <p>Sponsor wants Users to have the ability to alter event information if needed.</p>
             </li>
+        </ul>
+    </div>
+    <div class="page">
+        <ul class="auto-ID big" id="3.27">
             <li>Past Events (Commercial User) [1.5.1.1]
                 <p>Sponsor wants Users to know what sorts of events are offered.</p>
             </li>
@@ -685,88 +698,145 @@
                 <p>Sponsor wants Commercial profiles to be viewable</p>
             </li>
         </ul>
+    </div>
+    <div class="page">
         <h1><span class="id">4</span>Overview/Architecture</h1>
         <div class="indent">
             <h2><span class="id">4.1</span>Overview</h2>
-            <p>The overview is to show how all of the different pieces come together. At the top we have the login function to give access to one of the three different types of accounts. Upon login the database will be able to see which type of account
-                that you have access to. If you are a consumer User then you will login and have access to your consumer “My Profile”, “My Events”, “Discover” and “settings”. If you are a commercial User then you will have access to “My Profile”, “Commercial
-                Events”, “Settings”, and “Promote Event”. Upon login, the Admin will gain access to their account and will have access to “My Profile”, “Manage Users/Events”, “Settings”, and “Reports”. The following form consumer will be expanded upon:
-                “My Profile”, “My Events”, “Discover” and “settings”.The following from commercial will be expanded upon:“My Profile”, “Commercial Events”, “Settings”, and “Promote Event”..The following from Admin will be expanded upon: “My Profile”,
-                “Manage Users/Events”, “Settings”, and “Reports”.</p>
-            <img src="images/Overview.png" alt="Overview" class="pic"><br>
-
+            <p>
+                The overview is to show how all of the different pieces come together. At the top we have the login function to give access to one of the three different types of accounts. Upon login the database will be able to see which type of account that you have access to. If you are a consumer User then you will login and have access to your consumer “My Profile”, “My Events”, “Discover” and “settings”. If you are a commercial User then you will have access to “My Profile”, “Commercial Events”, “Settings”, and “Promote Event”. Upon login, the Admin will gain access to their account and will have access to “My Profile”, “Manage Users/Events”, “Settings”, and “Reports”. The following form consumer will be expanded upon: “My Profile”, “My Events”, “Discover” and “settings”.The following from commercial will be expanded upon:“My Profile”, “Commercial Events”, “Settings”, and “Promote Event”..The following from Admin will be expanded upon: “My Profile”, “Manage Users/Events”, “Settings”, and “Reports”.</p>
+        </div>
+        <div class="pic"><img src="images/Overview.png" alt="Overview"></div>
+    </div>
+    <div class="page">
+        <div class="indent">
             <h2><span class="id">4.2</span>Login</h2>
-            <p>Upon login the database will verify the login credentials. Once the credentials have been verified you will gain access to the account type that is associated with your credentials. If you do not have an account you will have the ability to
-                create a new account. If the credentials already are set then the credentials will be verified and the User will have access to the account.
-            </p>
-            <img src="images/Overview-Login.png" alt="Overview Login" class="pic"><br>
-
+            <p>
+                Upon login the database will verify the login credentials. Once the credentials have been verified you will gain access to the account type that is associated with your credentials. If you do not have an account you will have the ability to create a new account. If the credentials already are set then the credentials will be verified and the User will have access to the account.</p>
+        </div>
+        <div class="pic"><img src="images/Overview-Login.png" alt="Overview Login"></div>
+    </div>
+    <div class="page">
+        <div class="indent">
             <h2><span class="id">4.3</span>Consumer User Overview</h2>
-            <p>Upon login, the Consumer User will gain access to their account and will have access to “My Profile”, “My Events”, “Discover” and “Settings”. “My Profile” will show the Consumer Users profile information and allow them to change their profile
-                information. The Consumer User will also have “My Events”; within “My Events” the Consumer User will see all the Events that they have created or joined. The Consumer User will have the ability to edit the Events that they have created.</p>
-            <img src="images/OverviewConsumer.png" alt="Overview Consumer" class="pic"><br>
+            <p>
+                Upon login, the Consumer User will gain access to their account and will have access to “My Profile”, “My Events”, “Discover” and “Settings”. “My Profile” will show the Consumer Users profile information and allow them to change their profile information. The Consumer User will also have “My Events”; within “My Events” the Consumer User will see all the Events that they have created or joined. The Consumer User will have the ability to edit the Events that they have created.</p>
+        </div>
+        <div class="pic"><img src="images/OverviewConsumer.png" alt="Overview Consumer"></div>
+    </div>
+    <div class="page">
+        <div class="indent">
             <h3><span class="id">4.3.1</span>Discover</h3>
-            <p>Upon login, they will see the Discover page. On the Discover page, they will be shown a list of relevant events from the database. They will have the option to use a search bar to search for profiles or events as well as Filtering and Sorting.</p>
-            <p>When a Consumer or Commercial profile has been found, the Consumer User will have the option to access it. When viewing the profile, the Consumer User will have the ability to block or report a user. Any block or report will be sent to the
-                database for future use or review.</p>
-            <img src="images/OverviewConsumer-Discover.png" alt="Overview Consumer Discover" class="pic"><br>
+            <p>
+                Upon login, they will see the Discover page. On the Discover page, they will be shown a list of relevant events from the database. They will have the option to use a search bar to search for profiles or events as well as Filtering and Sorting.</p>
+            <p>
+                When a Consumer or Commercial profile has been found, the Consumer User will have the option to access it. When viewing the profile, the Consumer User will have the ability to block or report a user. Any block or report will be sent to the database for future use or review.</p>
+        </div>
+        <div class="pic"><img src="images/OverviewConsumer-Discover.png" alt="Overview Consumer Discover"></div>
+    </div>
+    <div class="page">
+        <div class="indent">
             <h3><span class="id">4.3.2</span>My Events</h3>
-            <p>Upon selecting the “My Events” tab, the user will be shown a list of events they have created and a list of events they have joined. From there, they will be able to select an event to edit it, leave it, or message other participants. The
-                Consumer will also be able to view consumer and commercial profiles that are a part of the Event.</p>
-            <img src="images/OverviewConsumer-Events.png" alt="Overview Consumer Events" class="pic"><br>
+            <p>
+                Upon selecting the “My Events” tab, the user will be shown a list of events they have created and a list of events they have joined. From there, they will be able to select an event to edit it, leave it, or message other participants. The Consumer will also be able to view consumer and commercial profiles that are a part of the Event.</p>
+        </div>
+        <div class="pic"><img src="images/OverviewConsumer-Events.png" alt="Overview Consumer Events"></div>
+    </div>
+    <div class="page">
+        <div class="indent">
             <h3><span class="id">4.3.3</span>View My Profile</h3>
-            <p>Once the Consumer User has logged in, they will be able to View their Profile in which they can see their own information and then edit it as well. After which the information is sent to the database to update the information.</p>
-            <img src="images/OverviewConsumer-Profile.png" alt="Overview Consumer Profile" class="pic">
+            <p>
+                Once the Consumer User has logged in, they will be able to View their Profile in which they can see their own information and then edit it as well. After which the information is sent to the database to update the information.</p>
+        </div>
+        <div class="pic"><img src="images/OverviewConsumer-Profile.png" alt="Overview Consumer Profile"></div>
+    </div>
+    <div class="page">
+        <div class="indent">
             <h3><span class="id">4.3.4</span>Settings</h3>
-            <p>In order to view the settings and make changes, the Consumer User must first be logged in. A new session will be created. User login info will be verified by comparing it to the data in the Database. Successful verification will grant application
-                access to the user. In settings, the Consumer User may go to Notifications or logout of their session. If they logout their session will be closed and then redirected to the login page. In the Notification settings the Consumer User may
-                choose notification preferences (turn on or off individual notifications).</p><br>
-            <img src="images/OverviewConsumer-Settings.png" alt="Overview Consumer Settings" class="pic">
-
+            <p>
+                In order to view the settings and make changes, the Consumer User must first be logged in. A new session will be created. User login info will be verified by comparing it to the data in the Database. Successful verification will grant application access to the user. In settings, the Consumer User may go to Notifications or logout of their session. If they logout their session will be closed and then redirected to the login page. In the Notification settings the Consumer User may choose notification preferences (turn on or off individual notifications).</p>
+        </div>
+        <div class="pic"><img src="images/OverviewConsumer-Settings.png" alt="Overview Consumer Settings"></div>
+    </div>
+    <div class="page">
+        <div class="indent">
             <h2><span class="id">4.4</span>Commercial User Overview</h2>
-            <p>Upon login, the Commercial User will gain access to their account and will have access to “My Profile”, “Commercial Events”, “Settings”, and “Promote Event”. “My Profile” will show the Commercial Users profile information and allow them to
-                change their profile information. The Commercial Users will have third party payment information in addition to the business information. The Commercial User will also have “Commercial Events”, this will show the Events created by the
-                Commercial User and will allow them to edit and see participants. The Commercial User will also have “Settings” and “Promote Event”.</p><br>
-            <img src="images/OverviewCommercial.png" alt="Overview Commercial" class="pic">
+            <p>
+                Upon login, the Commercial User will gain access to their account and will have access to “My Profile”, “Commercial Events”, “Settings”, and “Promote Event”. “My Profile” will show the Commercial Users profile information and allow them to change their profile information. The Commercial Users will have third party payment information in addition to the business information. The Commercial User will also have “Commercial Events”, this will show the Events created by the Commercial User and will allow them to edit and see participants. The Commercial User will also have “Settings” and “Promote Event”.</p>
+        </div>
+        <div class="pic"><img src="images/OverviewCommercial.png" alt="Overview Commercial"></div>
+    </div>
+    <div class="page">
+        <div class="indent"><div class="indent">
             <h3><span class="id">4.4.1</span>Promote Event</h3>
             <p>The Commercial user after logging in will be able to “Promote Event”. They will then be able to start auctioning to Promote a chosen Event.</p>
-            <img src="images/OverviewCommercial-PromoteEvent.png" alt="Overview Commercial Promote Event" class="pic"><br>
+        </div></div>
+        <div class="pic"><img src="images/OverviewCommercial-PromoteEvent.png" alt="Overview Commercial Promote Event"></div>
+    </div>
+    <div class="page">
+        <div class="indent"><div class="indent">
             <h3><span class="id">4.4.2</span>View My Profile</h3>
-            <p>In order to view their profile, the Commercial user must first be logged in. When a profile is viewed, information is retrieved from the database to be displayed in a standard format. The Commercial User will also be able to edit their own
-                profile information including their picture/logo or their username. Edited profile information will replace the old information in the database. Payment information will be handled through a third-party API.</p>
-            <img src="images/OverviewCommercial-Profile.png" alt="Overview Commercial Profile" class="pic"><br>
+            <p>
+                In order to view their profile, the Commercial user must first be logged in. When a profile is viewed, information is retrieved from the database to be displayed in a standard format. The Commercial User will also be able to edit their own profile information including their picture/logo or their username. Edited profile information will replace the old information in the database. Payment information will be handled through a third-party API.</p>
+        </div></div>
+        <div class="pic"><img src="images/OverviewCommercial-Profile.png" alt="Overview Commercial Profile"></div>
+    </div>
+    <div class="page">
+        <div class="indent"><div class="indent">
             <h3><span class="id">4.4.3</span>Commercial Event</h3>
-            <p>In order to view and make changes to the Commercial Events the user must be logged in. The Users can choose between Creating an Event, Editing/Deleting an Event or viewing the Past Events. After choosing each of these functions the app will
-                retrieve information from the database and the user can make changes to it. After the user is done editing the information will be updated to the database again.</p>
-            <img src="images/OverviewCommercial-Events.png" alt="Overview Commercial Events" class="pic"><br>
+            <p>
+                In order to view and make changes to the Commercial Events the user must be logged in. The Users can choose between Creating an Event, Editing/Deleting an Event or viewing the Past Events. After choosing each of these functions the app will retrieve information from the database and the user can make changes to it. After the user is done editing the information will be updated to the database again.</p>
+        </div></div>
+        <div class="pic"><img src="images/OverviewCommercial-Events.png" alt="Overview Commercial Events"></div>
+    </div>
+    <div class="page">
+        <div class="indent"><div class="indent">
             <h3><span class="id">4.4.4</span>Settings</h3>
-            <p>In order to view the settings and make changes, the Commercial user must first be logged in. A new session will be created. User login info will be verified by comparing it to the data in the Database. Successful verification will grant application
-                access to the user. In settings, the Commercial user may go to Notifications or logout of their session. If they logout their session will be closed and then redirected to the login page. In the Notification settings the Commercial user
-                may choose notification preferences (turn on or off individual notifications).</p>
-            <img src="images/OverviewCommercial-Settings.png" alt="Overview Commercial Settings" class="pic"><br>
-
+            <p>
+                In order to view the settings and make changes, the Commercial user must first be logged in. A new session will be created. User login info will be verified by comparing it to the data in the Database. Successful verification will grant application access to the user. In settings, the Commercial user may go to Notifications or logout of their session. If they logout their session will be closed and then redirected to the login page. In the Notification settings the Commercial user may choose notification preferences (turn on or off individual notifications).</p>
+        </div></div>
+        <div class="pic"><img src="images/OverviewCommercial-Settings.png" alt="Overview Commercial Settings"></div>
+    </div>
+    <div class="page">
+        <div class="indent">
             <h2><span class="id">4.5</span>Admin User Overview</h2>
-            <p>Upon login, the Admin will gain access to their account and will have access to “My Profile”, “Manage Users/Events”, “Settings”, and “Reports”. “My Profile” will show the Admin profile information and allow them to change their profile information.
-                The Admin User will also have “Manage User/Events”, this will give the Admin access to edit Accounts as well as Events Created by Consumers and Commercial Users. The Admin User will also have “Settings” and “Reports”.</p>
-            <img src="images/OverviewAdmin.png" alt="Overview Admin" class="pic"><br>
+            <p>
+                Upon login, the Admin will gain access to their account and will have access to “My Profile”, “Manage Users/Events”, “Settings”, and “Reports”. “My Profile” will show the Admin profile information and allow them to change their profile information. The Admin User will also have “Manage User/Events”, this will give the Admin access to edit Accounts as well as Events Created by Consumers and Commercial Users. The Admin User will also have “Settings” and “Reports”.</p>
+        </div>
+        <div class="pic"><img src="images/OverviewAdmin.png" alt="Overview Admin"></div>
+    </div>
+    <div class="page">
+        <div class="indent"><div class="indent">
             <h3><span class="id">4.5.1</span>Manage Users/Events</h3>
             <p>After logging in, an admin user will be able to select the “Manage Users/Events” tab to be able to edit or delete events created by another user as well as approving commercial users to obtain a commercial account.</p>
-            <img src="images/OverviewAdmin-ManageUsers&Events.png" alt="Overview Admin Manage Users and Events" class="pic"><br>
-            <h3><span class="id">4.5.2</span>View My Profile</h3>
-            <p>In order to view their profile, the Admin user must first be logged in. When a profile is viewed, information is retrieved from the database to be displayed in a standard format. The Admin User will also be able to edit their own profile information
-                including their picture/logo or their username. Edited profile information will replace the old information in the database.</p>
-            <img src="images/OverviewAdmin-Profile.png" alt="Overview Admin Profile" class="pic"><br>
-            <h3><span class="id">4.5.3</span>Reports</h3>
-            <p>The Admin User must be logged in to view the reports. Admin Users will be able to view Consumer as well as Commercial Reports. After the Admin Users chooses which report they want to view the app will request the information from the database
-                and the User can view it.</p>
-            <img src="images/image34.png" alt="Overview Admin Report" class="pic"><br>
-            <h3><span class="id">4.5.4</span>Settings</h3>
-            <p>In order to view the settings and make changes, the Admin user must first be logged in. A new session will be created. User login info will be verified by comparing it to the data in the Database. Successful verification will grant application
-                access to the user. In settings, the Admin user may go to Notifications or logout of their session. If they logout their session will be closed and then redirected to the login page. In the Notification settings the Admin user may choose
-                notification preferences (turn on or off individual notifications).</p>
-            <img src="images/image4.png" alt="Overview Admin Settings" class="pic"><br>
         </div>
-
+        <div class="pic"><img src="images/OverviewAdmin-ManageUsers&Events.png" alt="Overview Admin Manage Users and Events"></div>
+    </div></div>
+    <div class="page">
+        <div class="indent"><div class="indent">
+            <h3><span class="id">4.5.2</span>View My Profile</h3>
+            <p>
+                In order to view their profile, the Admin user must first be logged in. When a profile is viewed, information is retrieved from the database to be displayed in a standard format. The Admin User will also be able to edit their own profile information including their picture/logo or their username. Edited profile information will replace the old information in the database.</p>
+        </div></div>
+        <div class="pic"><img src="images/OverviewAdmin-Profile.png" alt="Overview Admin Profile"></div>
+    </div>
+    <div class="page">
+        <div class="indent"><div class="indent">
+            <h3><span class="id">4.5.3</span>Reports</h3>
+            <p>
+                The Admin User must be logged in to view the reports. Admin Users will be able to view Consumer as well as Commercial Reports. After the Admin Users chooses which report they want to view the app will request the information from the database and the User can view it.</p>
+        </div></div>
+        <div class="pic"><img src="images/image34.png" alt="Overview Admin Report"></div>
+    </div>
+    <div class="page">
+        <div class="indent"><div class="indent">
+            <h3><span class="id">4.5.4</span>Settings</h3>
+            <p>
+                In order to view the settings and make changes, the Admin user must first be logged in. A new session will be created. User login info will be verified by comparing it to the data in the Database. Successful verification will grant application access to the user. In settings, the Admin user may go to Notifications or logout of their session. If they logout their session will be closed and then redirected to the login page. In the Notification settings the Admin user may choose notification preferences (turn on or off individual notifications).</p>
+        </div></div>
+        <div class="pic"><img src="images/image4.png" alt="Overview Admin Settings"></div>
+    </div>
+    <div class="super-page">
         <h1><span class="id">5</span>Design Views</h1>
         <div class="indent">
             <h2><span class="id">5.1</span>Create Consumer Account [3.1]</h2>
