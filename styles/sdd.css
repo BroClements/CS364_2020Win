@@ -11,7 +11,7 @@ html {
    background: lightgray;
 }
 
-p { margin-top: 0; }
+p { margin: 0 0 5px 0; }
 li>p { margin-bottom: 0; }
 
 .indent {
@@ -130,6 +130,8 @@ img {
    max-width: 100%;
    max-height: 400px;
 }
+.pic { text-align: center; }
+.pic>img { max-height: unset; }
 
 .auto-ID {
    list-style: none;
