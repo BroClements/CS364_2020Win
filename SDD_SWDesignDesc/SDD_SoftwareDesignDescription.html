@@ -3834,11 +3834,23 @@
                     be saved to the database.</p>
                 <img src="./images/CommunicationUML-Edit&ViewProfile.png" alt="CommunicationUML - Edit & View Profile" class="pic">
                 <figcaption>Communication UML Figure 2</figcaption>
+            </div>
+          </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+             <div class="indent">
                 <h3><span class="id">8.1.3</span>Communication UML Create New Consumer/Commercial/Admin Profile Event</h3>
                 <p>This diagram describes the flow of communication data during the creation of a profile. User input is passed from the app to the server to the database where it is validated. The validation processes performed against the database ensures
                     that there are no duplicate users. Upon completion, a page confirming the success of profile creation is presented.</p>
                 <img src="./images/CommunicationUML-CreatNewAccount.png" alt="CommunicationUML - Create New Account " class="pic">
                 <figcaption>Communication UML Figure 3</figcaption>
+            </div>
+          </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+             <div class="indent">
                 <h3><span class="id">8.1.4</span>Communication UML Create Manage Event</h3>
                 <p>This diagram shows the flow of communication when creating and managing an Event. The User will click the button to create an Event. That action will then be sent to the server. The server will validate the Event and add it to the database.
                     A page will appear to show if the event was created or if there was a failure. The User can then edit the details of the event and then save it to the database.</p>
@@ -3846,19 +3858,23 @@
                 <figcaption>Communication UML Figure 4</figcaption>
             </div>
             <h2><span class="id">8.2</span>Database Design</h2>
-            <ol>
+            <ul>
                 <li>For designing our database, we will use the following design plan modified from the steps found in [1]:
-                    <div class="indent">
-                        <ul>
-                            <li>Find and organize required information </li>
-                            <li>Divide information into tables </li>
-                            <li>Turn information items into columns </li>
-                            <li>Specify primary keys </li>
-                            <li>Set up the table relationships (foreign keys) </li>
-                            <li>Apply Normalization Rules </li>
-                        </ul>
-                    </div>
+                     <ul>
+                         <li>Find and organize required information </li>
+                         <li>Divide information into tables </li>
+                         <li>Turn information items into columns </li>
+                         <li>Specify primary keys </li>
+                         <li>Set up the table relationships (foreign keys) </li>
+                         <li>Apply Normalization Rules </li>
+                     </ul>
                 </li>
+            </ul>
+          </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+             <ul>
                 <li>The first five steps above of the design plan were completed in the SRS. The database is already divided into tables, each of which has a primary key, and all foreign relationships have been identified. This leaves us with only applying
                     the Normalization Rules. The normalization rules we will apply are as follows, found at [1, 2]:
                     <ul>
@@ -3893,95 +3909,137 @@
             </ol>
             <img src="./images/DataBase.png" alt="Database" class="pic">
             <p>Database Design Figure 8.2.1 </p>
-
+          </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">8.3</span>Data Types [6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7, 6.8, 6.10, 6.11, 6.12, 6.13, 6.17, 6.18, 6.19,6,2 6.23, 6.24, 6.26,6.27, 6.33, 6.34, 6.35, 6.37, 6.38, 6.44, 6.45]</h2>
             <p>For the data types we will use Integers, Strings, Booleans, varchars, timestamps, tinyint, tinytext, blob, and decimal. </p>
             <p>We will inspect each table and find out which data type we will use. Some of the tables may require only 4, but some may require many more. This allows the correct storage of the data and will ensure that the wrong data type is not put into
                 the table. </p>
-            <p>the tables have been designed for the Uvents application have been made along with the data types that will be used in each column in the tables. </p>
+            <p>The tables have been designed for the Uvents application have been made along with the data types that will be used in each column in the tables. </p>
+            <div class="indent">
+               <h2><span class="id">8.3.1</span>Event Participant Table </h2>
+               <p>The Even_Participant Table chart demonstrates what is being stored, and what data-type is being used to display it.</p>
+               <img src="./images/DataTypes-Event-Participant.png" alt="Event Participant Table" class="pic">
+               <p>Data Types Figure 1</p>
 
-            <h2><span class="id">8.3.1</span>Event Participant Table </h2>
-            <p>The Even_Participant Table chart demonstrates what is being stored, and what data-type is being used to display it.</p>
-            <img src="./images/DataTypes-Event-Participant.png" alt="Event Participant Table" class="pic">
-            <p>Data Types Figure 1</p>
+               <h2><span class="id">8.3.2</span>User Report Table</h2>
+               <p>The User_Report Table chart demonstrates what is being stored, and what data-type is being used to display it. </p>
+               <img src="./images/Data Types- User-Report.png" alt="User Report Table" class="pic">
+               <p>Data Types Figure 2</p>
+            </div>
+          </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
+               <h2><span class="id">8.3.3</span>Message Table</h2>
+               <p>The Message Table chart demonstrates what is being stored, and what data-type is being used to display it.</p>
+               <img src="./images/DataTypes-Message.png" alt="Message Table" class="pic">
+               <p>Data Types Figure 3</p>
 
-            <h2><span class="id">8.3.2</span>User Report Table</h2>
-            <p>The User_Report Table chart demonstrates what is being stored, and what data-type is being used to display it. </p>
-            <img src="./images/Data Types- User-Report.png" alt="User Report Table" class="pic">
-            <p>Data Types Figure 2</p>
+               <h2><span class="id">8.3.4</span>Bid Table</h2>
+               <p>The Bid Table chart demonstrates what is being stored, and what data-type is being used to display it. </p>
+               <img src="./images/DataTypes-Bid.png" alt="Bid Table" class="pic">
+               <p>Data Types Figure 4</p>
 
-            <h2><span class="id">8.3.3</span>Message Table</h2>
-            <p>The Message Table chart demonstrates what is being stored, and what data-type is being used to display it.</p>
-            <img src="./images/DataTypes-Message.png" alt="Message Table" class="pic">
-            <p>Data Types Figure 3</p>
+               <h2><span class="id">8.3.5</span>Notification Table</h2>
+               <p>The Notification Table chart demonstrates what is being stored, and what data-type is being used to display it. </p>
+               <img src="./images/DataTypes-Notifications.png" alt="Notification Table" class="pic">
+               <p>Data Types Figure 5</p>
 
-            <h2><span class="id">8.3.4</span>Bid Table</h2>
-            <p>The Bid Table chart demonstrates what is being stored, and what data-type is being used to display it. </p>
-            <img src="./images/DataTypes-Bid.png" alt="Bid Table" class="pic">
-            <p>Data Types Figure 4</p>
+            </div>
+          </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+             <div class="indent">
+               <h2><span class="id">8.3.6</span>Address Table</h2>
+               <p>The Address Table chart demonstrates what is being stored, and what data-type is being used to display it. </p>
+               <img src="./images/DataTypes-Addres.png" alt="Address Table" class="pic">
+               <p>Data Types Figure 6</p>
 
-            <h2><span class="id">8.3.5</span>Notification Table</h2>
-            <p>The Notification Table chart demonstrates what is being stored, and what data-type is being used to display it. </p>
-            <img src="./images/DataTypes-Notifications.png" alt="Notification Table" class="pic">
-            <p>Data Types Figure 5</p>
+               <h2><span class="id">8.3.7</span>Conversation Table</h2>
+               <p>The Conversation Table chart demonstrates what is being stored, and what data-type is being used to display it. </p>
+               <img src="./images/DataTypes-Conversation.png" alt="Conversation Table" class="pic">
+               <p>Data Types Figure 7</p>
 
-            <h2><span class="id">8.3.6</span>Address Table</h2>
-            <p>The Address Table chart demonstrates what is being stored, and what data-type is being used to display it. </p>
-            <img src="./images/DataTypes-Addres.png" alt="Address Table" class="pic">
-            <p>Data Types Figure 6</p>
+               <h2><span class="id">8.3.8</span>Conversation Participant Table</h2>
+               <p>The Conversation Participant Table chart demonstrates what is being stored, and what data-type is being used to display it. </p>
+               <img src="./images/DataTypes-Conversation-Participant.png" alt="Conversation Participant Table" class="pic">
+               <p>Data Types Figure 8</p>
 
-            <h2><span class="id">8.3.7</span>Conversation Table</h2>
-            <p>The Conversation Table chart demonstrates what is being stored, and what data-type is being used to display it. </p>
-            <img src="./images/DataTypes-Conversation.png" alt="Conversation Table" class="pic">
-            <p>Data Types Figure 7</p>
+            </div>
+          </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+             <div class="indent">
+               <h2><span class="id">8.3.9</span>Event Table</h2>
+               <p>The Event Table chart demonstrates what is being stored, and what data-type is being used to display it. </p>
+               <img src="./images/DataTypes-Event_Table.png" alt="Event Table" class="pic">
+               <p>Data Types Figure 9</p>
 
-            <h2><span class="id">8.3.8</span>Conversation Participant Table</h2>
-            <p>The Conversation Participant Table chart demonstrates what is being stored, and what data-type is being used to display it. </p>
-            <img src="./images/DataTypes-Conversation-Participant.png" alt="Conversation Participant Table" class="pic">
-            <p>Data Types Figure 8</p>
+               <h2><span class="id">8.3.10</span>Event Media Table</h2>
+               <p>The Event Media chart demonstrates what is being stored, and what data-type is being used to display it.</p>
+               <img src="./images/DataTypes-Event_Media.png" alt="Event Media" class="pic">
+               <p>Data Types Figure 10</p>
 
-            <h2><span class="id">8.3.9</span>Event Table</h2>
-            <p>The Event Table chart demonstrates what is being stored, and what data-type is being used to display it. </p>
-            <img src="./images/DataTypes-Event_Table.png" alt="Event Table" class="pic">
-            <p>Data Types Figure 9</p>
+            </div>
+          </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+             <div class="indent">
+               <h2><span class="id">8.3.11</span>Consumer User Table</h2>
+               <p>The Consumer User chart demonstrates what is being stored, and what data-type is being used to display it. </p>
+               <img src="./images/DataTypes-Consumer_Users.png" alt="Consumer Table" class="pic">
+               <p>Data Types Figure 11</p>
 
-            <h2><span class="id">8.3.10</span>Event Media Table</h2>
-            <p>The Event Media chart demonstrates what is being stored, and what data-type is being used to display it.</p>
-            <img src="./images/DataTypes-Event_Media.png" alt="Event Media" class="pic">
-            <p>Data Types Figure 10</p>
+               <h2><span class="id">8.3.12</span>Group Event Table</h2>
+               <p>The Group Event chart demonstrates what is being stored, and what data-type is being used to display it. </p>
+               <img src="./images/DataTypes-Group_Events.png" alt="Group Events Table" class="pic">
+               <p>Data Types Figure 12</p>
 
-            <h2><span class="id">8.3.11</span>Consumer User Table</h2>
-            <p>The Consumer User chart demonstrates what is being stored, and what data-type is being used to display it. </p>
-            <img src="./images/DataTypes-Consumer_Users.png" alt="Consumer Table" class="pic">
-            <p>Data Types Figure 11</p>
-
-            <h2><span class="id">8.3.12</span>Group Event Table</h2>
-            <p>The Group Event chart demonstrates what is being stored, and what data-type is being used to display it. </p>
-            <img src="./images/DataTypes-Group_Events.png" alt="Group Events Table" class="pic">
-            <p>Data Types Figure 12</p>
-
-            <h2><span class="id">8.3.13</span>Commercial User Table</h2>
-            <p>The Commercial User chart demonstrates what is being stored, and what data-type is being used to display it.</p>
-            <img src="./images/DataTypes-Commercial_Users.png" alt="Commercial User Table" class="pic">
+            </div>
+          </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+             <div class="indent">
+               <h2><span class="id">8.3.13</span>Commercial User Table</h2>
+               <p>The Commercial User chart demonstrates what is being stored, and what data-type is being used to display it.</p>
+               <img src="images/DataTypes-Commercial_Users.png" alt="Commercial User Table" class="pic">
+            </div>
             <h2><span class="id">8.4</span>Structural Design Technique</h2>
-            <ol>
+            <ul>
                 <li>For the Structural Design Pattern we will be using the façade design pattern. This will allow us to create classes in the program that are easier to use many times in in many circumstances without the complexity of knowing all the underlying
-                    functions and how they work.. </li>
-                <li>We will use the façade design technique specifically to implement classes that involve the User class. The application has three unique users: admin, consumer, and commercial, but these users all share some similarities. These similarities
-                    included ID’s names, etc. They also share similar functions, such as logging in and creating events. The façade design pattern will allow us to simplify these shared functions so that a single function call can be made where several
-                    might otherwise be necessary so that the client does not need to keep track of unnecessary or repetitive functions. </li>
-            </ol>
-            <h2><span class="id">8.4.1</span>Structural Design Technique Login Façade Design</h2>
-            <p>The first chart shows how the client may simply use a login function providing the username and password as parameters. Then, the server can verify that the given username exists and that the password is correct and return an ID. The application
-                will then direct the user to the home page as a validated user. </p>
-            <img src="./images/StructuralDesign-Login.png" alt="Design Login" class="pic">
-            <p>Structural Design Technique Login Façade Design Figure 1 </p>
-
-            <p>The second chart shows how the Client may simply use a createEvent function (providing the data to be used in creation, e.g. start time, end time, description, etc.). The server will then validate that the data is appropriate (the correct
-                data types and allowed for that sort of user), insert the data into the database, and return the new event ID to the client. The Uvents will then direct the user to the event page for their new Event. </p>
-            <img src="./images/StructuralDesign-CreateEvent.png" alt="Design Create Event" class="pic">
-            <p>Structural Design Technique Create Event Façade Design Figure 2 </p>
-
+                    functions and how they work.</li>
+                <li>
+                    We will use the façade design technique specifically to implement classes that involve the User class. The application has three unique users: admin, consumer, and commercial, but these users all share some similarities. These similarities included ID’s names, etc. They also share similar functions, such as logging in and creating events. The façade design pattern will allow us to simplify these shared functions so that a single function call can be made where several might otherwise be necessary so that the client does not need to keep track of unnecessary or repetitive functions. </li>
+            </ul>
+          </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
+               <h2><span class="id">8.4.1</span>Structural Design Technique Login Facade Design</h2>
+               <p>The first chart shows how the client may simply use a login function providing the username and password as parameters. Then, the server can verify that the given username exists and that the password is correct and return an ID. The application
+                   will then direct the user to the home page as a validated user. </p>
+               <img src="./images/StructuralDesign-Login.png" alt="Design Login" class="pic">
+               <p>Structural Design Technique Login Façade Design Figure 1 </p>
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
+               <h2><span class="id">8.4.2</span>Structural Design Technique Create Event Design</h2>
+               <p>The second chart shows how the Client may simply use a createEvent function (providing the data to be used in creation, e.g. start time, end time, description, etc.). The server will then validate that the data is appropriate (the correct data types and allowed for that sort of user), insert the data into the database, and return the new event ID to the client. The Uvents will then direct the user to the event page for their new Event. </p>
+               <img src="./images/StructuralDesign-CreateEvent.png" alt="Design Create Event" class="pic">
+               <p>Structural Design Technique Create Event Façade Design Figure 2 </p>
+            </div>
             <h2><span class="id">8.5</span>Model Entity Relationship [6.25, 6.26, 6.27, 6.28, 6.29]</h2>
             <p>For the Entity Relationship design, we will be using the Entity Relationship Diagram. This will allow us to specify, visualize, construct and document artifacts of data.</p>
             <p>We will use the Entity Relationship Diagram technique to specifically visualize and construct data, including relations of columns to each table. We will apply the following steps to complete the design: </p>
@@ -3990,6 +4048,10 @@
                 <li>Identify relationships between entities. Connect them using a line and add a diamond in the middle describing the relationship. </li>
                 <li>Add attributes for entities. Give meaningful attribute names so they can be understood easily. </li>
             </ul>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <p>A few things to notice: </p>
             <ul>
                 <li>Provide a precise and appropriate name for each entity, attribute, and relationship in the diagram. Terms that are simple and familiar always beats vague, technical-sounding words. In naming entities, remember to use singular nouns. However,
@@ -3999,8 +4061,12 @@
                 <li>Never connect a relationship to another relationship. </li>
                 <li>Make effective use of colors. You can use colors to classify similar entities or to highlight key areas in your diagrams. </li>
             </ul>
-
             <img src="./images/EntityRelationship.png" alt="Entity Relationship" class="pic">
+
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">8.6</span>Data Flow</h2>
             <div class="indent">
                 <h3><span class="id">8.6.1</span>Model Data Flow Create Account View</h3>
@@ -4009,11 +4075,23 @@
                     an account via a third party social media account which will use the social media platforms own login feature.</p>
                 <img src="./images/DataFlow-CreateAccount.png" alt="" class="pic">
                 <figcaption>Data Flow Figure 1</figcaption>
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h3><span class="id">8.6.2</span>Model Data Flow Edit Profile</h3>
                 <p>The User enters a new username, password, and/or email. All three pieces of data are validated and if an error occurs a message is sent back to the edit profile view to alert the User. IF validation is successful, then the new password
                     is hashed (if one is present), and the data is then stored in the database. Confirmation is then sent to the User.</p>
                 <img src="./images/DataFlow-EditProfile.png" alt="" class="pic">
                 <figcaption>Data Flow Figure 2</figcaption>
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h3><span class="id">8.6.3</span>Model Data Flow View Profile View</h3>
                 <p>The User enters the view profile view. A process to request account information is then run. The database will send the requested information back to the view.</p>
                 <img src="./images/DataFlow-ViewProfile.png" alt="" class="pic">
@@ -4023,6 +4101,12 @@
                     saved to the database and confirmation is sent to the Consumer User.</p>
                 <img src="./images/DataFlow-CreateGroupEvent.png" alt="" class="pic">
                 <figcaption>Data Flow Figure 4</figcaption>
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h3><span class="id">8.6.5</span>Model Data Flow Edit Event View</h3>
                 <p>The User Enter the Edit Event View. Data about the event can then be edited and resubmitted. The data is inspected for appropriateness and validity. If successful, data is saved to the database. Confirmation is sent to the User.</p>
                 <img src="./images/DataFlow-EditEvent.png" alt="" class="pic">
@@ -4032,6 +4116,12 @@
                     is saved to the database and confirmation is sent to the Commercial User.</p>
                 <img src="./images/DataFlow-CreateCommercialEvent.png" alt="" class="pic">
                 <figcaption>Data Flow Figure 6</figcaption>
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h3><span class="id">8.6.7</span>Model Data Flow Description View
                 </h3>
                 <p>The User enters the add description view. The User then edits or adds a new description to the event. The description is then sent to the database for storage. Confirmation is sent to the User.</p>
@@ -4041,47 +4131,93 @@
                 <p>The User Enters the list view. Upon entering the view, the list of available events is sent from the database, with their corresponding details, and returned to the view. The view then displays this list of events.</p>
                 <img src="./images/DataFlow-ManageCommercialEvent.png" alt="" class="pic">
                 <figcaption>Data Flow Figure 8</figcaption>
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h3><span class="id">8.6.9</span>Model Data Flow Edit Users View</h3>
                 <p>The Admin User enters the edit users view. The Admin User then can select a Commercial or Consumer User. That users profile and information is then retrieved from the database and returned to the edit users view. From that point, the Admin
                     User can either edit user data, or delete user data. Changes are then saved to the database.</p>
                 <img src="./images/DataFlow-EditUsers.png" alt="" class="pic">
                 <figcaption>Data Flow Figure 9</figcaption>
-                <h3><span class="id">8.6.10</span>Promote Event Data Flow</h3>
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
+                <h3><span class="id">8.6.10</span>Model Data Flow Promote Event</h3>
                 <p>The Commercial user after logging in will be able to “Promote Event”. They will then be able to start auctioning to Promote a chosen Event.</p>
                 <img src="./images/Promote-Event-DF.png" alt="" class="pic">
                 <figcaption>Data Flow Figure 10</figcaption>
-                <h3><span class="id">8.6.11</span>Create (Post) Event Data Flow</h3>
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
+                <h3><span class="id">8.6.11</span>Model Data Flow Create Event</h3>
                 <p>In order to view and make changes to the Commercial Events the user must be logged in. The Users can choose between Creating an Event, Editing/Deleting an Event or viewing the Past Events. After choosing each of these functions the app will retrieve information from the database and the user can make changes to it. After the user is done editing the information will be updated to the database again.</p>
                 <img src="./images/df-11.png" alt="" class="pic">
                 <figcaption>Data Flow Figure 11</figcaption>
-                <h3><span class="id">8.6.12</span>Search Bar (Discover) Data Flow</h3>
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
+                <h3><span class="id">8.6.12</span>Model Data Flow Search Bar (Discover)</h3>
                 <p>Upon consumer login, they will see the Discover Page. On the Discover page, they will be shown a list of relevant events from the database. They will have the option to use a search bar to search for events as well as Filtering and sorting.</p>
                 <img src="./images/df-12.png" alt="" class="pic">
                 <figcaption>Data Flow Figure 12</figcaption>
-                <h3><span class="id">8.6.13</span>Join Event Data Flow</h3>
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
+                <h3><span class="id">8.6.13</span>Model Data Flow Join Event</h3>
                 <p>Upon consumer login, the Consumer will gain access to their account and will have access to “My Profile”, “My Events”, “Discover” and “settings”. “My Profile” will show the Consumer Users profile information and allow them to change their profile information. The Consumer will also have “My Events”, within “My Events” the Consumer will see all the Events that they have created or Joined. The Consumer will have the ability to edit the Events that they have created.</p>
                 <img src="./images/df-13.png" alt="" class="pic">
                 <figcaption>Data Flow Figure 13</figcaption>
-                <h3><span class="id">8.6.14</span> Notifications (Settings) Data Flow</h3>
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
+                <h3><span class="id">8.6.14</span>Model Data Flow Notifications (Settings)</h3>
                 <p>In order to view the settings and make changes, the Consumer User must first be logged in. A new session will be created. User login info will be verified by comparing it to the data in the Database. Successful verification will grant application access to the user.  In settings, the Consumer User may go to Notifications or logout of their session. If they logout their session will be closed and then redirected to the login page. In the Notification settings the Consumer User may choose notification preferences (turn on or off individual notifications).</p>
                 <img src="./images/df-14.png" alt="" class="pic">
                 <figcaption>Data Flow Figure 14</figcaption>
-                <h3><span class="id">8.6.15</span>Reports Data Flow</h3>
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
+                <h3><span class="id">8.6.15</span>Model Data Flow Reports</h3>
                 <p>Upon login, the Admin will gain access to their account and will have access to “My Profile”, “Manage Users/Events”, “Settings”, and “Reports”. “My Profile” will show the Admin profile information and allow them to change their profile information. The Admin User will also have “Manage User/Events”, this will give the Admin access to edit Accounts as well as Events Created by Consumers and Commercial Users. The Admin User will also have “Settings” and  “Reports”.</p>
                 <img src="./images/df-15.png" alt="" class="pic">
                 <figcaption>Data Flow Figure 15</figcaption>
             </div>
-
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">8.7</span>Data & Information View</h2>
-            <p>The Data and Information view describes the various relationships between the data schema and entities of the project. The figure below (DIV Figure 1) describes the data flow among three types of users (Admin, Commercial, Consumer) and their
-                dependencies.
+            <p>The Data and Information view describes the various relationships between the data schema and entities of the project. The figure below (DIV Figure 1) describes the data flow among three types of users (Admin, Commercial, Consumer) and their dependencies.
             </p>
             <img src="./images/Data&InfoView.png" alt="Data & Information View" class="pic">
             <figcaption>Data and Information View Figure 1</figcaption>
-
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">8.8</span>Petri-Nets</h2>
-            <p>One way to model an application is by the interaction between the various views of the application. A Petri-Net is an excellent way to design such a model. In the following Petri-Net each circle represents a view, and rectangles represent
-                functions that change a user from one view to another. The arcs connecting circles and rectangles show places where you can access specific view changing functions, and which views the functions lead to.</p>
+            <p>One way to model an application is by the interaction between the various views of the application. A Petri-Net is an excellent way to design such a model. In the following Petri-Net each circle represents a view, and rectangles represent functions that change a user from one view to another. The arcs connecting circles and rectangles show places where you can access specific view changing functions, and which views the functions lead to.</p>
             <img src="./images/petri-net.png" alt="Petri-Nets" class="pic">
             <figcaption>Petri-Nets Figure 1</figcaption>
             <img src="" alt="" class="pic">
@@ -4091,90 +4227,204 @@
             as it pulls requested data from the Model and updates the View with received data.</p>
         <div class="indent">
             <h2><span class="id">9.1</span> Server Process Flow (PF)</h2>
-            <p>The Server PF acts as a representation of the course of actions to be taken. It is also known as the Process Flow Diagram (PFD). This is a very accommodating tool for showings the relationship between major components throughout the project.
-                The major parts of the Server Process Flow consist of a Start/Stop, Action, Decision, and a connector.</p>
+            <p>The Server PF acts as a representation of the course of actions to be taken. It is also known as the Process Flow Diagram (PFD). This is a very accommodating tool for showings the relationship between major components throughout the project. The major parts of the Server Process Flow consist of a Start/Stop, Action, Decision, and a connector.</p>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <div class="indent">
                 <h2><span class="id">9.1.1</span> Join Event PF</h2>
                 <p>The Join Event PF defines the process of interactions between the Server, Database, and Front-End for the following Design Concerns: 3.2, 3.3</p>
                 <img src="./images/Figure1.png" alt="" class="pic">
 
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h2><span class="id">9.1.2</span>Update PF </h2>
                 <p>The Update PF defines the process of interactions between the Server, Database, and Front-End for the following Design Concerns: 3.1, 3.4, 3.8, 3.21, 3.36, 3.39, 3.17</p>
                 <img src="./images/Figure2.png" alt="" class="pic">
 
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h2><span class="id">9.1.3</span>Login PF </h2>
                 <p>The Login PF defines the process of interactions between the Server, Database, and Front-End for the following Design Concerns: 3.6, 3.23, 3.38</p>
                 <img src="./images/Figure3.png" alt="" class="pic">
 
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h2><span class="id">9.1.4</span>View Profile PF </h2>
                 <p>The View Profile PF defines the process of interactions between the Server, Database, and Front-End for the following Design Concerns: 3.5, 3.22, 3.37</p>
                 <img src="./images/Figure4.png" alt="" class="pic">
 
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h2><span class="id">9.1.5</span>Settings PF </h2>
                 <p>The Settings PF defines the process of interactions between the Server, Database, and Front-End for the following Design Concerns: 3.15, 3.32, 3.44</p>
                 <img src="./images/Figure5Settings.PNG" alt="" class="pic">
 
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h2><span class="id">9.1.6</span>Reports PF </h2>
                 <p>The Reports PF defines the process of interactions between the Server, Database, and Front-End for the following Design Concerns: 3.34, 3.35</p>
                 <img src="./images/Figure6Reports.PNG" alt="" class="pic">
 
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h2><span class="id">9.1.7</span>Edit Users/Events PF </h2>
                 <p>The Edit Users/Events PF defines the process of interactions between the Server, Database, and Front-End for the following Design Concerns: 3.40, 3.41</p>
                 <img src="./images/Figure7.png" alt="" class="pic">
 
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h2><span class="id">9.1.8</span>Messaging PF </h2>
                 <p>The Messaging PF defines the process of interactions between the Server, Database, and Front-End for the following Design Concerns: 3.42, 3.43, 3.12, 3.14</p>
                 <img src="./images/Figure8.png" alt="" class="pic">
 
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h2><span class="id">9.1.9</span>Posting Events PF </h2>
                 <p>The Posting Events PF defines the process of interactions between the Server, Database, and Front-End for the following Design Concerns: 3.23, 3.7, 3.26, 3.28, 3.20</p>
                 <img src="./images/Figure9.png" alt="" class="pic">
 
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h2><span class="id">9.1.10</span>Edit Information PF </h2>
                 <p>The Edit Information PF defines the process of interactions between the Server, Database, and Front-End for the following Design Concerns: 3.19, 3.11, 3.10, 3.24, 3.27, 3.31</p>
                 <img src="./images/Figure10EditInformation.PNG" alt="" class="pic">
 
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h2><span class="id">9.1.11</span>Logout PF </h2>
                 <p>The Logout PF defines the process of interactions between the Server, Database, and Front-End for the following Design Concerns: 3.33, 3.16, 3.45</p>
                 <img src="./images/Figure11.png" alt="" class="pic">
 
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h2><span class="id">9.1.12</span>Business Information PF </h2>
                 <p>The Business Information PF defines the process of interactions between the Server, Database, and Front-End for the following Design Concerns: 3.18</p>
                 <img src="./images/Figure12.png" alt="" class="pic">
 
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h2><span class="id">9.1.13</span>Promote Event PF </h2>
                 <p>The Promote Event PF defines the process of interactions between the Server, Database, and Front-End for the following Design Concerns: 3.29</p>
                 <img src="./images/Figure13.png" alt="" class="pic">
 
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h2><span class="id">9.1.14</span>Start Auction PF </h2>
                 <p>The Start Auction PF defines the process of interactions between the Server, Database, and Front-End for the following Design Concerns: 3.30</p>
                 <img src="./images/Figure14.png" alt="" class="pic">
 
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h2><span class="id">9.1.15</span>Search Bar PF </h2>
                 <p>The Search Bar PF defines the process of interactions between the Server, Database, and Front-End for the following Design Concerns: 3.9</p>
                 <img src="./images/Figure15.png" alt="" class="pic">
 
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h2><span class="id">9.1.16</span>My Events Process Flow </h2>
                 <p>The My Events PF defines the process of interactions between the Server, Database, and Front-End for the following Design Concerns: 3.13</p>
                 <img src="./images/Figure16.png" alt="" class="pic">
 
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h2><span class="id">9.1.17</span>Address</h2>
                 <p>The Address PF defines the process of interactions between the Server, Database, and Front-End for the following Design Concern: 3.18</p>
                 <img src="./images/Figure17Address.PNG" alt="" class="pic">
 
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h2><span class="id">9.1.18</span>Event Media</h2>
                 <p>The Event Media PF defines the process of interactions between the Server, Database, and Front-End for the following Design Concern: 3.14</p>
                 <img src="./images/Figure18EventMedia.PNG" alt="" class="pic">
 
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h2><span class="id">9.1.19</span>Create Group Event</h2>
                 <p>The Create Group Event PF defines the process of interactions between the Server, Database, and Front-End for the following Design Concern: 3.10</p>
                 <img src="./images/Figure19CreateGroupEvent.PNG" alt="" class="pic">
 
-                <h2><span class="id">9.1.20</span></h2>
-                <p>The Create Group Event PF defines the process of interactions between the Server, Database, and Front-End for the following Design Concerns: 3.2</p>
+                <h2><span class="id">9.1.20</span>Create Account</h2>
+                <p>The Create Account PF defines the process of interactions between the Server, Database, and Front-End for the following Design Concerns: 3.2</p>
                 <img src="./images/Figure20.PNG" alt="" class="pic">
             </div>
-
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">9.2</span> Create Account Factory Pattern [4.1,4.16,4.34]</h2>
             <p>The Factory Pattern is an example of a type of Creation Design Pattern. Creational Design Patterns focus on the creation of objects and the ability to reuse existing code. The Factory Pattern follows this method by creating an interface that
                 in turn, creates the objects in a superclass. The Factory Pattern for Creating an Account shows how a base account is represented and passed to different account objects, where these objects will add unique aspects to the base account
@@ -4186,11 +4436,19 @@
                 Commercial User, and Admin User. These states display the transition from the application only being downloaded, to an account being created and logged into, and then the eventual logging out of the account.</p>
             <img src="./images/Figure1StateDiagram.PNG" alt="" class="pic">
 
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">9.4</span>Server Class UML</h2>
             <p>The Class UML acts as a template for creating objects and implementing behavior within a system. The purpose of the Server Class UML is to provide a guide to implementing the classes and objects involved in the server-side of the Uvents application.
                 These classes and objects are specifically tasked with requesting data from the Back-End and updating the Front-End with said data.</p>
             <img src="./images/UML.png" alt="" class="pic">
 
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">9.5</span>Server Composite UML</h2>
             <p>The Composite UML acts as a representation of relationships between classes and objects. Composite UMLs are produced off of a predefined Class UML, as was the Server Composite UML, which was designed off of the Server Class UML. [8.3] The
                 Server Composite UML displays relationships between the Event, Account, and Message classes on the server-side of the Uvents application.
@@ -4199,21 +4457,38 @@
             <p>Additional Server Composite UML Diagrams displaying relationships with notifications and settings.</p>
             <img src="./images/Figure2CompositeUML.PNG" alt="" class="pic">
 
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">9.6</span>Sequence Diagram for Edit Profile</h2>
             <p>Sequence Diagrams are detailed diagrams that show how operations are carried out. They are commonly used to show how objects interact in a sequence to understand the detailed functionality of a system. It depicts the interaction between chosen
                 objects in the order the interactions take place. A typical Sequence Diagram consists of various objects, lifelines, activation occurrences, and loops to depict the necessary details of the interactions between the objects.</p>
             <img src="./images/SequenceDiagramFigure1.PNG" alt="" class="pic">
 
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">9.7</span>Server Control Flow </h2>
             <p>The Server Control Flow lists the order of instructions that the controller will follow. It contains the necessary user input as well as some of the checks that are performed. It shows how data flows from the view through the controller and
                 to the model. The control flow lists the order of instructions that the controller will follow. It contains the necessary user input as well as some of the checks that are performed. It shows how data flows from the view through the controller
                 and to the model. </p>
             <img src="./images/ControlFlow.png" alt="" class="pic">
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">9.8</span>Server Flow-Chart </h2>
             <p>The Server Flow-Chart displays the order of actions that will be performed as a certain function is running. It also displays all related functions and their relations to them as it pertains to actions. The arrows show the direction of each
                 function and the order that it happens, diamonds represent a choice being made, in this case it mostly used to validate whether the information inputted is valid information. Cylinders represent the database that we are storing user data.
                 This specific flow chart shows us how data is being inserted and taken from the database</p>
             <img src="./images/Flowdiagramtrash.png" alt="" class="pic">
+
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">9.9</span>Server Functional Flow Chart</h2>
             <p>The Server Functional Flow Chart displays the order the at functions can and will be called for the controller. The arrows point to the functions that can be called from that function. Most of the flow charts start with a verification, so
                 that the program uses the correct data. After the verification, they will proceed to get data from the model or send data to the model. </p>
@@ -4222,19 +4497,21 @@
         <h1><span class='id'>10</span>Design Languages</h1>
         <div class="indent">
             <p>Uvents will be developed on mobile platforms, IOS and Android. Here is a list of follow programming languages and technologies that will be used to create the Uvents application: </p>
-            <h2>For IOS</h2>
             <ul>
+                <h3>For IOS</h3>
                 <li>Swift (Language)</li>
                 <li>MySQL (Database)</li>
                 <li>XCode9 (Programming Environment)</li>
-            </ul>
-            <h2>For Android</h2>
-            <ul>
+                <h3>For Android</h3>
                 <li>Kotlin (Language)</li>
                 <li>MySQL (Database)</li>
                 <li>Android Studio (Programming Environment)</li>
-            </ul><br>
-            <h3><span class="id">10.1</span>Services View</h3>
+            </ul>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <h2><span class="id">10.1</span>Services View</h2>
             <p>The Services View acts to describe what is being provided by the system and how the items being provided will allow the system to work. To be able to provide usability to all mobile platforms the application will have two sets of criteria for it’s Design Languages. To have the application work on All Android device Uvents will be built on Android Studio using Kotlin for both the Frontware and Middleware. And MySQL will be used for the back end or the database. To have the application work on All IOS device Uvents will be built on Xcode9 using Swift for both the Frontware and Middleware. And MySQL will be used for the back end or the database.</p>
             <h2><span class='id'>10.2</span>System Engineer View (Layering)</h2>
             <p>The System Engineer View, designed through the layering technique, presents conceptually how the entire system will work together. This may be done through one of two previously mentioned routes, depending on the Uvents User’s operating system.</p>
