@@ -940,6 +940,10 @@
             <p>Consumer Users clicks on the notifications tab as found on the main menu. A new window will appear and display a list of all notifications that the Consumer User has received. Each notification listed, will display its title, the first portion
                 of its body, as well as any flags assigned to the notification such as unread, or important. Notifications may be If a notification is selected, the information about that notification will to expand to read display the full details,.
                 or The Consumer User has the option to modify flags or complete removal completely remove flags.</p>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">5.15</span>Settings (Consumer) [3.15]</h2>
             <p>Consumer users will be able to access the setting menu on the top of the page. It looks like a hamburger button. Once it clicked it went from horizontal hamburger button to vertical. When the user clicks the “setting”, a new window will appear
                 and ask users to type a password one more time to verify identification. Once the users type the password, all information(Name, password, address, contact information etc.) will be displayed. And when users are done changing any information,
@@ -959,6 +963,10 @@
             <p>When a Commercial User submits their business information, the data is sent to the server and added to the database. A notification is sent to the admin to be approved.</p>
             <h2><span class="id">5.21</span>Edit Profile (Commercial User) [3.21]</h2>
             <p>Commercial user clicks on picture, description, etc. to edit information. Once user saves edits, the changes will be sent to the database, where the appropriate table's information shall be changed. Edits will be displayed after being saved.</p>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">5.22</span>Login (Commercial User) [3.22]</h2>
             <p>The Commercial User opens Uvents and sees the option to login via 3rd party, username/password, or to create an account.</p>
             <ul>
@@ -987,6 +995,10 @@
             <p>Commercial User clicks a navigation option to view Past Events. Uvents navigates to that page, past events created by the Commercial User are fetched from the database. Those events are displayed in a list to the Commercial User.</p>
             <h2><span class="id">5.28</span>Promote Event (Commercial User) [3.28]</h2>
             <p>The Commercial User shall have the option to promote their events. From Promote Event, the Commercial User may either choose to Share Event or Start Auction. Start Auction will only be an option when the Auction is currently available, otherwise there will be a countdown till the next auction.</p>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">5.29</span>Start Auction / Place Bid (Commercial User) [3.29]</h2>
             <p>Commercial User clicks on the Start Auction / Place Bid button. Uvents then contacts the server and gets the required information regarding placing a bid. The Commercial User can then click on an input field and enter in the amount they would
                 like to bid. The data is sent to the database and a message is displayed indicating whether the bid was placed successfully.</p>
@@ -1020,6 +1032,10 @@
                 if the username does not already exist among any other Uvents Account. If the inputs are acceptable, then the Admin User will be displayed a success screen. Otherwise, the Server will send a message to the GUI informing the Admin User
                 that either the profile picture or the username is unacceptable.
             </p>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">5.36</span>Login (Admin User) [3.36]</h2>
             <p>The Admin User opens the app and sees the option to login via 3rd party, username/password, or to create an account.</p>
             <ul>
@@ -1048,6 +1064,10 @@
                 The Admin User will need to provide a reason for deleting the event. The changes will be verified, and then the Admin User can save them to the database.</p>
             <h2><span class="id">5.40</span>Message (Admin User) [3.40]</h2>
             <p>The Admin User will have the ability to message all other Users.</p>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">5.41</span>Notifications (Admin User) [3.41]</h2>
             <p>The Admin User will have the ability to see different types of notifications for different events on the Events page. Once the Admin User clicks on the Event, there is a button to “View Notifications”. Further notifications preferences will
                 have the option to be changed in the settings.</p>
@@ -1069,6 +1089,10 @@
                 validation will ensure that the password reaches or exceeds 6 characters, and that the email address is in the correct format. In order to proceed with Create Account, the Consumer User must also verify they are over 18 by marking a check-box
                 asking for confirmation of being over 18.  When the consumer clicks 'Create Account' and the password, username, and email are authenticated, the password will be salted and hashed and added to the database along with the email and username.
                 [DF.1] After the account is created, the Server will request a Session ID be generated and the User will be logged in and taken to the Discover page. [4.7]</p>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h3>Design Elements</h3>
             <p>A text field for the user to type in their email address, a text field for the user to type in their username, and a text field for the user to type in their password is displayed on the screen. A button that displays the words “Create Account”
                 is displayed. A button that displays the words “Social Media Login” is displayed. [DF.1]</p>
@@ -1125,6 +1149,10 @@
                 <li>Interface between HMI and Server</li>
                 <li>Interface between Server and Database</li>
             </ul>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h3>Design Elements: </h3>
             <p>Below is a list of Design Elements that compose the Join Commercial event:</p>
             <table>
@@ -1177,6 +1205,10 @@
                 <li>Interface between HMI and Server </li>
                 <li>Interface between Server and Database </li>
             </ul>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h3>Design Elements: </h3>
             <p>Below is the list of Design Elements that compose the Join Commercial event. These Elements will give the consumer options to join, view, or decline Group events.</p>
             <table>
@@ -1223,11 +1255,14 @@
                     <td>The return button will be an option to take the user back to list of events, that way the user can continue to investigate other events.</td>
                 </tr>
             </table>
-
             <h2><span class="id">6.4</span>Edit Profile (Consumer User) [3.4]</h2>
             <h3>Design Viewpoints:</h3>
             <p>Setting icon is presented to the customer. On "edit profile" click, a new activity is presented on the screen with the personal information fields already filled with current information. The user will be able to edit them. Input validation
                 messages should be provided (ex: e-mail, username). Upon information change, the save and the cancel buttons are available with their perspective actions of canceling the operation or saving it.</p>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h3>Design Elements </h3>
             <p>Below is a list of Design Elements that compose the Edit Profile. These elements will give the Consumer the ability to edit their Email, Username, Password. They will be able to save these changes or discard them.</p>
             <table>
@@ -1274,7 +1309,6 @@
                     <td>If any changes have been made to the Email, Username or Password text fields. This button will cancel any would-be changes and revert the fields to the original values.</td>
                 </tr>
             </table>
-
             <h2><span class="id">6.5</span>View Profile (All User) [3.5]</h2>
             <h3>Design Viewpoints:</h3>
             <p>A user’s profile is displayed. Within that profile is an option to report the user. On click, an admin user will be notified, and informed which user has been reported. If the block user button has been pushed, that user is added to a list
@@ -1308,7 +1342,10 @@
                         and event invitations from the other user.</td>
                 </tr>
             </table>
-
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">6.6</span>Login (Consumer User) [3.6]</h2>
             <h3>Design Viewpoints:</h3>
             <p>Consumer User has option to login via username/password or via 3rd party.</p>
@@ -1385,6 +1422,18 @@
                         </ul>
                     </td>
                 </tr>
+             </table>
+          </div>
+       </div>
+       <div class="page">
+         <div class="indent">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Purpose</th>
+                    <th>Description</th>
+                </tr>
                 <tr>
                     <td>Remember me checkbox</td>
                     <td>Entity- Checkbox</td>
@@ -1445,7 +1494,6 @@
                     <td>A button that will bring access to filtering and sorting properties.</td>
                 </tr>
             </table>
-
             <h2><span class="id">6.8</span>Filter/Sorting (Consumer User) [3.8]</h2>
             <h3>Design Viewpoints:</h3>
             <p>App sends request to server. Server gathers details from database. Server sends view to App. </p>
@@ -1483,7 +1531,10 @@
                     <td>An input that will filter out any event that does not include the specified type tag.</td>
                 </tr>
             </table>
-
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">6.9</span>Search Bar (Consumer User) [3.9]</h2>
             <h3>Design Viewpoints:</h3>
             <p>Below are the Consumer User Design Elements concerning the search bar. Verification for the search bar includes:</p>
@@ -1540,6 +1591,10 @@
                 <li>When the input is submitted it must be saved to the database. If any errors occur, the user must be notified and provided a way to solve the problems</li>
                 <li>Proper navigation upon the Event creation</li>
             </ul>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h3>Design Elements: </h3>
             <p>The Create Group Event Table identifies elements for the Create Group Event Concern. [4.22] These elements perform the duties of displaying and copying values held within said concern.</p>
             <table>
@@ -1611,6 +1666,10 @@
                     <td>This view allows all users to see the Group Events. It will also contain interface allowing the creators of events to start editing their events.</td>
                 </tr>
             </table>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">6.11</span>Edit Event (Consumer User) [3.11]</h2>
             <ul>
                 <li>Verify that the correct options are displayed on the page</li>
@@ -1683,6 +1742,10 @@
                     </tr>
                 </table>
             </ul>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">6.12</span>Event Messaging (Consumer User) [3.12]</h2>
             <h3>Design Viewpoints:</h3>
             <ul>
@@ -1744,6 +1807,12 @@
                 <li>Filter of local events to local events this specific Consumer user is subscribed to</li>
                 <li>Interface between social media and server</li>
                 <li>Separation of each event</li>
+            </ul>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h3>Design Elements: </h3>
                 <p>The My Events Table identifies elements for the My Events Concern. [4.13] These elements perform the duties of displaying and copying values held within said concern.</p>
                 <table>
@@ -1790,7 +1859,7 @@
                         <td>Used to give Consumer users an exact location of where an event will be taking place. </td>
                     </tr>
                 </table>
-            </ul>
+            </div>
             <h2><span class="id">6.14</span>Notifications (Consumer User) [3.14]</h2>
             <h3>Design Viewpoints:</h3>
             <ul>
@@ -1838,6 +1907,10 @@
                     <td>A popup menu that displays when selecting a notification, allowing for deletion, flagging, muting, and other messaging options.</td>
                 </tr>
             </table>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">6.15</span>Settings (Consumer User) [3.15]</h2>
             <p>The session ID must be verified. After the checking of the session ID, the information will be pulled from the database and displayed correctly. Name, password, address, contact information will be displayed. The User will be able to change information. The user will be asked one more time when they click the “Confirm” button. The user can cancel the change when users click the “Cancel” button. After the users change the information, change the information in the database, and display the changed information of users. Also, the user will be able to delete his account.</p>
             <h3>Design Elements: </h3>
@@ -1904,6 +1977,10 @@
                     <td>Upon the click, the user will be asked for a confirmation. After the success, all the information about the user will be permanently deleted.</td>
                 </tr>
             </table>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">6.16</span>Logout (Consumer User) [3.16]</h2>
             <h3>Design Viewpoints:</h3>
             <p>Consumer User information is sent to the server. If logout is accepted, the server will send confirmation to the Consumer User, who’s information will be removed from the device.</p>
@@ -1973,6 +2050,20 @@
                         <td>Entity</td>
                         <td>Allows a consumer to enter a valid email address.</td>
                         <td>A textbox that allows the consumer to enter the email address they want to use for creating an account.</td>
+                    </tr>
+                </table>
+             </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+             <div class="indent">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Purpose</th>
+                        <th>Description</th>
                     </tr>
                     <tr>
                         <td>“Username” Textbox</td>
@@ -2057,8 +2148,11 @@
                     </tr>
 
                 </table>
-
             </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">6.19</span>Payment Information (Commercial User) [3.19]</h2>
             <div class="indent">
                 <h3>Design Viewpoints:</h3>
@@ -2121,6 +2215,10 @@
                     </tr>
                 </table>
             </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">6.21</span>Edit Profile (Commercial User) [3.21]</h2>
             <div class="indent">
                 <h3>Design Viewpoints:</h3>
@@ -2200,6 +2298,10 @@
                     </tr>
                 </table>
             </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">6.22</span>Login (Commercial User) [3.22]</h2>
             <div class="indent">
                 <h3>Design Viewpoints:</h3>
@@ -2213,7 +2315,7 @@
                     <li>Instagram: Information is sent to Instagram server for verification. If the server accepts the request the Commercial User is brought to the homepage of Uvents.</li>
                 </ul>
                 <h3>Design Elements:</h3>
-                <p>The Login Table identifies elements for the Login Concern. [3.22] These elements perform the duties of displaying and copying values held within said concern.</p>
+                <p>The Login Table identifies elements for the Login Concern. These elements perform the duties of displaying and copying values held within said concern.</p>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -2262,9 +2364,7 @@
                         <td>Entity- Textbox</td>
                         <td>Input for username to be sent to the server</td>
                         <td>A textbox that collects the Commercial User’s username to be sent to the server for login
-                            <ul>
-                                <li>Constraint: Limited input characters</li>
-                            </ul>
+                            <ul><li>Constraint: Limited input characters</li></ul>
                         </td>
                     </tr>
                     <tr>
@@ -2277,6 +2377,20 @@
                                 <li>Constraint: Limited acceptance of symbols</li>
                             </ul>
                         </td>
+                    </tr>
+                 </table>
+              </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+              <div class="indent">
+                 <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Purpose</th>
+                        <th>Description</th>
                     </tr>
                     <tr>
                         <td>Remember me checkbox</td>
@@ -2367,6 +2481,10 @@
                     </tr>
                 </table>
             </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">6.24</span>Add Description (Commercial User) [3.24]</h2>
             <div class="indent">
                 <h3>Design Viewpoints</h3>
@@ -2429,6 +2547,12 @@
                 The Edit Event concern is meant to provide users the capacity to edit the events they created. This edit event functionality allows users to modify the details of the non-past events they created.
                 <h3>Design Viewpoints</h3>
                 <p>Commercial User clicks on the Edit Event button. Data is retrieved from the database and becomes editable. The updates will take effect once the Commercial User clicks on the Update button.</p>
+             </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+             <div class="indent">
                 <h3>Design Elements</h3>
                 <p> The Edit Event Table identifies elements for the Edit Event Concern. [4.26] These elements perform the duties of displaying and copying values held within said concern. </p>
                 <table>
@@ -2519,6 +2643,12 @@
                 <h3>Design Viewpoints</h3>
                 <p>Commercial User requests to view Past Events. Server queries information for all Events whose user ID column matches the Commercial User's user ID and whose end date is before the current date. Server returns the requested information.
                     The application displays to the user the information for each of these past events. If no past events exist, the application displays a message indicating that the Commercial User has no past events.</p>
+            </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+             <div class="indent">
                 <h3>Design Elements</h3>
                 <p>The Past Events Table identifies elements for the Past Events Concern. [4.27] These elements perform the duties of displaying and copying values held within said concern.</p>
                 <table>
@@ -2594,6 +2724,10 @@
                     </tr>
                 </table>
             </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">6.29</span>Start Auction (Commercial User) / Place Bid [3.29]</h2>
             <div class="indent">
                 <p>The Start Auction / Place Bid functionality is to allow a commercial user to bid for more awareness of their event. </p>
@@ -2643,6 +2777,10 @@
             <h2><span class="id">6.30</span>Share Event (Commercial User) [3.30]</h2>
             <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated, the Database sends a response to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the Share Event screen.</p>
             <p>Upon loading the Share Event screen, the Server sends a request to the Database to receive a link to the current Commercial User’s Event. The Database searches for the Commercial Users Event link, then sends the link back to the Server. Upon receiving an Event Link, the Server updates the GUI’s shareable link bar with the Event Link text. The GUI loads the Facebook, Instagram, and Twitter icons. [9.1.10]</p>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <p>If the Commercial User clicks on the Copy Link button, then the GUI copies the Event Link text to the Commercial User’s clipboard.</p>
             <p>If the Commercial User clicks on the Facebook icon, the Server will send a request through the Facebook API to load a post. [8.1.1] The Server will send the Event Link as a package through the Facebook API to be used in the post. If the Commercial
                 User clicks on the Instagram icon, the Server will send a request through the Instagram API to load a post. The Server will send the Event Link as a package through the Instagram API to be used in the post. If the Commercial User clicks
@@ -2725,6 +2863,10 @@
                     </tr>
                 </table>
             </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">6.31</span>Settings (Commercial User) [3.31]</h2>
             <p>
                 The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated, the Database sends a response to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the Settings screen.</p>
@@ -2784,6 +2926,10 @@
                     </tr>
                 </table>
             </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">6.32</span>Logout (Commercial User) [3.32]</h2>
             <div class="indent">
                 <h3>Design Viewpoints:</h3>
@@ -2852,7 +2998,10 @@
             <p>
                 The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated, the Database sends a response to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the View Consumer User Reports screen.</p>
             <p>Upon loading the Server will request an up to date Report text from the Database. Database will retrieve Report text and send back to the Server. The Server will update the GUI with the Report text. [7.4.1]</p>
-            <div class="indent">
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
                 <h3>Design Elements: </h3>
                 <p>
                     The View Consumer Reports Table identifies elements for the View Consumer Reports (Admin) Concern. [4.34] These elements perform the duty of displaying values held with said concern
@@ -2883,7 +3032,6 @@
                         <td>A block of text </td>
                     </tr>
                 </table>
-            </div>
             <h2><span class="id">6.35</span>Edit Profile (Admin User) [3.35]</h2>
             <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Key is validated, the Database sends a response to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the Edit Profile screen.[9.1.2]</p>
 
@@ -2940,6 +3088,10 @@
                     </tr>
                 </table>
             </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">6.36</span>Login (Admin User) [3.36]</h2>
             <div class="indent">
                 <h3>Design Viewpoints:</h3>
@@ -3017,6 +3169,20 @@
                                 <li>Constraint: Limited acceptance of symbols</li>
                             </ul>
                         </td>
+                    </tr>
+                 </table>
+              </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+              <div class="indent">
+                 <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Purpose</th>
+                        <th>Description</th>
                     </tr>
                     <tr>
                         <td>Remember me checkbox</td>
@@ -3099,6 +3265,10 @@
                     </tr>
                 </table>
             </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">6.38</span>Edit Users (Admin) [3.38]</h2>
             <div class="indent">
                 <h3>Design Viewpoints</h3>
@@ -3172,6 +3342,10 @@
                     </tr>
                 </table>
             </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">6.39</span>Edit Events (Admin) [3.39]</h2>
             <div class="indent">
                 <h3>Design Viewpoints</h3>
@@ -3245,6 +3419,10 @@
                     </tr>
                 </table>
             </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">6.40</span>Message (Admin) [3.40]</h2>
             <div class="indent">
                 <h3>Design Viewpoint</h3>
@@ -3320,6 +3498,20 @@
                         <td>Class</td>
                         <td>An object to more easily access and manipulate notifications.</td>
                         <td>This object will contain members such as date,title, body(others to be determined), associated getters and setters, and other functions to better work with notifications.</td>
+                    </tr>
+                 </table>
+              </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+              <div class="indent">
+                 <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Purpose</th>
+                        <th>Description</th>
                     </tr>
                     <tr>
                         <td>Notification title</td>
@@ -3410,6 +3602,10 @@
                     </tr>
                 </table>
             </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">6.44</span>View Consumer Profile [3.44]</h2>
             <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Key is validated, the Database sends a response to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the View My Profile screen.</p>
             <p>Upon loading the Server will update the GUI with a Report User button and Block User button. If the Report User button is clicked, then the Server will send a request to the Database to update the given Commercial or Consumer User as having been reported. If the Report User button is clicked, then the Server will send a request to the Database to update the given Commercial or Consumer User as having been blocked.</p>
@@ -3475,7 +3671,10 @@
                         <td>A unique key that validates login sessions by comparing the current key with the key stored in the database. </td>
                     </tr>
                 </table>
-        </div>
+              </div>
+          </div>
+      </div>
+      <div class="page">
         <h1><span class="id">7</span>Front-End</h1>
         <p>The Front-End section defines how the View will interact with the Controller. The Front-End serves to represent how the Admin, Commercial, and Consumer Users will be presented information. The Front-End also defines how the individual user may
             interact with the system.</p>
@@ -3484,25 +3683,55 @@
             <p>The Component UML of the view describes the components of the Front-End, and how they will interact and relate to each other. The Component UML also acts as the Operation View, which is used present to how the User-Interface is to be interacted
                 with and controlled by the User.</p>
             <img src="images/ComponentUML.png" alt="View Component UML" class="pic">
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">7.2</span>Behavioral Design Pattern</h2>
             <p>The Behavioral Design Pattern for the Front-End shows how the entities on the Uvents application interact with the Server to receive and show Server information.</p>
             <img src="images/View-BehavioralDesignPattern.png" alt="Behavioral Design Pattern" class="pic">
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">7.3</span>Front-End Structure Chart</h2>
             <p>The Structure-Charts for the Front-End show how the user may interact with the Front-End, and how information is presented to the user.</p>
             <div class="indent">
                 <h3><span class="id">7.3.1</span>Front-End Share Event (Commercial User) Structure Chart</h3>
                 <p>The Front-End Structure Chart for Share Event (Commercial User) acts to define how the Commercial User will interact with the Front-End to share their events.</p>
                 <img src="images/View-StructureChart-ShareEvent.png" alt="Share Event (Commercial User) Structure Chart" class="pic">
+             </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h3><span class="id">7.3.2</span>Front-End Edit Profile Structure Chart</h3>
                 <p>The Front-End Structure Chart for Edit Profile acts to define how the user will interact with the Front-End to edit their profile.</p>
                 <img src="images/View-StructureChart-EditProfile.png" alt="Edit Profile Structure Chart" class="pic">
+             </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h3><span class="id">7.3.3</span>Front-End Create Group Event (Consumer User) Structure Chart</h3>
                 <p>The Front-End Create Group Event acts to define how the Consumer User will interact with the Front-End to create a Group Event.</p>
                 <img src="images/View-StructureChart-CreateGroupEvent.png" alt="Create Group Event (Consumer User) Structure Chart" class="pic">
+             </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+            <div class="indent">
                 <h3><span class="id">7.3.4</span>Front-End Edit Users (Admin User) Structure Chart</h3>
                 <p>The Front-End Structure Chart for Edit Users (Admin User) acts to define how the Admin User will interact with the Front-End to edit users.</p>
                 <img src="images/View-StructureChart-EditUsers.png" alt="Edit Users (Admin User) Structure Chart" class="pic">
             </div>
+         </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">7.4</span>Front-End Workflow</h2>
             <p>
                 There are different workflow diagrams based on the User and process in question. The Following three diagrams together form the workflow that can be used by both engineers and developers alike.
@@ -3513,17 +3742,33 @@
                     used to highlight spots in the code where something along the lines of an if statement will be needed. This represents a crossroads where a condition is met or is not. This graphic overview of these different processes makes all of
                     the aspects of something more complicated like logging in, the logic behind it, and lays it out in an easy-to-understand manner. This is the Workflow Diagram for Admin Users.</p>
                 <img src="images/AdminWorkflowDiagrams.png" alt="Admin Workflow Diagram" class="pic">
+            </div>
+          </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+             <div class="indent">
                 <h3><span class="id">7.4.2</span>Commercial Workflow Diagram</h3>
                 <p>The workflow technique is designed to give the person who uses it a layed out example of a User performing a task on the system. This takes things like logging in and breaks it down into its steps and decision logic. Decision logic is
                     used to highlight spots in the code where something along the lines of an if statement will be needed. This represents a crossroads where a condition is met or is not. This graphic overview of these different processes makes all of
                     the aspects of something more complicated like logging in, the logic behind it, and lays it out in an easy-to-understand manner. This is the Workflow Diagram for Commercial Users.</p>
                 <img src="images/CommercialWorkflowDiagram.png" alt="Commercial Workflor Diagram" class="pic">
+            </div>
+          </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+             <div class="indent">
                 <h3><span class="id">7.4.3</span>Consumer Workflow Diagram</h3>
                 <p>The workflow technique is designed to give the person who uses it a layed out example of a User performing a task on the system. This takes things like logging in and breaks it down into its steps and decision logic. Decision logic is
                     used to highlight spots in the code where something along the lines of an if statement will be needed. This represents a crossroads where a condition is met or is not. This graphic overview of these different processes makes all of
                     the aspects of something more complicated like logging in, the logic behind it, and lays it out in an easy-to-understand manner. This is the Workflow Diagram for ConsumerUsers.</p>
                 <img src="images/ConsumerWorkflowDiagram.png" alt="Consumer Workflow Diagram" class="pic">
             </div>
+          </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">7.5</span>Front-End Data and Information View Design</h2>
             <p>
                 This view focuses on the flow of information and data as the program operates. There is no particular sequence of events. Of course everything begins when a user either creates an account or logs into their account. This can be done by entering credentials
@@ -3533,6 +3778,10 @@
                 showcase more ways to operate a commercial user account.
             </p>
             <img src="images/Data_and_Information_View_Design.png" alt="Data and Information View Design Diagram" class="pic">
+          </div>
+      </div>
+      <div class="page">
+         <div class="indent">
             <h2><span class="id">7.6</span>Entity Relationships</h2>
             <p>An entity relationship diagram (ERD) shows the relationships of entity sets stored in a database. An entity in this context is an object, a component of data. An entity set is a collection of similar entities. These entities can have attributes
                 that define its properties[1]. For the Uvents project, this diagram is built based on the 3.5 Logical Database Requirements section of the SRS. It consists of 14 tables that will hold both user and application data[2]. This database will
@@ -3544,6 +3793,8 @@
                 own special project.</p>
             <img src="./images/Uvents_project_viewpoint.png" alt="Uvents Project Viewpoint Diagram" class="pic">
         </div>
+      </div>
+      <div class="page">
         <h1><span class="id">8</span>Model</h1>
         <p>The Model of the Uvents application acts as….</p>
         <div class="indent">
@@ -3557,6 +3808,12 @@
                     can be predictable.</p>
                 <img src="./images/CommunicationUML.png" alt="Communication UML" class="pic">
                 <figcaption>Communication UML Figure 1</figcaption>
+            </div>
+          </div>
+      </div>
+      <div class="page">
+         <div class="indent">
+             <div class="indent">
                 <h3><span class="id">8.1.2</span>Communication UML Edit/View Profile View</h3>
                 <p>This diagram shows the flow of communication when editing and viewing a profile. The user will click the button to view or edit. That will then be sent to the server and the server will retrieve data from the database. The information
                     will now be adjustable. The user can adjust their profile, and upon completion may save it to the database. The server will perform some validation and upon completion an update success view will be sent to the app and it will then
