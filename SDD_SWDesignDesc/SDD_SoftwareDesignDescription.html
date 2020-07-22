@@ -2554,8 +2554,8 @@
                 </table>
             </div>
             <h2><span class="id">6.30</span>Share Event (Commercial User) [3.30]</h2>
-            <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends a response
-                to the Server that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the Share Event screen.</p>
+            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated, the Database sends a response to 
+                the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the Share Event screen.</p>
             <p>Upon loading the Share Event screen, the Server sends a request to the Database to receive a link to the current Commercial User’s Event. The Database searches for the Commercial Users Event link, then sends the link back to the Server. Upon
                 receiving an Event Link, the Server updates the GUI’s shareable link bar with the Event Link text. The GUI loads the Facebook, Instagram, and Twitter icons. [9.1.10]</p>
             <p>If the Commercial User clicks on the Copy Link button, then the GUI copies the Event Link text to the Commercial User’s clipboard.</p>
@@ -2591,10 +2591,10 @@
                         <td>Hyperlinks using Instagram API to load new post. </td>
                     </tr>
                     <tr>
-                        <td>Hyperlinks using Instagram API to load new post. </td>
+                        <td>Shareable link bar </td>
                         <td>Entity </td>
                         <td>Pulls up option for the Commercial Users to share events. </td>
-                        <td>Presents options for the Commercial Users to share events. </td>
+                        <td>Presents options for the Commercial Users to share events.</td>
                     </tr>
                     <tr>
                         <td>Event link </td>
@@ -2609,44 +2609,20 @@
                         <td>Copies shareable link to Commercial Users clipboard. </td>
                     </tr>
                     <tr>
-                        <td>Facebook login </td>
-                        <td>Relationship </td>
-                        <td>Login a Commercial to their Facebook account so they can share on Facebook. </td>
-                        <td>Use Facebook API to ask for and verify credentials </td>
-                    </tr>
-                    <tr>
-                        <td>Twitter login </td>
-                        <td>Relationship </td>
-                        <td>Login a Commercial to their Facebook account so they can share on Twitter. </td>
-                        <td>Use Twitter API to ask for and verify credentials. </td>
-                    </tr>
-                    <tr>
-                        <td>Instagram login </td>
-                        <td>Relationship </td>
-                        <td>Login a Commercial to their Facebook account so they can share on Instagram. </td>
-                        <td>Use Instagram API to ask for and verify credentials </td>
-                    </tr>
-                    <tr>
-                        <td>Invalid Credentials </td>
-                        <td>Constraint </td>
-                        <td>Provide proper authentication for logging in to Social Media Platforms </td>
-                        <td>Doesn’t allow Commercial Users to access Social Media platforms if credentials are invalid. </td>
-                    </tr>
-                    <tr>
-                        <td>Session Key </td>
+                        <td>User Token </td>
                         <td>Entity </td>
-                        <td>Verifies the user is currently logged. </td>
+                        <td>Verifies the user is currently logged.</td>
                         <td>A unique key that validates login sessions by comparing the current key with the key stored in the database. </td>
                     </tr>
                 </table>
             </div>
             <h2><span class="id">6.31</span>Settings (Commercial User) [3.31]</h2>
-            <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends a response
-                to the Server that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the Settings screen. </p>
-            <p>Upon loading the Settings screen, the GUI [7.4.3, 9.1.5, 9.1.11] will display a Logout button and a Notifications on/off slider. If the Commercial User clicks the logout button, the Server will send a request to the Database to disqualify
-                the current Session Key. Once the Session Key is disqualified, the Database will notify the Server that the Session Key is no longer valid. Once the Server receives the communication from the Database, then the Server will update the GUI
-                to present the Login screen. If the Commercial User clicks the Notifications on/off slider, the Server will send a request to open the Commercial User’s default settings application with a package to open the notifications settings section
-                within the default settings application.</p>
+            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated, the Database sends a response 
+                to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the Settings screen.  </p>
+            <p>Upon loading the Settings screen, the GUI will display a Logout button and a Notifications on/off slider. If the Commercial User clicks the logout button, the Server will send a request to the Database to disqualify the current User Token. 
+                Once the User Token is disqualified, the Database will notify the Server that the USer Token is no longer valid. Once the Server receives the communication from the Database, then the Server will update the GUI to present the Login screen. 
+                If the Commercial User clicks the Notifications on/off slider, the Server will send a request to open the Commercial User’s default settings application with a package to open the notifications settings section within the default settings 
+                application.</p>
             <div class="indent">
                 <h3>Design Elements: </h3>
                 <p>The Settings (Commercial) Table identifies elements for the Settings (Commercial) concern. [4.31] These elements perform the duties of displaying and updating values within said concern.</p>
@@ -2664,9 +2640,9 @@
                         <td>A button that can be clicked to perform the function. </td>
                     </tr>
                     <tr>
-                        <td>Session Key</td>
+                        <td>User Token </td>
                         <td>Entity </td>
-                        <td>Verifies the user is currently logged. </td>
+                        <td>Verifies the user is currently logged.</td>
                         <td>A unique key that validates login sessions by comparing the current key with the key stored in the database. </td>
                     </tr>
                     <tr>
@@ -2678,14 +2654,26 @@
                     <tr>
                         <td>Server Request </td>
                         <td>Relationship </td>
-                        <td>To request that Session Keys be invalidated.</td>
+                        <td>To request that User Tokens be invalidated. </td>
                         <td>A request </td>
                     </tr>
                     <tr>
                         <td>Database Notification </td>
                         <td>Relationship </td>
-                        <td>To notify server that Session Key has been invalidated </td>
+                        <td>To notify server that User Token has been invalidated</td>
                         <td>A notification </td>
+                    </tr>
+                    <tr>
+                        <td>Delete Account button</td>
+                        <td>Entity</td>
+                        <td>Allows the user to delete the account</td>
+                        <td>Upon the click, the user will be asked for a confirmation. After the success, all the information about the user will be permanently deleted.</td>
+                    </tr>
+                    <tr>
+                        <td>Setting button</td>
+                        <td>Entity</td>
+                        <td>Allow users to go “setting menu” and change the information of users.</td>
+                        <td>A button that retrieves the database of information of users, and displays all information of users</td>
                     </tr>
                 </table>
             </div>
@@ -2715,8 +2703,8 @@
                 </table>
             </div>
             <h2><span class="id">6.33</span>View Commercial Reports (Admin User) [3.33]</h2>
-            <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. [7.4.1] The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends
-                a response to the Server that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the View Commercial Reports screen. [7.3.4] </p>
+            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated, 
+                the Database sends a response to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the View Commercial Reports screen.</p>
             <p>Upon loading the Server will request an up to date Report text from the Database. Database will retrieve Report text and send back to the Server. The Server will update the GUI with the Report text. [7.4.1] </p>
             <div class="indent">
                 <h3>Design Elements: </h3>
@@ -2737,9 +2725,9 @@
                         <td>A block of text </td>
                     </tr>
                     <tr>
-                        <td>Session Key</td>
+                        <td>User Token </td>
                         <td>Entity </td>
-                        <td>Verifies the user is currently logged. </td>
+                        <td>Verifies the user is currently logged.</td>
                         <td>A unique key that validates login sessions by comparing the current key with the key stored in the database. </td>
                     </tr>
                     <tr>
@@ -2751,8 +2739,8 @@
                 </table>
             </div>
             <h2><span class="id">6.34</span>View Consumer Reports (Admin User) [3.34]</h2>
-            <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. [7.4.1] The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends
-                a response to the Server that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the View Consumer Reports screen. [7.3.4]</p>
+            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated, 
+                the Database sends a response to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the View Consumer Reports screen.  </p>
             <p>Upon loading the Server will request an up to date Report text from the Database. Database will retrieve Report text and send back to the Server. The Server will update the GUI with the Report text. [7.4.1]</p>
             <div class="indent">
                 <h3>Design Elements: </h3>
@@ -2773,9 +2761,9 @@
                         <td>A block of text </td>
                     </tr>
                     <tr>
-                        <td>Session Key</td>
+                        <td>User Token </td>
                         <td>Entity </td>
-                        <td>Verifies the user is currently logged. </td>
+                        <td>Verifies the user is currently logged.</td>
                         <td>A unique key that validates login sessions by comparing the current key with the key stored in the database. </td>
                     </tr>
                     <tr>
@@ -2787,8 +2775,9 @@
                 </table>
             </div>
             <h2><span class="id">6.35</span>Edit Profile (Admin User) [3.35]</h2>
-            <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends a response
-                to the Server that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the Edit Profile screen. [9.1.2] </p>
+            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its 
+                own valid User Token. If the Token is validated, the Database sends a response to the Server that the User Token is valid. If the User Token is valid, then the 
+                Server updates the GUI with the View Consumer Reports screen.</p>
 
             <p>If Admin User clicks on a current username, they may change their username. The Server will request the username to be checked with the database to make sure that username is not already in use. [8.6.2, 9.1.2]</p>
 
@@ -2818,7 +2807,7 @@
                         <td>Name chosen by an Admin User to represent themselves to others.</td>
                     </tr>
                     <tr>
-                        <td>Relationship between the Server and Database </td>
+                        <td>Update current profile picture</td>
                         <td>Relationship </td>
                         <td>Changes the Admin User’s username </td>
                         <td>Relationship between the Server and Database </td>
@@ -2834,6 +2823,14 @@
                         <td>Constraint </td>
                         <td>Prevents username from being overly complicated and long. </td>
                         <td>Checks new username character count with pre-configured maximum size. </td>
+                    </tr>
+                    <tr>
+                        <td>Save Button</td>
+                        <td>Entity</td>
+                        <td>Allows Admin User to Save changes</td>
+                        <td>After clicking, the information is verified and sent to the server to be recorded in the database. Upon the successful 
+                            submission, the user is notified about it
+                        </td>
                     </tr>
                 </table>
             </div>
@@ -3271,12 +3268,13 @@
                 </tr>
             </table>
             <h2><span class="id">6.45</span>View Commercial Profile [3.45]</h2>
-            <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends a response
-                to the Server that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the View My Profile screen. [9.1.1] </p>
+            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated, the Database sends a 
+                response to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the View My Profile screen. </p>
             <p>Upon loading the Server will update the GUI with a Report User button and Block User button. If the Report User button is clicked, then the Server will send a request to the Database to update the given Commercial or Consumer User as having
                 been reported. [7.6] If the Report User button is clicked, then the Server will send a request to the Database to update the given Commercial or Consumer User as having been blocked. [9.1.4] </p>
             <div class="indent">
                 <h3>Design Elements:</h3>
+                <p>The Login Table identifies elements for the Login Concern. [3.45] These elements perform the duties of displaying and copying values held within said concern.</p>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -3297,10 +3295,10 @@
                         <td>A button that can be clicked to perform the function.</td>
                     </tr>
                     <tr>
-                        <td>Session Key</td>
-                        <td>Entity</td>
+                        <td>User Token </td>
+                        <td>Entity </td>
                         <td>Verifies the user is currently logged.</td>
-                        <td>A unique key that validates login sessions by comparing the current key with the key stored in the database.</td>
+                        <td>A unique key that validates login sessions by comparing the current key with the key stored in the database. </td>
                     </tr>
                 </table>
             </div>
