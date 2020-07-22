@@ -701,14 +701,6 @@
         </ul>
     </div>
     <div class="page">
-        <ul class="auto-ID big" id="3.46">
-            <li>Event Messaging (Commercial User)[1.5.1.1]
-                <p>Sponsor wants Commercial Users to be able to send messages about events</p>
-            </li>
-            <li>Notifications (Commercial User) [1.5.1.01]
-                <p>Sponsor wants Commercial Users to be able to receive notifications</p>
-            </li>
-        </ul>
         <h1><span class="id">4</span>Overview/Architecture</h1>
         <div class="indent">
             <h2><span class="id">4.1</span>Overview</h2>
@@ -1062,11 +1054,6 @@
                 Consumer profile.</p>
             <h2><span class="id">5.45</span>View Commercial Profile [3.45]</h2>
             <p>Consumer and Admin Users can view all Commercial profiles on the Commercial Profiles page.</p>
-            <h2><span class="id">5.46</span>Event Messaging (Commercial User) [3.46]</h2>
-            <p>Commercial Users can send Messages with information about events.</p>
-            <h2><span class="id">5.47</span>Notifications (Commercial User) [3.47]</h2>
-            <p>The Commercial User will have the ability to see different types of notifications for different events on the Events page. Once the Commercial User clicks on the Event, there is a button to “View Notifications”. Further notifications preferences
-                will have the option to be changed in the settings.</p>
         </div>
         <h1><span class="id">6</span>Design Viewpoints</h1>
         <div class="indent">
@@ -1451,15 +1438,12 @@
             <p>App sends request to server. Server gathers details from database. Server sends view to App. </p>
             <h3>Design Elements: </h3>
             <p>The following elements will control the elements sent to the database, restricting the results returned to the application.</p>
-<<<<<<< HEAD
             <ul>
                 <li>Time frame scale [DIV Figure 1]</li>
                 <li>Location input [DIV Figure 1] </li>
                 <li>Cost [DIV Figure 1] </li>
                 <li>Event type selector [DIV Figure 1] </li>
             </ul>
-=======
->>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
             <table>
                 <tr>
                     <th>Name</th>
@@ -2313,7 +2297,6 @@
             <h2><span class="id">6.23</span>Create Commercial Event (Commercial User) [3.23]</h2>
             <div class="indent">
                 <h3>Design Viewpoints:</h3>
-<<<<<<< HEAD
                 <p>The User Token will be verified and then the user’s input will be added to the database and stored as a new commercial event.</p>
                 <ul>
                     <li>User Token verified</li>
@@ -2323,10 +2306,6 @@
                     <li>Database saves new Event</li>
                     <li>Changes to queried table</li>
                 </ul>
-=======
-                <p>The session id will be verified and then the user’s input will be added to the database and stored as a new commercial event.</p>
->>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
-
                 <h3>Design Elements:</h3>
                 <p>The Create Commercial Event feature shall prompt the commercial user for a price, location, date, and time that shall be stored in a database.</p>
                 <table>
@@ -2565,12 +2544,7 @@
             <div class="indent">
                 <p>The promote event concern is meant to provide users the capacity to promote the events they created. The promote event functionality allows users to keep track and to manage their auctions. </p>
                 <h3>Design Viewpoints</h3>
-<<<<<<< HEAD
-                <p>Commercial User enters in the Promote Event feature. The server requests the time till the next bidding auction. The server returns the requested information. The information is displayed to the commercial user. The server verifies if
-                    the next bidding auction started. If the answer is true, the application will allow the commercial user to click on Start Auction. </p>
-=======
                 <p>Commercial user enters in the Promote Event feature. The server requests the time till the next bidding auction. The server returns the requested information. The time till next auction will be a predetermined date and time. The auction will also end at a predetermined time. The information is displayed to the Commercial User. The server verifies if the next bidding auction started. If the answer is true, the application will allow the commercial user to click on Start Auction.</p>
->>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
                 <h3>Design Elements</h3>
                 <p>The Promote Event Table identifies elements for the Promote Event Concern. [4.28] These elements perform the duties of displaying and copying values held within said concern.</p>
                 <table>
@@ -2653,14 +2627,8 @@
                 </table>
             </div>
             <h2><span class="id">6.30</span>Share Event (Commercial User) [3.30]</h2>
-<<<<<<< HEAD
-            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated, the Database sends a response
-=======
-            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Key is validated, the Database sends a response
->>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
-                to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the Share Event screen.</p>
-            <p>Upon loading the Share Event screen, the Server sends a request to the Database to receive a link to the current Commercial User’s Event. The Database searches for the Commercial Users Event link, then sends the link back to the Server. Upon
-                receiving an Event Link, the Server updates the GUI’s shareable link bar with the Event Link text. The GUI loads the Facebook, Instagram, and Twitter icons. [9.1.10]</p>
+            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated, the Database sends a response to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the Share Event screen.</p>
+            <p>Upon loading the Share Event screen, the Server sends a request to the Database to receive a link to the current Commercial User’s Event. The Database searches for the Commercial Users Event link, then sends the link back to the Server. Upon receiving an Event Link, the Server updates the GUI’s shareable link bar with the Event Link text. The GUI loads the Facebook, Instagram, and Twitter icons. [9.1.10]</p>
             <p>If the Commercial User clicks on the Copy Link button, then the GUI copies the Event Link text to the Commercial User’s clipboard.</p>
             <p>If the Commercial User clicks on the Facebook icon, the Server will send a request through the Facebook API to load a post. [8.1.1] The Server will send the Event Link as a package through the Facebook API to be used in the post. If the Commercial
                 User clicks on the Instagram icon, the Server will send a request through the Instagram API to load a post. The Server will send the Event Link as a package through the Instagram API to be used in the post. If the Commercial User clicks
@@ -2744,21 +2712,10 @@
                 </table>
             </div>
             <h2><span class="id">6.31</span>Settings (Commercial User) [3.31]</h2>
-            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated, the Database sends a response
-<<<<<<< HEAD
-                to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the Settings screen. </p>
-            <p>Upon loading the Settings screen, the GUI will display a Logout button and a Notifications on/off slider. If the Commercial User clicks the logout button, the Server will send a request to the Database to disqualify the current User Token.
-                Once the User Token is disqualified, the Database will notify the Server that the USer Token is no longer valid. Once the Server receives the communication from the Database, then the Server will update the GUI to present the Login screen.
-                If the Commercial User clicks the Notifications on/off slider, the Server will send a request to open the Commercial User’s default settings application with a package to open the notifications settings section within the default settings
-                application.
-            </p>
-=======
-                to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the Settings screen.  </p>
-            <p>Upon loading the Settings screen, the GUI will display a Logout button and a Notifications on/off slider. If the Commercial User clicks the logout button, the Server will send a request to the Database to disqualify the current User Token.
-                Once the User Token is disqualified, the Database will notify the Server that the USer Token is no longer valid. Once the Server receives the communication from the Database, then the Server will update the GUI to present the Login screen.
-                If the Commercial User clicks the Notifications on/off slider, the Server will send a request to open the Commercial User’s default settings application with a package to open the notifications settings section within the default settings
-                application.</p>
->>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
+            <p>
+                The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated, the Database sends a response to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the Settings screen.</p>
+            <p>
+                Upon loading the Settings screen, the GUI will display a Logout button and a Notifications on/off slider. If the Commercial User clicks the logout button, the Server will send a request to the Database to disqualify the current User Token. Once the User Token is disqualified, the Database will notify the Server that the USer Token is no longer valid. Once the Server receives the communication from the Database, then the Server will update the GUI to present the Login screen. If the Commercial User clicks the Notifications on/off slider, the Server will send a request to open the Commercial User’s default settings application with a package to open the notifications settings section within the default settings application.</p>
             <div class="indent">
                 <h3>Design Elements: </h3>
                 <p>The Settings (Commercial) Table identifies elements for the Settings (Commercial) concern. [4.31] These elements perform the duties of displaying and updating values within said concern.</p>
@@ -2843,13 +2800,7 @@
                 </table>
             </div>
             <h2><span class="id">6.33</span>View Commercial Reports (Admin User) [3.33]</h2>
-<<<<<<< HEAD
-            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated, the Database sends a response
-                to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the View Commercial Reports screen.</p>
-=======
-            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated,
-                the Database sends a response to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the View Commercial Reports screen.</p>
->>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
+            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated, the Database sends a response to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the View Commercial Reports screen.</p>
             <p>Upon loading the Server will request an up to date Report text from the Database. Database will retrieve Report text and send back to the Server. The Server will update the GUI with the Report text. [7.4.1] </p>
             <div class="indent">
                 <h3>Design Elements: </h3>
@@ -2884,13 +2835,8 @@
                 </table>
             </div>
             <h2><span class="id">6.34</span>View Consumer Reports (Admin User) [3.34]</h2>
-<<<<<<< HEAD
-            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated, the Database sends a response
-                to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the View Consumer Reports screen. </p>
-=======
-            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. [7.4.1] The Database compares the received User Token with its own valid User Token. If the Key is validated, the Database sends
-                a response to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the View Consumer Reports screen. [7.3.4]</p>
->>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
+            <p>
+                The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated, the Database sends a response to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the View Consumer User Reports screen.</p>
             <p>Upon loading the Server will request an up to date Report text from the Database. Database will retrieve Report text and send back to the Server. The Server will update the GUI with the Report text. [7.4.1]</p>
             <div class="indent">
                 <h3>Design Elements: </h3>
@@ -2925,13 +2871,7 @@
                 </table>
             </div>
             <h2><span class="id">6.35</span>Edit Profile (Admin User) [3.35]</h2>
-<<<<<<< HEAD
-            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated, the Database sends a response
-                to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the View Consumer Reports screen.</p>
-=======
-            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Key is validated, the Database sends a response
-                to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the Edit Profile screen. [9.1.2] </p>
->>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
+            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Key is validated, the Database sends a response to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the Edit Profile screen.[9.1.2]</p>
 
             <p>If Admin User clicks on a current username, they may change their username. The Server will request the username to be checked with the database to make sure that username is not already in use. [8.6.2, 9.1.2]</p>
 
@@ -2982,13 +2922,7 @@
                         <td>Save Button</td>
                         <td>Entity</td>
                         <td>Allows Admin User to Save changes</td>
-<<<<<<< HEAD
-                        <td>After clicking, the information is verified and sent to the server to be recorded in the database. Upon the successful submission, the user is notified about it
-=======
-                        <td>After clicking, the information is verified and sent to the server to be recorded in the database. Upon the successful
-                            submission, the user is notified about it
->>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
-                        </td>
+                        <td>After clicking, the information is verified and sent to the server to be recorded in the database. Upon the successful submission, the user is notified about it</td>
                     </tr>
                 </table>
             </div>
@@ -3103,18 +3037,9 @@
             <h2><span class="id">6.37</span>Create New Admin (Admin) [3.37]</h2>
             <div class="indent">
                 <h3>Design Viewpoints</h3>
-<<<<<<< HEAD
-                <p>The Admin is asked to input their email. Create new username and password is displayed to the admin. The server shall authenticate the username by searching through the database for the same username. This ensures a unique username. If
-                    a similar username is found, an alert will pop up to the user telling them that the username is already in use. Client side validation shall be used to ensure that the password is valid. A valid password will be a password that has
-                    at least 6 characters. The Admin is then asked to provide their name. Once the create account button is pressed, the form will be validated.</p>
-                <h3>Design Elements</h3>
-                <p>The Create New Admin Table identifies elements for the Create New Admin Concern. [4.37] These elements perform the duties of displaying and copying values held within said concern.
-                </p>
-=======
                 <p>The Admin is asked to input their email. Create new username and password is displayed to the admin. The server shall authenticate the username by searching through the database for the same username. This ensures a unique username. If a similar username is found, an alert will pop up to the user telling them that the username is already in use. Client side validation shall be used to ensure that the password is valid. A valid password will be a password that has at least 6 characters. The Admin is then asked to provide their name. Once the create account button is pressed, the form will be validated.</p>
                 <h3>Design Elements</h3>
-                <p>	The Create New Admin Table identifies elements for the Create New Admin Concern. [4.37] These elements perform the duties of displaying and copying values held within said concern.</p>
->>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
+                <p>The Create New Admin Table identifies elements for the Create New Admin Concern. [4.37] These elements perform the duties of displaying and copying values held within said concern.</p>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -3472,15 +3397,8 @@
                 </table>
             </div>
             <h2><span class="id">6.44</span>View Consumer Profile [3.44]</h2>
-<<<<<<< HEAD
-            <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends a response
-                to the Server that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the View My Profile screen.</p>
-            <p>Upon loading the Server will update the GUI with a Report User button and Block User button. If the Report User button is clicked, then the Server will send a request to the Database to update the given Commercial or Consumer User as having
-                been reported. If the Report User button is clicked, then the Server will send a request to the Database to update the given Commercial or Consumer User as having been blocked.</p>
-=======
             <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Key is validated, the Database sends a response to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the View My Profile screen.</p>
             <p>Upon loading the Server will update the GUI with a Report User button and Block User button. If the Report User button is clicked, then the Server will send a request to the Database to update the given Commercial or Consumer User as having been reported. If the Report User button is clicked, then the Server will send a request to the Database to update the given Commercial or Consumer User as having been blocked.</p>
->>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
             <h3>Design Elements:</h3>
             <p>	The View Consumer Profile Table identifies elements for the Login Concern. [4.44] These elements perform the duties of displaying and copying values held within said concern.</p>
             <table>
@@ -3510,13 +3428,8 @@
                 </tr>
             </table>
             <h2><span class="id">6.45</span>View Commercial Profile [3.45]</h2>
-<<<<<<< HEAD
-            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated, the Database sends a response
-                to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the View My Profile screen. </p>
-=======
             <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Key is validated, the Database sends a response
                 to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the View My Profile screen. [9.1.1] </p>
->>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
             <p>Upon loading the Server will update the GUI with a Report User button and Block User button. If the Report User button is clicked, then the Server will send a request to the Database to update the given Commercial or Consumer User as having
                 been reported. [7.6] If the Report User button is clicked, then the Server will send a request to the Database to update the given Commercial or Consumer User as having been blocked. [9.1.4] </p>
             <div class="indent">
@@ -3548,102 +3461,6 @@
                         <td>A unique key that validates login sessions by comparing the current key with the key stored in the database. </td>
                     </tr>
                 </table>
-            </div>
-            <h2><span class="id">6.46</span>Event Messaging (Commercial User) [3.46]</h2>
-            <div class="indent">
-                <h3>Design Viewpoints:</h3>
-                <p>Session ID must be verified, after which the conversation begins between two users securely. They can send messages, view message information, see whether the conversations are read. The interface of the messaging allows Commercial Users
-                    to send messages and the interface of the messaging allows Commercial Usersto react to messages that have been sent.</p>
-                <h3>Design Elements:</h3>
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Purpose</th>
-                        <th>Description</th>
-                    </tr>
-                    <tr>
-                        <td>‘Event Messaging’ Button</td>
-                        <td>Entity</td>
-                        <td>To allow a Commercial UUser to access and use the Event Messages that they have permissions for.</td>
-                        <td>A button that switches the view, retrieves data from the database and populates the Event Messages page with the information.</td>
-                    </tr>
-                    <tr>
-                        <td>Messages</td>
-                        <td>Class</td>
-                        <td>An object to access, send and receive messages for specific events.</td>
-                        <td>This object will contain all of the logic needed for the messages portion to function and member variables that will be tracked and stored in the database.</td>
-                    </tr>
-                    <tr>
-                        <td>Event Messages Display</td>
-                        <td>Entity</td>
-                        <td>Displays the messages in sequential order based on date.</td>
-                        <td>This will display messages in an easy-to-read way for the Consumer to view.</td>
-                    </tr>
-                    <tr>
-                        <td>Event Messages Name View</td>
-                        <td>Entity</td>
-                        <td>Displays the name of the other Users that have sent each message on the page.</td>
-                        <td>This will display the names of users when they send messages to identify who said what in the chat.</td>
-                    </tr>
-                    <tr>
-                        <td>Event Messages Date View</td>
-                        <td>Entity</td>
-                        <td>Displays the date that goes with each message. This is dual purpose as it can also be used to display the messages in the correct order.</td>
-                        <td>This will display the date of when each message was sent, this can be used to keep a log of the conversation and can also be used in the display logic.</td>
-                    </tr>
-                    <tr>
-                        <td>Event Messages ‘Send’ Button</td>
-                        <td>Entity</td>
-                        <td>To allow a Commercial User with sufficient permissions to send messages to the other Users of the same Event.</td>
-                        <td>A button that will send the message to the database to be stored and will re-populate the page with the new message (with accompanying data).</td>
-                    </tr>
-                </table>
-            </div>
-            <h2><span class="id">6.47</span>Notifications (Commercial User) [3.47]</h2>
-            <div class="indent">
-                <h3>Design Viewpoints:</h3>
-                <p>The connection to the database must be verified. The list of notifications is displayed according to the preferences. Expired notifications are removed. Notifications shall be deletable and removable.</p>
-                <h3>Design Elements:</h3>
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Purpose</th>
-                        <th>Description</th>
-                    </tr>
-                    <tr>
-                        <td>Notifications Button</td>
-                        <td>Entity</td>
-                        <td>Allow a User to view Notifications they have received.</td>
-                        <td>A button that retrieves the database of notifications in the Commercial User’s inbox, and displays those notifications.</td>
-                    </tr>
-                    <tr>
-                        <td>Notifications</td>
-                        <td>Class</td>
-                        <td>An object to more easily access and manipulate notifications.</td>
-                        <td>This object will contain members such as date,title, body(others to be determined), associated getters and setters, and other functions to better work with notifications.</td>
-                    </tr>
-                    <tr>
-                        <td>Notification title</td>
-                        <td>Entity</td>
-                        <td>Gives the main point of the notification.</td>
-                        <td>A text box displaying which function of the application caused the notification to be sent</td>
-                    </tr>
-                    <tr>
-                        <td>Notification Body</td>
-                        <td>Entity</td>
-                        <td>Gives the details that come with the notification.</td>
-                        <td>The text contained within the notification</td>
-                    </tr>
-                    <tr>
-                        <td>Notification options bar</td>
-                        <td>Entity</td>
-                        <td></td>
-                        <td>A popup menu that displays when selecting a notification, allowing for deletion, flagging, muting, and other messaging options.</td>
-                    </tr>
-                </table>
-            </div>
         </div>
         <h1><span class="id">7</span>Front-End</h1>
         <p>The Front-End section defines how the View will interact with the Controller. The Front-End serves to represent how the Admin, Commercial, and Consumer Users will be presented information. The Front-End also defines how the individual user may
