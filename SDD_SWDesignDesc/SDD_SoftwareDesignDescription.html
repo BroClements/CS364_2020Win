@@ -149,16 +149,17 @@
             <div><a href="#4.3">4.3 Consumer User Overview</a> <span></span> <span class="pageNumber">19</span></div>
             <div><a href="#4.4">4.4 Commercial User Overview</a> <span></span> <span class="pageNumber">24</span></div>
             <div><a href="#4.5">4.5 Admin User Overview</a> <span></span> <span class="pageNumber">29</span></div>
+            <div><a href="#4.6">4.6 Model View Controller</a> <span></span> <span class="pageNumber">34</span></div>
         </div>
-        <div><a href="#5" class="big">5 DESIGN VIEWS</a> <span></span> <span class="pageNumber">34</span></div>
+        <div><a href="#5" class="big">5 DESIGN VIEWS</a> <span></span> <span class="pageNumber">35</span></div>
         <div class="indent">
-            <div><a href="#5.1">5.1 Create Account (Consumer User)</a> <span></span> <span class="pageNumber">34</span></div>
-            <div><a href="#5.2">5.2 Join Commercial Event (Consumer User)</a> <span></span> <span class="pageNumber">34</span></div>
-            <div><a href="#5.3">5.3 Join Group Event (Consumer User)</a> <span></span> <span class="pageNumber">34</span></div>
-            <div><a href="#5.4">5.4 Edit Profile (Consumer User)</a> <span></span> <span class="pageNumber">34</span></div>
-            <div><a href="#5.5">5.5 View My Profile (All Users)</a> <span></span> <span class="pageNumber">34</span></div>
-            <div><a href="#5.6">5.6 Login (Consumer User)</a> <span></span> <span class="pageNumber">34</span></div>
-            <div><a href="#5.7">5.7 Discover (Consumer User)</a> <span></span> <span class="pageNumber">35</span></div>
+            <div><a href="#5.1">5.1 Create Account (Consumer User)</a> <span></span> <span class="pageNumber">35</span></div>
+            <div><a href="#5.2">5.2 Join Commercial Event (Consumer User)</a> <span></span> <span class="pageNumber">35</span></div>
+            <div><a href="#5.3">5.3 Join Group Event (Consumer User)</a> <span></span> <span class="pageNumber">35</span></div>
+            <div><a href="#5.4">5.4 Edit Profile (Consumer User)</a> <span></span> <span class="pageNumber">35</span></div>
+            <div><a href="#5.5">5.5 View My Profile (All Users)</a> <span></span> <span class="pageNumber">35</span></div>
+            <div><a href="#5.6">5.6 Login (Consumer User)</a> <span></span> <span class="pageNumber">35</span></div>
+            <div><a href="#5.7">5.7 Discover (Consumer User)</a> <span></span> <span class="pageNumber">36</span></div>
             <div><a href="#5.8">5.8 Filter/Sorting (Consumer User)</a> <span></span> <span class="pageNumber">p</span></div>
             <div><a href="#5.9">5.9 Search Bar (Consumer User)</a> <span></span> <span class="pageNumber">p</span></div>
             <div><a href="#5.10">5.10 Create Group Event (Consumer User)</a> <span></span> <span class="pageNumber">p</span></div>
@@ -364,6 +365,7 @@
         <div><a href="#4.5.2">Admin User - View My Profile</a> <span></span> <span class="pageNumber">31</span></div>
         <div><a href="#4.5.3">Admin User - Reports</a> <span></span> <span class="pageNumber">32</span></div>
         <div><a href="#4.5.4">Admin User - Settings</a> <span></span> <span class="pageNumber">33</span></div>
+        <div><a href="#4.6">Model View Controller (Architectural Design Pattern)</a> <span></span> <span class="pageNumber">34</span></div>
         <div><a href="#7.1">Front-End - Component UML</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#7.2">Front-End - Behavioral Design Pattern</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#7.3.1">Front-End - Share Event (Commercial User) Structure Chart</a> <span></span> <span class="pageNumber">p</span></div>
@@ -375,9 +377,9 @@
         <div><a href="#7.4.3">Front-End - Consumer Workflow Diagram</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#7.5">Front-End Data and Information View Design</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#7.6">Entity Relationships</a> <span></span> <span class="pageNumber">p</span></div>
-        <div><a href="#7.7">Project Viewpoint</a> <span></span> <span class="pageNumber">p</span></div>
     </div>
     <div class="page table-of-contents">
+        <div><a href="#7.7">Project Viewpoint</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#8">Communication UML</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#8.1">Communication Edit/View Profile</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#8.1.1">Communication UML Login View</a> <span></span> <span class="pageNumber">p</span></div>
@@ -408,9 +410,9 @@
         <div><a href="#8.5.3">Data Flow - View Profile</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#8.5.4">Data Flow - Create Group Event</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#8.5.5">Data Flow - Edit Event</a> <span></span> <span class="pageNumber">p</span></div>
-        <div><a href="#8.5.6">Data Flow - Commercial Event</a> <span></span> <span class="pageNumber">p</span></div>
     </div>
     <div class="page table-of-contents">
+        <div><a href="#8.5.6">Data Flow - Commercial Event</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#8.5.7">Data Flow - Add Description</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#8.5.8">Data Flow - Manage Commercial Event</a> <span></span> <span class="pageNumber">p</span></div>
         <div><a href="#8.5.9">Data Flow - Edit User</a> <span></span> <span class="pageNumber">p</span></div>
@@ -510,47 +512,45 @@
     </div>
     <div class="page">
         <h1><span class="id">2</span>SDD Identification</h1>
-        <div class="indent">
-            <h2>Revision History</h2>
-            <table style="width:100%">
-                <tr>
-                    <th>Draft Number</th>
-                    <th>Changes Made</th>
-                    <th>Link</th>
-                    <th>Date</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Added in the first drafts for Section 1, 4, and 5</td>
-                    <td><a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/3.0-SDD-version-0/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html> https://github.com/BroClements/CS364_2020Win/blob/3.0-SDD-version-0/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html</a></td>
-                    <td>06/27/2020</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Updated Section 1, 3, 4, and 5</td>
-                    <td><a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/3.2-SDD-version-2/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html> https://github.com/BroClements/CS364_2020Win/blob/3.2-SDD-version-2/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html</a></td>
-                    <td>07/04/2020</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Updated Section 1, 3, 4, and 5. Sections 7, 8, and 9 were added</td>
-                    <td><a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/3.3-SDD-version-3/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html> https://github.com/BroClements/CS364_2020Win/blob/3.3-SDD-version-3/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html</a></td>
-                    <td>07/11/2020</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Cleaned, formated and rearranged. Updated Section 1, 2, 3, 4, 5, 6, 7, 8, and 9. Added Table of's</td>
-                    <td><a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/3.4-SDD-version-Final/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html> https://github.com/BroClements/CS364_2020Win/blob/3.4-SDD-version-Final/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html</a></td>
-                    <td>07/18/2020</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Updated all sections</td>
-                    <td><a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/3.5-SDD-Final/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html> https://github.com/BroClements/CS364_2020Win/blob/3.5-SDD-Final/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html</a></td>
-                    <td>07/22/2020</td>
-                </tr>
-            </table>
-        </div>
+         <h2>Revision History</h2>
+         <table style="width:100%">
+             <tr>
+                 <th>Draft Number</th>
+                 <th>Changes Made</th>
+                 <th>Link</th>
+                 <th>Date</th>
+             </tr>
+             <tr>
+                 <td>1</td>
+                 <td>Added in the first drafts for Section 1, 4, and 5</td>
+                 <td><a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/3.0-SDD-version-0/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html> https://github.com/BroClements/CS364_2020Win/blob/3.0-SDD-version-0/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html</a></td>
+                 <td>06/27/2020</td>
+             </tr>
+             <tr>
+                 <td>2</td>
+                 <td>Updated Section 1, 3, 4, and 5</td>
+                 <td><a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/3.2-SDD-version-2/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html> https://github.com/BroClements/CS364_2020Win/blob/3.2-SDD-version-2/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html</a></td>
+                 <td>07/04/2020</td>
+             </tr>
+             <tr>
+                 <td>3</td>
+                 <td>Updated Section 1, 3, 4, and 5. Sections 7, 8, and 9 were added</td>
+                 <td><a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/3.3-SDD-version-3/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html> https://github.com/BroClements/CS364_2020Win/blob/3.3-SDD-version-3/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html</a></td>
+                 <td>07/11/2020</td>
+             </tr>
+             <tr>
+                 <td>4</td>
+                 <td>Cleaned, formated and rearranged. Updated Section 1, 2, 3, 4, 5, 6, 7, 8, and 9. Added Table of's</td>
+                 <td><a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/3.4-SDD-version-Final/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html> https://github.com/BroClements/CS364_2020Win/blob/3.4-SDD-version-Final/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html</a></td>
+                 <td>07/18/2020</td>
+             </tr>
+             <tr>
+                 <td>5</td>
+                 <td>Updated all sections</td>
+                 <td><a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/3.5-SDD-Final/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html> https://github.com/BroClements/CS364_2020Win/blob/3.5-SDD-Final/SDD_SWDesignDesc/SDD_SoftwareDesignDescription.html</a></td>
+                 <td>07/22/2020</td>
+             </tr>
+         </table>
         <h1><span class="id">3</span>Design Stakeholders and Concerns</h1>
         <p>The Stakeholders are those with an interest in the overall success of the Uvents application, especially Jordan Hamblin, the project sponsor. The following are concerns of the sponsor that must be resolved by the Uvents application.</p>
         <ul class="auto-ID big" id="3.1">
@@ -683,7 +683,7 @@
                 <p>Sponsor wants the possibility of communication between Admin Users and other Users</p>
             </li>
             <li>Notifications (Admin User) [1.5.1.1]
-                <p>Sponsor wants Amin Users to be notified of specific relevant activities</p>
+                <p>Sponsor wants Admin Users to be notified of specific relevant activities</p>
             </li>
             <li>Settings (Admin User) [1.5.1.1]
                 <p>Sponsor wants the Admin User to be able to adjust settings</p>
@@ -700,6 +700,14 @@
         </ul>
     </div>
     <div class="page">
+        <ul class="auto-ID big" id="3.46">
+            <li>Event Messaging (Commercial User)[1.5.1.1]
+                <p>Sponsor wants Commercial Users to be able to send messages about events</p>
+            </li>
+            <li>Notifications (Commercial User) [1.5.1.01]
+                <p>Sponsor wants Commercial Users to be able to receive notifications</p>
+            </li>
+        </ul>
         <h1><span class="id">4</span>Overview/Architecture</h1>
         <div class="indent">
             <h2><span class="id">4.1</span>Overview</h2>
@@ -728,9 +736,7 @@
         <div class="indent">
             <h3><span class="id">4.3.1</span>Discover</h3>
             <p>
-                Upon login, they will see the Discover page. On the Discover page, they will be shown a list of relevant events from the database. They will have the option to use a search bar to search for profiles or events as well as Filtering and Sorting.</p>
-            <p>
-                When a Consumer or Commercial profile has been found, the Consumer User will have the option to access it. When viewing the profile, the Consumer User will have the ability to block or report a user. Any block or report will be sent to the database for future use or review.</p>
+                Upon Consumer User login, they will see the Discover Page. On the Discover page, they will be shown a list of relevant events from the database. They will have the option to use a search bar to search for events as well as Filtering and sorting.</p>
         </div>
         <div class="pic"><img src="images/OverviewConsumer-Discover.png" alt="Overview Consumer Discover"></div>
     </div>
@@ -799,7 +805,7 @@
     </div>
     <div class="page">
         <div class="indent">
-            <h2><span class="id">4.5</span>Admin User Overview</h2>
+            <h2><span class="id">4.5</span>Admin User Overview (Bottom Up)</h2>
             <p>
                 Upon login, the Admin will gain access to their account and will have access to “My Profile”, “Manage Users/Events”, “Settings”, and “Reports”. “My Profile” will show the Admin profile information and allow them to change their profile information. The Admin User will also have “Manage User/Events”, this will give the Admin access to edit Accounts as well as Events Created by Consumers and Commercial Users. The Admin User will also have “Settings” and “Reports”.</p>
         </div>
@@ -836,6 +842,14 @@
         </div></div>
         <div class="pic"><img src="images/image4.png" alt="Overview Admin Settings"></div>
     </div>
+    <div class="page">
+        <div class="indent">
+            <h2><span class="id">4.6</span>Model View Controller (Architectural Design Pattern)</h2>
+            <p>
+                Architectural Design Patterns are used to define how elements in a system are to be processed. In the case of the Uvents application, the Architectural Design Pattern of choice will be the Model View Controller pattern.</p>
+        </div>
+        <div class="pic"><img src="images/ArchitecturalDesignPattern.png" alt="Architectural Design Pattern"></div>
+    </div>
     <div class="super-page">
         <h1><span class="id">5</span>Design Views</h1>
         <div class="indent">
@@ -856,8 +870,7 @@
             <h2><span class="id">5.6</span>Login (Consumer User) [3.6]</h2>
             <p>The Consumer User opens Uvents and sees the option to login via 3rd party, username/password, or to create an account.</p>
             <ul>
-                <li>Username and password: The Consumer User clicks on username/password and is brought to the login portal. The username and password boxes are displayed to the Consumer User. The Consumer User submits information. If the database rejects
-                    Consumer User information an error appears with an option to retry or recover password. If the database accepts the Consumer User information the Consumer User is brought to the home page.</li>
+                <li>Username and password: The Consumer User clicks on username/password and is brought to the login portal. The username and password boxes are displayed to the Consumer User. The Consumer User submits information. The username and password are validated and sent to the database for storage. If the database rejects Consumer User information an error appears with an option to retry or recover password. If the database accepts the Consumer User information the Consumer User is brought to the home page.</li>
                 <li>The Consumer User clicks on ‘3rd party login’ and is taken to a screen that displays the different 3rd party login options: Facebook, Twitter, Instagram.</li>
                 <ul>
                     <li>Facebook: The Consumer User clicks on login with Facebook. Facebook's login page is brought up and displays the Facebook Username and Password boxes. If the Facebook server rejects Consumer User information an error message appears.</li>
@@ -902,8 +915,7 @@
             <h2><span class="id">5.22</span>Login (Commercial User) [3.22]</h2>
             <p>The Commercial User opens Uvents and sees the option to login via 3rd party, username/password, or to create an account.</p>
             <ul>
-                <li>Username and password: The Commercial User clicks on username/password and is brought to the login portal. The username and password boxes are displayed to the Commercial User. The Commercial User submits information. If the database rejects
-                    Commercial User information an error appears with an option to retry or recover password. If the database accepts the Commercial User information the Commercial User is brought to the home page.</li>
+                <li>Username and password: The Commercial User clicks on username/password and is brought to the login portal. The username and password boxes are displayed to the Commercial User. The Commercial User submits information. The username and password are validated and sent to the database for storage. If the database rejects Commercial User information an error appears with an option to retry or recover password. If the database accepts the Commercial User information the Commercial User is brought to the home page.</li>
                 <li>The Commercial User clicks on ‘3rd party login’ and is taken to a screen that displays the different 3rd party login options: Facebook, Twitter, Instagram.</li>
                 <ul>
                     <li>Facebook: The Commercial User clicks on login with Facebook. Facebook's login page is brought up and displays the Facebook Username and Password boxes. If the Facebook server rejects Commercial User information an error message appears.</li>
@@ -960,8 +972,7 @@
             <h2><span class="id">5.36</span>Login (Admin User) [3.36]</h2>
             <p>The Admin User opens the app and sees the option to login via 3rd party, username/password, or to create an account.</p>
             <ul>
-                <li>Username and password: The Admin User clicks on username/password and is brought to the login portal. The username and password boxes are displayed to the Admin User. The Admin User submits information. If the database rejects Admin User
-                    information an error appears with an option to retry or recover password. If the database accepts the Admin User information the Admin User is brought to the home page.</li>
+                <li>Username and password: The Admin User clicks on username/password and is brought to the login portal. The username and password boxes are displayed to the Admin User. The Admin User submits information. The username and password are validated and sent to the database for storage. If the database rejects Admin User information an error appears with an option to retry or recover password. If the database accepts the Admin User information the Admin User is brought to the home page.</li>
                 <li>The Admin User clicks on ‘3rd party login’ and is taken to a screen that displays the different 3rd party login options: Facebook, Twitter, Instagram.</li>
                 <ul>
                     <li>Facebook: The Admin User clicks on login with Facebook. Facebook's login page is brought up and displays the Facebook Username and Password boxes. If the Facebook server rejects Admin User information an error message appears. If the
@@ -983,10 +994,9 @@
             <p>The Admin User will have the ability to edit event information. The Admin User will be able to change the Event location, time, participants, title, description, type, and price. The Admin User will also have the option to delete the event.
                 The Admin User will need to provide a reason for deleting the event. The changes will be verified, and then the Admin User can save them to the database.</p>
             <h2><span class="id">5.40</span>Message (Admin User) [3.40]</h2>
-            <p>The Admin User will have the ability to message other all other Users. There will be a separate chat page with area to input text and area to view the participants of the conversation, as well as their messages. Messages can be deleted
-                by holding on them.</p>
+            <p>The Admin User will have the ability to message all other Users.</p>
             <h2><span class="id">5.41</span>Notifications (Admin User) [3.41]</h2>
-            <p>The Admin User will have the ability to see different types of notifications for different events on the Events page. Once the Admin User clicks on the Event, there is a button to “View Notifications”.</p>
+            <p>The Admin User will have the ability to see different types of notifications for different events on the Events page. Once the Admin User clicks on the Event, there is a button to “View Notifications”. Further notifications preferences will have the option to be changed in the settings.</p>
             <h2><span class="id">5.42</span>Settings (Admin User) [3.42]</h2>
             <p>The Admin User will have the ability to edit their settings and notifications</p>
             <h2><span class="id">5.43</span>Logout (Admin User) [3.43]</h2>
@@ -996,6 +1006,10 @@
                 Consumer profile.</p>
             <h2><span class="id">5.45</span>View Commercial Profile [3.45]</h2>
             <p>Consumer and Admin Users can view all Commercial profiles on the Commercial Profiles page.</p>
+            <h2><span class="id">5.46</span>Event Messaging (Commercial User) [3.46]</h2>
+            <p>Commercial Users can send Messages with information about events.</p>
+            <h2><span class="id">5.47</span>Notifications (Commercial User) [3.47]</h2>
+            <p>The Commercial User will have the ability to see different types of notifications for different events on the Events page. Once the Commercial User clicks on the Event, there is a button to “View Notifications”. Further notifications preferences will have the option to be changed in the settings.</p>
         </div>
         <h1><span class="id">6</span>Design Viewpoints</h1>
         <div class="indent">
@@ -1257,6 +1271,7 @@
             </table>
 
             <h2><span class="id">6.6</span>Login (Consumer User) [3.6]</h2>
+            <h3>Design Viewpoints:</h3>
             <p>Consumer User has option to login via username/password or via 3rd party.</p>
             <ul>
                 <li>Username and password: Consumer User login information is submitted to server and put through hash to check for existing user as well as correct username and password. ‘Remember me’ option is taken into account. If information is incorrect
@@ -1265,102 +1280,101 @@
                 <li>Twitter: Information is sent to Twitter server for verification. If server accepts request the Consumer User is brought to the home page of Uvents.</li>
                 <li>Instagram: Information is sent to Instagram server for verification. If server accepts request the Consumer User is brought to the home page of Uvents.</li>
             </ul>
-            <div class="indent">
-                <h3>Design Elements:</h3>
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Purpose</th>
-                        <th>Description</th>
-                    </tr>
-                    <tr>
-                        <td>User Token</td>
-                        <td>Entity</td>
-                        <td>Security Measure to prevent malicious intent</td>
-                        <td>A piece of data that is sent between the device and server, allowing the accounts</td>
-                    </tr>
-                    <tr>
-                        <td>Login with 3rd Party</td>
-                        <td>Entity- Button</td>
-                        <td>Takes the Consumer User to login page with 3rd party options</td>
-                        <td>A button that takes the Consumer User to the 3rd party login options page</td>
-                    </tr>
-                    <tr>
-                        <td>Facebook Login Button</td>
-                        <td>Entity- Button</td>
-                        <td>Sends Consumer User to Facebook login API</td>
-                        <td>A button that sends the Consumer User to the Facebook API login page and gathers information from API for Uvents login</td>
-                    </tr>
-                    <tr>
-                        <td>Twitter Login button</td>
-                        <td>Entity- Button</td>
-                        <td>Sends Consumer User to Twitter Login API</td>
-                        <td>A button that sends the Consumer User to the Twitter API login page and gathers information from API for Uvents login</td>
-                    </tr>
-                    <tr>
-                        <td>Instagram login button</td>
-                        <td>Entity- Button</td>
-                        <td>Sends Consumer User to Instagram Login API</td>
-                        <td>A button that sends the Consumer User to the Instagram API login page and gathers information from API for Uvents login</td>
-                    </tr>
-                    <tr>
-                        <td>Username/password button</td>
-                        <td>Entity- Button</td>
-                        <td>Takes the Consumer User to Uvents login page</td>
-                        <td>A button that takes the Consumer User to the Uvents login page to login with their Uvents username and password</td>
-                    </tr>
-                    <tr>
-                        <td>Username textbox</td>
-                        <td>Entity- Textbox</td>
-                        <td>Input for username to be sent to the server</td>
-                        <td>A textbox that collects the Consumer User’s username to be sent to the server for login
-                            <ul>
-                                <li>Constraint: Limited input characters</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Password textbox</td>
-                        <td>Entity- Textbox</td>
-                        <td>Input for password to be sent to the server</td>
-                        <td>A textbox that collects the Consumer User's password to be sent to the server for login
-                            <ul>
-                                <li>Constraint: Characters are hidden from user</li>
-                                <li>Constraint: Limited acceptance of symbols</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Remember me checkbox</td>
-                        <td>Entity- Checkbox</td>
-                        <td>Input to tell the server/device to remember login information for device</td>
-                        <td>A checkbox that tells the device to locally store this login information in order to save the user time</td>
-                    </tr>
-                    <tr>
-                        <td>Recover password button</td>
-                        <td>Entity- Button</td>
-                        <td>Takes the Consumer User to the recovery screen</td>
-                        <td>A button that takes the Consumer User to the recovery screen</td>
-                    </tr>
-                    <tr>
-                        <td>Submit Button</td>
-                        <td>Entity- Button</td>
-                        <td>Sends inputs (username & password) to the server for login verification</td>
-                        <td>A button that sends the username & password to the server for login verification
-                            <ul>
-                                <li>Constraint: Only sends if username and password textboxes are filled out</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Back Button</td>
-                        <td>Entity- Button</td>
-                        <td>Takes the the Consumer User to the main login page</td>
-                        <td>A button that takes the Consumer User to the main login page</td>
-                    </tr>
-                </table>
-            </div>
+            <h3>Design Elements:</h3>
+            <p>When Uvents is opened without a valid User Token, the Login page is displayed. The Login page is where the Consumer User can log in.</p>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Purpose</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>User Token</td>
+                    <td>Entity</td>
+                    <td>Security Measure to prevent malicious intent</td>
+                    <td>A piece of data that is sent between the device and server, allowing the accounts</td>
+                </tr>
+                <tr>
+                    <td>Login with 3rd Party</td>
+                    <td>Entity- Button</td>
+                    <td>Takes the Consumer User to login page with 3rd party options</td>
+                    <td>A button that takes the Consumer User to the 3rd party login options page</td>
+                </tr>
+                <tr>
+                    <td>Facebook Login Button</td>
+                    <td>Entity- Button</td>
+                    <td>Sends Consumer User to Facebook login API</td>
+                    <td>A button that sends the Consumer User to the Facebook API login page and gathers information from API for Uvents login</td>
+                </tr>
+                <tr>
+                    <td>Twitter Login button</td>
+                    <td>Entity- Button</td>
+                    <td>Sends Consumer User to Twitter Login API</td>
+                    <td>A button that sends the Consumer User to the Twitter API login page and gathers information from API for Uvents login</td>
+                </tr>
+                <tr>
+                    <td>Instagram login button</td>
+                    <td>Entity- Button</td>
+                    <td>Sends Consumer User to Instagram Login API</td>
+                    <td>A button that sends the Consumer User to the Instagram API login page and gathers information from API for Uvents login</td>
+                </tr>
+                <tr>
+                    <td>Username/password button</td>
+                    <td>Entity- Button</td>
+                    <td>Takes the Consumer User to Uvents login page</td>
+                    <td>A button that takes the Consumer User to the Uvents login page to login with their Uvents username and password</td>
+                </tr>
+                <tr>
+                    <td>Username textbox</td>
+                    <td>Entity- Textbox</td>
+                    <td>Input for username to be sent to the server</td>
+                    <td>A textbox that collects the Consumer User’s username to be sent to the server for login
+                        <ul>
+                            <li>Constraint: Limited input characters</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password textbox</td>
+                    <td>Entity- Textbox</td>
+                    <td>Input for password to be sent to the server</td>
+                    <td>A textbox that collects the Consumer User's password to be sent to the server for login
+                        <ul>
+                            <li>Constraint: Characters are hidden from user</li>
+                            <li>Constraint: Limited acceptance of symbols</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Remember me checkbox</td>
+                    <td>Entity- Checkbox</td>
+                    <td>Input to tell the server/device to remember login information for device</td>
+                    <td>A checkbox that tells the device to locally store this login information in order to save the user time</td>
+                </tr>
+                <tr>
+                    <td>Recover password button</td>
+                    <td>Entity- Button</td>
+                    <td>Takes the Consumer User to the recovery screen</td>
+                    <td>A button that takes the Consumer User to the recovery screen</td>
+                </tr>
+                <tr>
+                    <td>Submit Button</td>
+                    <td>Entity- Button</td>
+                    <td>Sends inputs (username & password) to the server for login verification</td>
+                    <td>A button that sends the username & password to the server for login verification
+                        <ul>
+                            <li>Constraint: Only sends if username and password textboxes are filled out</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Back Button</td>
+                    <td>Entity- Button</td>
+                    <td>Takes the the Consumer User to the main login page</td>
+                    <td>A button that takes the Consumer User to the main login page</td>
+                </tr>
+            </table>
             <h2><span class="id">6.7</span>Discover (Consumer User) [3.7]</h2>
             <h3>Design Viewpoints:</h3>
             <p>Consumer presses the discover button. Server sends request to database. Database returns list of events to server. events list is loaded on application.</p>
@@ -1856,30 +1870,30 @@
                 </table>
             </ul>
             <h2><span class="id">6.16</span>Logout (Consumer User) [3.16]</h2>
+            <h3>Design Viewpoints:</h3>
             <p>Consumer User information is sent to the server. If logout is accepted, the server will send confirmation to the Consumer User, who’s information will be removed from the device.</p>
-            <div class="indent">
-                <h3>Design Elements:</h3>
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Purpose</th>
-                        <th>Description</th>
-                    </tr>
-                    <tr>
-                        <td>User Token</td>
-                        <td>Entity</td>
-                        <td>Security Measure to prevent malicious intent</td>
-                        <td>A piece of data that is sent between the device and server, allowing the accounts</td>
-                    </tr>
-                    <tr>
-                        <td>Logout Button</td>
-                        <td>Entity- Button</td>
-                        <td>Takes the Consumer User to the main login page</td>
-                        <td>A button that informs the server of logout and clears information on device, then takes the Consumer User to the main login page</td>
-                    </tr>
-                </table>
-            </div>
+            <h3>Design Elements:</h3>
+            <p>The Logout Table identifies elements for the Logout Concern. [3.15] These elements perform the duties of displaying and copying values held within said concern.</p>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Purpose</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>User Token</td>
+                    <td>Entity</td>
+                    <td>Security Measure to prevent malicious intent</td>
+                    <td>A piece of data that is sent between the device and server, allowing the accounts</td>
+                </tr>
+                <tr>
+                    <td>Logout Button</td>
+                    <td>Entity- Button</td>
+                    <td>Takes the Consumer User to the main login page</td>
+                    <td>A button that informs the server of logout and clears information on device, then takes the Consumer User to the main login page</td>
+                </tr>
+            </table>
             <h2><span class="id">6.17</span>Create Account (Commercial User) [3.17]</h2>
             <div class="indent">
                 <h3>Design Viewpoints:</h3>
@@ -2127,17 +2141,17 @@
                 </table>
             </div>
             <h2><span class="id">6.22</span>Login (Commercial User) [3.22]</h2>
-            <p>Commercial User has the option to login via username/password or via 3rd party.</p>
-            <ul>
-                <li>Username and password: Commercial User login information is submitted to the server and put through a hash to check for existing users as well as correct username and password. ‘Remember me’ option is taken into account. If information
-                    is incorrect the server returns an error message with option to recover password/account information and to re-submit login information. If the database accepts the submitted information the Commercial User will be sent to the homepage
-                    of Uvents.</li>
-                <li>Facebook: Information is sent to Facebook server for verification. If the server accepts the request the Commercial User is brought to the homepage of Uvents.</li>
-                <li>Twitter: Information is sent to Twitter server for verification. If the server accepts the request the Commercial User is brought to the homepage of Uvents.</li>
-                <li>Instagram: Information is sent to Instagram server for verification. If the server accepts the request the Commercial User is brought to the homepage of Uvents.</li>
-            </ul>
             <div class="indent">
+                <h3>Design Viewpoints:</h3>
+                <p>Commercial User has the option to login via username/password or via 3rd party.</p>
+                <ul>
+                    <li>Username and password: Commercial User login information is submitted to the server and put through a hash to check for existing users as well as correct username and password. ‘Remember me’ option is taken into account. If information is incorrect the server returns an error message with option to recover password/account information and to re-submit login information. If the database accepts the submitted information the Commercial User will be sent to the homepage of Uvents.</li>
+                    <li>Facebook: Information is sent to Facebook server for verification. If the server accepts the request the Commercial User is brought to the homepage of Uvents.</li>
+                    <li>Twitter: Information is sent to Twitter server for verification. If the server accepts the request the Commercial User is brought to the homepage of Uvents.</li>
+                    <li>Instagram: Information is sent to Instagram server for verification. If the server accepts the request the Commercial User is brought to the homepage of Uvents.</li>
+                </ul>
                 <h3>Design Elements:</h3>
+                <p>The Login Table identifies elements for the Login Concern. [3.22] These elements perform the duties of displaying and copying values held within said concern.</p>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -2678,9 +2692,11 @@
                 </table>
             </div>
             <h2><span class="id">6.32</span>Logout (Commercial User) [3.32]</h2>
-            <p>Commercial User information is sent to the server. If logout is accepted, the server will send confirmation to Commercial User, who’s information will be removed from device.</p>
             <div class="indent">
+                <h3>Design Viewpoints:</h3>
+                <p>Commercial User information is sent to the server. If logout is accepted, the server will send confirmation to Commercial User, who’s information will be removed from device.</p>
                 <h3>Design Elements:</h3>
+                <ul><li>Logout button: Sends Commercial User information to server for logout</li></ul>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -2835,16 +2851,17 @@
                 </table>
             </div>
             <h2><span class="id">6.36</span>Login (Admin User) [3.36]</h2>
-            <p>Admin User has the option to login via username/password or via 3rd party.</p>
-            <ul>
-                <li>Username and password: Admin User login information is submitted to the server and put through a hash to check for existing users as well as correct username and password. ‘Remember me’ option is taken into account. If information is incorrect
-                    the server returns an error message with the option to recover password/account information and to re-submit login information. If the database accepts the submitted information the Admin User will be sent to the homepage of Uvents.</li>
-                <li>Facebook: Information is sent to Facebook server for verification. If the server accepts the request the Admin User is brought to the homepage of Uvents.</li>
-                <li>Twitter: Information is sent to Twitter server for verification. If the server accepts the request the Admin User is brought to the homepage of Uvents.</li>
-                <li>Instagram: Information is sent to Instagram server for verification. If the server accepts the request the Admin User is brought to the homepage of Uvents.</li>
-            </ul>
             <div class="indent">
+                <h3>Design Viewpoints:</h3>
+                <p>Admin User has the option to login via username/password or via 3rd party.</p>
+                <ul>
+                    <li>Username and password: Admin User login information is submitted to the server and put through a hash to check for existing users as well as correct username and password. ‘Remember me’ option is taken into account. If information is incorrect the server returns an error message with the option to recover password/account information and to re-submit login information. If the database accepts the submitted information the Admin User will be sent to the homepage of Uvents.</li>
+                    <li>Facebook: Information is sent to Facebook server for verification. If the server accepts the request the Admin User is brought to the homepage of Uvents.</li>
+                    <li>Twitter: Information is sent to Twitter server for verification. If the server accepts the request the Admin User is brought to the homepage of Uvents.</li>
+                    <li>Instagram: Information is sent to Instagram server for verification. If the server accepts the request the Admin User is brought to the homepage of Uvents.</li>
+                </ul>
                 <h3>Design Elements:</h3>
+                <p>The Login Table identifies elements for the Login Concern. [4.36] These elements perform the duties of displaying and copying values held within said concern.</p>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -2941,9 +2958,13 @@
             </div>
             <h2><span class="id">6.37</span>Create New Admin (Admin) [3.37]</h2>
             <div class="indent">
+                <h3>Design Viewpoints</h3>
                 <p>The Admin is asked to input their email. Create new username and password is displayed to the admin. The server shall authenticate the username by searching through the database for the same username. This ensures a unique username. If
                     a similar username is found, an alert will pop up to the user telling them that the username is already in use. Client side validation shall be used to ensure that the password is valid. A valid password will be a password that has
                     at least 6 characters. The Admin is then asked to provide their name. Once the create account button is pressed, the form will be validated.</p>
+                    <h3>Design Elements</h3>
+                    <p>The Create New Admin Table identifies elements for the Create New Admin Concern. [4.37] These elements perform the duties of displaying and copying values held within said concern.
+                    </p>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -2991,10 +3012,14 @@
             </div>
             <h2><span class="id">6.38</span>Edit Users (Admin) [3.38]</h2>
             <div class="indent">
+                <h3>Design Viewpoints</h3>
                 <p>he user interface will allow the Admin User to search for usernames. The UI will allow the Admin to click on a username to bring it up along with its associated social media links. The Admin will be able to edit the username and the social
                     media links through a text box. After making changes, the Admin will be able to save the changes by pressing a button. If there are any issues saving the data, the UI will be updated to indicate. There will also be a button to delete
                     the user's account. Upon doing so, the Admin will need to verify that they want to delete the user account, and they will provide a reason for deleting it through a text box. If they verify it, the account will be deleted, and if there
                     are any issues with deleting the account, the UI will be updated to indicate so.</p>
+                    <h3>Design Elements</h3>
+                    <p>The Edits Users Table identifies elements for the Login Concern. [4.38] These elements perform the duties of displaying and copying values held within said concern.
+                    </p>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -3060,11 +3085,14 @@
             </div>
             <h2><span class="id">6.39</span>Edit Events (Admin) [3.39]</h2>
             <div class="indent">
+                <h3>Design Viewpoints</h3>
                 <p>The user interface will allow the Admin User to search for events. The UI will allow the Admin to click on an event to bring up its details. The Admin will be able to edit the start time, end time, type, title, description, address, price,
                     and participants through text boxes. The Admin will be able to save the changes by pressing a button. If there are any issues saving the data, the UI will be updated to indicate. There will also be a button to delte an account. Upon
                     doing so, the Admin will need verify that they want to delete the event, and the Admin will provide a reason for deleting the account. If there are any issues trying to delete the account after the Admin verifies that they want it
                     deleted, the UI will be updated to indicate so.
                 </p>
+                <h3>Design Elements</h3>
+                <p>The Edits Events Table identifies elements for the Edit Events Concern. [4.39] These elements perform the duties of displaying and copying values held within said concern.</p>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -3130,7 +3158,10 @@
             </div>
             <h2><span class="id">6.40</span>Message (Admin) [3.40]</h2>
             <div class="indent">
-                <p>The user interface will allow the Admin user to search for any other account. The UI will allow the Admin to see any message for them that are unread.</p>
+                <h3>Design Viewpoint</h3>
+                <p>The user interface will allow the Admin user to search for any other account. The UI will allow the Admin to see any messages for them that are unread.</p>
+                <h3>Design Elements</h3>
+                <p>The Message Table identifies elements for the Message Concern. [4.40] These elements perform the duties of displaying and copying values held within said concern.</p>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -3156,11 +3187,20 @@
                         <td>Allow user to select who is receiving the message </td>
                         <td>A string that shows who received or is receiving the message </td>
                     </tr>
+                    <tr>
+                        <td>Send Message</td>
+                        <td>Entity</td>
+                        <td>Allows the admin user to send a message</td>
+                        <td>A button will first validate the message for profanity and then send it to the server where it will be processed and displayed for the users participating in the conversation</td>
+                    </tr>
                 </table>
             </div>
             <h2><span class="id">6.41</span>Notifications (Admin) [3.41]</h2>
             <div class="indent">
+                <h3>Design Viewpoint</h3>
                 <p>Notifications will display useful information to the Admin User. These Notifications will include Events, Approval Status Advertising, new reports, messages, and account activity.</p>
+                <h3>Design Elements</h3>
+                <p>The Notifications Table identifies elements for the Notifications Concern. [4.41] These elements perform the duties of displaying and copying values held within said concern.</p>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -3180,11 +3220,46 @@
                         <td>Notifications that will appear on the lock screen or as a banner when the user is on the device. </td>
                         <td>Depending on what the user is doing, notifications will show up differently. </td>
                     </tr>
+                    <tr>
+                        <td>Notifications Button</td>
+                        <td>Entity</td>
+                        <td>Allow a User to view Notifications they have received.</td>
+                        <td>A button that retrieves the database of notifications in the user’s inbox, and displays those notifications.</td>
+                    </tr>
+                    <tr>
+                        <td>Notifications</td>
+                        <td>Class</td>
+                        <td>An object to more easily access and manipulate notifications.</td>
+                        <td>This object will contain members such as date,title, body(others to be determined), associated getters and setters, and other functions to better work with notifications.</td>
+                    </tr>
+                    <tr>
+                        <td>Notification title</td>
+                        <td>Entity</td>
+                        <td>Gives the main point of the notification.</td>
+                        <td>A text box displaying which function of the application caused the notification to be sent</td>
+                    </tr>
+                    <tr>
+                        <td>Notification Body</td>
+                        <td>Entity</td>
+                        <td>Gives the details that come with the notification.</td>
+                        <td>The text contained within the notification</td>
+                    </tr>
+                    <tr>
+                        <td>Notification options bar</td>
+                        <td>Entity</td>
+                        <td></td>
+                        <td>A popup menu that displays when selecting a notification, allowing for deletion, flagging, muting, and other messaging options.</td>
+                    </tr>
                 </table>
             </div>
             <h2><span class="id">6.42</span>Settings (Admin) [3.42]</h2>
             <div class="indent">
-                <p>The settings UI will allow for the Admin User to logout and access their profile information, as well as notification information.</p>
+                <h3>Design Viewpoints</h3>
+                <p>The settings UI will allow for the Admin User to logout and access their profile information, as well as notification information.Also, they will be able to delete their account by clicking on the ‘delete account’ button.
+                </p>
+                <h3>Design Elements</h3>
+                <p>The Settings Table identifies elements for the Settings Concern. [4.42] These elements perform the duties of displaying and copying values held within said concern.
+                </p>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -3210,12 +3285,21 @@
                         <td>Allows the user to choose what type of notifications is to be viewed </td>
                         <td>Different toggles will display and the user can toggle on or off different types of notifications. </td>
                     </tr>
+                    <tr>
+                        <td>Delete Account button</td>
+                        <td>Entity</td>
+                        <td>Allows the user to delete the account</td>
+                        <td>Upon the click, the user will be asked for a confirmation. After the success, all the information about the user will be permanently deleted.</td>
+                    </tr>
+
                 </table>
             </div>
             <h2><span class="id">6.43</span>Logout (Admin User) [3.43]</h2>
-            <p>Admin User information is sent to the server after clicking on the corresponding button. If logout is accepted, the server will send confirmation to Admin User, who’s information will be removed from the device.</p>
             <div class="indent">
+                <h3>Design Viewpoints:</h3>
+                <p>Admin User information is sent to the server after clicking on the corresponding button. If logout is accepted, the server will send confirmation to Admin User, who’s information will be removed from the device.</p>
                 <h3>Design Elements:</h3>
+                <p>The Logout Table identifies elements for the Logout Concern. [3.43] These elements perform the duties of displaying and copying values held within said concern.</p>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -3302,22 +3386,124 @@
                     </tr>
                 </table>
             </div>
+            <h2><span class="id">6.46</span>Event Messaging (Commercial User) [3.46]</h2>
+            <div class="indent">
+                <h3>Design Viewpoints:</h3>
+                <p>Session ID must be verified, after which the conversation begins between two users securely. They can send messages, view message information, see whether the conversations are read. The interface of the messaging allows Commercial Users to send messages and the interface of the messaging allows Commercial Usersto react to messages that have been sent.</p>
+                <h3>Design Elements:</h3>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Purpose</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                       <td>‘Event Messaging’ Button</td>
+                       <td>Entity</td>
+                       <td>To allow a Commercial UUser to access and use the Event Messages that they have permissions for.</td>
+                       <td>A button that switches the view, retrieves data from the database and populates the Event Messages page with the information.</td>
+                    </tr>
+                    <tr>
+                       <td>Messages</td>
+                       <td>Class</td>
+                       <td>An object to access, send and receive messages for specific events.</td>
+                       <td>This object will contain all of the logic needed for the messages portion to function and member variables that will be tracked and stored in the database.</td>
+                    </tr>
+                    <tr>
+                       <td>Event Messages Display</td>
+                       <td>Entity</td>
+                       <td>Displays the messages in sequential order based on date.</td>
+                       <td>This will display messages in an easy-to-read way for the Consumer to view.</td>
+                    </tr>
+                    <tr>
+                       <td>Event Messages Name View</td>
+                       <td>Entity</td>
+                       <td>Displays the name of the other Users that have sent each message on the page.</td>
+                       <td>This will display the names of users when they send messages to identify who said what in the chat.</td>
+                    </tr>
+                    <tr>
+                       <td>Event Messages Date View</td>
+                       <td>Entity</td>
+                       <td>Displays the date that goes with each message. This is dual purpose as it can also be used to display the messages in the correct order.</td>
+                       <td>This will display the date of when each message was sent, this can be used to keep a log of the conversation and can also be used in the display logic.</td>
+                    </tr>
+                    <tr>
+                       <td>Event Messages ‘Send’ Button</td>
+                       <td>Entity</td>
+                       <td>To allow a Commercial User with sufficient permissions to send messages to the other Users of the same Event.</td>
+                       <td>A button that will send the message to the database to be stored and will re-populate the page with the new message (with accompanying data).</td>
+                    </tr>
+                </table>
+            </div>
+            <h2><span class="id">6.47</span>Notifications (Commercial User) [3.47]</h2>
+            <div class="indent">
+                <h3>Design Viewpoints:</h3>
+                <p>The connection to the database must be verified. The list of notifications is displayed according to the preferences. Expired notifications are removed. Notifications shall be deletable and removable.</p>
+                <h3>Design Elements:</h3>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Purpose</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>Notifications Button</td>
+                        <td>Entity</td>
+                        <td>Allow a User to view Notifications they have received.</td>
+                        <td>A button that retrieves the database of notifications in the Commercial User’s inbox, and displays those notifications.</td>
+                    </tr>
+                    <tr>
+                        <td>Notifications</td>
+                        <td>Class</td>
+                        <td>An object to more easily access and manipulate notifications.</td>
+                        <td>This object will contain members such as date,title, body(others to be determined), associated getters and setters, and other functions to better work with notifications.</td>
+                    </tr>
+                    <tr>
+                        <td>Notification title</td>
+                        <td>Entity</td>
+                        <td>Gives the main point of the notification.</td>
+                        <td>A text box displaying which function of the application caused the notification to be sent</td>
+                    </tr>
+                    <tr>
+                        <td>Notification Body</td>
+                        <td>Entity</td>
+                        <td>Gives the details that come with the notification.</td>
+                        <td>The text contained within the notification</td>
+                    </tr>
+                    <tr>
+                        <td>Notification options bar</td>
+                        <td>Entity</td>
+                        <td></td>
+                        <td>A popup menu that displays when selecting a notification, allowing for deletion, flagging, muting, and other messaging options.</td>
+                    </tr>
+                </table>
+            </div>
         </div>
         <h1><span class="id">7</span>Front-End</h1>
+        <p>The Front-End section defines how the View will interact with the Controller. The Front-End serves to represent how the Admin, Commercial, and Consumer Users will be presented information. The Front-End also defines how the individual user may interact with the system.</p>
         <div class="indent">
-            <h2><span class="id">7.1</span>Component UML</h2>
+            <h2><span class="id">7.1</span>Component UML (Operational View)</h2>
+            <p>The Component UML of the view describes the components of the Front-End, and how they will interact and relate to each other. The Component UML also acts as the Operation View, which is used present to how the User-Interface is to be interacted with and controlled by the User.</p>
             <img src="images/ComponentUML.png" alt="View Component UML" class="pic">
             <h2><span class="id">7.2</span>Behavioral Design Pattern</h2>
+            <p>The Behavioral Design Pattern for the Front-End shows how the entities on the Uvents application interact with the Server to receive and show Server information.</p>
             <img src="images/View-BehavioralDesignPattern.png" alt="Behavioral Design Pattern" class="pic">
             <h2><span class="id">7.3</span>Front-End Structure Chart</h2>
+            <p>The Structure-Charts for the Front-End show how the user may interact with the Front-End, and how information is presented to the user.</p>
             <div class="indent">
                 <h3><span class="id">7.3.1</span>Front-End Share Event (Commercial User) Structure Chart</h3>
+                <p>The Front-End Structure Chart for Share Event (Commercial User) acts to define how the Commercial User will interact with the Front-End to share their events.</p>
                 <img src="images/View-StructureChart-ShareEvent.png" alt="Share Event (Commercial User) Structure Chart" class="pic">
                 <h3><span class="id">7.3.2</span>Front-End Edit Profile Structure Chart</h3>
+                <p>The Front-End Structure Chart for Edit Profile acts to define how the user will interact with the Front-End to edit their profile.</p>
                 <img src="images/View-StructureChart-EditProfile.png" alt="Edit Profile Structure Chart" class="pic">
                 <h3><span class="id">7.3.3</span>Front-End Create Group Event (Consumer User) Structure Chart</h3>
+                <p>The Front-End Create Group Event acts to define how the Consumer User will interact with the Front-End to create a Group Event.</p>
                 <img src="images/View-StructureChart-CreateGroupEvent.png" alt="Create Group Event (Consumer User) Structure Chart" class="pic">
                 <h3><span class="id">7.3.4</span>Front-End Edit Users (Admin User) Structure Chart</h3>
+                <p>The Front-End Structure Chart for Edit Users (Admin User) acts to define how the Admin User will interact with the Front-End to edit users.</p>
                 <img src="images/View-StructureChart-EditUsers.png" alt="Edit Users (Admin User) Structure Chart" class="pic">
             </div>
             <h2><span class="id">7.4</span>Front-End Workflow</h2>
