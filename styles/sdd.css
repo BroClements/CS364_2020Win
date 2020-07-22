@@ -184,7 +184,7 @@ img {
    border: 1.5px solid black;
    padding: 30px;
 }
-
+.table-of-contents { height: fit-content !important }
 .table-of-contents h1 {
    margin-top: 20px 0 0 0;
 }
