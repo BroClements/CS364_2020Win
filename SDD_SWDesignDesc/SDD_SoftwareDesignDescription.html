@@ -1127,13 +1127,6 @@
             </ul>
             <h3>Design Elements: </h3>
             <p>Below is a list of Design Elements that compose the Join Commercial event:</p>
-            <ul>
-                <li>List of Events</li>
-                <li>"View Event" Button</li>
-                <li>View of Event Description.</li>
-                <li>"Join Event" Button.</li>
-                <li>"Return to List" Button.</li>
-            </ul>
             <table>
                 <tr>
                     <th>Name</th>
@@ -1186,14 +1179,6 @@
             </ul>
             <h3>Design Elements: </h3>
             <p>Below is the list of Design Elements that compose the Join Commercial event. These Elements will give the consumer options to join, view, or decline Group events.</p>
-            <ul>
-                <li>List of Group Events</li>
-                <li>"View Group Event" Button</li>
-                <li>View of Group Event Description.</li>
-                <li>"Join Group Event" Button.</li>
-                <li>"Decline Group Event"</li>
-                <li>"Return to List" Button.</li>
-            </ul>
             <table>
                 <tr>
                     <th>Name</th>
@@ -1245,14 +1230,6 @@
                 messages should be provided (ex: e-mail, username). Upon information change, the save and the cancel buttons are available with their perspective actions of canceling the operation or saving it.</p>
             <h3>Design Elements </h3>
             <p>Below is a list of Design Elements that compose the Edit Profile. These elements will give the Consumer the ability to edit their Email, Username, Password. They will be able to save these changes or discard them.</p>
-            <ul>
-                <li>"Edit profile" button/option</li>
-                <li>"Email Address" Text Field</li>
-                <li>"Username" Text Field</li>
-                <li>"Password" Text Field</li>
-                <li>"Save" Button</li>
-                <li>"Cancel" Button</li>
-            </ul>
             <table>
                 <tr>
                     <th>Name</th>
@@ -1442,11 +1419,6 @@
             <p>Consumer presses the discover button. Server sends request to database. Database returns list of events to server. events list is loaded on application.</p>
             <h3>Design Elements: </h3>
             <p>The following elements will be visible to the Consumer User upon entering the discover view.</p>
-            <ul>
-                <li>Events Icons [DIV Figure 1]</li>
-                <li>Entity row & col from database [DIV Figure 1] </li>
-                <li>Filter/Sort Button [DIV Figure 1] </li>
-            </ul>
             <table>
                 <tr>
                     <th>Name</th>
@@ -1479,12 +1451,15 @@
             <p>App sends request to server. Server gathers details from database. Server sends view to App. </p>
             <h3>Design Elements: </h3>
             <p>The following elements will control the elements sent to the database, restricting the results returned to the application.</p>
+<<<<<<< HEAD
             <ul>
                 <li>Time frame scale [DIV Figure 1]</li>
                 <li>Location input [DIV Figure 1] </li>
                 <li>Cost [DIV Figure 1] </li>
                 <li>Event type selector [DIV Figure 1] </li>
             </ul>
+=======
+>>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
             <table>
                 <tr>
                     <th>Name</th>
@@ -2338,6 +2313,7 @@
             <h2><span class="id">6.23</span>Create Commercial Event (Commercial User) [3.23]</h2>
             <div class="indent">
                 <h3>Design Viewpoints:</h3>
+<<<<<<< HEAD
                 <p>The User Token will be verified and then the user’s input will be added to the database and stored as a new commercial event.</p>
                 <ul>
                     <li>User Token verified</li>
@@ -2347,6 +2323,9 @@
                     <li>Database saves new Event</li>
                     <li>Changes to queried table</li>
                 </ul>
+=======
+                <p>The session id will be verified and then the user’s input will be added to the database and stored as a new commercial event.</p>
+>>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
 
                 <h3>Design Elements:</h3>
                 <p>The Create Commercial Event feature shall prompt the commercial user for a price, location, date, and time that shall be stored in a database.</p>
@@ -2398,10 +2377,11 @@
             <h2><span class="id">6.24</span>Add Description (Commercial User) [3.24]</h2>
             <div class="indent">
                 <h3>Design Viewpoints</h3>
+                <p>The add description concern is meant to provide users with more information about the event. The add description is something that every event contains and provides further insights and allows users to join events that better align with their interests. </p>
                 <p>Commercial User enters information into text box entry. Commercial user will click on the save button. The changes are sent to the database. There the changes are made to the proper table and column. The changes are saved in the database.
                     The updated changes are then sent back and displayed in the Commercial User's profile.</p>
                 <h3>Design Elements</h3>
-                The Add Description (Commercial) Table Allows the User to connect a description to events. This description will allow users to better navigate the application and quickly find events that are suited for their needs.
+                <p>The Add Description Table identifies elements for the Add Description Concern. [4.24] These elements perform the duties of displaying and copying values held within said concern. </p>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -2429,7 +2409,7 @@
                 <h3>Design Viewpoints</h3>
                 <p>Commercial User clicks on the Manage Events button. Information is fetched from the database, and sent back to the app. Information is then displayed in the app in a listview.</p>
                 <h3>Design Elements</h3>
-                The Manage Commercial Event (Commercial) Table allows users to access ongoing events pertinent to their account. This assists users in quickly finding their ongoing events without sorting through all past, present, and future events.
+                <p>The Manage Commercial Event Table identifies elements for the Manage Event Concern. [4.25] These elements perform the duties of displaying and copying values held within said concern. </p>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -2457,7 +2437,7 @@
                 <h3>Design Viewpoints</h3>
                 <p>Commercial User clicks on the Edit Event button. Data is retrieved from the database and becomes editable. The updates will take effect once the Commercial User clicks on the Update button.</p>
                 <h3>Design Elements</h3>
-                The Edit Event table allows users to edit details of the events they created, including event type, title, description, address, start time, end time, price, icon, and maximum participants allowed.
+                <p> The Edit Event Table identifies elements for the Edit Event Concern. [4.26] These elements perform the duties of displaying and copying values held within said concern. </p>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -2531,6 +2511,12 @@
                         <td>Security Measure to prevent malicious intent. </td>
                         <td>A piece of data that is sent back and forth from front end to server, allowing the accounts. </td>
                     </tr>
+                    <tr>
+                        <td>Confirm Button</td>
+                        <td>Entity</td>
+                        <td> Allows the user to confirm the editing of the event </td>
+                        <td> Upon the click, the user will be asked again to confirm the action. Once approved, the data will be sent to the database to update the event information.</td>
+                    </tr>
                 </table>
             </div>
             <h2><span class="id">6.27</span>Past Events (Commercial User) [3.27]</h2>
@@ -2541,7 +2527,7 @@
                 <p>Commercial User requests to view Past Events. Server queries information for all Events whose user ID column matches the Commercial User's user ID and whose end date is before the current date. Server returns the requested information.
                     The application displays to the user the information for each of these past events. If no past events exist, the application displays a message indicating that the Commercial User has no past events.</p>
                 <h3>Design Elements</h3>
-                The Past Events (Commercial) Table identifies elements for the Past Events (Commercial) Concern. [4.27] These elements perform the duties of security, identifying relevant data, and displaying values held within said concern.
+                <p>The Past Events Table identifies elements for the Past Events Concern. [4.27] These elements perform the duties of displaying and copying values held within said concern.</p>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -2579,10 +2565,14 @@
             <div class="indent">
                 <p>The promote event concern is meant to provide users the capacity to promote the events they created. The promote event functionality allows users to keep track and to manage their auctions. </p>
                 <h3>Design Viewpoints</h3>
+<<<<<<< HEAD
                 <p>Commercial User enters in the Promote Event feature. The server requests the time till the next bidding auction. The server returns the requested information. The information is displayed to the commercial user. The server verifies if
                     the next bidding auction started. If the answer is true, the application will allow the commercial user to click on Start Auction. </p>
+=======
+                <p>Commercial user enters in the Promote Event feature. The server requests the time till the next bidding auction. The server returns the requested information. The time till next auction will be a predetermined date and time. The auction will also end at a predetermined time. The information is displayed to the Commercial User. The server verifies if the next bidding auction started. If the answer is true, the application will allow the commercial user to click on Start Auction.</p>
+>>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
                 <h3>Design Elements</h3>
-                The Promote Event Table allows Users to promote ongoing events that are part of their domain, and to share those events as well. This will also help Users to keep track of the timing until the next bidding auction.
+                <p>The Promote Event Table identifies elements for the Promote Event Concern. [4.28] These elements perform the duties of displaying and copying values held within said concern.</p>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -2620,10 +2610,9 @@
             <div class="indent">
                 <p>The Start Auction / Place Bid functionality is to allow a commercial user to bid for more awareness of their event. </p>
                 <h3>Design Viewpoints</h3>
-                <p>Session ID is Verified Server queries information for the current monthly bids Server sends the information regarding the bid to the client The user inputs the amount he/she would like to bid and the information is sent to the server The
-                    server inserts the bid into the bid table The server sends a response to the user that the bid was successfully added The application displays to the user that the bid was successfull/unsuccessfull</p>
+                <p>User Token is Verified Server queries information for the current monthly bids Server sends the information regarding the bid to the client The user inputs the amount he/she would like to bid and the information is sent to the server The server inserts the bid into the bid table The server sends a response to the user that the bid was successfully added The application displays to the user that the bid was successful/unsuccessful. If the End Auction time is reached, then the Commercial User will be taken back to the Promote Event screen and they will no longer be able to Start Auction until the next auction begins.</p>
                 <h3>Design Elements</h3>
-                The Start Auction / Place Bid allows the Users to place a bid to get their event advertised earlier on the app. This will allow those that create events to get more awareness for their application.
+                <p>The Start Auction (Commercial) / Place Bid Table identifies elements for the Start Auction (Commercial)/ Place Bid Concern. [4.29] These elements perform the duties of displaying and copying values held within said concern.</p>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -2655,10 +2644,20 @@
                         <td>Allows the Commercial User to save the amount that has been bid. </td>
                         <td>This button will save the bid amount and enter in that bid amount to the database. </td>
                     </tr>
+                    <tr>
+                        <td>End Auction time</td>
+                        <td>Entity</td>
+                        <td> Commercial User should only be allowed to place a bid before the End Auction time is reached </td>
+                        <td>This will be a set date & time. One this time is reached then the Auction is over.</td>
+                    </tr>
                 </table>
             </div>
             <h2><span class="id">6.30</span>Share Event (Commercial User) [3.30]</h2>
+<<<<<<< HEAD
             <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated, the Database sends a response
+=======
+            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Key is validated, the Database sends a response
+>>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
                 to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the Share Event screen.</p>
             <p>Upon loading the Share Event screen, the Server sends a request to the Database to receive a link to the current Commercial User’s Event. The Database searches for the Commercial Users Event link, then sends the link back to the Server. Upon
                 receiving an Event Link, the Server updates the GUI’s shareable link bar with the Event Link text. The GUI loads the Facebook, Instagram, and Twitter icons. [9.1.10]</p>
@@ -2713,6 +2712,30 @@
                         <td>Copies shareable link to Commercial Users clipboard. </td>
                     </tr>
                     <tr>
+                        <td>Facebook login </td>
+                        <td>Relationship </td>
+                        <td>Login a Commercial to their Facebook account so they can share on Facebook. </td>
+                        <td>Use Facebook API to ask for and verify credentials </td>
+                    </tr>
+                    <tr>
+                        <td>Twitter login </td>
+                        <td>Relationship </td>
+                        <td>Login a Commercial to their Facebook account so they can share on Twitter. </td>
+                        <td>Use Twitter API to ask for and verify credentials. </td>
+                    </tr>
+                    <tr>
+                        <td>Instagram login </td>
+                        <td>Relationship </td>
+                        <td>Login a Commercial to their Facebook account so they can share on Instagram. </td>
+                        <td>Use Instagram API to ask for and verify credentials </td>
+                    </tr>
+                    <tr>
+                        <td>Invalid Credentials </td>
+                        <td>Constraint </td>
+                        <td>Provide proper authentication for logging in to Social Media Platforms </td>
+                        <td>Doesn’t allow Commercial Users to access Social Media platforms if credentials are invalid. </td>
+                    </tr>
+                    <tr>
                         <td>User Token </td>
                         <td>Entity </td>
                         <td>Verifies the user is currently logged.</td>
@@ -2722,12 +2745,20 @@
             </div>
             <h2><span class="id">6.31</span>Settings (Commercial User) [3.31]</h2>
             <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated, the Database sends a response
+<<<<<<< HEAD
                 to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the Settings screen. </p>
             <p>Upon loading the Settings screen, the GUI will display a Logout button and a Notifications on/off slider. If the Commercial User clicks the logout button, the Server will send a request to the Database to disqualify the current User Token.
                 Once the User Token is disqualified, the Database will notify the Server that the USer Token is no longer valid. Once the Server receives the communication from the Database, then the Server will update the GUI to present the Login screen.
                 If the Commercial User clicks the Notifications on/off slider, the Server will send a request to open the Commercial User’s default settings application with a package to open the notifications settings section within the default settings
                 application.
             </p>
+=======
+                to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the Settings screen.  </p>
+            <p>Upon loading the Settings screen, the GUI will display a Logout button and a Notifications on/off slider. If the Commercial User clicks the logout button, the Server will send a request to the Database to disqualify the current User Token.
+                Once the User Token is disqualified, the Database will notify the Server that the USer Token is no longer valid. Once the Server receives the communication from the Database, then the Server will update the GUI to present the Login screen.
+                If the Commercial User clicks the Notifications on/off slider, the Server will send a request to open the Commercial User’s default settings application with a package to open the notifications settings section within the default settings
+                application.</p>
+>>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
             <div class="indent">
                 <h3>Design Elements: </h3>
                 <p>The Settings (Commercial) Table identifies elements for the Settings (Commercial) concern. [4.31] These elements perform the duties of displaying and updating values within said concern.</p>
@@ -2745,7 +2776,7 @@
                         <td>A button that can be clicked to perform the function. </td>
                     </tr>
                     <tr>
-                        <td>User Token </td>
+                        <td>User Token</td>
                         <td>Entity </td>
                         <td>Verifies the user is currently logged.</td>
                         <td>A unique key that validates login sessions by comparing the current key with the key stored in the database. </td>
@@ -2759,13 +2790,13 @@
                     <tr>
                         <td>Server Request </td>
                         <td>Relationship </td>
-                        <td>To request that User Tokens be invalidated. </td>
+                        <td>To request that User Tokens be invalidated.</td>
                         <td>A request </td>
                     </tr>
                     <tr>
                         <td>Database Notification </td>
                         <td>Relationship </td>
-                        <td>To notify server that User Token has been invalidated</td>
+                        <td>To notify server that User Token has been invalidated </td>
                         <td>A notification </td>
                     </tr>
                     <tr>
@@ -2812,8 +2843,13 @@
                 </table>
             </div>
             <h2><span class="id">6.33</span>View Commercial Reports (Admin User) [3.33]</h2>
+<<<<<<< HEAD
             <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated, the Database sends a response
                 to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the View Commercial Reports screen.</p>
+=======
+            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated,
+                the Database sends a response to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the View Commercial Reports screen.</p>
+>>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
             <p>Upon loading the Server will request an up to date Report text from the Database. Database will retrieve Report text and send back to the Server. The Server will update the GUI with the Report text. [7.4.1] </p>
             <div class="indent">
                 <h3>Design Elements: </h3>
@@ -2834,7 +2870,7 @@
                         <td>A block of text </td>
                     </tr>
                     <tr>
-                        <td>User Token </td>
+                        <td>User Token</td>
                         <td>Entity </td>
                         <td>Verifies the user is currently logged.</td>
                         <td>A unique key that validates login sessions by comparing the current key with the key stored in the database. </td>
@@ -2848,8 +2884,13 @@
                 </table>
             </div>
             <h2><span class="id">6.34</span>View Consumer Reports (Admin User) [3.34]</h2>
+<<<<<<< HEAD
             <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated, the Database sends a response
                 to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the View Consumer Reports screen. </p>
+=======
+            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. [7.4.1] The Database compares the received User Token with its own valid User Token. If the Key is validated, the Database sends
+                a response to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the View Consumer Reports screen. [7.3.4]</p>
+>>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
             <p>Upon loading the Server will request an up to date Report text from the Database. Database will retrieve Report text and send back to the Server. The Server will update the GUI with the Report text. [7.4.1]</p>
             <div class="indent">
                 <h3>Design Elements: </h3>
@@ -2870,7 +2911,7 @@
                         <td>A block of text </td>
                     </tr>
                     <tr>
-                        <td>User Token </td>
+                        <td>User Token</td>
                         <td>Entity </td>
                         <td>Verifies the user is currently logged.</td>
                         <td>A unique key that validates login sessions by comparing the current key with the key stored in the database. </td>
@@ -2884,8 +2925,13 @@
                 </table>
             </div>
             <h2><span class="id">6.35</span>Edit Profile (Admin User) [3.35]</h2>
+<<<<<<< HEAD
             <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated, the Database sends a response
                 to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the View Consumer Reports screen.</p>
+=======
+            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Key is validated, the Database sends a response
+                to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the Edit Profile screen. [9.1.2] </p>
+>>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
 
             <p>If Admin User clicks on a current username, they may change their username. The Server will request the username to be checked with the database to make sure that username is not already in use. [8.6.2, 9.1.2]</p>
 
@@ -2936,7 +2982,12 @@
                         <td>Save Button</td>
                         <td>Entity</td>
                         <td>Allows Admin User to Save changes</td>
+<<<<<<< HEAD
                         <td>After clicking, the information is verified and sent to the server to be recorded in the database. Upon the successful submission, the user is notified about it
+=======
+                        <td>After clicking, the information is verified and sent to the server to be recorded in the database. Upon the successful
+                            submission, the user is notified about it
+>>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
                         </td>
                     </tr>
                 </table>
@@ -3052,12 +3103,18 @@
             <h2><span class="id">6.37</span>Create New Admin (Admin) [3.37]</h2>
             <div class="indent">
                 <h3>Design Viewpoints</h3>
+<<<<<<< HEAD
                 <p>The Admin is asked to input their email. Create new username and password is displayed to the admin. The server shall authenticate the username by searching through the database for the same username. This ensures a unique username. If
                     a similar username is found, an alert will pop up to the user telling them that the username is already in use. Client side validation shall be used to ensure that the password is valid. A valid password will be a password that has
                     at least 6 characters. The Admin is then asked to provide their name. Once the create account button is pressed, the form will be validated.</p>
                 <h3>Design Elements</h3>
                 <p>The Create New Admin Table identifies elements for the Create New Admin Concern. [4.37] These elements perform the duties of displaying and copying values held within said concern.
                 </p>
+=======
+                <p>The Admin is asked to input their email. Create new username and password is displayed to the admin. The server shall authenticate the username by searching through the database for the same username. This ensures a unique username. If a similar username is found, an alert will pop up to the user telling them that the username is already in use. Client side validation shall be used to ensure that the password is valid. A valid password will be a password that has at least 6 characters. The Admin is then asked to provide their name. Once the create account button is pressed, the form will be validated.</p>
+                <h3>Design Elements</h3>
+                <p>	The Create New Admin Table identifies elements for the Create New Admin Concern. [4.37] These elements perform the duties of displaying and copying values held within said concern.</p>
+>>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
                 <table>
                     <tr>
                         <th>Name</th>
@@ -3415,11 +3472,17 @@
                 </table>
             </div>
             <h2><span class="id">6.44</span>View Consumer Profile [3.44]</h2>
+<<<<<<< HEAD
             <p>The current Session Key is sent from the Server to the Database to check that the current session is valid. The Database compares the received Session Key with its own valid Session Key. If the Key is validated, the Database sends a response
                 to the Server that the Session Key is valid. If the Session Key is valid, then the Server updates the GUI with the View My Profile screen.</p>
             <p>Upon loading the Server will update the GUI with a Report User button and Block User button. If the Report User button is clicked, then the Server will send a request to the Database to update the given Commercial or Consumer User as having
                 been reported. If the Report User button is clicked, then the Server will send a request to the Database to update the given Commercial or Consumer User as having been blocked.</p>
+=======
+            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Key is validated, the Database sends a response to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the View My Profile screen.</p>
+            <p>Upon loading the Server will update the GUI with a Report User button and Block User button. If the Report User button is clicked, then the Server will send a request to the Database to update the given Commercial or Consumer User as having been reported. If the Report User button is clicked, then the Server will send a request to the Database to update the given Commercial or Consumer User as having been blocked.</p>
+>>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
             <h3>Design Elements:</h3>
+            <p>	The View Consumer Profile Table identifies elements for the Login Concern. [4.44] These elements perform the duties of displaying and copying values held within said concern.</p>
             <table>
                 <tr>
                     <th>Name</th>
@@ -3440,15 +3503,20 @@
                     <td>A button that can be clicked to perform the function.</td>
                 </tr>
                 <tr>
-                    <td>Session Key</td>
+                    <td>User Token</td>
                     <td>Entity</td>
                     <td>Verifies the user is currently logged.</td>
                     <td>A unique key that validates login sessions by comparing the current key with the key stored in the database.</td>
                 </tr>
             </table>
             <h2><span class="id">6.45</span>View Commercial Profile [3.45]</h2>
+<<<<<<< HEAD
             <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Token is validated, the Database sends a response
                 to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the View My Profile screen. </p>
+=======
+            <p>The current User Token is sent from the Server to the Database to check that the current session is valid. The Database compares the received User Token with its own valid User Token. If the Key is validated, the Database sends a response
+                to the Server that the User Token is valid. If the User Token is valid, then the Server updates the GUI with the View My Profile screen. [9.1.1] </p>
+>>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
             <p>Upon loading the Server will update the GUI with a Report User button and Block User button. If the Report User button is clicked, then the Server will send a request to the Database to update the given Commercial or Consumer User as having
                 been reported. [7.6] If the Report User button is clicked, then the Server will send a request to the Database to update the given Commercial or Consumer User as having been blocked. [9.1.4] </p>
             <div class="indent">
@@ -3474,8 +3542,8 @@
                         <td>A button that can be clicked to perform the function.</td>
                     </tr>
                     <tr>
-                        <td>User Token </td>
-                        <td>Entity </td>
+                        <td>User Token</td>
+                        <td>Entity</td>
                         <td>Verifies the user is currently logged.</td>
                         <td>A unique key that validates login sessions by comparing the current key with the key stored in the database. </td>
                     </tr>
@@ -3876,6 +3944,30 @@
                     User can either edit user data, or delete user data. Changes are then saved to the database.</p>
                 <img src="./images/DataFlow-EditUsers.png" alt="" class="pic">
                 <figcaption>Data Flow Figure 9</figcaption>
+                <h3><span class="id">8.6.10</span>Promote Event Data Flow</h3>
+                <p>The Commercial user after logging in will be able to “Promote Event”. They will then be able to start auctioning to Promote a chosen Event.</p>
+                <img src="./images/Promote-Event-DF.png" alt="" class="pic">
+                <figcaption>Data Flow Figure 10</figcaption>
+                <h3><span class="id">8.6.11</span>Create (Post) Event Data Flow</h3>
+                <p>In order to view and make changes to the Commercial Events the user must be logged in. The Users can choose between Creating an Event, Editing/Deleting an Event or viewing the Past Events. After choosing each of these functions the app will retrieve information from the database and the user can make changes to it. After the user is done editing the information will be updated to the database again.</p>
+                <img src="./images/df-11.png" alt="" class="pic">
+                <figcaption>Data Flow Figure 11</figcaption>
+                <h3><span class="id">8.6.12</span>Search Bar (Discover) Data Flow</h3>
+                <p>Upon consumer login, they will see the Discover Page. On the Discover page, they will be shown a list of relevant events from the database. They will have the option to use a search bar to search for events as well as Filtering and sorting.</p>
+                <img src="./images/df-12.png" alt="" class="pic">
+                <figcaption>Data Flow Figure 12</figcaption>
+                <h3><span class="id">8.6.13</span>Join Event Data Flow</h3>
+                <p>Upon consumer login, the Consumer will gain access to their account and will have access to “My Profile”, “My Events”, “Discover” and “settings”. “My Profile” will show the Consumer Users profile information and allow them to change their profile information. The Consumer will also have “My Events”, within “My Events” the Consumer will see all the Events that they have created or Joined. The Consumer will have the ability to edit the Events that they have created.</p>
+                <img src="./images/df-13.png" alt="" class="pic">
+                <figcaption>Data Flow Figure 13</figcaption>
+                <h3><span class="id">8.6.14</span> Notifications (Settings) Data Flow</h3>
+                <p>In order to view the settings and make changes, the Consumer User must first be logged in. A new session will be created. User login info will be verified by comparing it to the data in the Database. Successful verification will grant application access to the user.  In settings, the Consumer User may go to Notifications or logout of their session. If they logout their session will be closed and then redirected to the login page. In the Notification settings the Consumer User may choose notification preferences (turn on or off individual notifications).</p>
+                <img src="./images/df-14.png" alt="" class="pic">
+                <figcaption>Data Flow Figure 14</figcaption>
+                <h3><span class="id">8.6.15</span>Reports Data Flow</h3>
+                <p>Upon login, the Admin will gain access to their account and will have access to “My Profile”, “Manage Users/Events”, “Settings”, and “Reports”. “My Profile” will show the Admin profile information and allow them to change their profile information. The Admin User will also have “Manage User/Events”, this will give the Admin access to edit Accounts as well as Events Created by Consumers and Commercial Users. The Admin User will also have “Settings” and  “Reports”.</p>
+                <img src="./images/df-15.png" alt="" class="pic">
+                <figcaption>Data Flow Figure 15</figcaption>
             </div>
 
             <h2><span class="id">8.7</span>Data & Information View</h2>
@@ -4022,10 +4114,16 @@
                 <li>MySQL (Database)</li>
                 <li>Android Studio (Programming Environment)</li>
             </ul><br>
+<<<<<<< HEAD
             <p>To be able to provide usability to all mobile platforms the application will have two sets of criteria for it’s Design Languages. To have the application work on All Android device Uvents will be built on Android Studio using Kotlin for both
                 the Frontware and Middleware. And MySQL will be used for the back end or the database. To have the application work on All IOS device Uvents will be built on Xcode9 using Swift for both the Frontware and Middleware. And MySQL will be used
                 for the back end or the database.</p>
             <h2><span class='id'>10.1</span>System Engineer View (Layering)</h2>
+=======
+            <h3><span class="id">10.1</span>Services View</h3>
+            <p>The Services View acts to describe what is being provided by the system and how the items being provided will allow the system to work. To be able to provide usability to all mobile platforms the application will have two sets of criteria for it’s Design Languages. To have the application work on All Android device Uvents will be built on Android Studio using Kotlin for both the Frontware and Middleware. And MySQL will be used for the back end or the database. To have the application work on All IOS device Uvents will be built on Xcode9 using Swift for both the Frontware and Middleware. And MySQL will be used for the back end or the database.</p>
+            <h2><span class='id'>10.2</span>System Engineer View (Layering)</h2>
+>>>>>>> 06c94fec5c6d64c4e7ae319f4d0ea8ca9ba36b94
             <p>The System Engineer View, designed through the layering technique, presents conceptually how the entire system will work together. This may be done through one of two previously mentioned routes, depending on the Uvents User’s operating system.</p>
             <img src="./images/Layering.png" alt="">
             <figcaption>Layering Figure 1</figcaption>
