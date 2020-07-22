@@ -1011,8 +1011,11 @@
       <div class="page">
          <div class="indent">
             <h2><span class="id">5.29</span>Start Auction / Place Bid (Commercial User) [3.29]</h2>
-            <p>Commercial User clicks on the Start Auction / Place Bid button. Uvents then contacts the server and gets the required information regarding placing a bid. The Commercial User can then click on an input field and enter in the amount they would
-                like to bid. The data is sent to the database and a message is displayed indicating whether the bid was placed successfully.</p>
+            <p>Commercial User clicks on the Start Auction / Place Bid button. Uvents then contacts the server and gets the required information 
+                regarding placing a bid. The Commercial User can then click on an input field and enter in the amount they would like to bid. The 
+                data is sent to the database and a message is displayed indicating whether the bid was placed successfully. Depending on the bid 
+                amount, the Commercial User will be ranked for a spot on the Discover page. The Auction will only last for a predetermined period 
+                of time.</p>
             <h2><span class="id">5.30</span>Share Event (Commercial User) [3.30]</h2>
             <p>
                 The Commercial User may share their Event. The Shareable link bar allows the Commercial User to copy a shareable link. The Commercial User may click the copy link button to copy the Event Link to their clipboard. The Commercial User may click on the Facebook
@@ -3780,7 +3783,7 @@
                 <img src="./images/CommunicationUML-Create&ManageEvent.png" alt="CommuncationUML - Create & Manage Event.png" class="pic">
                 <figcaption>Communication UML Figure 4</figcaption>
             </div>
-            <h2><span class="id">8.2</span>Database Design</h2>
+            <h2><span class="id">8.2</span>Model Database Design</h2>
             <ul>
                 <li>For designing our database, we will use the following design plan modified from the steps found in [1]:
                      <ul>
@@ -3899,7 +3902,7 @@
                <figcaption>Data Types Figure 9</figcaption>
 
                <h2><span class="id">8.3.10</span>Event Media Table</h2>
-               <p>The Event Media chart demonstrates what is being stored, and what data-type is being used to display it.</p>
+               <p>The Event Media chart demonstrates what is being stored, and what data-type is being used to display it. The foreign key will be associated with a unique Commercial User to verify the media belongs to them.</p>
                <img src="./images/DataTypes-Event_Media.png" alt="Event Media" class="pic">
                <figcaption>Data Types Figure 10</figcaption>
 
