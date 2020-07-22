@@ -884,9 +884,10 @@
         <div class="indent">
             <h2><span class="id">5.1</span>Create Consumer Account [3.1]</h2>
             <p> Consumer enters an email address. Consumer enters a username and is notified if the username is already taken. Consumer enters a password and is notified when the password is valid (ie. when it reaches or exceeds 6 characters). Consumer presses
-                the create account button. Alternatively, they can create an account by signing into a social media account and allowing the application to capture the required information to create an account.</p>
+                the create account button. Alternatively, they can create an account by signing into a social media account and allowing the application to capture the required information to create an account. [DF.1] After the account is created, the Consumer
+                User will be logged in and taken to the Discover page. [4.7]</p>
             <h2><span class="id">5.2</span>Join Commercial Event [3.2]</h2>
-            <p>Consumer will access a list of Commercial Events. Consumer select the Event of interest. Consumer will then have access to the Events description. Consumer can return to the list or join Event. </p>
+            <p>Consumer will access a list of Commercial Events. Consumer select the Event of interest. Consumer will then have access to the Events description. Consumer can return to the list or Join Event. </p>
             <h2><span class="id">5.3</span>Join Group Event (Consumer User)[3.3]</h2>
             <ol>
                 <li>On notification to join group Event, Consumer will view the description of the Event. Following the description the Consumer will have the option to reject or join Group event. </li>
@@ -894,8 +895,9 @@
             </ol>
             <h2><span class="id">5.4</span>Edit Profile (Consumer User) [3.4]</h2>
             <p>Consumer User will have access to settings. On the Consumer User’s profile will be an option to edit profile. Current information fields will be presented. The Consumer User will be able to change these values and save them. </p>
-            <h2><span class="id">5.5</span>View Profile (Consumer User) [3.5]</h2>
-            <p>View My Profile will display the current user’s profile. They will be able to view their username, email, and bio. They will also be able to select the option to edit their profile.</p>
+            <h2><span class="id">5.5</span>View Profile (All User) (Capability View) [3.5]</h2>
+            <p>View My Profile will display the current user’s profile. They will be able to view their username, email, and bio. They will also be able to select the option to edit their profile.  View My Profile also represents the Capability View, as it
+                defines what capabilities will be interrelated between all types of Users - Admin, Consumer, and Commercial.</p>
             <h2><span class="id">5.6</span>Login (Consumer User) [3.6]</h2>
             <p>The Consumer User opens Uvents and sees the option to login via 3rd party, username/password, or to create an account.</p>
             <ul>
@@ -925,7 +927,7 @@
             <p>Consumer User clicks on the ‘Edit Event’ button located inside an Event they own. A new window will appear allowing the Consumer User to change parts of the Event. This will display the options to the Consumer and based on their input will
                 change the Event in different ways. Event details will be updated once the changes are confirmed.</p>
             <h2><span class="id">5.12</span>Event Messaging (Consumer) [3.12]</h2>
-            <p>Consumer User clicks on the “Event Messaging” button from located inside an Event. A new window will appear that lists the Event Chat and the messages that have been exchanged with the Consumer Usersent in it.Messages will be listed This will
+            <p>Consumer User clicks on the “Event Messaging” button from located inside an Event. A new window will appear that lists the Event Chat and the messages that have been exchanged with the Consumer User sent in it. Messages will be listed This will
                 display messages in sequential order starting with the most recent messages at the bottom.</p>
             <h2><span class="id">5.13</span>My Events (Consumer) [3.13]</h2>
             <p>Consumer users click on the “My Events” tab as found on the main menu. A new window will appear that lists all upcoming events that the Consumer user has subscribed to either by following the event or paying for a spot at the event. These
@@ -980,7 +982,7 @@
             <h2><span class="id">5.27</span>Past Events (Commercial User) [3.27]</h2>
             <p>Commercial User clicks a navigation option to view Past Events. Uvents navigates to that page, past events created by the Commercial User are fetched from the database. Those events are displayed in a list to the Commercial User.</p>
             <h2><span class="id">5.28</span>Promote Event (Commercial User) [3.28]</h2>
-            <p>The Commercial User shall have the option to promote their events. This option shall allow the Commercial User to add deals and/or discounts to the event.</p>
+            <p>The Commercial User shall have the option to promote their events. From Promote Event, the Commercial User may either choose to Share Event or Start Auction. Start Auction will only be an option when the Auction is currently available, otherwise there will be a countdown till the next auction.</p>
             <h2><span class="id">5.29</span>Start Auction / Place Bid (Commercial User) [3.29]</h2>
             <p>Commercial User clicks on the Start Auction / Place Bid button. Uvents then contacts the server and gets the required information regarding placing a bid. The Commercial User can then click on an input field and enter in the amount they would
                 like to bid. The data is sent to the database and a message is displayed indicating whether the bid was placed successfully.</p>
@@ -1060,8 +1062,9 @@
             <h2><span class="id">6.1</span>Create Consumer Account [3.1]</h2>
             <h3>Design Viewpoints</h3>
             <p>The option to create a username and password is displayed to the consumer. An option to sign in with social media is also displayed. The server shall authenticate the username once it has been typed in ensuring that it is unique. Client-side
-                validation will ensure that the password reaches or exceeds 6 characters, and that the email address is in the correct format. When the consumer clicks 'Create Account' and the password, username, and email are authenticated, the password
-                will be hashed and added to the database along with the email and username. [DF.1]</p>
+                validation will ensure that the password reaches or exceeds 6 characters, and that the email address is in the correct format. In order to proceed with Create Account, the Consumer User must also verify they are over 18 by marking a check-box
+                asking for confirmation of being over 18.  When the consumer clicks 'Create Account' and the password, username, and email are authenticated, the password will be salted and hashed and added to the database along with the email and username.
+                [DF.1] After the account is created, the Server will request a Session ID be generated and the User will be logged in and taken to the Discover page. [4.7]</p>
             <h3>Design Elements</h3>
             <p>A text field for the user to type in their email address, a text field for the user to type in their username, and a text field for the user to type in their password is displayed on the screen. A button that displays the words “Create Account”
                 is displayed. A button that displays the words “Social Media Login” is displayed. [DF.1]</p>
@@ -1101,6 +1104,12 @@
                     <td>Entity</td>
                     <td>Allow the User to use their social media to log in.</td>
                     <td>A button will be displayed that will give the user an option to sign into their social media account.</td>
+                </tr>
+                <tr>
+                    <td>Age Confirmation</td>
+                    <td>Entity</td>
+                    <td>Legally, the Consumer User must confirm they are over 18.</td>
+                    <td>Check box to confirm the Consumer User is over 18 will be displayed. If they are over 18, they may continue. If they are not, they may not continue.</td>
                 </tr>
             </table>
             <h2><span class="id">6.2</span>Join Commercial Event (Consumer User) [3.2]</h2>
@@ -1437,13 +1446,7 @@
             <h3>Design Viewpoints:</h3>
             <p>App sends request to server. Server gathers details from database. Server sends view to App. </p>
             <h3>Design Elements: </h3>
-            <p>The following elements will control the elements sent to the database, restricting the results returned to the application.</p>
-            <ul>
-                <li>Time frame scale [DIV Figure 1]</li>
-                <li>Location input [DIV Figure 1] </li>
-                <li>Cost [DIV Figure 1] </li>
-                <li>Event type selector [DIV Figure 1] </li>
-            </ul>
+            <p>The following elements will control the elements sent to the database, restricting the results returned to the application.</p>  
             <table>
                 <tr>
                     <th>Name</th>
@@ -1479,6 +1482,7 @@
 
             <h2><span class="id">6.9</span>Search Bar (Consumer User) [3.9]</h2>
             <h3>Design Viewpoints:</h3>
+            <p>Below are the Consumer User Design Elements concerning the search bar. Verification for the search bar includes:</p>
             <ul>
                 <li>Verify the Keyboard appears on the Screen</li>
                 <li>Verify the page is scrollable to enable navigation across the page</li>
@@ -1486,40 +1490,41 @@
                 <li>User input is sent to the server and the correct list of events is returned back to the client and displayed appropriately on the screen</li>
                 <li>Every Event in the list should be clickable </li>
                 <li>Interface of Search Bar input field allows user to enter different characters with no limit</li>
-                <h3>Design Elements: </h3>
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Purpose</th>
-                        <th>Description</th>
-                    </tr>
-                    <tr>
-                        <td>Keyboard</td>
-                        <td>Entity</td>
-                        <td>Allow user to type characters</td>
-                        <td>System tool that has different characters of different languages and allows users to provide input</td>
-                    </tr>
-                    <tr>
-                        <td>Search Bar Input</td>
-                        <td>Entity</td>
-                        <td>Field to accept input</td>
-                        <td>This input field will allow users to enter, modify, and remove characters entered from the keyboard and it will filter the results based on the input</td>
-                    </tr>
-                    <tr>
-                        <td>List View </td>
-                        <td>Entity</td>
-                        <td>Area to display the results</td>
-                        <td>This area will display the filtered results based on the input from the Search Bar</td>
-                    </tr>
-                    <tr>
-                        <td>List View Item</td>
-                        <td>Entity</td>
-                        <td>Item in the List View that is clickable</td>
-                        <td>The List View will consist of Items which will be clickable. Upon click on an Item that represents an Event, the user will navigate to an Event Details screen.</td>
-                    </tr>
-                </table>
             </ul>
+            <h3>Design Elements: </h3>
+            <p>The Search Bar Table identifies elements for the Search Bar Concern. [4.9] These elements perform the duties of displaying and copying values held within said concern.</p>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Purpose</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Keyboard</td>
+                    <td>Entity</td>
+                    <td>Allow user to type characters</td>
+                    <td>System tool that has different characters of different languages and allows users to provide input</td>
+                </tr>
+                <tr>
+                    <td>Search Bar Input</td>
+                    <td>Entity</td>
+                    <td>Field to accept input</td>
+                    <td>This input field will allow users to enter, modify, and remove characters entered from the keyboard and it will filter the results based on the input</td>
+                </tr>
+                <tr>
+                    <td>List View </td>
+                    <td>Entity</td>
+                    <td>Area to display the results</td>
+                    <td>This area will display the filtered results based on the input from the Search Bar</td>
+                </tr>
+                <tr>
+                    <td>List View Item</td>
+                    <td>Entity</td>
+                    <td>Item in the List View that is clickable</td>
+                    <td>The List View will consist of Items which will be clickable. Upon click on an Item that represents an Event, the user will navigate to an Event Details screen.</td>
+                </tr>
+            </table>
             <h2><span class="id">6.10</span>Create Group Event (Consumer User) [3.10]</h2>
             <h3>Design Viewpoints:</h3>
             <ul>
@@ -1532,6 +1537,7 @@
                 <li>Proper navigation upon the Event creation</li>
             </ul>
             <h3>Design Elements: </h3>
+            <p>The Create Group Event Table identifies elements for the Create Group Event Concern. [4.22] These elements perform the duties of displaying and copying values held within said concern.</p>
             <table>
                 <tr>
                     <th>Name</th>
@@ -1609,6 +1615,7 @@
                 <li>Verify that the Consumer has to press ‘Confirm’ twice before changes are sent to the database and the page is refreshed to display the new changes</li>
                 <li>Verify that the ‘Cancel’ button directs the Consumer back to the Event page and discards the changes</li>
                 <h3>Design Elements: </h3>
+                <p>The Edit Event Table identifies elements for the Edit Event Concern. [4.11] These elements perform the duties of displaying and copying values held within said concern.</p>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -1675,12 +1682,13 @@
             <h2><span class="id">6.12</span>Event Messaging (Consumer User) [3.12]</h2>
             <h3>Design Viewpoints:</h3>
             <ul>
-                <li>Session-id verified</li>
+                <li>User Token verified</li>
                 <li>Populate message page with messages from the database</li>
                 <li>Interface of the messaging allows Consumer to send messages</li>
                 <li>Interface of the messaging allows Consumer to react to messages that have been sent</li>
             </ul>
             <h3>Design Elements: </h3>
+            <p>The Event Messaging Table identifies elements for the Event Messaging Concern. [4.12] These elements perform the duties of displaying and copying values held within said concern.</p>
             <table>
                 <tr>
                     <th>Name</th>
@@ -1727,12 +1735,13 @@
             </table>
             <h2><span class="id">6.13</span>My Events (Consumer User) [3.13]</h2>
             <ul>
-                <li>Session id verified</li>
-                <li>Interface between session ID and database of local events</li>
+                <li>User Token verified</li>
+                <li>Interface between User Token and database of local events</li>
                 <li>Filter of local events to local events this specific Consumer user is subscribed to</li>
                 <li>Interface between social media and server</li>
                 <li>Separation of each event</li>
                 <h3>Design Elements: </h3>
+                <p>The My Events Table identifies elements for the My Events Concern. [4.13] These elements perform the duties of displaying and copying values held within said concern.</p>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -1786,6 +1795,7 @@
                 <li>Interface of the notifications allows users to delete or flag notifications.</li>
             </ul>
             <h3>Design Elements: </h3>
+            <p>The Notifications Table identifies elements for the Notifications Concern. [4.14] These elements perform the duties of displaying and copying values held within said concern.</p>
             <table>
                 <tr>
                     <th>Name</th>
@@ -1825,71 +1835,71 @@
                 </tr>
             </table>
             <h2><span class="id">6.15</span>Settings (Consumer User) [3.15]</h2>
-            <ul>
-                <li>Session-id verified</li>
-                <li>Check session-id and database and display correct information displayed (Name, password, address, contact information etc.)</li>
-                <li>Able to change information.</li>
-                <li>Ask one more time when they click the “Confirm” button.</li>
-                <li>Cancel the change when users click the “Cancel” button.</li>
-                <li>After the users change the information, change the information in the database, and display the changed information of users.</li>
-                <h3>Design Elements: </h3>
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Purpose</th>
-                        <th>Description</th>
-                    </tr>
-                    <tr>
-                        <td>Setting button</td>
-                        <td>Entity</td>
-                        <td>Allow users to go “setting menu” and change the information of users.</td>
-                        <td>A button that retrieves the database of information of users, and displays all information of users</td>
-                    </tr>
-                    <tr>
-                        <td>Name</td>
-                        <td>Entity</td>
-                        <td>Show the name of users</td>
-                        <td>This used to show the name of the users</td>
-                    </tr>
-                    <tr>
-                        <td>Password</td>
-                        <td>Entity</td>
-                        <td>Able to change the password</td>
-                        <td>There are two blank boxes. One is for the old password and another is for the new password. The users should type the old password to change the password. </td>
-                    </tr>
-                    <tr>
-                        <td>Phone number</td>
-                        <td>Entity</td>
-                        <td>Show the phone number and able to change the number</td>
-                        <td>Users can check their phone numbers and are able to change their phone numbers if needed.</td>
-                    </tr>
-                    <tr>
-                        <td>Email address</td>
-                        <td>Entity</td>
-                        <td>Show the email address and able to change the email address</td>
-                        <td>Users can check their email addresses and are able to change their email addresses if needed.</td>
-                    </tr>
-                    <tr>
-                        <td>Home address</td>
-                        <td>Entity</td>
-                        <td>Show the home address and be able to change the home address.</td>
-                        <td>Users can check their home addresses and are able to change their home address if needed.</td>
-                    </tr>
-                    <tr>
-                        <td>Confirm button</td>
-                        <td>Class</td>
-                        <td>Able to change the all changed information by clicking the button. </td>
-                        <td>This button allows the users to change the information they need to. It includes all information of the database and changes that when it is completed. And it could be a “blue” color.</td>
-                    </tr>
-                    <tr>
-                        <td>Cancel button</td>
-                        <td>Entity</td>
-                        <td>Able to cancel the activities that users did.</td>
-                        <td>This button allows the users to cancel what they did. It is a button type and it could be a “red” color.</td>
-                    </tr>
-                </table>
-            </ul>
+            <p>The session ID must be verified. After the checking of the session ID, the information will be pulled from the database and displayed correctly. Name, password, address, contact information will be displayed. The User will be able to change information. The user will be asked one more time when they click the “Confirm” button. The user can cancel the change when users click the “Cancel” button. After the users change the information, change the information in the database, and display the changed information of users. Also, the user will be able to delete his account.</p>>
+            <h3>Design Elements: </h3>
+            <p>The Settings Table identifies elements for the Settings Concern. [4.15] These elements perform the duties of displaying and copying values held within said concern.</p>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Purpose</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Setting button</td>
+                    <td>Entity</td>
+                    <td>Allow users to go “setting menu” and change the information of users.</td>
+                    <td>A button that retrieves the database of information of users, and displays all information of users</td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>Entity</td>
+                    <td>Show the name of users</td>
+                    <td>This used to show the name of the users</td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>Entity</td>
+                    <td>Able to change the password</td>
+                    <td>There are two blank boxes. One is for the old password and another is for the new password. The users should type the old password to change the password. </td>
+                </tr>
+                <tr>
+                    <td>Phone number</td>
+                    <td>Entity</td>
+                    <td>Show the phone number and able to change the number</td>
+                    <td>Users can check their phone numbers and are able to change their phone numbers if needed.</td>
+                </tr>
+                <tr>
+                    <td>Email address</td>
+                    <td>Entity</td>
+                    <td>Show the email address and able to change the email address</td>
+                    <td>Users can check their email addresses and are able to change their email addresses if needed.</td>
+                </tr>
+                <tr>
+                    <td>Home address</td>
+                    <td>Entity</td>
+                    <td>Show the home address and be able to change the home address.</td>
+                    <td>Users can check their home addresses and are able to change their home address if needed.</td>
+                </tr>
+                <tr>
+                    <td>Confirm button</td>
+                    <td>Class</td>
+                    <td>Able to change the all changed information by clicking the button. </td>
+                    <td>This button allows the users to change the information they need to. It includes all information of the database and changes that when it is completed. And it could be a “blue” color.</td>
+                </tr>
+                <tr>
+                    <td>Cancel button</td>
+                    <td>Entity</td>
+                    <td>Able to cancel the activities that users did.</td>
+                    <td>This button allows the users to cancel what they did. It is a button type and it could be a “red” color.</td>
+                </tr>
+                <tr>
+                    <td>Delete Account button</td>
+                    <td>Entity</td>
+                    <td>Allows the user to delete the account</td>
+                    <td>Upon the click, the user will be asked for a confirmation. After the success, all the information about the user will be permanently deleted.</td>
+                </tr>
+            </table>
             <h2><span class="id">6.16</span>Logout (Consumer User) [3.16]</h2>
             <h3>Design Viewpoints:</h3>
             <p>Consumer User information is sent to the server. If logout is accepted, the server will send confirmation to the Consumer User, who’s information will be removed from the device.</p>
